@@ -1,0 +1,20 @@
+{
+  "source": "tools\\v7_clock_probe.cpp",
+  "source_sha256": "7681a83acba7715e9c6f082d1bbfb2ef9435b61aeed62a719c3e5e50f6dd0561",
+  "exe": "build\\v7_clock_probe.exe",
+  "exe_sha256": "ca6053ef27fba93b2a2b0992aafc5f21fa642d871ce1478041346fd2126ba163",
+  "crt_imports": [
+    "KERNEL32.dll",
+    "msvcrt.dll"
+  ],
+  "requested_sleep_ms": 300,
+  "CLOCKS_PER_SEC": 1000,
+  "clock_seconds": 0.314,
+  "steady_wall_seconds": 0.314659,
+  "process_cpu_seconds": 0,
+  "official_source_modified": false,
+  "documentation": [
+    "https://learn.microsoft.com/en-us/cpp/c-runtime-library/time-management?view=msvc-170",
+    "https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/clock?view=msvc-170"
+  ]
+}

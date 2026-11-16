@@ -1,0 +1,22 @@
+{
+  "all_flows": 194313,
+  "admitted": 164406,
+  "worlds": 128,
+  "old_admitted": 41151,
+  "new_admitted": 123255,
+  "dataset_sha256": "8522b19c49f114cc32827e33a72fbfc3bf1de1214c0021615da18b1dfc06a30b",
+  "arrays_sha256": "0e9f9c1fcf4116221ee357d42fb7e6565a41b72fcee30c6b65039a6305315979",
+  "old32_all_and_admitted_csv_numerically_exact": true,
+  "only_admitted_used_for_training": true,
+  "all_x_y_groups_weights_rebuilt_exact": true,
+  "all128_world_keys_expected_and_unique": true,
+  "world_names_group_map_exact": true,
+  "equal_global128_world_weights": true,
+  "old32_total_weight_fraction": 0.25,
+  "all128_csv_totals_match_baseline_reports": true,
+  "all_finish_integer_revenues_recomputed_exact": true,
+  "trace_full_report_equal_evidence": "Dataset agent reconciled immutable trace;this audit independently reaggregates CSV against baseline rather than rerunning interaction",
+  "new_model_refits": 0,
+  "new_interactive_runs": 0,
+  "fresh_profit_accessed": false
+}

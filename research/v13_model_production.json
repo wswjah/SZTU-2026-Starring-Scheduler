@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-16",
+  "selection_source": ".\\candidates\\v13_model\\veto_strict.cpp",
+  "selection_sha256": "560c63b3dbcbe6341b315b1b56ef36f0d41dd902d12216bb5cb12ba3d4d5d55c",
+  "source": ".\\candidates\\v13_model\\production.cpp",
+  "source_sha256": "997d4e112368ca47595585a021c6c9fc7cbbd5e3d09fdc2681afedca43b78983",
+  "source_bytes": 36569,
+  "executable": ".\\build\\v13_model_production.exe",
+  "exe_sha256": "542f766fea14e6b0df34524eaa1ec9733a7ba5ec4e307a8d8c2a1d0295b926c9",
+  "only_runtime_features": [
+    5,
+    10
+  ],
+  "tree_and_strict_gate_preserved_exactly": true,
+  "original_header_preserved": true,
+  "forecast_cached_at_same_original_schedule_point": true,
+  "job_scalar_rejection_rollback_preserved": true,
+  "no_retraining_or_policy_changes": true,
+  "official_submission_sent": false,
+  "interactive_verification": "Root will pack and compare80 full reports;this reduction task runs non-interactive audits only"
+}

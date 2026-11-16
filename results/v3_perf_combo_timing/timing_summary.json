@@ -1,0 +1,110 @@
+{
+  "rounds": 2,
+  "run_count": 24,
+  "all_reports_exactly_equal": true,
+  "splits": {
+    "stress": {
+      "all_cpu_totals": {
+        "baseline": 5.953125,
+        "candidate": 5.109375
+      },
+      "total_cpu_reduction_pct": 14.173228346456689,
+      "per_case": [
+        {
+          "case": "failures",
+          "baseline_all_cpu_seconds": [
+            0.84375,
+            0.84375
+          ],
+          "baseline_median_cpu_seconds": 0.84375,
+          "candidate_all_cpu_seconds": [
+            0.75,
+            0.8125
+          ],
+          "candidate_median_cpu_seconds": 0.78125,
+          "median_reduction_pct": 7.4074074074074066
+        },
+        {
+          "case": "logs_audits",
+          "baseline_all_cpu_seconds": [
+            0.75,
+            0.71875
+          ],
+          "baseline_median_cpu_seconds": 0.734375,
+          "candidate_all_cpu_seconds": [
+            0.546875,
+            0.578125
+          ],
+          "candidate_median_cpu_seconds": 0.5625,
+          "median_reduction_pct": 23.404255319148938
+        },
+        {
+          "case": "max_topology",
+          "baseline_all_cpu_seconds": [
+            0.875,
+            0.765625
+          ],
+          "baseline_median_cpu_seconds": 0.8203125,
+          "candidate_all_cpu_seconds": [
+            0.796875,
+            0.703125
+          ],
+          "candidate_median_cpu_seconds": 0.75,
+          "median_reduction_pct": 8.571428571428575
+        },
+        {
+          "case": "slow_costly",
+          "baseline_all_cpu_seconds": [
+            0.5625,
+            0.59375
+          ],
+          "baseline_median_cpu_seconds": 0.578125,
+          "candidate_all_cpu_seconds": [
+            0.46875,
+            0.453125
+          ],
+          "candidate_median_cpu_seconds": 0.4609375,
+          "median_reduction_pct": 20.270270270270274
+        }
+      ]
+    },
+    "train": {
+      "all_cpu_totals": {
+        "baseline": 2.859375,
+        "candidate": 2.5625
+      },
+      "total_cpu_reduction_pct": 10.382513661202186,
+      "per_case": [
+        {
+          "case": "large_00",
+          "baseline_all_cpu_seconds": [
+            0.734375,
+            0.6875
+          ],
+          "baseline_median_cpu_seconds": 0.7109375,
+          "candidate_all_cpu_seconds": [
+            0.59375,
+            0.5625
+          ],
+          "candidate_median_cpu_seconds": 0.578125,
+          "median_reduction_pct": 18.681318681318682
+        },
+        {
+          "case": "large_01",
+          "baseline_all_cpu_seconds": [
+            0.75,
+            0.6875
+          ],
+          "baseline_median_cpu_seconds": 0.71875,
+          "candidate_all_cpu_seconds": [
+            0.703125,
+            0.703125
+          ],
+          "candidate_median_cpu_seconds": 0.703125,
+          "median_reduction_pct": 2.1739130434782594
+        }
+      ]
+    }
+  },
+  "execution": "Strictly serial; case-paired runs, variant order alternated per round"
+}

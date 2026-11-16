@@ -1,0 +1,812 @@
+{
+  "actual_included_sources": {
+    ".\\candidates\\v13_model\\trace.cpp": "c03d521e97c68e24afb6c1e4d76b19f51f654297dcbd33e51949f8fdcadea211",
+    ".\\candidates\\v13_model\\tree.inc": "a92d4906a811260772bf29ef08c225e591956d4349262f3a5da957c1922b71d1"
+  },
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "tools/v13_model_audit_features.cpp",
+    "-o",
+    ".\\build\\v13_model_audit_features.exe"
+  ],
+  "compiler_stderr": "In file included from tools/v13_model_audit_features.cpp:3:\ntools/../candidates/v13_model/trace.cpp: In function 'int v13ModelAuditTraceMain()':\ntools/../candidates/v13_model/trace.cpp:887:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  887 | }\n      | ^\n",
+  "fixture_count": 4,
+  "features_per_fixture": 18,
+  "all_72_float32_features_exact": true,
+  "feature_fixture_details": [
+    {
+      "id": 0,
+      "T": 600,
+      "now": 83,
+      "arrival": 17,
+      "deadline": 250,
+      "forecast_tick": 76,
+      "n": 7,
+      "roots": 2,
+      "value": 1200,
+      "raw_rem": 55,
+      "cached_rem": 58.210751745941266,
+      "work": 1000,
+      "cost": 450,
+      "rev": 930,
+      "factor": 1.3,
+      "preparation": 6,
+      "warm": 1,
+      "cores": 4,
+      "estimate": 9,
+      "zin": 25,
+      "distance": 2,
+      "Unet": 3,
+      "parents": [
+        -1,
+        3,
+        3,
+        0
+      ],
+      "tenant": 1,
+      "quota": [
+        72,
+        25,
+        1,
+        40
+      ],
+      "used": [
+        60,
+        7,
+        1,
+        28
+      ],
+      "features": [
+        7,
+        0.285714298,
+        0.375,
+        0.239550412,
+        0.774999976,
+        0.400000006,
+        0.16460906,
+        0.479999989,
+        0.405000001,
+        0.138333336,
+        1.29999995,
+        0.687242806,
+        0.159999996,
+        0.0246913582,
+        0.125,
+        0.0481481478,
+        0.0116666667,
+        1
+      ],
+      "prediction": [
+        0.7126421735592867,
+        0.32835675552239896
+      ],
+      "public_state_unchanged": true,
+      "python_features": [
+        7.0,
+        0.2857142984867096,
+        0.375,
+        0.2395504117012024,
+        0.7749999761581421,
+        0.4000000059604645,
+        0.16460905969142914,
+        0.47999998927116394,
+        0.4050000011920929,
+        0.13833333551883698,
+        1.2999999523162842,
+        0.6872428059577942,
+        0.1599999964237213,
+        0.02469135820865631,
+        0.125,
+        0.04814814776182175,
+        0.011666666716337204,
+        1.0
+      ],
+      "float32_exact": true,
+      "window": 243,
+      "path": [
+        1,
+        3,
+        0
+      ],
+      "path_quota": 25,
+      "headroom": 12
+    },
+    {
+      "id": 1,
+      "T": 400,
+      "now": 210,
+      "arrival": 30,
+      "deadline": 390,
+      "forecast_tick": 203,
+      "n": 7,
+      "roots": 2,
+      "value": 1200,
+      "raw_rem": 90,
+      "cached_rem": 95.25395740244934,
+      "work": 2400,
+      "cost": 620,
+      "rev": 1100,
+      "factor": 2.25,
+      "preparation": 14,
+      "warm": 0,
+      "cores": 4,
+      "estimate": 9,
+      "zin": 25,
+      "distance": 3,
+      "Unet": 3,
+      "parents": [
+        -1,
+        3,
+        3,
+        0
+      ],
+      "tenant": 1,
+      "quota": [
+        100,
+        60,
+        1,
+        30
+      ],
+      "used": [
+        80,
+        10,
+        1,
+        5
+      ],
+      "features": [
+        7,
+        0.285714298,
+        0.516666651,
+        0.501336634,
+        0.916666687,
+        0.400000006,
+        0.421052635,
+        0.666666687,
+        0.474999994,
+        0.524999976,
+        2.25,
+        0.947368443,
+        0.13333334,
+        0.0736842081,
+        0.1875,
+        0.106578946,
+        0.0175000001,
+        0
+      ],
+      "prediction": [
+        0.7126421735592867,
+        0.32835675552239896
+      ],
+      "public_state_unchanged": true,
+      "python_features": [
+        7.0,
+        0.2857142984867096,
+        0.5166666507720947,
+        0.5013366341590881,
+        0.9166666865348816,
+        0.4000000059604645,
+        0.42105263471603394,
+        0.6666666865348816,
+        0.4749999940395355,
+        0.5249999761581421,
+        2.25,
+        0.9473684430122375,
+        0.13333334028720856,
+        0.0736842080950737,
+        0.1875,
+        0.10657894611358643,
+        0.017500000074505806,
+        0.0
+      ],
+      "float32_exact": true,
+      "window": 190,
+      "path": [
+        1,
+        3,
+        0
+      ],
+      "path_quota": 30,
+      "headroom": 20
+    },
+    {
+      "id": 2,
+      "T": 400,
+      "now": 397,
+      "arrival": 20,
+      "deadline": 300,
+      "forecast_tick": 390,
+      "n": 7,
+      "roots": 2,
+      "value": 1200,
+      "raw_rem": 9,
+      "cached_rem": 9.525395740244933,
+      "work": 80,
+      "cost": 450,
+      "rev": 600,
+      "factor": 0.75,
+      "preparation": 3,
+      "warm": 1,
+      "cores": 4,
+      "estimate": 9,
+      "zin": 10,
+      "distance": 4,
+      "Unet": 3,
+      "parents": [
+        -1,
+        3,
+        3,
+        0
+      ],
+      "tenant": 1,
+      "quota": [
+        200,
+        20,
+        1,
+        100
+      ],
+      "used": [
+        190,
+        3,
+        1,
+        95
+      ],
+      "features": [
+        7,
+        0.285714298,
+        0.375,
+        9.52539539,
+        0.5,
+        0.125,
+        4,
+        0.25,
+        0.00249999994,
+        0.992500007,
+        0.75,
+        -97,
+        0.200000003,
+        3,
+        0.100000001,
+        6.75,
+        0.0175000001,
+        1
+      ],
+      "prediction": [
+        0.44372626647599256,
+        0.11835382503280145
+      ],
+      "public_state_unchanged": true,
+      "python_features": [
+        7.0,
+        0.2857142984867096,
+        0.375,
+        9.525395393371582,
+        0.5,
+        0.125,
+        4.0,
+        0.25,
+        0.0024999999441206455,
+        0.9925000071525574,
+        0.75,
+        -97.0,
+        0.20000000298023224,
+        3.0,
+        0.10000000149011612,
+        6.75,
+        0.017500000074505806,
+        1.0
+      ],
+      "float32_exact": true,
+      "window": 1,
+      "path": [
+        1,
+        3,
+        0
+      ],
+      "path_quota": 20,
+      "headroom": 5
+    },
+    {
+      "id": 3,
+      "T": 600,
+      "now": 599,
+      "arrival": 60,
+      "deadline": 700,
+      "forecast_tick": 599,
+      "n": 7,
+      "roots": 2,
+      "value": 1200,
+      "raw_rem": 3,
+      "cached_rem": 3.175131913414978,
+      "work": 40,
+      "cost": 170,
+      "rev": 1000,
+      "factor": 1.1,
+      "preparation": 0,
+      "warm": 0,
+      "cores": 4,
+      "estimate": 9,
+      "zin": 0,
+      "distance": 2,
+      "Unet": 3,
+      "parents": [
+        -1,
+        3,
+        3,
+        0
+      ],
+      "tenant": 1,
+      "quota": [
+        999,
+        40,
+        1,
+        80
+      ],
+      "used": [
+        900,
+        2,
+        1,
+        50
+      ],
+      "features": [
+        7,
+        0.285714298,
+        0.141666666,
+        3.1751318,
+        0.833333313,
+        0.691666663,
+        1,
+        0.75,
+        0.00166666671,
+        0.998333335,
+        1.10000002,
+        101,
+        0.100000001,
+        0,
+        0,
+        9.89999962,
+        0,
+        0
+      ],
+      "prediction": [
+        0.8966337812252856,
+        0.5456300912110263
+      ],
+      "public_state_unchanged": true,
+      "python_features": [
+        7.0,
+        0.2857142984867096,
+        0.14166666567325592,
+        3.1751317977905273,
+        0.8333333134651184,
+        0.6916666626930237,
+        1.0,
+        0.75,
+        0.0016666667070239782,
+        0.9983333349227905,
+        1.100000023841858,
+        101.0,
+        0.10000000149011612,
+        0.0,
+        0.0,
+        9.899999618530273,
+        0.0,
+        0.0
+      ],
+      "float32_exact": true,
+      "window": 1,
+      "path": [
+        1,
+        3,
+        0
+      ],
+      "path_quota": 40,
+      "headroom": 30
+    }
+  ],
+  "tree_vectors": 93,
+  "fit_sample_vectors": 72,
+  "split_boundary_vectors": 21,
+  "all_tree_predictions_exact": true,
+  "tree_vector_descriptions": [
+    {
+      "type": "fit_sample",
+      "row": 0
+    },
+    {
+      "type": "fit_sample",
+      "row": 1
+    },
+    {
+      "type": "fit_sample",
+      "row": 4
+    },
+    {
+      "type": "fit_sample",
+      "row": 11
+    },
+    {
+      "type": "fit_sample",
+      "row": 12
+    },
+    {
+      "type": "fit_sample",
+      "row": 13
+    },
+    {
+      "type": "fit_sample",
+      "row": 14
+    },
+    {
+      "type": "fit_sample",
+      "row": 17
+    },
+    {
+      "type": "fit_sample",
+      "row": 53
+    },
+    {
+      "type": "fit_sample",
+      "row": 309
+    },
+    {
+      "type": "fit_sample",
+      "row": 567
+    },
+    {
+      "type": "fit_sample",
+      "row": 1474
+    },
+    {
+      "type": "fit_sample",
+      "row": 2241
+    },
+    {
+      "type": "fit_sample",
+      "row": 2290
+    },
+    {
+      "type": "fit_sample",
+      "row": 2345
+    },
+    {
+      "type": "fit_sample",
+      "row": 2411
+    },
+    {
+      "type": "fit_sample",
+      "row": 2945
+    },
+    {
+      "type": "fit_sample",
+      "row": 3049
+    },
+    {
+      "type": "fit_sample",
+      "row": 4746
+    },
+    {
+      "type": "fit_sample",
+      "row": 4914
+    },
+    {
+      "type": "fit_sample",
+      "row": 6014
+    },
+    {
+      "type": "fit_sample",
+      "row": 6169
+    },
+    {
+      "type": "fit_sample",
+      "row": 7253
+    },
+    {
+      "type": "fit_sample",
+      "row": 8148
+    },
+    {
+      "type": "fit_sample",
+      "row": 8994
+    },
+    {
+      "type": "fit_sample",
+      "row": 9574
+    },
+    {
+      "type": "fit_sample",
+      "row": 9592
+    },
+    {
+      "type": "fit_sample",
+      "row": 9776
+    },
+    {
+      "type": "fit_sample",
+      "row": 10284
+    },
+    {
+      "type": "fit_sample",
+      "row": 10363
+    },
+    {
+      "type": "fit_sample",
+      "row": 12268
+    },
+    {
+      "type": "fit_sample",
+      "row": 12787
+    },
+    {
+      "type": "fit_sample",
+      "row": 13187
+    },
+    {
+      "type": "fit_sample",
+      "row": 15021
+    },
+    {
+      "type": "fit_sample",
+      "row": 15286
+    },
+    {
+      "type": "fit_sample",
+      "row": 15461
+    },
+    {
+      "type": "fit_sample",
+      "row": 15784
+    },
+    {
+      "type": "fit_sample",
+      "row": 15986
+    },
+    {
+      "type": "fit_sample",
+      "row": 16800
+    },
+    {
+      "type": "fit_sample",
+      "row": 17391
+    },
+    {
+      "type": "fit_sample",
+      "row": 17476
+    },
+    {
+      "type": "fit_sample",
+      "row": 19532
+    },
+    {
+      "type": "fit_sample",
+      "row": 19769
+    },
+    {
+      "type": "fit_sample",
+      "row": 20953
+    },
+    {
+      "type": "fit_sample",
+      "row": 21997
+    },
+    {
+      "type": "fit_sample",
+      "row": 22717
+    },
+    {
+      "type": "fit_sample",
+      "row": 22837
+    },
+    {
+      "type": "fit_sample",
+      "row": 23364
+    },
+    {
+      "type": "fit_sample",
+      "row": 23463
+    },
+    {
+      "type": "fit_sample",
+      "row": 24777
+    },
+    {
+      "type": "fit_sample",
+      "row": 24976
+    },
+    {
+      "type": "fit_sample",
+      "row": 25902
+    },
+    {
+      "type": "fit_sample",
+      "row": 26372
+    },
+    {
+      "type": "fit_sample",
+      "row": 27509
+    },
+    {
+      "type": "fit_sample",
+      "row": 29423
+    },
+    {
+      "type": "fit_sample",
+      "row": 30120
+    },
+    {
+      "type": "fit_sample",
+      "row": 30208
+    },
+    {
+      "type": "fit_sample",
+      "row": 30579
+    },
+    {
+      "type": "fit_sample",
+      "row": 32468
+    },
+    {
+      "type": "fit_sample",
+      "row": 33236
+    },
+    {
+      "type": "fit_sample",
+      "row": 34670
+    },
+    {
+      "type": "fit_sample",
+      "row": 35495
+    },
+    {
+      "type": "fit_sample",
+      "row": 35749
+    },
+    {
+      "type": "fit_sample",
+      "row": 35801
+    },
+    {
+      "type": "fit_sample",
+      "row": 36517
+    },
+    {
+      "type": "fit_sample",
+      "row": 36520
+    },
+    {
+      "type": "fit_sample",
+      "row": 37774
+    },
+    {
+      "type": "fit_sample",
+      "row": 38095
+    },
+    {
+      "type": "fit_sample",
+      "row": 38179
+    },
+    {
+      "type": "fit_sample",
+      "row": 40916
+    },
+    {
+      "type": "fit_sample",
+      "row": 40976
+    },
+    {
+      "type": "fit_sample",
+      "row": 41100
+    },
+    {
+      "type": "split_boundary",
+      "node": 0,
+      "direction": -1
+    },
+    {
+      "type": "split_boundary",
+      "node": 0,
+      "direction": 0
+    },
+    {
+      "type": "split_boundary",
+      "node": 0,
+      "direction": 1
+    },
+    {
+      "type": "split_boundary",
+      "node": 1,
+      "direction": -1
+    },
+    {
+      "type": "split_boundary",
+      "node": 1,
+      "direction": 0
+    },
+    {
+      "type": "split_boundary",
+      "node": 1,
+      "direction": 1
+    },
+    {
+      "type": "split_boundary",
+      "node": 2,
+      "direction": -1
+    },
+    {
+      "type": "split_boundary",
+      "node": 2,
+      "direction": 0
+    },
+    {
+      "type": "split_boundary",
+      "node": 2,
+      "direction": 1
+    },
+    {
+      "type": "split_boundary",
+      "node": 5,
+      "direction": -1
+    },
+    {
+      "type": "split_boundary",
+      "node": 5,
+      "direction": 0
+    },
+    {
+      "type": "split_boundary",
+      "node": 5,
+      "direction": 1
+    },
+    {
+      "type": "split_boundary",
+      "node": 8,
+      "direction": -1
+    },
+    {
+      "type": "split_boundary",
+      "node": 8,
+      "direction": 0
+    },
+    {
+      "type": "split_boundary",
+      "node": 8,
+      "direction": 1
+    },
+    {
+      "type": "split_boundary",
+      "node": 9,
+      "direction": -1
+    },
+    {
+      "type": "split_boundary",
+      "node": 9,
+      "direction": 0
+    },
+    {
+      "type": "split_boundary",
+      "node": 9,
+      "direction": 1
+    },
+    {
+      "type": "split_boundary",
+      "node": 12,
+      "direction": -1
+    },
+    {
+      "type": "split_boundary",
+      "node": 12,
+      "direction": 0
+    },
+    {
+      "type": "split_boundary",
+      "node": 12,
+      "direction": 1
+    }
+  ],
+  "sources_unchanged": true,
+  "interaction_benchmarks_run": 0,
+  "note": "Only four deterministic feature fixtures and existing training sample/split-boundary predictor queries; not a full replay of every pre-RUN state. Renamed included main may warn about its implicit return; production sources are unchanged."
+}

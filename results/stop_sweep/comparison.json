@@ -1,0 +1,183 @@
+{
+  "default": {
+    "name": "default",
+    "env": {},
+    "ok": true,
+    "profit": 24834780,
+    "max_cpu": 0.6875,
+    "profits": {
+      "fast_00": 10711549,
+      "heavy_00": 2830434,
+      "large_00": 3032173,
+      "light_00": 1635533,
+      "slow_00": 331953,
+      "small_00": 124424,
+      "standard_00": 1870903,
+      "unstable_00": 4297811
+    }
+  },
+  "stop_1": {
+    "name": "stop_1",
+    "env": {
+      "SR_STOP": 1
+    },
+    "ok": true,
+    "profit": 24816895,
+    "max_cpu": 0.75,
+    "profits": {
+      "fast_00": 10533712,
+      "heavy_00": 2963705,
+      "large_00": 3089337,
+      "light_00": 1583099,
+      "slow_00": 380925,
+      "small_00": 120423,
+      "standard_00": 1829926,
+      "unstable_00": 4315768
+    },
+    "mean_ratio": 1.0143653132750867,
+    "median_ratio": 0.9937879064038939,
+    "wins": 4,
+    "min_ratio": 0.9678438243425705
+  },
+  "stop_15": {
+    "name": "stop_15",
+    "env": {
+      "SR_STOP": 1.5
+    },
+    "ok": true,
+    "profit": 24901522,
+    "max_cpu": 0.78125,
+    "profits": {
+      "fast_00": 10590180,
+      "heavy_00": 2980213,
+      "large_00": 3065812,
+      "light_00": 1600874,
+      "slow_00": 380813,
+      "small_00": 104732,
+      "standard_00": 1890084,
+      "unstable_00": 4288814
+    },
+    "mean_ratio": 1.003571566083056,
+    "median_ratio": 1.0040794386466745,
+    "wins": 4,
+    "min_ratio": 0.8417347135600849
+  },
+  "stop_2": {
+    "name": "stop_2",
+    "env": {
+      "SR_STOP": 2
+    },
+    "ok": true,
+    "profit": 24894381,
+    "max_cpu": 0.6875,
+    "profits": {
+      "fast_00": 10622147,
+      "heavy_00": 2898279,
+      "large_00": 3072235,
+      "light_00": 1595616,
+      "slow_00": 391086,
+      "small_00": 109678,
+      "standard_00": 1887046,
+      "unstable_00": 4318294
+    },
+    "mean_ratio": 1.0096808273416586,
+    "median_ratio": 1.006697184150887,
+    "wins": 5,
+    "min_ratio": 0.8814858869671446
+  },
+  "stop_4": {
+    "name": "stop_4",
+    "env": {
+      "SR_STOP": 4
+    },
+    "ok": true,
+    "profit": 24846124,
+    "max_cpu": 0.796875,
+    "profits": {
+      "fast_00": 10634851,
+      "heavy_00": 2977232,
+      "large_00": 3024454,
+      "light_00": 1588801,
+      "slow_00": 359241,
+      "small_00": 110811,
+      "standard_00": 1850976,
+      "unstable_00": 4299758
+    },
+    "mean_ratio": 0.9970229306496077,
+    "median_ratio": 0.9951469959957994,
+    "wins": 3,
+    "min_ratio": 0.8905918472320453
+  },
+  "stop_15_age20": {
+    "name": "stop_15_age20",
+    "env": {
+      "SR_STOP": 1.5,
+      "SR_STOP_AGE": 20
+    },
+    "ok": true,
+    "profit": 25037924,
+    "max_cpu": 0.71875,
+    "profits": {
+      "fast_00": 10599095,
+      "heavy_00": 2924992,
+      "large_00": 3046852,
+      "light_00": 1619171,
+      "slow_00": 408659,
+      "small_00": 113350,
+      "standard_00": 1951072,
+      "unstable_00": 4374733
+    },
+    "mean_ratio": 1.027570919078828,
+    "median_ratio": 1.0113695155650593,
+    "wins": 5,
+    "min_ratio": 0.9109978782228509
+  },
+  "stop_2_age10": {
+    "name": "stop_2_age10",
+    "env": {
+      "SR_STOP": 2,
+      "SR_STOP_AGE": 10
+    },
+    "ok": true,
+    "profit": 24921594,
+    "max_cpu": 0.78125,
+    "profits": {
+      "fast_00": 10571071,
+      "heavy_00": 2934435,
+      "large_00": 3055989,
+      "light_00": 1600778,
+      "slow_00": 390549,
+      "small_00": 109869,
+      "standard_00": 1856490,
+      "unstable_00": 4402413
+    },
+    "mean_ratio": 1.0108010350580603,
+    "median_ratio": 1.0000753332654926,
+    "wins": 4,
+    "min_ratio": 0.883020960586382
+  },
+  "stop_2_scale11": {
+    "name": "stop_2_scale11",
+    "env": {
+      "SR_STOP": 2,
+      "SR_DURATION": 1.1
+    },
+    "ok": true,
+    "profit": 24775529,
+    "max_cpu": 0.78125,
+    "profits": {
+      "fast_00": 10511368,
+      "heavy_00": 2941201,
+      "large_00": 3092326,
+      "light_00": 1558101,
+      "slow_00": 393426,
+      "small_00": 132330,
+      "standard_00": 1832668,
+      "unstable_00": 4314109
+    },
+    "mean_ratio": 1.0281278457743661,
+    "median_ratio": 1.0118152055246128,
+    "wins": 5,
+    "min_ratio": 0.9526564123132948
+  }
+}

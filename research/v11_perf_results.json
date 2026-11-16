@@ -1,0 +1,249 @@
+{
+  "training": [
+    {
+      "name": "memo",
+      "all_full_reports_equal": true,
+      "runs": 16,
+      "audit_total": 27953,
+      "total_cpu": 2.609375,
+      "max_cpu": 0.46875
+    },
+    {
+      "name": "o3",
+      "all_full_reports_equal": true,
+      "runs": 16,
+      "audit_total": 27953,
+      "total_cpu": 2.453125,
+      "max_cpu": 0.421875
+    }
+  ],
+  "paired_pressure_runs": 36,
+  "all_reports_identical": true,
+  "all_ok": true,
+  "audit_total": 118440,
+  "total_cpu": {
+    "base": 3.25,
+    "memo": 3.484375,
+    "o3": 3.421875
+  },
+  "relative_total_cpu": {
+    "base": 1.0,
+    "memo": 1.0721153846153846,
+    "o3": 1.0528846153846154
+  },
+  "case_median_cpu": {
+    "failures": {
+      "base": 0.3125,
+      "memo": 0.34375,
+      "o3": 0.3125
+    },
+    "logs_audits": {
+      "base": 0.265625,
+      "memo": 0.296875,
+      "o3": 0.28125
+    },
+    "max_topology": {
+      "base": 0.328125,
+      "memo": 0.359375,
+      "o3": 0.375
+    },
+    "slow_costly": {
+      "base": 0.15625,
+      "memo": 0.1875,
+      "o3": 0.1875
+    }
+  },
+  "order": "3 rotated repetitions percase,base/memo/O3 interleaved,all workers1",
+  "configs": {
+    "base": {
+      "exe": ".\\build\\v10_input_fix.exe",
+      "exe_sha256": "9cb5b6a5b73e7732fdf2e959929b158fcfc97b3abd58fc0debf0a3924ee17b6c"
+    },
+    "memo": {
+      "exe": ".\\build\\v11_perf_memo.exe",
+      "exe_sha256": "8197943f909fe1c1682f13f2ecb9352886a1584c0a662483cb709b935c9a8ea1"
+    },
+    "o3": {
+      "exe": ".\\build\\v11_perf_o3.exe",
+      "exe_sha256": "6c76592be90d73222393d3adc78cfcb0806735a7ca7cecaab0381593d3830515"
+    }
+  },
+  "official_submission_sent": false,
+  "current_profile": [
+    {
+      "case": "fast_00",
+      "all_full_reports_equal": true,
+      "counters": {
+        "schedule": {
+          "calls": 500,
+          "samples": 500,
+          "sample_ns": 250315000,
+          "estimate_ns": 250315000
+        },
+        "tryPlace": {
+          "calls": 314131,
+          "samples": 9817,
+          "sample_ns": 5632000,
+          "estimate_ns": 180216541
+        },
+        "flowEstimate": {
+          "calls": 86470,
+          "samples": 2703,
+          "sample_ns": 837000,
+          "estimate_ns": 26775948
+        },
+        "transferCost": {
+          "calls": 3701743,
+          "samples": 28920,
+          "sample_ns": 1036000,
+          "estimate_ns": 132607391
+        },
+        "waitFor": {
+          "calls": 2511089,
+          "samples": 19618,
+          "sample_ns": 754000,
+          "estimate_ns": 96511423
+        },
+        "cacheHit": {
+          "calls": 271888,
+          "samples": 1063,
+          "sample_ns": 44000,
+          "estimate_ns": 11254065
+        },
+        "cachePut": {
+          "calls": 87347,
+          "samples": 342,
+          "sample_ns": 16000,
+          "estimate_ns": 4086409
+        },
+        "decode": {
+          "calls": 15616,
+          "samples": 244,
+          "sample_ns": 284000,
+          "estimate_ns": 18176000
+        }
+      },
+      "quote_calls": 997946,
+      "version_hits": 592806,
+      "version_hit_ratio": 0.5940261296703429,
+      "quote_layer_visits": 4429261
+    },
+    {
+      "case": "large_01",
+      "all_full_reports_equal": true,
+      "counters": {
+        "schedule": {
+          "calls": 600,
+          "samples": 600,
+          "sample_ns": 255657000,
+          "estimate_ns": 255657000
+        },
+        "tryPlace": {
+          "calls": 190419,
+          "samples": 5951,
+          "sample_ns": 4505000,
+          "estimate_ns": 144150158
+        },
+        "flowEstimate": {
+          "calls": 128833,
+          "samples": 4027,
+          "sample_ns": 1362000,
+          "estimate_ns": 43573515
+        },
+        "transferCost": {
+          "calls": 3646176,
+          "samples": 28486,
+          "sample_ns": 1047000,
+          "estimate_ns": 134014823
+        },
+        "waitFor": {
+          "calls": 1437803,
+          "samples": 11233,
+          "sample_ns": 403000,
+          "estimate_ns": 51583246
+        },
+        "cacheHit": {
+          "calls": 321105,
+          "samples": 1255,
+          "sample_ns": 65000,
+          "estimate_ns": 16630936
+        },
+        "cachePut": {
+          "calls": 111078,
+          "samples": 434,
+          "sample_ns": 23000,
+          "estimate_ns": 5886622
+        },
+        "decode": {
+          "calls": 33643,
+          "samples": 526,
+          "sample_ns": 626000,
+          "estimate_ns": 40039007
+        }
+      },
+      "quote_calls": 466910,
+      "version_hits": 177623,
+      "version_hit_ratio": 0.3804223512025872,
+      "quote_layer_visits": 1979090
+    },
+    {
+      "case": "max_topology",
+      "all_full_reports_equal": true,
+      "counters": {
+        "schedule": {
+          "calls": 600,
+          "samples": 600,
+          "sample_ns": 203217000,
+          "estimate_ns": 203217000
+        },
+        "tryPlace": {
+          "calls": 222376,
+          "samples": 6950,
+          "sample_ns": 3186000,
+          "estimate_ns": 101940997
+        },
+        "flowEstimate": {
+          "calls": 119611,
+          "samples": 3738,
+          "sample_ns": 1280000,
+          "estimate_ns": 40958287
+        },
+        "transferCost": {
+          "calls": 2635252,
+          "samples": 20588,
+          "sample_ns": 772000,
+          "estimate_ns": 98815550
+        },
+        "waitFor": {
+          "calls": 908349,
+          "samples": 7097,
+          "sample_ns": 284000,
+          "estimate_ns": 36349318
+        },
+        "cacheHit": {
+          "calls": 319487,
+          "samples": 1248,
+          "sample_ns": 58000,
+          "estimate_ns": 14847953
+        },
+        "cachePut": {
+          "calls": 105277,
+          "samples": 412,
+          "sample_ns": 23000,
+          "estimate_ns": 5877114
+        },
+        "decode": {
+          "calls": 24658,
+          "samples": 386,
+          "sample_ns": 468000,
+          "estimate_ns": 29896227
+        }
+      },
+      "quote_calls": 418784,
+      "version_hits": 139636,
+      "version_hit_ratio": 0.3334320317872698,
+      "quote_layer_visits": 2041316
+    }
+  ],
+  "decision": "Reject both membership memo and generic O3 pragma: exact reports preserved, no measured pressure CPU benefit; no combination tested."
+}

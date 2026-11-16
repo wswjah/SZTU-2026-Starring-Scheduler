@@ -1,0 +1,14 @@
+{
+  "record_type": "sanitized_public_official_result",
+  "variant": "v6_attributed96",
+  "official_score": 96,
+  "solution_id": 543902,
+  "date": "2026-11-15",
+  "language": "C++",
+  "original_source_file": "versions/v6_attributed96/submit.cpp",
+  "original_source_sha256": "ec22e8889720e58ff2c05bbf8177778d53510e8ecff4236fac755f8ecaf6d703",
+  "original_source_bytes": 16926,
+  "public_source_note": "Leading comments relocated;use PUBLICATION_MANIFEST.json for published source checksum",
+  "per_case_feedback_public": false,
+  "privacy_note": "Personal identifiers,login/submission transaction details and full answer sheets are excluded"
+}

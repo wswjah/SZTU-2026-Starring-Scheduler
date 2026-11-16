@@ -1,0 +1,12 @@
+{
+  "place": {
+    "source": "candidates\\v4_terminal_place.cpp",
+    "source_sha256": "53262cbcae44e053750c07f2e0bb496a28fdecd944947a492c9d9440261b4aad",
+    "baseline_sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c"
+  },
+  "rescue": {
+    "source": "candidates\\v4_terminal_rescue.cpp",
+    "source_sha256": "d5bbbee035da1b1fef144d09a7bb0edf285637cd808242d1c897ee478581c4fd",
+    "baseline_sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c"
+  }
+}

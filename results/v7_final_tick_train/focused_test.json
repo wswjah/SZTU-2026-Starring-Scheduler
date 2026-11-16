@@ -1,0 +1,16 @@
+{
+  "test": "tools/test_v7_final_tick.cpp",
+  "test_exe_sha256": "9d22d91debac7e7a4dbc9fcfedb67f0b3372755f3c79993c4ddc159ec2a84953",
+  "returncode": 0,
+  "stdout": "final_tick cleanup: horizon, budget and deferred DONE passed\n",
+  "stderr": "",
+  "production_source_sha256": "5400f2629930633c62ba9aad79434e00c8f02432b239432877ee1e28f2deb996",
+  "checks": [
+    "T tick kills all running jobs within budget",
+    "No new RUN at T",
+    "20000 command limit respected",
+    "DONE remains DONE",
+    "Pending deferred stop applied once",
+    "Future-rate/quota and actual affine bill reconcile"
+  ]
+}

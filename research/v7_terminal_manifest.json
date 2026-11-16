@@ -1,0 +1,14 @@
+[
+  {
+    "variant": "v7_terminal_rescue",
+    "source": ".\\candidates\\v7_terminal_rescue.cpp",
+    "sha256": "d0053e74fc811ef6f3a1c39ba035068d7ad521343eae3b3b632468a19284616b",
+    "base_sha256": "65be27cdc374c30c8434b335c3895ebf661eca1a0d8e1394523237124df56fab"
+  },
+  {
+    "variant": "v7_terminal_conditioned",
+    "source": ".\\candidates\\v7_terminal_conditioned.cpp",
+    "sha256": "e43ab647fc7e60435a320d68ef3246906ce74b255a809c681cb236cdd8593300",
+    "base_sha256": "65be27cdc374c30c8434b335c3895ebf661eca1a0d8e1394523237124df56fab"
+  }
+]

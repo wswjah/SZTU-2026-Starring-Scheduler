@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-14",
+  "authorized_new_submissions": 2,
+  "base": ".\\candidates\\v3_perf_combo.cpp",
+  "base_sha256": "fded4f1d7b69b4137a4f8faba1c0fcd351c4b69a14425e4b3e81697f507fa049",
+  "original_84_submission": 543386,
+  "variants": {
+    "aggressive": {
+      "cost_factor": 1.1,
+      "source": ".\\versions\\v3_aggressive\\main.cpp",
+      "source_sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c",
+      "other_policy_parameters": "identical to the official 84-point source",
+      "packed": {
+        "path": ".\\versions\\v3_aggressive\\submit.cpp",
+        "bytes": 55042,
+        "sha256": "7bf5ae764011c792b471bd03b49f6fb2b44603dec955deea019a7c8d3cb2ee8f"
+      },
+      "executable": {
+        "path": ".\\build\\v3_submission_aggressive.exe",
+        "bytes": 675979,
+        "sha256": "2290965cbb64c84c27159b2339c44977f95b616177547dea466b5bb3b7caf2be"
+      },
+      "validation": {
+        "runs": 34,
+        "all_ok": true,
+        "train_exactly_matches_selected_strategy": true,
+        "audit_total": 62174,
+        "illegal_commands": 0,
+        "audit_errors": 0,
+        "train": {
+          "case_count": 14,
+          "total_profit_increase_pct": -0.29890092524392786,
+          "improved": 7,
+          "regressed": 7,
+          "median_profit_ratio": 0.9981310603973579,
+          "max_cpu": 0.71875
+        },
+        "v3_validation": {
+          "case_count": 12,
+          "total_profit_increase_pct": -0.32730108557729176,
+          "improved": 3,
+          "regressed": 9,
+          "median_profit_ratio": 0.9933714256004493,
+          "max_cpu": 0.71875
+        },
+        "stress": {
+          "case_count": 4,
+          "total_profit_increase_pct": -0.31037144008095874,
+          "improved": 2,
+          "regressed": 2,
+          "median_profit_ratio": 0.998152789343204,
+          "max_cpu": 0.84375
+        }
+      },
+      "official_submission_id": 543440,
+      "official_state": "completed",
+      "official_score": 85,
+      "official_record": "research/official_v3_aggressive.json"
+    },
+    "conservative": {
+      "cost_factor": 1.35,
+      "source": ".\\versions\\v3_conservative\\main.cpp",
+      "source_sha256": "ee725a494937c36e5ba00b4e092ae277918b873c32fce2bd5ef6f699e5efb72a",
+      "other_policy_parameters": "identical to the official 84-point source",
+      "packed": {
+        "path": ".\\versions\\v3_conservative\\submit.cpp",
+        "bytes": 55044,
+        "sha256": "eb5912ff6573b1ec94601b82ec25e46b71423cedc97ad3a7383e9ae57b913469"
+      },
+      "executable": {
+        "path": ".\\build\\v3_submission_conservative.exe",
+        "bytes": 675979,
+        "sha256": "bae312c1571de832d029ff23e64b2eea016d6e3ce6dfcb63a573b6fdc57288c7"
+      },
+      "validation": {
+        "runs": 34,
+        "all_ok": true,
+        "train_exactly_matches_selected_strategy": true,
+        "audit_total": 62174,
+        "illegal_commands": 0,
+        "audit_errors": 0,
+        "train": {
+          "case_count": 14,
+          "total_profit_increase_pct": -0.5330765281368999,
+          "improved": 6,
+          "regressed": 8,
+          "median_profit_ratio": 0.9996845340728675,
+          "max_cpu": 0.6875
+        },
+        "v3_validation": {
+          "case_count": 12,
+          "total_profit_increase_pct": 0.3488643266831293,
+          "improved": 7,
+          "regressed": 5,
+          "median_profit_ratio": 1.010633608146805,
+          "max_cpu": 0.671875
+        },
+        "stress": {
+          "case_count": 4,
+          "total_profit_increase_pct": 1.011059349741772,
+          "improved": 2,
+          "regressed": 2,
+          "median_profit_ratio": 1.003096759681367,
+          "max_cpu": 0.890625
+        }
+      },
+      "official_state": "completed",
+      "official_score": 84,
+      "official_submission_id": 543441,
+      "official_record": "research/official_v3_conservative.json"
+    }
+  },
+  "frozen_at": "2026-11-14",
+  "new_submission_posts_sent": 2,
+  "best_official_score": 85,
+  "best_variant": "aggressive",
+  "remaining_submissions": 7
+}

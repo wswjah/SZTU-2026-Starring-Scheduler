@@ -1,0 +1,155 @@
+{
+  "baseline": ".\\results\\v10_input_verification\\stress\\original99",
+  "candidate": ".\\results\\v10_input_verification\\stress\\fixed",
+  "case_count": 4,
+  "cases": [
+    "failures",
+    "logs_audits",
+    "max_topology",
+    "slow_costly"
+  ],
+  "baseline_total_profit": 27195090,
+  "candidate_total_profit": 27195090,
+  "total_profit_delta": 0,
+  "total_profit_increase_pct": 0.0,
+  "mean_profit_ratio": 1.0,
+  "median_profit_ratio": 1.0,
+  "equal_weight_increase_pct": 0.0,
+  "ratio_undefined_cases": [],
+  "improved": 0,
+  "regressed": 0,
+  "unchanged": 4,
+  "scope_policy": {
+    "log_limit": 3000000,
+    "binary_log_limit_reference": 3145728,
+    "description": "Conservatively interpret 3 MB as 3,000,000 decoded characters. Exclude a case from valid_range_summary if either run exceeds any checked bound; retain all cases in overall totals.",
+    "static_evidence": "Parameter input and available actual initialization manifest; fields absent from both remain unchecked."
+  },
+  "valid_range_summary": {
+    "case_count": 4,
+    "cases": [
+      "failures",
+      "logs_audits",
+      "max_topology",
+      "slow_costly"
+    ],
+    "baseline_total_profit": 27195090,
+    "candidate_total_profit": 27195090,
+    "total_profit_delta": 0,
+    "total_profit_increase_pct": 0.0,
+    "mean_profit_ratio": 1.0,
+    "median_profit_ratio": 1.0,
+    "equal_weight_increase_pct": 0.0,
+    "ratio_undefined_cases": [],
+    "improved": 0,
+    "regressed": 0,
+    "unchanged": 4,
+    "baseline_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.390625,
+      "max_peak_memory_bytes": 21094400,
+      "over_one_second": [],
+      "range_violations": {}
+    },
+    "candidate_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.390625,
+      "max_peak_memory_bytes": 21127168,
+      "over_one_second": [],
+      "range_violations": {}
+    }
+  },
+  "boundary_pressure_summary": {
+    "case_count": 0,
+    "cases": [],
+    "baseline_total_profit": 0,
+    "candidate_total_profit": 0,
+    "total_profit_delta": 0,
+    "total_profit_increase_pct": null,
+    "mean_profit_ratio": null,
+    "median_profit_ratio": null,
+    "equal_weight_increase_pct": null,
+    "ratio_undefined_cases": [],
+    "improved": 0,
+    "regressed": 0,
+    "unchanged": 0
+  },
+  "baseline_health": {
+    "all_runs_ok": true,
+    "all_audits_correct": true,
+    "all_commands_legal": true,
+    "audit_errors": 0,
+    "illegal_commands": 0,
+    "max_cpu_seconds": 0.390625,
+    "max_peak_memory_bytes": 21094400,
+    "over_one_second": [],
+    "range_violations": {}
+  },
+  "candidate_health": {
+    "all_runs_ok": true,
+    "all_audits_correct": true,
+    "all_commands_legal": true,
+    "audit_errors": 0,
+    "illegal_commands": 0,
+    "max_cpu_seconds": 0.390625,
+    "max_peak_memory_bytes": 21127168,
+    "over_one_second": [],
+    "range_violations": {}
+  },
+  "unmatched_baseline_cases": [],
+  "unmatched_candidate_cases": [],
+  "rows": [
+    {
+      "case": "failures",
+      "baseline_profit": 6745790,
+      "candidate_profit": 6745790,
+      "delta": 0,
+      "profit_ratio": 1.0,
+      "baseline_cpu_seconds": 0.28125,
+      "candidate_cpu_seconds": 0.390625,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    {
+      "case": "logs_audits",
+      "baseline_profit": 6315325,
+      "candidate_profit": 6315325,
+      "delta": 0,
+      "profit_ratio": 1.0,
+      "baseline_cpu_seconds": 0.296875,
+      "candidate_cpu_seconds": 0.25,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    {
+      "case": "max_topology",
+      "baseline_profit": 11975036,
+      "candidate_profit": 11975036,
+      "delta": 0,
+      "profit_ratio": 1.0,
+      "baseline_cpu_seconds": 0.390625,
+      "candidate_cpu_seconds": 0.359375,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    {
+      "case": "slow_costly",
+      "baseline_profit": 2158939,
+      "candidate_profit": 2158939,
+      "delta": 0,
+      "profit_ratio": 1.0,
+      "baseline_cpu_seconds": 0.1875,
+      "candidate_cpu_seconds": 0.140625,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    }
+  ]
+}

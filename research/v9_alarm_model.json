@@ -1,0 +1,1423 @@
+{
+  "features": [
+    "log_score3",
+    "log_score8",
+    "log_scoreW",
+    "log_peak3",
+    "log_peak8",
+    "density8_relative",
+    "density3_relative",
+    "log_chars8",
+    "log_lines8",
+    "alarm_age"
+  ],
+  "horizons": [
+    3,
+    8,
+    16
+  ],
+  "rows": 1355769,
+  "worlds": [
+    {
+      "case": "fast_00",
+      "T": 500,
+      "M": 183,
+      "W": 40,
+      "rows": 82726,
+      "failures": 68,
+      "positive_rows": [
+        204,
+        544,
+        1088
+      ],
+      "raw_sha256": "30ce5c6dadac403d6569653d151a28ea31491d479b7f9a4ee0e9f2675e6ee9e9"
+    },
+    {
+      "case": "fast_01",
+      "T": 500,
+      "M": 172,
+      "W": 40,
+      "rows": 77250,
+      "failures": 75,
+      "positive_rows": [
+        225,
+        600,
+        1198
+      ],
+      "raw_sha256": "5bc64c8c1bb49ae0bcc404f992f4196280fba8b4be215bf085d2195ba23d3fba"
+    },
+    {
+      "case": "heavy_00",
+      "T": 500,
+      "M": 165,
+      "W": 40,
+      "rows": 74699,
+      "failures": 69,
+      "positive_rows": [
+        207,
+        552,
+        1102
+      ],
+      "raw_sha256": "be97991d8deea7d880d2d3996f00043d40aebecdf8aab57f1ccf716c518e4955"
+    },
+    {
+      "case": "heavy_01",
+      "T": 500,
+      "M": 168,
+      "W": 40,
+      "rows": 75783,
+      "failures": 83,
+      "positive_rows": [
+        249,
+        662,
+        1314
+      ],
+      "raw_sha256": "fe984f9375c8858181c6e36ee6f0e1126b97dbba527b283e7c1248e4423588c9"
+    },
+    {
+      "case": "large_00",
+      "T": 600,
+      "M": 320,
+      "W": 60,
+      "rows": 173874,
+      "failures": 112,
+      "positive_rows": [
+        336,
+        896,
+        1786
+      ],
+      "raw_sha256": "4465e1630a2652b0b787ab6411ae5e6277e3190451fa5ee2db3376f92f436a76"
+    },
+    {
+      "case": "large_01",
+      "T": 600,
+      "M": 320,
+      "W": 60,
+      "rows": 177248,
+      "failures": 128,
+      "positive_rows": [
+        384,
+        1024,
+        2040
+      ],
+      "raw_sha256": "d67b1d1e2864623db2156c4b3ae3d83a4dd7c72b8ec820539f966aeaed751de8"
+    },
+    {
+      "case": "light_00",
+      "T": 500,
+      "M": 193,
+      "W": 40,
+      "rows": 86674,
+      "failures": 67,
+      "positive_rows": [
+        201,
+        536,
+        1072
+      ],
+      "raw_sha256": "88a6d268ad529f5232dace143eb92b35b86a290aea7d5d1bfaf4702478116ed9"
+    },
+    {
+      "case": "light_01",
+      "T": 500,
+      "M": 169,
+      "W": 40,
+      "rows": 74990,
+      "failures": 63,
+      "positive_rows": [
+        189,
+        504,
+        1008
+      ],
+      "raw_sha256": "93a68b2ec33c218a5f99ebb42f38b85999cf4335bff61d57cb7179a56c7fb115"
+    },
+    {
+      "case": "slow_00",
+      "T": 500,
+      "M": 189,
+      "W": 40,
+      "rows": 85223,
+      "failures": 71,
+      "positive_rows": [
+        209,
+        562,
+        1128
+      ],
+      "raw_sha256": "4490663c0ab5874283a1317c59d6754a924ae76cd9f12897de5a46472c63cbb8"
+    },
+    {
+      "case": "slow_01",
+      "T": 500,
+      "M": 197,
+      "W": 40,
+      "rows": 89814,
+      "failures": 86,
+      "positive_rows": [
+        256,
+        681,
+        1361
+      ],
+      "raw_sha256": "909f58ccd60a9c454876d02d7d89a51cf259ce402136cf1b8df8f27678ecca70"
+    },
+    {
+      "case": "small_00",
+      "T": 400,
+      "M": 61,
+      "W": 40,
+      "rows": 19181,
+      "failures": 39,
+      "positive_rows": [
+        116,
+        306,
+        610
+      ],
+      "raw_sha256": "4fb1c0c8fe71a04b3ddb77bce2d77450a232959deeb39437042a2a180b64e6c9"
+    },
+    {
+      "case": "small_01",
+      "T": 400,
+      "M": 64,
+      "W": 40,
+      "rows": 21384,
+      "failures": 40,
+      "positive_rows": [
+        120,
+        320,
+        640
+      ],
+      "raw_sha256": "e2a7629ace48d531735e2eb5f1979bebb56e6bc85387a027625239d4d804da6b"
+    },
+    {
+      "case": "standard_00",
+      "T": 500,
+      "M": 178,
+      "W": 40,
+      "rows": 79385,
+      "failures": 68,
+      "positive_rows": [
+        204,
+        544,
+        1088
+      ],
+      "raw_sha256": "9cc3ba71085b21c29f502f3c2a270ee7164957133a6f5557dd81cb4d1e4361bd"
+    },
+    {
+      "case": "standard_01",
+      "T": 500,
+      "M": 169,
+      "W": 40,
+      "rows": 74501,
+      "failures": 73,
+      "positive_rows": [
+        219,
+        584,
+        1168
+      ],
+      "raw_sha256": "c0e39399a9854d722a41c708a484f5512da6eb62b7511ec5fee63f1278301562"
+    },
+    {
+      "case": "unstable_00",
+      "T": 500,
+      "M": 182,
+      "W": 40,
+      "rows": 82130,
+      "failures": 103,
+      "positive_rows": [
+        307,
+        817,
+        1620
+      ],
+      "raw_sha256": "0ac005d5c95d92916fb4c39cb8cfbe63f01bdc3df5261973bf7c26aebdb95c9d"
+    },
+    {
+      "case": "unstable_01",
+      "T": 500,
+      "M": 184,
+      "W": 40,
+      "rows": 80907,
+      "failures": 121,
+      "positive_rows": [
+        359,
+        954,
+        1906
+      ],
+      "raw_sha256": "b3b68394ed2aa0060935e731bbebc72b316c4dda646431e807000d8ea7984113"
+    }
+  ],
+  "snapshot": "Current and previous observed logs only, after current events and before schedule",
+  "labels": "UP machine at t, any FAIL in (t,t+h]; t>=1 and t+16<=T for all heads",
+  "weights": "Each whole world has equal total training weight; no class balancing",
+  "max_depth": 3,
+  "min_samples_leaf": 500,
+  "folds": [
+    {
+      "fold": 0,
+      "train_worlds": [
+        "fast_00",
+        "heavy_00",
+        "heavy_01",
+        "large_00",
+        "light_00",
+        "light_01",
+        "slow_00",
+        "slow_01",
+        "small_00",
+        "small_01",
+        "standard_00",
+        "unstable_00",
+        "unstable_01"
+      ],
+      "test_worlds": [
+        "fast_01",
+        "large_01",
+        "standard_01"
+      ],
+      "tree_nodes": 15
+    },
+    {
+      "fold": 1,
+      "train_worlds": [
+        "fast_00",
+        "fast_01",
+        "heavy_00",
+        "large_01",
+        "light_00",
+        "light_01",
+        "slow_00",
+        "slow_01",
+        "small_00",
+        "small_01",
+        "standard_01",
+        "unstable_00",
+        "unstable_01"
+      ],
+      "test_worlds": [
+        "heavy_01",
+        "large_00",
+        "standard_00"
+      ],
+      "tree_nodes": 15
+    },
+    {
+      "fold": 2,
+      "train_worlds": [
+        "fast_01",
+        "heavy_00",
+        "heavy_01",
+        "large_00",
+        "large_01",
+        "light_00",
+        "slow_00",
+        "small_00",
+        "standard_00",
+        "standard_01",
+        "unstable_00"
+      ],
+      "test_worlds": [
+        "fast_00",
+        "light_01",
+        "slow_01",
+        "small_01",
+        "unstable_01"
+      ],
+      "tree_nodes": 15
+    },
+    {
+      "fold": 3,
+      "train_worlds": [
+        "fast_00",
+        "fast_01",
+        "heavy_01",
+        "large_00",
+        "large_01",
+        "light_01",
+        "slow_01",
+        "small_01",
+        "standard_00",
+        "standard_01",
+        "unstable_01"
+      ],
+      "test_worlds": [
+        "heavy_00",
+        "light_00",
+        "slow_00",
+        "small_00",
+        "unstable_00"
+      ],
+      "tree_nodes": 15
+    }
+  ],
+  "grouped_oof": {
+    "3": {
+      "weighted_brier": 0.0030930584974587162,
+      "average_precision": 0.04301649417445308,
+      "observed_event_probability": 0.0031887627171993385,
+      "mean_predicted_probability": 0.0031458416552806283
+    },
+    "8": {
+      "weighted_brier": 0.007917843409133525,
+      "average_precision": 0.0956038491286493,
+      "observed_event_probability": 0.00848927565876173,
+      "mean_predicted_probability": 0.008375472347476685
+    },
+    "16": {
+      "weighted_brier": 0.01524974194075853,
+      "average_precision": 0.13803114603612857,
+      "observed_event_probability": 0.016945556846251944,
+      "mean_predicted_probability": 0.016706634528129694
+    }
+  },
+  "grouped_constant": {
+    "3": {
+      "weighted_brier": 0.0031787334250195534,
+      "average_precision": 0.002951200662151595,
+      "observed_event_probability": 0.0031887627171993385,
+      "mean_predicted_probability": 0.003142244466796201
+    },
+    "8": {
+      "weighted_brier": 0.008418184887649276,
+      "average_precision": 0.007857519703445656,
+      "observed_event_probability": 0.00848927565876173,
+      "mean_predicted_probability": 0.008366040394929036
+    },
+    "16": {
+      "weighted_brier": 0.01666234151997423,
+      "average_precision": 0.015674731689644335,
+      "observed_event_probability": 0.016945556846251944,
+      "mean_predicted_probability": 0.01669853357588196
+    }
+  },
+  "per_world_oof": [
+    {
+      "case": "fast_00",
+      "model": {
+        "3": {
+          "weighted_brier": 0.0024120081088618286,
+          "average_precision": 0.02927280633140799,
+          "observed_event_probability": 0.002465972003964897,
+          "mean_predicted_probability": 0.002784240148406433
+        },
+        "8": {
+          "weighted_brier": 0.0062377359930434395,
+          "average_precision": 0.06683066150457752,
+          "observed_event_probability": 0.006575925343906391,
+          "mean_predicted_probability": 0.007450728219208964
+        },
+        "16": {
+          "weighted_brier": 0.012087042430401275,
+          "average_precision": 0.10368986336343083,
+          "observed_event_probability": 0.013151850687812782,
+          "mean_predicted_probability": 0.014971169112653367
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.002460189400195995,
+          "average_precision": 0.0024659720039681816,
+          "observed_event_probability": 0.002465972003964897,
+          "mean_predicted_probability": 0.003012244971844699
+        },
+        "8": {
+          "weighted_brier": 0.006534760943320174,
+          "average_precision": 0.006575925343914936,
+          "observed_event_probability": 0.006575925343906391,
+          "mean_predicted_probability": 0.00801758880755394
+        },
+        "16": {
+          "weighted_brier": 0.012986937129528664,
+          "average_precision": 0.013151850687829071,
+          "observed_event_probability": 0.013151850687812782,
+          "mean_predicted_probability": 0.015990445098855194
+        }
+      }
+    },
+    {
+      "case": "fast_01",
+      "model": {
+        "3": {
+          "weighted_brier": 0.002832833301482755,
+          "average_precision": 0.0363265211211977,
+          "observed_event_probability": 0.0029126213592232993,
+          "mean_predicted_probability": 0.0030572600998034615
+        },
+        "8": {
+          "weighted_brier": 0.0073914241828953895,
+          "average_precision": 0.0639167424061548,
+          "observed_event_probability": 0.007766990291262131,
+          "mean_predicted_probability": 0.008115608187821106
+        },
+        "16": {
+          "weighted_brier": 0.014348477252888183,
+          "average_precision": 0.09406345697112306,
+          "observed_event_probability": 0.015508090614886725,
+          "mean_predicted_probability": 0.016214015441341014
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.002904294172426532,
+          "average_precision": 0.0029126213592227026,
+          "observed_event_probability": 0.0029126213592232993,
+          "mean_predicted_probability": 0.0033078129398989055
+        },
+        "8": {
+          "weighted_brier": 0.007707738486827001,
+          "average_precision": 0.007766990291260695,
+          "observed_event_probability": 0.007766990291262131,
+          "mean_predicted_probability": 0.008803491014577693
+        },
+        "16": {
+          "weighted_brier": 0.01527184878897178,
+          "average_precision": 0.015508090614884352,
+          "observed_event_probability": 0.015508090614886725,
+          "mean_predicted_probability": 0.017571836869781737
+        }
+      }
+    },
+    {
+      "case": "heavy_00",
+      "model": {
+        "3": {
+          "weighted_brier": 0.002723618586959724,
+          "average_precision": 0.025056045265800367,
+          "observed_event_probability": 0.0027711214340218754,
+          "mean_predicted_probability": 0.002886271667892816
+        },
+        "8": {
+          "weighted_brier": 0.00714985972512822,
+          "average_precision": 0.04743912099924589,
+          "observed_event_probability": 0.007389657157391668,
+          "mean_predicted_probability": 0.007704461407277017
+        },
+        "16": {
+          "weighted_brier": 0.014046708988228884,
+          "average_precision": 0.07172595597987558,
+          "observed_event_probability": 0.01475254019464786,
+          "mean_predicted_probability": 0.015424292976809171
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0027635274616578443,
+          "average_precision": 0.002771121434026214,
+          "observed_event_probability": 0.0027711214340218754,
+          "mean_predicted_probability": 0.003062911834933776
+        },
+        "8": {
+          "weighted_brier": 0.007335643449816137,
+          "average_precision": 0.007389657157403083,
+          "observed_event_probability": 0.007389657157391668,
+          "mean_predicted_probability": 0.008159933295057313
+        },
+        "16": {
+          "weighted_brier": 0.014537281988185477,
+          "average_precision": 0.014752540194670316,
+          "observed_event_probability": 0.01475254019464786,
+          "mean_predicted_probability": 0.016295017336235923
+        }
+      }
+    },
+    {
+      "case": "heavy_01",
+      "model": {
+        "3": {
+          "weighted_brier": 0.0031821407459869506,
+          "average_precision": 0.038843721977097165,
+          "observed_event_probability": 0.003285697319979417,
+          "mean_predicted_probability": 0.0035070028650819045
+        },
+        "8": {
+          "weighted_brier": 0.008184152833362084,
+          "average_precision": 0.08074097204485038,
+          "observed_event_probability": 0.008735468376812747,
+          "mean_predicted_probability": 0.009322827761271689
+        },
+        "16": {
+          "weighted_brier": 0.015718824037672455,
+          "average_precision": 0.11730815204193822,
+          "observed_event_probability": 0.017338981037963667,
+          "mean_predicted_probability": 0.01848288318226581
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0032749031023631137,
+          "average_precision": 0.0032856973199830507,
+          "observed_event_probability": 0.003285697319979417,
+          "mean_predicted_probability": 0.003325562871716695
+        },
+        "8": {
+          "weighted_brier": 0.008659173748494623,
+          "average_precision": 0.008735468376822405,
+          "observed_event_probability": 0.008735468376812747,
+          "mean_predicted_probability": 0.008852854254025114
+        },
+        "16": {
+          "weighted_brier": 0.017038455643851896,
+          "average_precision": 0.01733898103798205,
+          "observed_event_probability": 0.017338981037963667,
+          "mean_predicted_probability": 0.017677904809770346
+        }
+      }
+    },
+    {
+      "case": "large_00",
+      "model": {
+        "3": {
+          "weighted_brier": 0.0019106494209920153,
+          "average_precision": 0.034743038677670375,
+          "observed_event_probability": 0.0019324338313951499,
+          "mean_predicted_probability": 0.003517758355704856
+        },
+        "8": {
+          "weighted_brier": 0.004981938973103981,
+          "average_precision": 0.08393685237779266,
+          "observed_event_probability": 0.005153156883720397,
+          "mean_predicted_probability": 0.009210923689136999
+        },
+        "16": {
+          "weighted_brier": 0.009683892828569362,
+          "average_precision": 0.11557157900967417,
+          "observed_event_probability": 0.010271806020451593,
+          "mean_predicted_probability": 0.018018367079022584
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0019306403394054148,
+          "average_precision": 0.0019324338313966012,
+          "observed_event_probability": 0.0019324338313951499,
+          "mean_predicted_probability": 0.003325562871716695
+        },
+        "8": {
+          "weighted_brier": 0.005140289618484001,
+          "average_precision": 0.005153156883724173,
+          "observed_event_probability": 0.005153156883720397,
+          "mean_predicted_probability": 0.008852854254025112
+        },
+        "16": {
+          "weighted_brier": 0.010221146320806956,
+          "average_precision": 0.010271806020458636,
+          "observed_event_probability": 0.010271806020451593,
+          "mean_predicted_probability": 0.017677904809770346
+        }
+      }
+    },
+    {
+      "case": "large_01",
+      "model": {
+        "3": {
+          "weighted_brier": 0.0021132703946652328,
+          "average_precision": 0.04809354257381015,
+          "observed_event_probability": 0.0021664560389962075,
+          "mean_predicted_probability": 0.0037573434134964712
+        },
+        "8": {
+          "weighted_brier": 0.005447779854726039,
+          "average_precision": 0.10565252352156855,
+          "observed_event_probability": 0.0057772161039898896,
+          "mean_predicted_probability": 0.009693825225529376
+        },
+        "16": {
+          "weighted_brier": 0.010435450684114719,
+          "average_precision": 0.1524210635193184,
+          "observed_event_probability": 0.011509297707167356,
+          "mean_predicted_probability": 0.01847283772946464
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0021630652028025426,
+          "average_precision": 0.0021664560389897205,
+          "observed_event_probability": 0.0021664560389962075,
+          "mean_predicted_probability": 0.0033078129398989064
+        },
+        "8": {
+          "weighted_brier": 0.005752998217912142,
+          "average_precision": 0.005777216103972869,
+          "observed_event_probability": 0.0057772161039898896,
+          "mean_predicted_probability": 0.008803491014577697
+        },
+        "16": {
+          "weighted_brier": 0.011413588154553385,
+          "average_precision": 0.011509297707134004,
+          "observed_event_probability": 0.011509297707167356,
+          "mean_predicted_probability": 0.017571836869781737
+        }
+      }
+    },
+    {
+      "case": "light_00",
+      "model": {
+        "3": {
+          "weighted_brier": 0.0022668738256323507,
+          "average_precision": 0.03002397243899255,
+          "observed_event_probability": 0.0023190345432309574,
+          "mean_predicted_probability": 0.0028248170792622186
+        },
+        "8": {
+          "weighted_brier": 0.005911331902615984,
+          "average_precision": 0.06380759766204128,
+          "observed_event_probability": 0.006184092115282555,
+          "mean_predicted_probability": 0.007585345948269863
+        },
+        "16": {
+          "weighted_brier": 0.011525253585205529,
+          "average_precision": 0.09519322434880605,
+          "observed_event_probability": 0.012368184230565106,
+          "mean_predicted_probability": 0.015284713593100957
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0023142099754433704,
+          "average_precision": 0.002319034543229617,
+          "observed_event_probability": 0.0023190345432309574,
+          "mean_predicted_probability": 0.0030629118349337764
+        },
+        "8": {
+          "weighted_brier": 0.006149753068359948,
+          "average_precision": 0.006184092115278808,
+          "observed_event_probability": 0.006184092115282555,
+          "mean_predicted_probability": 0.008159933295057304
+        },
+        "16": {
+          "weighted_brier": 0.012230632267643695,
+          "average_precision": 0.012368184230557248,
+          "observed_event_probability": 0.012368184230565106,
+          "mean_predicted_probability": 0.016295017336235916
+        }
+      }
+    },
+    {
+      "case": "light_01",
+      "model": {
+        "3": {
+          "weighted_brier": 0.002488992504285396,
+          "average_precision": 0.019816655996768944,
+          "observed_event_probability": 0.002520336044805973,
+          "mean_predicted_probability": 0.0025303659746556736
+        },
+        "8": {
+          "weighted_brier": 0.006428912936949768,
+          "average_precision": 0.05776422400559419,
+          "observed_event_probability": 0.006720896119482595,
+          "mean_predicted_probability": 0.00678602357403727
+        },
+        "16": {
+          "weighted_brier": 0.01252084755861912,
+          "average_precision": 0.09448710935061713,
+          "observed_event_probability": 0.013441792238965189,
+          "mean_predicted_probability": 0.013753264598939057
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0025142259254197245,
+          "average_precision": 0.0025203360448037824,
+          "observed_event_probability": 0.002520336044805973,
+          "mean_predicted_probability": 0.0030122449718446966
+        },
+        "8": {
+          "weighted_brier": 0.006677407086761021,
+          "average_precision": 0.006720896119476907,
+          "observed_event_probability": 0.006720896119482595,
+          "mean_predicted_probability": 0.008017588807553933
+        },
+        "16": {
+          "weighted_brier": 0.013267606091769914,
+          "average_precision": 0.013441792238954054,
+          "observed_event_probability": 0.013441792238965189,
+          "mean_predicted_probability": 0.015990445098855173
+        }
+      }
+    },
+    {
+      "case": "slow_00",
+      "model": {
+        "3": {
+          "weighted_brier": 0.0023701595077891408,
+          "average_precision": 0.04642302733444452,
+          "observed_event_probability": 0.002452389613132605,
+          "mean_predicted_probability": 0.0030725451132085128
+        },
+        "8": {
+          "weighted_brier": 0.006116874647783057,
+          "average_precision": 0.10173248333894962,
+          "observed_event_probability": 0.006594463935791982,
+          "mean_predicted_probability": 0.008191539969609639
+        },
+        "16": {
+          "weighted_brier": 0.01192922730919134,
+          "average_precision": 0.13786134900765265,
+          "observed_event_probability": 0.013235863557959707,
+          "mean_predicted_probability": 0.016341439005294982
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0024467481357013177,
+          "average_precision": 0.002452389613132835,
+          "observed_event_probability": 0.002452389613132605,
+          "mean_predicted_probability": 0.0030629118349337747
+        },
+        "8": {
+          "weighted_brier": 0.006553427675506316,
+          "average_precision": 0.006594463935792708,
+          "observed_event_probability": 0.006594463935791982,
+          "mean_predicted_probability": 0.008159933295057303
+        },
+        "16": {
+          "weighted_brier": 0.013070033895673919,
+          "average_precision": 0.013235863557961663,
+          "observed_event_probability": 0.013235863557959707,
+          "mean_predicted_probability": 0.016295017336235913
+        }
+      }
+    },
+    {
+      "case": "slow_01",
+      "model": {
+        "3": {
+          "weighted_brier": 0.002750296960208213,
+          "average_precision": 0.048065834479328766,
+          "observed_event_probability": 0.002850335137061037,
+          "mean_predicted_probability": 0.0029737090929157174
+        },
+        "8": {
+          "weighted_brier": 0.006879672827555377,
+          "average_precision": 0.12528245289185086,
+          "observed_event_probability": 0.007582336829447524,
+          "mean_predicted_probability": 0.007961170307389251
+        },
+        "16": {
+          "weighted_brier": 0.013293827505113232,
+          "average_precision": 0.15948245544707518,
+          "observed_event_probability": 0.015153539537265902,
+          "mean_predicted_probability": 0.01601622405590645
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0028422369414620717,
+          "average_precision": 0.0028503351370566836,
+          "observed_event_probability": 0.002850335137061037,
+          "mean_predicted_probability": 0.003012244971844699
+        },
+        "8": {
+          "weighted_brier": 0.007525034441936772,
+          "average_precision": 0.007582336829435912,
+          "observed_event_probability": 0.007582336829447524,
+          "mean_predicted_probability": 0.008017588807553929
+        },
+        "16": {
+          "weighted_brier": 0.014924610187677436,
+          "average_precision": 0.015153539537242851,
+          "observed_event_probability": 0.015153539537265902,
+          "mean_predicted_probability": 0.01599044509885517
+        }
+      }
+    },
+    {
+      "case": "small_00",
+      "model": {
+        "3": {
+          "weighted_brier": 0.006029479020035569,
+          "average_precision": 0.008145757888045262,
+          "observed_event_probability": 0.006047651321620351,
+          "mean_predicted_probability": 0.0022909854759365226
+        },
+        "8": {
+          "weighted_brier": 0.015769572332354934,
+          "average_precision": 0.02326844740463286,
+          "observed_event_probability": 0.01595328710703299,
+          "mean_predicted_probability": 0.006192442151014524
+        },
+        "16": {
+          "weighted_brier": 0.031001208618958456,
+          "average_precision": 0.04526905218882515,
+          "observed_event_probability": 0.031802304363693225,
+          "mean_predicted_probability": 0.012715154763063334
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0060199859049158404,
+          "average_precision": 0.006047651321619382,
+          "observed_event_probability": 0.006047651321620351,
+          "mean_predicted_probability": 0.003062911834933775
+        },
+        "8": {
+          "weighted_brier": 0.015759516101152206,
+          "average_precision": 0.015953287107030555,
+          "observed_event_probability": 0.01595328710703299,
+          "mean_predicted_probability": 0.008159933295057304
+        },
+        "16": {
+          "weighted_brier": 0.031031393751804186,
+          "average_precision": 0.03180230436368938,
+          "observed_event_probability": 0.031802304363693225,
+          "mean_predicted_probability": 0.0162950173362359
+        }
+      }
+    },
+    {
+      "case": "small_01",
+      "model": {
+        "3": {
+          "weighted_brier": 0.005468954597342833,
+          "average_precision": 0.06718123831656672,
+          "observed_event_probability": 0.005611672278338946,
+          "mean_predicted_probability": 0.002994747331293621
+        },
+        "8": {
+          "weighted_brier": 0.014021149250080295,
+          "average_precision": 0.1278400783319103,
+          "observed_event_probability": 0.014964459408903858,
+          "mean_predicted_probability": 0.008170358182261242
+        },
+        "16": {
+          "weighted_brier": 0.026833504699167662,
+          "average_precision": 0.17783057074971764,
+          "observed_event_probability": 0.029928918817807716,
+          "mean_predicted_probability": 0.016817920039232048
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.005586938434901218,
+          "average_precision": 0.005611672278340066,
+          "observed_event_probability": 0.005611672278338946,
+          "mean_predicted_probability": 0.0030122449718446983
+        },
+        "8": {
+          "weighted_brier": 0.014788783374655027,
+          "average_precision": 0.01496445940890662,
+          "observed_event_probability": 0.014964459408903858,
+          "mean_predicted_probability": 0.008017588807553936
+        },
+        "16": {
+          "weighted_brier": 0.029227459685818722,
+          "average_precision": 0.02992891881781252,
+          "observed_event_probability": 0.029928918817807716,
+          "mean_predicted_probability": 0.01599044509885519
+        }
+      }
+    },
+    {
+      "case": "standard_00",
+      "model": {
+        "3": {
+          "weighted_brier": 0.002472784255834597,
+          "average_precision": 0.04793990197462559,
+          "observed_event_probability": 0.0025697549914971353,
+          "mean_predicted_probability": 0.0034058246885841025
+        },
+        "8": {
+          "weighted_brier": 0.006269141539718678,
+          "average_precision": 0.1091660997245315,
+          "observed_event_probability": 0.006852679977325696,
+          "mean_predicted_probability": 0.008997998072207178
+        },
+        "16": {
+          "weighted_brier": 0.01190802727971466,
+          "average_precision": 0.17359975767427538,
+          "observed_event_probability": 0.013705359954651388,
+          "mean_predicted_probability": 0.017760434109078533
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0025637225963326122,
+          "average_precision": 0.002569754991495915,
+          "observed_event_probability": 0.0025697549914971353,
+          "mean_predicted_probability": 0.0033255628717166995
+        },
+        "8": {
+          "weighted_brier": 0.00680972145159122,
+          "average_precision": 0.006852679977322432,
+          "observed_event_probability": 0.006852679977325696,
+          "mean_predicted_probability": 0.00885285425402511
+        },
+        "16": {
+          "weighted_brier": 0.013533304175790758,
+          "average_precision": 0.01370535995464444,
+          "observed_event_probability": 0.013705359954651388,
+          "mean_predicted_probability": 0.017677904809770342
+        }
+      }
+    },
+    {
+      "case": "standard_01",
+      "model": {
+        "3": {
+          "weighted_brier": 0.002826402386280334,
+          "average_precision": 0.04874366204157182,
+          "observed_event_probability": 0.0029395578582837806,
+          "mean_predicted_probability": 0.0033578370401600712
+        },
+        "8": {
+          "weighted_brier": 0.007280182119321029,
+          "average_precision": 0.09258573456435286,
+          "observed_event_probability": 0.007838820955423416,
+          "mean_predicted_probability": 0.008961734252398454
+        },
+        "16": {
+          "weighted_brier": 0.014131288294508989,
+          "average_precision": 0.1287511360319989,
+          "observed_event_probability": 0.015677641910846828,
+          "mean_predicted_probability": 0.017929762207686033
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.002931052469686716,
+          "average_precision": 0.0029395578582820884,
+          "observed_event_probability": 0.0029395578582837806,
+          "mean_predicted_probability": 0.0033078129398989072
+        },
+        "8": {
+          "weighted_brier": 0.007778304429775258,
+          "average_precision": 0.007838820955418846,
+          "observed_event_probability": 0.007838820955423416,
+          "mean_predicted_probability": 0.008803491014577695
+        },
+        "16": {
+          "weighted_brier": 0.015435441429504548,
+          "average_precision": 0.015677641910837835,
+          "observed_event_probability": 0.015677641910846828,
+          "mean_predicted_probability": 0.01757183686978174
+        }
+      }
+    },
+    {
+      "case": "unstable_00",
+      "model": {
+        "3": {
+          "weighted_brier": 0.003519169527291673,
+          "average_precision": 0.07512174644993724,
+          "observed_event_probability": 0.0037379763789114795,
+          "mean_predicted_probability": 0.0036005868629262468
+        },
+        "8": {
+          "weighted_brier": 0.008578977113424027,
+          "average_precision": 0.17615539376695602,
+          "observed_event_probability": 0.009947643979057588,
+          "mean_predicted_probability": 0.009690813804922834
+        },
+        "16": {
+          "weighted_brier": 0.015888522669059886,
+          "average_precision": 0.25151668440044384,
+          "observed_event_probability": 0.01972482649458175,
+          "mean_predicted_probability": 0.01945027727489519
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.0037244596236407157,
+          "average_precision": 0.0037379763789132233,
+          "observed_event_probability": 0.0037379763789114795,
+          "mean_predicted_probability": 0.0030629118349337725
+        },
+        "8": {
+          "weighted_brier": 0.009851884267813193,
+          "average_precision": 0.0099476439790623,
+          "observed_event_probability": 0.009947643979057588,
+          "mean_predicted_probability": 0.008159933295057304
+        },
+        "16": {
+          "weighted_brier": 0.01934752130520307,
+          "average_precision": 0.019724826494590234,
+          "observed_event_probability": 0.01972482649458175,
+          "mean_predicted_probability": 0.01629501733623591
+        }
+      }
+    },
+    {
+      "case": "unstable_01",
+      "model": {
+        "3": {
+          "weighted_brier": 0.004121302815690794,
+          "average_precision": 0.09686173759476231,
+          "observed_event_probability": 0.004437193320726266,
+          "mean_predicted_probability": 0.0037721712751613867
+        },
+        "8": {
+          "weighted_brier": 0.010036788314073957,
+          "average_precision": 0.2039035192838913,
+          "observed_event_probability": 0.011791315955356148,
+          "mean_predicted_probability": 0.009971756807271416
+        },
+        "16": {
+          "weighted_brier": 0.018643767310722353,
+          "average_precision": 0.28655537352354,
+          "observed_event_probability": 0.023557912170763962,
+          "mean_predicted_probability": 0.01965339728132168
+        }
+      },
+      "constant": {
+        "3": {
+          "weighted_brier": 0.004419535113957749,
+          "average_precision": 0.004437193320722625,
+          "observed_event_probability": 0.004437193320726266,
+          "mean_predicted_probability": 0.0030122449718446996
+        },
+        "8": {
+          "weighted_brier": 0.011666521839983172,
+          "average_precision": 0.01179131595534692,
+          "observed_event_probability": 0.011791315955356148,
+          "mean_predicted_probability": 0.008017588807553934
+        },
+        "16": {
+          "weighted_brier": 0.023060203502802957,
+          "average_precision": 0.023557912170746962,
+          "observed_event_probability": 0.023557912170763962,
+          "mean_predicted_probability": 0.01599044509885518
+        }
+      }
+    }
+  ],
+  "oof_calibration8": [
+    {
+      "horizon": 8,
+      "lower": 0.001,
+      "upper": 0.005,
+      "rows": 27987,
+      "worlds": 8,
+      "predicted": 0.0020197842960467493,
+      "observed": 0.002831247805532118
+    },
+    {
+      "horizon": 8,
+      "lower": 0.005,
+      "upper": 0.02,
+      "rows": 1305760,
+      "worlds": 16,
+      "predicted": 0.006262305332116952,
+      "observed": 0.00633461925964678
+    },
+    {
+      "horizon": 8,
+      "lower": 0.02,
+      "upper": 0.1,
+      "rows": 10143,
+      "worlds": 16,
+      "predicted": 0.055798727965362276,
+      "observed": 0.0705391659214079
+    },
+    {
+      "horizon": 8,
+      "lower": 0.1,
+      "upper": 0.3,
+      "rows": 9485,
+      "worlds": 16,
+      "predicted": 0.18886832391359776,
+      "observed": 0.18756868150870112
+    },
+    {
+      "horizon": 8,
+      "lower": 0.3,
+      "upper": 0.7,
+      "rows": 2394,
+      "worlds": 15,
+      "predicted": 0.4546943436220455,
+      "observed": 0.3959784159756335
+    }
+  ],
+  "background_probability": [
+    0.0031887627171992856,
+    0.008489275658761645,
+    0.016945556846254962
+  ],
+  "leaf_stats": [
+    {
+      "leaf": 3,
+      "rows": 72255,
+      "world_count": 16,
+      "positive_rows": [
+        51,
+        134,
+        300
+      ],
+      "probabilities": [
+        0.001246883208642339,
+        0.002915368641578086,
+        0.006051084947833182
+      ],
+      "note": "Positive rows overlap across preceding ticks; they are not independent failure events."
+    },
+    {
+      "leaf": 4,
+      "rows": 1261445,
+      "world_count": 16,
+      "positive_rows": [
+        2577,
+        6903,
+        13974
+      ],
+      "probabilities": [
+        0.002420036561362401,
+        0.0065020551550420205,
+        0.013193177359903847
+      ],
+      "note": "Positive rows overlap across preceding ticks; they are not independent failure events."
+    },
+    {
+      "leaf": 6,
+      "rows": 4912,
+      "world_count": 16,
+      "positive_rows": [
+        26,
+        143,
+        530
+      ],
+      "probabilities": [
+        0.00646246793467483,
+        0.03513027684758188,
+        0.1265430137902007
+      ],
+      "note": "Positive rows overlap across preceding ticks; they are not independent failure events."
+    },
+    {
+      "leaf": 7,
+      "rows": 2983,
+      "world_count": 16,
+      "positive_rows": [
+        76,
+        194,
+        424
+      ],
+      "probabilities": [
+        0.03287372167193254,
+        0.07951422068151168,
+        0.16911665355166233
+      ],
+      "note": "Positive rows overlap across preceding ticks; they are not independent failure events."
+    },
+    {
+      "leaf": 10,
+      "rows": 6659,
+      "world_count": 16,
+      "positive_rows": [
+        163,
+        594,
+        1531
+      ],
+      "probabilities": [
+        0.03252295128245676,
+        0.1098894771186536,
+        0.26007370424576015
+      ],
+      "note": "Positive rows overlap across preceding ticks; they are not independent failure events."
+    },
+    {
+      "leaf": 11,
+      "rows": 4507,
+      "world_count": 16,
+      "positive_rows": [
+        402,
+        989,
+        1643
+      ],
+      "probabilities": [
+        0.10436133770349038,
+        0.24871645676537352,
+        0.39675694601103806
+      ],
+      "note": "Positive rows overlap across preceding ticks; they are not independent failure events."
+    },
+    {
+      "leaf": 13,
+      "rows": 1798,
+      "world_count": 16,
+      "positive_rows": [
+        191,
+        503,
+        850
+      ],
+      "probabilities": [
+        0.10943881553668904,
+        0.29873168646010145,
+        0.49797507131558094
+      ],
+      "note": "Positive rows overlap across preceding ticks; they are not independent failure events."
+    },
+    {
+      "leaf": 14,
+      "rows": 1210,
+      "world_count": 15,
+      "positive_rows": [
+        299,
+        626,
+        877
+      ],
+      "probabilities": [
+        0.2652046049463023,
+        0.5374809319278894,
+        0.7447326046798195
+      ],
+      "note": "Positive rows overlap across preceding ticks; they are not independent failure events."
+    }
+  ],
+  "tree": {
+    "feature": [
+      1,
+      4,
+      2,
+      -2,
+      -2,
+      2,
+      -2,
+      -2,
+      1,
+      2,
+      -2,
+      -2,
+      2,
+      -2,
+      -2
+    ],
+    "left": [
+      1,
+      2,
+      3,
+      -1,
+      -1,
+      6,
+      -1,
+      -1,
+      9,
+      10,
+      -1,
+      -1,
+      13,
+      -1,
+      -1
+    ],
+    "right": [
+      8,
+      5,
+      4,
+      -1,
+      -1,
+      7,
+      -1,
+      -1,
+      12,
+      11,
+      -1,
+      -1,
+      14,
+      -1,
+      -1
+    ],
+    "threshold": [
+      5.856502532958984,
+      4.620046615600586,
+      4.482986688613892,
+      -2.0,
+      -2.0,
+      6.970260381698608,
+      -2.0,
+      -2.0,
+      6.648336410522461,
+      7.359785795211792,
+      -2.0,
+      -2.0,
+      7.753408908843994,
+      -2.0,
+      -2.0
+    ],
+    "value": [
+      [
+        0.003188762717206314,
+        0.008489275658780356,
+        0.01694555684629231
+      ],
+      [
+        0.0024139679511418714,
+        0.00650390539270719,
+        0.01343187184914939
+      ],
+      [
+        0.002335699412867954,
+        0.006244210848167046,
+        0.012679737486997949
+      ],
+      [
+        0.001246883208642339,
+        0.002915368641578086,
+        0.006051084947833182
+      ],
+      [
+        0.002420036561362401,
+        0.0065020551550420205,
+        0.013193177359903847
+      ],
+      [
+        0.015740922114148438,
+        0.05072266005150807,
+        0.1414994247849153
+      ],
+      [
+        0.00646246793467483,
+        0.03513027684758188,
+        0.1265430137902007
+      ],
+      [
+        0.03287372167193254,
+        0.07951422068151168,
+        0.16911665355166233
+      ],
+      [
+        0.07987428923869744,
+        0.20499184751708313,
+        0.3647135024220358
+      ],
+      [
+        0.05929432926812052,
+        0.16162490342608665,
+        0.3110102426607219
+      ],
+      [
+        0.03252295128245676,
+        0.1098894771186536,
+        0.26007370424576015
+      ],
+      [
+        0.10436133770349038,
+        0.24871645676537352,
+        0.39675694601103806
+      ],
+      [
+        0.16416543716479157,
+        0.38261364584433605,
+        0.5846706558434286
+      ],
+      [
+        0.10943881553668904,
+        0.29873168646010145,
+        0.49797507131558094
+      ],
+      [
+        0.2652046049463023,
+        0.5374809319278894,
+        0.7447326046798195
+      ]
+    ]
+  },
+  "feature_importance": {
+    "log_score3": 0.0,
+    "log_score8": 0.8776789844644834,
+    "log_scoreW": 0.07212045128616898,
+    "log_peak3": 0.0,
+    "log_peak8": 0.05020056424934759,
+    "density8_relative": 0.0,
+    "density3_relative": 0.0,
+    "log_chars8": 0.0,
+    "log_lines8": 0.0,
+    "alarm_age": 0.0
+  },
+  "trace_manifest_sha256": "59559f6f21c72860dcf997cbdedd13410f2d854a9bac95a313c4fb3e6915e52e",
+  "future_values_used_at_runtime": false,
+  "failure_cause": "FAIL includes collective power incidents; CSV cannot exactly separate individual causes"
+}

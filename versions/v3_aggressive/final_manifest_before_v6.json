@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-14",
+  "candidate": "v3_aggressive_cost1.10_fast",
+  "official_score": 85,
+  "official_submission_id": 543440,
+  "official_submission_url": "https://acm.sztu.edu.cn:40081/examsys/contest/status?cid=2231#solution_id=543440",
+  "official_submissions_total": 3,
+  "remaining_submissions": 7,
+  "previous_84_manifest": "versions/v1_84/manifest.json",
+  "artifacts": {
+    "main.cpp": {
+      "bytes": 87433,
+      "sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c"
+    },
+    "submit.cpp": {
+      "bytes": 55042,
+      "sha256": "7bf5ae764011c792b471bd03b49f6fb2b44603dec955deea019a7c8d3cb2ee8f"
+    },
+    "build/main.exe": {
+      "bytes": 675979,
+      "sha256": "2290965cbb64c84c27159b2339c44977f95b616177547dea466b5bb3b7caf2be"
+    },
+    "build/submit.exe": {
+      "bytes": 675979,
+      "sha256": "2290965cbb64c84c27159b2339c44977f95b616177547dea466b5bb3b7caf2be"
+    },
+    "tpj_win.exe": {
+      "bytes": 833024,
+      "sha256": "eb5a32b4a5ad196d3af503d892837141b38792744114f41d02675bab4bdcaf65"
+    }
+  },
+  "results": "results/v3_final_aggressive",
+  "frozen_experiment": "research/v3_frozen_manifest.json",
+  "best_source_matches_official_receipt": true
+}

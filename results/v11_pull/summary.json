@@ -1,0 +1,586 @@
+[
+  {
+    "name": "hybrid",
+    "base": ".\\versions\\v10_input_fix\\main.cpp",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "source": ".\\candidates\\v11_pull\\hybrid.cpp",
+    "source_sha256": "06c452f30c2284f2035ec45e24c541a07a77e97c8ce973113db1965997fdb088",
+    "executable": ".\\build\\v11_pull_hybrid.exe",
+    "exe_sha256": "0dd6d18f5e8249bc9bdbe9dc65e3e4a8cc28fc2c722c0b0ff2a15cf2eb920f21",
+    "real_runJob_and_billing_unchanged": true,
+    "second_pass_fast_path": "Unique image bytes <= machine capacity proves zero second pull",
+    "ordinary_delay": "exact",
+    "windows_process_cpu_clock": true,
+    "official_submission_sent": false,
+    "valid_range": {
+      "case_count": 14,
+      "cases": [
+        "fast_00",
+        "fast_01",
+        "heavy_00",
+        "heavy_01",
+        "light_00",
+        "light_01",
+        "slow_00",
+        "slow_01",
+        "small_00",
+        "small_01",
+        "standard_00",
+        "standard_01",
+        "unstable_00",
+        "unstable_01"
+      ],
+      "baseline_total_profit": 56070086,
+      "candidate_total_profit": 55525862,
+      "total_profit_delta": -544224,
+      "total_profit_increase_pct": -0.9706138135761044,
+      "mean_profit_ratio": 0.9942194761406177,
+      "median_profit_ratio": 0.9976255245825922,
+      "equal_weight_increase_pct": -0.5780523859382325,
+      "ratio_undefined_cases": [],
+      "improved": 6,
+      "regressed": 8,
+      "unchanged": 0,
+      "baseline_health": {
+        "all_runs_ok": true,
+        "all_audits_correct": true,
+        "all_commands_legal": true,
+        "audit_errors": 0,
+        "illegal_commands": 0,
+        "max_cpu_seconds": 0.390625,
+        "max_peak_memory_bytes": 30474240,
+        "over_one_second": [],
+        "range_violations": {}
+      },
+      "candidate_health": {
+        "all_runs_ok": true,
+        "all_audits_correct": true,
+        "all_commands_legal": true,
+        "audit_errors": 0,
+        "illegal_commands": 0,
+        "max_cpu_seconds": 0.515625,
+        "max_peak_memory_bytes": 30822400,
+        "over_one_second": [],
+        "range_violations": {}
+      }
+    },
+    "boundary": {
+      "case_count": 2,
+      "cases": [
+        "large_00",
+        "large_01"
+      ],
+      "baseline_total_profit": 16352752,
+      "candidate_total_profit": 16363523,
+      "total_profit_delta": 10771,
+      "total_profit_increase_pct": 0.06586658930558542,
+      "mean_profit_ratio": 1.011987055362529,
+      "median_profit_ratio": 1.011987055362529,
+      "equal_weight_increase_pct": 1.1987055362528976,
+      "ratio_undefined_cases": [],
+      "improved": 1,
+      "regressed": 1,
+      "unchanged": 0
+    },
+    "all_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.5625,
+      "max_peak_memory_bytes": 30822400,
+      "over_one_second": [],
+      "range_violations": {
+        "large_00": [
+          "logchars=3027206 > 3000000"
+        ],
+        "large_01": [
+          "logchars=3111782 > 3000000"
+        ]
+      }
+    },
+    "worst_ratio": 0.9647797468309054,
+    "diagnostics": {
+      "totals": {
+        "previews": 3383039,
+        "exact": 2816760,
+        "first_mismatch": 179875,
+        "warm_residual": 0,
+        "guard_samples": 7984,
+        "late_samples": 12,
+        "guard_returns": 0
+      },
+      "worlds": [
+        {
+          "case": "fast_00",
+          "previews": 866400,
+          "exact": 765041,
+          "first_mismatch": 53659,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.5
+        },
+        {
+          "case": "fast_01",
+          "previews": 799782,
+          "exact": 682604,
+          "first_mismatch": 31901,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.484375
+        },
+        {
+          "case": "heavy_00",
+          "previews": 189106,
+          "exact": 152751,
+          "first_mismatch": 14218,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.234375
+        },
+        {
+          "case": "heavy_01",
+          "previews": 132310,
+          "exact": 104552,
+          "first_mismatch": 8309,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.140625
+        },
+        {
+          "case": "large_00",
+          "previews": 196562,
+          "exact": 159281,
+          "first_mismatch": 9765,
+          "warm_residual": 0,
+          "guard_samples": 599,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.3125
+        },
+        {
+          "case": "large_01",
+          "previews": 473558,
+          "exact": 403057,
+          "first_mismatch": 22429,
+          "warm_residual": 0,
+          "guard_samples": 599,
+          "late_samples": 12,
+          "guard_returns": 0,
+          "max_used": 0.5625
+        },
+        {
+          "case": "light_00",
+          "previews": 56941,
+          "exact": 37685,
+          "first_mismatch": 2286,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.109375
+        },
+        {
+          "case": "light_01",
+          "previews": 28111,
+          "exact": 17557,
+          "first_mismatch": 1394,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.078125
+        },
+        {
+          "case": "slow_00",
+          "previews": 15231,
+          "exact": 8710,
+          "first_mismatch": 677,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.078125
+        },
+        {
+          "case": "slow_01",
+          "previews": 9527,
+          "exact": 3754,
+          "first_mismatch": 181,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.03125
+        },
+        {
+          "case": "small_00",
+          "previews": 5851,
+          "exact": 3563,
+          "first_mismatch": 399,
+          "warm_residual": 0,
+          "guard_samples": 399,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.03125
+        },
+        {
+          "case": "small_01",
+          "previews": 12985,
+          "exact": 8294,
+          "first_mismatch": 841,
+          "warm_residual": 0,
+          "guard_samples": 399,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.03125
+        },
+        {
+          "case": "standard_00",
+          "previews": 133195,
+          "exact": 103453,
+          "first_mismatch": 8358,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.171875
+        },
+        {
+          "case": "standard_01",
+          "previews": 147066,
+          "exact": 114666,
+          "first_mismatch": 6973,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.140625
+        },
+        {
+          "case": "unstable_00",
+          "previews": 150871,
+          "exact": 120829,
+          "first_mismatch": 8678,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.171875
+        },
+        {
+          "case": "unstable_01",
+          "previews": 165543,
+          "exact": 130963,
+          "first_mismatch": 9807,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.3125
+        }
+      ]
+    }
+  },
+  {
+    "name": "fee_only",
+    "base": ".\\versions\\v10_input_fix\\main.cpp",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "source": ".\\candidates\\v11_pull\\fee_only.cpp",
+    "source_sha256": "df305836025294e6ffb60b4c610fd2069983df30b09a88d51cf73436015acb93",
+    "executable": ".\\build\\v11_pull_fee_only.exe",
+    "exe_sha256": "3d01a6315c47d23ed63549d3d635fcb783e12b5c1f747ec9fdfebf15f90d7077",
+    "real_runJob_and_billing_unchanged": true,
+    "second_pass_fast_path": "Unique image bytes <= machine capacity proves zero second pull",
+    "ordinary_delay": "original membership heuristic",
+    "windows_process_cpu_clock": true,
+    "official_submission_sent": false,
+    "valid_range": {
+      "case_count": 14,
+      "cases": [
+        "fast_00",
+        "fast_01",
+        "heavy_00",
+        "heavy_01",
+        "light_00",
+        "light_01",
+        "slow_00",
+        "slow_01",
+        "small_00",
+        "small_01",
+        "standard_00",
+        "standard_01",
+        "unstable_00",
+        "unstable_01"
+      ],
+      "baseline_total_profit": 56070086,
+      "candidate_total_profit": 55310051,
+      "total_profit_delta": -760035,
+      "total_profit_increase_pct": -1.3555088893567935,
+      "mean_profit_ratio": 0.9880865628508856,
+      "median_profit_ratio": 0.9957414030649567,
+      "equal_weight_increase_pct": -1.1913437149114414,
+      "ratio_undefined_cases": [],
+      "improved": 4,
+      "regressed": 10,
+      "unchanged": 0,
+      "baseline_health": {
+        "all_runs_ok": true,
+        "all_audits_correct": true,
+        "all_commands_legal": true,
+        "audit_errors": 0,
+        "illegal_commands": 0,
+        "max_cpu_seconds": 0.390625,
+        "max_peak_memory_bytes": 30474240,
+        "over_one_second": [],
+        "range_violations": {}
+      },
+      "candidate_health": {
+        "all_runs_ok": true,
+        "all_audits_correct": true,
+        "all_commands_legal": true,
+        "audit_errors": 0,
+        "illegal_commands": 0,
+        "max_cpu_seconds": 0.546875,
+        "max_peak_memory_bytes": 30842880,
+        "over_one_second": [],
+        "range_violations": {}
+      }
+    },
+    "boundary": {
+      "case_count": 2,
+      "cases": [
+        "large_00",
+        "large_01"
+      ],
+      "baseline_total_profit": 16352752,
+      "candidate_total_profit": 16591912,
+      "total_profit_delta": 239160,
+      "total_profit_increase_pct": 1.4625061274090134,
+      "mean_profit_ratio": 1.018368140437504,
+      "median_profit_ratio": 1.018368140437504,
+      "equal_weight_increase_pct": 1.836814043750401,
+      "ratio_undefined_cases": [],
+      "improved": 2,
+      "regressed": 0,
+      "unchanged": 0
+    },
+    "all_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.546875,
+      "max_peak_memory_bytes": 30842880,
+      "over_one_second": [],
+      "range_violations": {
+        "large_00": [
+          "logchars=3027206 > 3000000"
+        ],
+        "large_01": [
+          "logchars=3111782 > 3000000"
+        ]
+      }
+    },
+    "worst_ratio": 0.9401589526769297,
+    "diagnostics": {
+      "totals": {
+        "previews": 3345838,
+        "exact": 2789372,
+        "first_mismatch": 179865,
+        "warm_residual": 0,
+        "guard_samples": 7984,
+        "late_samples": 0,
+        "guard_returns": 0
+      },
+      "worlds": [
+        {
+          "case": "fast_00",
+          "previews": 880125,
+          "exact": 779360,
+          "first_mismatch": 52867,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.546875
+        },
+        {
+          "case": "fast_01",
+          "previews": 770959,
+          "exact": 655466,
+          "first_mismatch": 32153,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.484375
+        },
+        {
+          "case": "heavy_00",
+          "previews": 191413,
+          "exact": 156597,
+          "first_mismatch": 14255,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.25
+        },
+        {
+          "case": "heavy_01",
+          "previews": 121737,
+          "exact": 96557,
+          "first_mismatch": 7324,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.09375
+        },
+        {
+          "case": "large_00",
+          "previews": 194618,
+          "exact": 158150,
+          "first_mismatch": 8942,
+          "warm_residual": 0,
+          "guard_samples": 599,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.34375
+        },
+        {
+          "case": "large_01",
+          "previews": 466149,
+          "exact": 395335,
+          "first_mismatch": 23886,
+          "warm_residual": 0,
+          "guard_samples": 599,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.484375
+        },
+        {
+          "case": "light_00",
+          "previews": 56874,
+          "exact": 37643,
+          "first_mismatch": 2268,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.078125
+        },
+        {
+          "case": "light_01",
+          "previews": 27295,
+          "exact": 17173,
+          "first_mismatch": 1424,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.078125
+        },
+        {
+          "case": "slow_00",
+          "previews": 15226,
+          "exact": 8708,
+          "first_mismatch": 677,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.0625
+        },
+        {
+          "case": "slow_01",
+          "previews": 9527,
+          "exact": 3754,
+          "first_mismatch": 181,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.046875
+        },
+        {
+          "case": "small_00",
+          "previews": 5849,
+          "exact": 3564,
+          "first_mismatch": 396,
+          "warm_residual": 0,
+          "guard_samples": 399,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.03125
+        },
+        {
+          "case": "small_01",
+          "previews": 12985,
+          "exact": 8294,
+          "first_mismatch": 841,
+          "warm_residual": 0,
+          "guard_samples": 399,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.015625
+        },
+        {
+          "case": "standard_00",
+          "previews": 132863,
+          "exact": 102957,
+          "first_mismatch": 8711,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.140625
+        },
+        {
+          "case": "standard_01",
+          "previews": 147748,
+          "exact": 114839,
+          "first_mismatch": 7497,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.140625
+        },
+        {
+          "case": "unstable_00",
+          "previews": 152860,
+          "exact": 124349,
+          "first_mismatch": 7939,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.1875
+        },
+        {
+          "case": "unstable_01",
+          "previews": 159610,
+          "exact": 126626,
+          "first_mismatch": 10504,
+          "warm_residual": 0,
+          "guard_samples": 499,
+          "late_samples": 0,
+          "guard_returns": 0,
+          "max_used": 0.15625
+        }
+      ]
+    }
+  }
+]

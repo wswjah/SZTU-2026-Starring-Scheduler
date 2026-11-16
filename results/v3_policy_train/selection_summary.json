@@ -1,0 +1,338 @@
+{
+  "aggressive_mild": {
+    "configuration": {
+      "safety": 1.1,
+      "margin": 1.2,
+      "long_cost": 0.75,
+      "mix": 0.72,
+      "started": 1.12,
+      "new": 1.05
+    },
+    "valid": {
+      "case_count": 14,
+      "baseline_total_profit": 41410377,
+      "candidate_total_profit": 41130649,
+      "total_profit_increase_pct": -0.6755021814942697,
+      "mean_profit_ratio": 0.904303123706693,
+      "median_profit_ratio": 0.9959782463634961,
+      "improved": 4,
+      "regressed": 10,
+      "unchanged": 0
+    },
+    "overall": {
+      "case_count": 16,
+      "baseline_total_profit": 52574889,
+      "candidate_total_profit": 52321304,
+      "total_profit_increase_pct": -0.4823310230859468,
+      "mean_profit_ratio": 0.9164303415983948,
+      "median_profit_ratio": 0.9962392934944913,
+      "improved": 5,
+      "regressed": 11,
+      "unchanged": 0
+    },
+    "boundary": {
+      "case_count": 2,
+      "baseline_total_profit": 11164512,
+      "candidate_total_profit": 11190655,
+      "total_profit_increase_pct": 0.23416160061451308,
+      "mean_profit_ratio": 1.0013208668403075,
+      "median_profit_ratio": 1.0013208668403075,
+      "improved": 1,
+      "regressed": 1,
+      "unchanged": 0
+    },
+    "worst": {
+      "case": "small_00",
+      "baseline_profit": 113059,
+      "candidate_profit": 49011,
+      "delta": -64048,
+      "profit_ratio": 0.43349932336213837,
+      "baseline_cpu_seconds": 0.078125,
+      "candidate_cpu_seconds": 0.015625,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    "ok": true,
+    "max_cpu": 0.6875
+  },
+  "aggressive_medium": {
+    "configuration": {
+      "safety": 1.05,
+      "margin": 1.15,
+      "long_cost": 0.75,
+      "mix": 0.65,
+      "started": 1.15,
+      "new": 1.08
+    },
+    "valid": {
+      "case_count": 14,
+      "baseline_total_profit": 41410377,
+      "candidate_total_profit": 41165268,
+      "total_profit_increase_pct": -0.5919023630236442,
+      "mean_profit_ratio": 0.9277194872019534,
+      "median_profit_ratio": 0.9869702037116057,
+      "improved": 5,
+      "regressed": 9,
+      "unchanged": 0
+    },
+    "overall": {
+      "case_count": 16,
+      "baseline_total_profit": 52574889,
+      "candidate_total_profit": 52163333,
+      "total_profit_increase_pct": -0.7827995604517635,
+      "mean_profit_ratio": 0.9351406848769078,
+      "median_profit_ratio": 0.9870890686015892,
+      "improved": 5,
+      "regressed": 11,
+      "unchanged": 0
+    },
+    "boundary": {
+      "case_count": 2,
+      "baseline_total_profit": 11164512,
+      "candidate_total_profit": 10998065,
+      "total_profit_increase_pct": -1.4908578180577892,
+      "mean_profit_ratio": 0.9870890686015892,
+      "median_profit_ratio": 0.9870890686015892,
+      "improved": 0,
+      "regressed": 2,
+      "unchanged": 0
+    },
+    "worst": {
+      "case": "slow_01",
+      "baseline_profit": 138217,
+      "candidate_profit": 35015,
+      "delta": -103202,
+      "profit_ratio": 0.2533335262666676,
+      "baseline_cpu_seconds": 0.21875,
+      "candidate_cpu_seconds": 0.21875,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    "ok": true,
+    "max_cpu": 0.75
+  },
+  "aggressive_strong": {
+    "configuration": {
+      "safety": 1.0,
+      "margin": 1.1,
+      "long_cost": 0.8,
+      "mix": 0.6,
+      "started": 1.18,
+      "new": 1.1
+    },
+    "valid": {
+      "case_count": 14,
+      "baseline_total_profit": 41410377,
+      "candidate_total_profit": 40710929,
+      "total_profit_increase_pct": -1.6890645550027283,
+      "mean_profit_ratio": 0.8535688013230791,
+      "median_profit_ratio": 0.9931109579844947,
+      "improved": 7,
+      "regressed": 7,
+      "unchanged": 0
+    },
+    "overall": {
+      "case_count": 16,
+      "baseline_total_profit": 52574889,
+      "candidate_total_profit": 51314422,
+      "total_profit_increase_pct": -2.397469636122296,
+      "mean_profit_ratio": 0.8652410586553351,
+      "median_profit_ratio": 0.9824482750660954,
+      "improved": 7,
+      "regressed": 9,
+      "unchanged": 0
+    },
+    "boundary": {
+      "case_count": 2,
+      "baseline_total_profit": 11164512,
+      "candidate_total_profit": 10603493,
+      "total_profit_increase_pct": -5.02502035019533,
+      "mean_profit_ratio": 0.9469468599811267,
+      "median_profit_ratio": 0.9469468599811267,
+      "improved": 0,
+      "regressed": 2,
+      "unchanged": 0
+    },
+    "worst": {
+      "case": "slow_01",
+      "baseline_profit": 138217,
+      "candidate_profit": -24632,
+      "delta": -162849,
+      "profit_ratio": -0.1782125208910626,
+      "baseline_cpu_seconds": 0.21875,
+      "candidate_cpu_seconds": 0.203125,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    "ok": true,
+    "max_cpu": 0.734375
+  },
+  "conservative_mild": {
+    "configuration": {
+      "safety": 1.3,
+      "margin": 1.3,
+      "long_cost": 0.68,
+      "mix": 0.78,
+      "started": 1.12,
+      "new": 1.02
+    },
+    "valid": {
+      "case_count": 14,
+      "baseline_total_profit": 41410377,
+      "candidate_total_profit": 41018646,
+      "total_profit_increase_pct": -0.9459730347299189,
+      "mean_profit_ratio": 0.9908516989968992,
+      "median_profit_ratio": 0.9899887797813646,
+      "improved": 6,
+      "regressed": 8,
+      "unchanged": 0
+    },
+    "overall": {
+      "case_count": 16,
+      "baseline_total_profit": 52574889,
+      "candidate_total_profit": 52164640,
+      "total_profit_increase_pct": -0.7803135827828322,
+      "mean_profit_ratio": 0.9915735535488057,
+      "median_profit_ratio": 0.9914217669087254,
+      "improved": 7,
+      "regressed": 9,
+      "unchanged": 0
+    },
+    "boundary": {
+      "case_count": 2,
+      "baseline_total_profit": 11164512,
+      "candidate_total_profit": 11145994,
+      "total_profit_increase_pct": -0.16586484030829407,
+      "mean_profit_ratio": 0.9966265354121516,
+      "median_profit_ratio": 0.9966265354121516,
+      "improved": 1,
+      "regressed": 1,
+      "unchanged": 0
+    },
+    "worst": {
+      "case": "small_01",
+      "baseline_profit": 144094,
+      "candidate_profit": 122388,
+      "delta": -21706,
+      "profit_ratio": 0.8493622218829375,
+      "baseline_cpu_seconds": 0.046875,
+      "candidate_cpu_seconds": 0.046875,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    "ok": true,
+    "max_cpu": 0.734375
+  },
+  "conservative_medium": {
+    "configuration": {
+      "safety": 1.35,
+      "margin": 1.35,
+      "long_cost": 0.65,
+      "mix": 0.8,
+      "started": 1.1,
+      "new": 1.0
+    },
+    "valid": {
+      "case_count": 14,
+      "baseline_total_profit": 41410377,
+      "candidate_total_profit": 40901280,
+      "total_profit_increase_pct": -1.2293947480845224,
+      "mean_profit_ratio": 1.0147485009777928,
+      "median_profit_ratio": 0.9903968440814785,
+      "improved": 4,
+      "regressed": 10,
+      "unchanged": 0
+    },
+    "overall": {
+      "case_count": 16,
+      "baseline_total_profit": 52574889,
+      "candidate_total_profit": 52039778,
+      "total_profit_increase_pct": -1.017807189283837,
+      "mean_profit_ratio": 1.0114370608807701,
+      "median_profit_ratio": 0.9903968440814785,
+      "improved": 5,
+      "regressed": 11,
+      "unchanged": 0
+    },
+    "boundary": {
+      "case_count": 2,
+      "baseline_total_profit": 11164512,
+      "candidate_total_profit": 11138498,
+      "total_profit_increase_pct": -0.2330061537844208,
+      "mean_profit_ratio": 0.9882569802016103,
+      "median_profit_ratio": 0.9882569802016103,
+      "improved": 1,
+      "regressed": 1,
+      "unchanged": 0
+    },
+    "worst": {
+      "case": "small_01",
+      "baseline_profit": 144094,
+      "candidate_profit": 136894,
+      "delta": -7200,
+      "profit_ratio": 0.9500326175968465,
+      "baseline_cpu_seconds": 0.046875,
+      "candidate_cpu_seconds": 0.03125,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    "ok": true,
+    "max_cpu": 0.75
+  },
+  "conservative_strong": {
+    "configuration": {
+      "safety": 1.5,
+      "margin": 1.5,
+      "long_cost": 0.6,
+      "mix": 0.9,
+      "started": 1.05,
+      "new": 0.98
+    },
+    "valid": {
+      "case_count": 14,
+      "baseline_total_profit": 41410377,
+      "candidate_total_profit": 39467476,
+      "total_profit_increase_pct": -4.691821569265109,
+      "mean_profit_ratio": 1.0026241309044217,
+      "median_profit_ratio": 0.9622810605093923,
+      "improved": 3,
+      "regressed": 11,
+      "unchanged": 0
+    },
+    "overall": {
+      "case_count": 16,
+      "baseline_total_profit": 52574889,
+      "candidate_total_profit": 49789200,
+      "total_profit_increase_pct": -5.298516179463542,
+      "mean_profit_ratio": 0.9916825301121283,
+      "median_profit_ratio": 0.9499061260016965,
+      "improved": 3,
+      "regressed": 13,
+      "unchanged": 0
+    },
+    "boundary": {
+      "case_count": 2,
+      "baseline_total_profit": 11164512,
+      "candidate_total_profit": 10321724,
+      "total_profit_increase_pct": -7.548811806552758,
+      "mean_profit_ratio": 0.9150913245660734,
+      "median_profit_ratio": 0.9150913245660734,
+      "improved": 0,
+      "regressed": 2,
+      "unchanged": 0
+    },
+    "worst": {
+      "case": "light_01",
+      "baseline_profit": 1161826,
+      "candidate_profit": 972096,
+      "delta": -189730,
+      "profit_ratio": 0.8366967170643452,
+      "baseline_cpu_seconds": 0.234375,
+      "candidate_cpu_seconds": 0.140625,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    "ok": true,
+    "max_cpu": 0.75
+  }
+}

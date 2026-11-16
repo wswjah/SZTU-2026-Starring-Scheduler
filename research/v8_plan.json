@@ -1,0 +1,63 @@
+{
+  "base": ".\\versions\\v7_tuned\\main.cpp",
+  "source_sha256": "69cf3b597411fb5e406e80d42c37e47f6f231d1146a61fe51a12da24d0022da2",
+  "single_axis_configs": {
+    "sb_15": {
+      "SB": 1.5
+    },
+    "sb_25": {
+      "SB": 2.5
+    },
+    "sb_10": {
+      "SB": 1
+    },
+    "kill_105": {
+      "KILLK": 1.05
+    },
+    "kill_115": {
+      "KILLK": 1.15
+    },
+    "adm_025": {
+      "ADM": 0.025
+    },
+    "adm_075": {
+      "ADM": 0.075
+    },
+    "spread_035": {
+      "SP": 0.35
+    },
+    "spread_045": {
+      "SP": 0.45
+    },
+    "racks_14": {
+      "RK": 14
+    },
+    "racks_20": {
+      "RK": 20
+    },
+    "tickprice_4": {
+      "TH0": 4
+    },
+    "tickprice_6": {
+      "TH0": 6
+    },
+    "lookahead_075": {
+      "LAK": 0.75
+    },
+    "lookahead_125": {
+      "LAK": 1.25
+    },
+    "slack_075": {
+      "SL": 0.75
+    },
+    "slack_125": {
+      "SL": 1.25
+    }
+  },
+  "max_combinations": 2,
+  "training": "cases/train (14 checked-range + 2 boundary)",
+  "development_replay": "V7 validation/confirmation become development data if reused; never fresh V8 evidence",
+  "held_out": "cases/v8_holdout, 40 new worlds, final candidates frozen before outcome evaluation",
+  "selection": "Prefer positive aggregate and equal-weight mean; inspect median and worst regression. At most two disjoint top-axis combinations, then freeze finalists based on training only.",
+  "official_submission_authorized": false
+}

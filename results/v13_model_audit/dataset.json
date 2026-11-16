@@ -1,0 +1,26 @@
+{
+  "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+  "dataset_sha256": "e3b6d53a5665a31fee8169734e260d437e41cfd181e502f96ea0e80562ea0daf",
+  "rows": 41151,
+  "worlds": 32,
+  "feature_columns_exact_float32": true,
+  "targets_reconstructed_exact": true,
+  "only_seen_admitted_rows": true,
+  "all_world_weights_equal": true,
+  "all_folds_world_disjoint": true,
+  "all_worlds_held_out_exactly_once": true,
+  "fold_constants_reconstructed_from_training_worlds_only": true,
+  "oof_mse_reconstructed_exact": true,
+  "author_recorded_32_ledgers_and_full_reports_exact": true,
+  "metrics": {
+    "earned_fraction_mse": 0.1266446657947504,
+    "net_fraction_mse": 0.11357197766256971
+  },
+  "constant_metrics": {
+    "earned_fraction_mse": 0.1717441171854489,
+    "net_fraction_mse": 0.17832515766836146
+  },
+  "model_refits": 0,
+  "interaction_benchmarks_run": 0,
+  "limitation": "Ledger equality flags reuse author's reconciliation artifact; this script independently checks arrays, labels, group splits, weights and fold-constant arithmetic without recollecting or retraining."
+}

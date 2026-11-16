@@ -1,0 +1,26 @@
+{
+  "comparisons": [
+    {
+      "case": "fast_00",
+      "portable_profit": 14086150,
+      "ts0_profit": 14086150,
+      "full_report_equal": true,
+      "all_ok": true
+    },
+    {
+      "case": "standard_00",
+      "portable_profit": 2628618,
+      "ts0_profit": 2628618,
+      "full_report_equal": true,
+      "all_ok": true
+    },
+    {
+      "case": "large_01",
+      "portable_profit": 11453598,
+      "ts0_profit": 11453598,
+      "full_report_equal": true,
+      "all_ok": true
+    }
+  ],
+  "all_reports_equal": true
+}

@@ -1,0 +1,45 @@
+{
+  "files": {
+    "tools/v7_portable_clock.py": {
+      "sha256": "0fa1e08ab50d4c1b6376e80ba7ae180110550e195737075b64d03d40ccaccc31",
+      "bytes": 2259
+    },
+    "tools/v7_portable_clock_probe.cpp": {
+      "sha256": "81234947f7a18c8ff8436b0cd27d67476cfffd98b175b9361e7ea3ce1cdca875",
+      "bytes": 1758
+    },
+    "build/v7_portable_clock_probe.exe": {
+      "sha256": "2a0979f50ac486a64d2f1ecf6fdd56f28e2004c3daed8ec3874866ac909fdeeb",
+      "bytes": 2468109
+    },
+    "candidates/v7_cpu/base.cpp": {
+      "sha256": "605d9a3c02c6a51c0a304b340e1e5701749d0bd698f043ca1a3e8bb88ca376b9",
+      "bytes": 33475
+    },
+    "build/v7_cpu_base.exe": {
+      "sha256": "5a28160e1c3375cc4efbdd49144f2ad9f1142a5ed6db0bebdf4d8a1c7ade2444",
+      "bytes": 581205
+    },
+    "candidates/v7_cpu/base_ts0.cpp": {
+      "sha256": "af1e25f14158309e2c7dc92206857644b019fc2c27bd123b2d54dc644d19e588",
+      "bytes": 33405
+    },
+    "build/v7_cpu_base_ts0.exe": {
+      "sha256": "7716ec4d9c3d37fa9382e6afcf65f22237efbbc7ede0a23b870d413917138e6a",
+      "bytes": 581179
+    }
+  },
+  "sleep": {
+    "old_clock_seconds": 0.312,
+    "portable_cpu_seconds": 0,
+    "steady_wall_seconds": 0.310904
+  },
+  "burn": {
+    "old_clock_seconds": 0.152,
+    "portable_cpu_seconds": 0.15625,
+    "steady_wall_seconds": 0.152675
+  },
+  "report": "research/v7_clock_semantics.md",
+  "control_report": "results/v7_cpu_clock_control/summary.json",
+  "official_source_modified": false
+}

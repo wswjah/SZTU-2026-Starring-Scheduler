@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-16",
+  "dataset": "results/v15_model_dataset/arrays.npz",
+  "admitted": "results/v15_model_dataset/admitted.csv",
+  "expected_worlds": 128,
+  "composition": "OriginalV13 32 plus96 newtrainingworlds,8profiles×12newseeds;explicitv13/v15 keys",
+  "features": [
+    "jobs",
+    "root_fraction",
+    "forecast_cost_per_value",
+    "forecast_time_per_window",
+    "forecast_revenue_per_value",
+    "forecast_net_per_value",
+    "work_per_quota_window",
+    "headroom_fraction",
+    "window_fraction",
+    "elapsed_fraction",
+    "tenant_duration_factor",
+    "deadline_slack_fraction",
+    "first_cores_per_quota",
+    "selected_prep_fraction",
+    "first_transfer_fee_per_value",
+    "first_duration_fraction",
+    "forecast_age_fraction",
+    "selected_prewarm"
+  ],
+  "targets": [
+    "earned/value",
+    "clip(net/value,-2,1)"
+  ],
+  "models": {
+    "A128_120": {
+      "kind": "mlp",
+      "widths": [
+        18,
+        16,
+        2
+      ],
+      "seed": 141116,
+      "epochs": 120,
+      "steps": null,
+      "policy_name": "rev_blend25"
+    },
+    "B128_120": {
+      "kind": "mlp",
+      "widths": [
+        18,
+        16,
+        8,
+        2
+      ],
+      "seed": 141117,
+      "epochs": 120,
+      "steps": null,
+      "policy_name": "veto_strict"
+    },
+    "tree128": {
+      "kind": "tree",
+      "max_depth": 3,
+      "min_samples_leaf": 500,
+      "seed": 131116,
+      "policy_name": "veto_strict"
+    },
+    "A128_steps": {
+      "kind": "mlp",
+      "widths": [
+        18,
+        16,
+        2
+      ],
+      "seed": 141116,
+      "epochs": null,
+      "steps": 4920,
+      "policy_name": "rev_blend25"
+    }
+  },
+  "policies": {
+    "A128_120": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    },
+    "B128_120": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "tree128": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "A128_steps": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    }
+  },
+  "all4_enter_fresh_validation": true,
+  "no_train_threshold_or_architecture_selection": true,
+  "optimizer": "Adam,lr0.003,weight_decay1e-4,batch1024",
+  "training_loss": "Raw linear outputs,world-weighted2-output MSE;targets clipped",
+  "normalization": "Equal-totalworld-weight trainingfold mean/std,std floor1e-6,inputs clipped[-8,8],float64;originalfloat32features castdouble",
+  "evaluation": "Output earned clipped[0,1],net clipped[-2,1];same4foldGroupKFold wholeworlds,train-onlyconstants/norm",
+  "fixed_step_control": "FinalA128_steps4920 updates equalsoldA32full120*ceil(41151/1024);eachnewfold also4920 explicitly differsfromoldfold updatebudgets;freshshuffle each epoch untilstep4920",
+  "reproducibility": "Fixedseeds resetforeachfit,torchCPU1thread/interop1,noearlystopping,noepochselection,noextrasweeps",
+  "export": "C++ inlined predictor replacing corresponding originalfixedgate only;originalheader/18helper/rawprefixrollback/8MiB/scanner/CPUinsurance/20k preserved;diagnosticprefixV15_MODEL_POLICY",
+  "fit_waits_for_dataset_agent_ready": true,
+  "fresh_data_accessed": false,
+  "official_submission_sent": false
+}

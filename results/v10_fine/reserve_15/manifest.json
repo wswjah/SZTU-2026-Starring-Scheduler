@@ -1,0 +1,82 @@
+{
+  "name": "reserve_15",
+  "parameters": {
+    "RESV": 15
+  },
+  "source": ".\\candidates\\v10_fine\\reserve_15.cpp",
+  "source_sha256": "df3b828f4b416423c04b258230c83b04d762398a107205a6caba014ea795dd0e",
+  "executable": ".\\build\\v10_fine_reserve_15.exe",
+  "exe_sha256": "e3fc6efe11407e7315590dfdefc1df7b9d6ee5df95488c1bc07fe3979b0dc9da",
+  "result_dir": ".\\results\\v10_fine\\reserve_15",
+  "valid_range": {
+    "case_count": 14,
+    "cases": [
+      "fast_00",
+      "fast_01",
+      "heavy_00",
+      "heavy_01",
+      "light_00",
+      "light_01",
+      "slow_00",
+      "slow_01",
+      "small_00",
+      "small_01",
+      "standard_00",
+      "standard_01",
+      "unstable_00",
+      "unstable_01"
+    ],
+    "baseline_total_profit": 56070086,
+    "candidate_total_profit": 56135142,
+    "total_profit_delta": 65056,
+    "total_profit_increase_pct": 0.11602621761628296,
+    "mean_profit_ratio": 1.0066906377556362,
+    "median_profit_ratio": 1.0024295701359138,
+    "equal_weight_increase_pct": 0.6690637755636164,
+    "ratio_undefined_cases": [],
+    "improved": 7,
+    "regressed": 5,
+    "unchanged": 2,
+    "baseline_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.3125,
+      "max_peak_memory_bytes": 26226688,
+      "over_one_second": [],
+      "range_violations": {}
+    },
+    "candidate_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.296875,
+      "max_peak_memory_bytes": 26271744,
+      "over_one_second": [],
+      "range_violations": {}
+    }
+  },
+  "boundary": {
+    "case_count": 2,
+    "cases": [
+      "large_00",
+      "large_01"
+    ],
+    "baseline_total_profit": 16352752,
+    "candidate_total_profit": 16446818,
+    "total_profit_delta": 94066,
+    "total_profit_increase_pct": 0.5752303954710491,
+    "mean_profit_ratio": 1.0139433247235359,
+    "median_profit_ratio": 1.0139433247235359,
+    "equal_weight_increase_pct": 1.3943324723535877,
+    "ratio_undefined_cases": [],
+    "improved": 1,
+    "regressed": 1,
+    "unchanged": 0
+  },
+  "worst_ratio": 0.94394713142635
+}

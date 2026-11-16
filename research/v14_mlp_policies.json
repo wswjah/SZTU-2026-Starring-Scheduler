@@ -1,0 +1,146 @@
+[
+  {
+    "architecture": "A",
+    "name": "A_veto_light",
+    "policy_name": "veto_light",
+    "policy": {
+      "type": "net_veto",
+      "net_threshold": 0.02,
+      "forecast_net_threshold": 0.25,
+      "min_jobs": 3
+    },
+    "source": ".\\candidates\\v14_mlp\\A_veto_light.cpp",
+    "source_sha256": "8b8e6b622920166b11160091d68178c1499a5992b17ba5bee5da3b57620a04f1",
+    "executable": ".\\build\\v14_mlp_A_veto_light.exe",
+    "exe_sha256": "5feb98f27006ef1756e4ec020b7aa90560f927ebc89a9d2525c83616b309b180",
+    "original_policy_source": ".\\candidates\\v13_model\\veto_light.cpp",
+    "only_predictor_replaced": true,
+    "model_sha256": "a1c4792e1b8f2387f8015d4658ee79faad741f55be75702bf4f03fba6c717024",
+    "official_submission_sent": false
+  },
+  {
+    "architecture": "A",
+    "name": "A_veto_strict",
+    "policy_name": "veto_strict",
+    "policy": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "source": ".\\candidates\\v14_mlp\\A_veto_strict.cpp",
+    "source_sha256": "91bf8328177ae625d8a6a681277ecfb526b7362ea347b22e0dccbf8f6459bfef",
+    "executable": ".\\build\\v14_mlp_A_veto_strict.exe",
+    "exe_sha256": "a2b9ce5d7caf1d47a1cfb5fbb9a3b3e8a06d63915fead9b612bb8a5bdd58614a",
+    "original_policy_source": ".\\candidates\\v13_model\\veto_strict.cpp",
+    "only_predictor_replaced": true,
+    "model_sha256": "a1c4792e1b8f2387f8015d4658ee79faad741f55be75702bf4f03fba6c717024",
+    "official_submission_sent": false
+  },
+  {
+    "architecture": "A",
+    "name": "A_rev_blend25",
+    "policy_name": "rev_blend25",
+    "policy": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    },
+    "source": ".\\candidates\\v14_mlp\\A_rev_blend25.cpp",
+    "source_sha256": "1e7c75636936674bbbf57272ff20bfc526be112da1eaa3b1e70367e3efb51286",
+    "executable": ".\\build\\v14_mlp_A_rev_blend25.exe",
+    "exe_sha256": "32cb6c504736b44742c962dd9dfaf6eb497c518bd49cb4ff168b5e4106c59299",
+    "original_policy_source": ".\\candidates\\v13_model\\rev_blend25.cpp",
+    "only_predictor_replaced": true,
+    "model_sha256": "a1c4792e1b8f2387f8015d4658ee79faad741f55be75702bf4f03fba6c717024",
+    "official_submission_sent": false
+  },
+  {
+    "architecture": "A",
+    "name": "A_rev_blend50",
+    "policy_name": "rev_blend50",
+    "policy": {
+      "type": "revenue_blend",
+      "model_weight": 0.5
+    },
+    "source": ".\\candidates\\v14_mlp\\A_rev_blend50.cpp",
+    "source_sha256": "43781c618b71f05fb1c60da811a799b6a2b48c18ad639b0df118b3cc3fa7a11e",
+    "executable": ".\\build\\v14_mlp_A_rev_blend50.exe",
+    "exe_sha256": "9283e6eec8da484a30973a4faa0af69d970c772877722a90a6c48eccf059866d",
+    "original_policy_source": ".\\candidates\\v13_model\\rev_blend50.cpp",
+    "only_predictor_replaced": true,
+    "model_sha256": "a1c4792e1b8f2387f8015d4658ee79faad741f55be75702bf4f03fba6c717024",
+    "official_submission_sent": false
+  },
+  {
+    "architecture": "B",
+    "name": "B_veto_light",
+    "policy_name": "veto_light",
+    "policy": {
+      "type": "net_veto",
+      "net_threshold": 0.02,
+      "forecast_net_threshold": 0.25,
+      "min_jobs": 3
+    },
+    "source": ".\\candidates\\v14_mlp\\B_veto_light.cpp",
+    "source_sha256": "bc6c06275342110ab658422bd7f1ef292e8d28ca7b024dc4e856607138255aa0",
+    "executable": ".\\build\\v14_mlp_B_veto_light.exe",
+    "exe_sha256": "5eb351935f3d33f8d08f4b6bf88ceea5debe1b656fd9f5d55aee9b194abf4a8c",
+    "original_policy_source": ".\\candidates\\v13_model\\veto_light.cpp",
+    "only_predictor_replaced": true,
+    "model_sha256": "a2fe0399f72128996bcd2e7328d108f5667f8fe52c331f920fb50fa006347ee6",
+    "official_submission_sent": false
+  },
+  {
+    "architecture": "B",
+    "name": "B_veto_strict",
+    "policy_name": "veto_strict",
+    "policy": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "source": ".\\candidates\\v14_mlp\\B_veto_strict.cpp",
+    "source_sha256": "b7cee043f78a02c481954c72b6e2c5a4fa1c4b9f4fffcd81d68732d3d0acae07",
+    "executable": ".\\build\\v14_mlp_B_veto_strict.exe",
+    "exe_sha256": "42935c8ed2112610de5b79bee742290855302a46c20632524a7d1c230c878b03",
+    "original_policy_source": ".\\candidates\\v13_model\\veto_strict.cpp",
+    "only_predictor_replaced": true,
+    "model_sha256": "a2fe0399f72128996bcd2e7328d108f5667f8fe52c331f920fb50fa006347ee6",
+    "official_submission_sent": false
+  },
+  {
+    "architecture": "B",
+    "name": "B_rev_blend25",
+    "policy_name": "rev_blend25",
+    "policy": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    },
+    "source": ".\\candidates\\v14_mlp\\B_rev_blend25.cpp",
+    "source_sha256": "19c6dd7e3977eb17d133b3c2116f0a6c5a60817d59dfbb8519d7cf6d5fe7f4a7",
+    "executable": ".\\build\\v14_mlp_B_rev_blend25.exe",
+    "exe_sha256": "69905a7d58cb51dd3f69c739ad4a574dbcc7d512ac0b5a5dc9edba9439599a71",
+    "original_policy_source": ".\\candidates\\v13_model\\rev_blend25.cpp",
+    "only_predictor_replaced": true,
+    "model_sha256": "a2fe0399f72128996bcd2e7328d108f5667f8fe52c331f920fb50fa006347ee6",
+    "official_submission_sent": false
+  },
+  {
+    "architecture": "B",
+    "name": "B_rev_blend50",
+    "policy_name": "rev_blend50",
+    "policy": {
+      "type": "revenue_blend",
+      "model_weight": 0.5
+    },
+    "source": ".\\candidates\\v14_mlp\\B_rev_blend50.cpp",
+    "source_sha256": "c6481dcc5fe7cebc54d04565105b4b158f382655e704806438fe649c1ec9f83d",
+    "executable": ".\\build\\v14_mlp_B_rev_blend50.exe",
+    "exe_sha256": "41cddcbfa7c70e4d8a6828105308e836825af72c0a0ac8fabe1b8a0f0eb30974",
+    "original_policy_source": ".\\candidates\\v13_model\\rev_blend50.cpp",
+    "only_predictor_replaced": true,
+    "model_sha256": "a2fe0399f72128996bcd2e7328d108f5667f8fe52c331f920fb50fa006347ee6",
+    "official_submission_sent": false
+  }
+]

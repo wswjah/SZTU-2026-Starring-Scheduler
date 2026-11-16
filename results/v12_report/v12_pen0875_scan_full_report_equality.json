@@ -1,0 +1,322 @@
+[
+  {
+    "case": "holdout/fast_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/fast_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/fast_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/fast_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/heavy_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/heavy_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/heavy_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/heavy_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/large_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/large_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/large_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/large_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/light_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/light_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/light_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/light_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/shift_changing",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/shift_dense",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/shift_high_failures",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/shift_no_failures",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/shift_sparse",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/shift_uncertain",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/shift_very_fast",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/shift_very_slow",
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/slow_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/slow_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/slow_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/slow_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/small_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/small_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/small_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/small_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/standard_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/standard_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/standard_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/standard_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/unstable_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/unstable_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/unstable_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "holdout/unstable_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/fast_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/fast_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/fast_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/fast_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/heavy_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/heavy_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/heavy_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/heavy_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/large_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/large_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/large_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/large_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/light_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/light_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/light_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/light_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/shift_changing",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/shift_dense",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/shift_high_failures",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/shift_no_failures",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/shift_sparse",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/shift_uncertain",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/shift_very_fast",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/shift_very_slow",
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/slow_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/slow_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/slow_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/slow_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/small_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/small_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/small_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/small_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/standard_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/standard_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/standard_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/standard_03",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/unstable_00",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/unstable_01",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/unstable_02",
+    "full_report_equal": false
+  },
+  {
+    "case": "confirmation/unstable_03",
+    "full_report_equal": false
+  }
+]

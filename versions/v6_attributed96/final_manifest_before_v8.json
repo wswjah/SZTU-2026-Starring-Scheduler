@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-15",
+  "candidate": "v6_attributed96_bounds_and_command_budget",
+  "official_score": 96,
+  "official_submission_id": 543902,
+  "official_submission_url": "https://acm.sztu.edu.cn:40081/examsys/contest/status?cid=2231#solution_id=543902",
+  "official_submissions_total": 5,
+  "remaining_submissions": 5,
+  "previous_85_manifest": "versions/v3_aggressive/final_manifest_before_v6.json",
+  "upstream_repository": "https://github.com/Shuang-su/SZTU-2026-data-structure-final-homework",
+  "upstream_commit": "a35a23f3a8a3c623ff9c62af15e680143264de5e",
+  "attribution_preserved": true,
+  "artifacts": {
+    "main.cpp": {
+      "bytes": 32618,
+      "sha256": "65be27cdc374c30c8434b335c3895ebf661eca1a0d8e1394523237124df56fab"
+    },
+    "submit.cpp": {
+      "bytes": 16926,
+      "sha256": "ec22e8889720e58ff2c05bbf8177778d53510e8ecff4236fac755f8ecaf6d703"
+    },
+    "build/main.exe": {
+      "bytes": 581179,
+      "sha256": "d219856bcc80cba41006d540fbedda61cc7308e2aaa4960ad066e3c5a21ed683"
+    },
+    "build/submit.exe": {
+      "bytes": 581179,
+      "sha256": "d219856bcc80cba41006d540fbedda61cc7308e2aaa4960ad066e3c5a21ed683"
+    },
+    "tpj_win.exe": {
+      "bytes": 833024,
+      "sha256": "eb5a32b4a5ad196d3af503d892837141b38792744114f41d02675bab4bdcaf65"
+    }
+  },
+  "results": "results/v6_attributed96",
+  "focused_regressions": "results/v6_attributed96_focused/summary.json",
+  "frozen_experiment": "versions/v6_attributed96/manifest.json",
+  "best_source_matches_official_receipt": true
+}

@@ -1,0 +1,42 @@
+{
+  "dominant": {
+    "fast_00": {
+      "checks": 230242,
+      "affected": 2412,
+      "affected_pct": 1.0475934017251414,
+      "same_report_as_normal": true
+    },
+    "heavy_00": {
+      "checks": 189152,
+      "affected": 4040,
+      "affected_pct": 2.1358484182033495,
+      "same_report_as_normal": true
+    },
+    "standard_00": {
+      "checks": 115659,
+      "affected": 1206,
+      "affected_pct": 1.042720410862968,
+      "same_report_as_normal": true
+    }
+  },
+  "pressure": {
+    "fast_00": {
+      "checks": 230190,
+      "affected": 1500,
+      "affected_pct": 0.6516356053694774,
+      "same_report_as_normal": true
+    },
+    "heavy_00": {
+      "checks": 189352,
+      "affected": 3371,
+      "affected_pct": 1.7802822256960582,
+      "same_report_as_normal": true
+    },
+    "standard_00": {
+      "checks": 115659,
+      "affected": 297,
+      "affected_pct": 0.2567893549140145,
+      "same_report_as_normal": true
+    }
+  }
+}

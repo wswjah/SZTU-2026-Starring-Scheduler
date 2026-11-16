@@ -1,0 +1,11 @@
+{
+  "base": ".\\versions\\v10_input_fix\\main.cpp",
+  "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "source": ".\\candidates\\v11_scan.cpp",
+  "source_sha256": "d59972ba208958bca0688f432515e60edee920815596eb32644415d461224828",
+  "exe": ".\\build\\v11_scan.exe",
+  "exe_sha256": "b86de36f1e7ae825ea0b5eed3083f107d80a070b03372e2db4c0239ab14907aa",
+  "text_reader_and_buffer_unchanged": true,
+  "signed_limits_safe_for_representable_inputs": true,
+  "official_submission_sent": false
+}

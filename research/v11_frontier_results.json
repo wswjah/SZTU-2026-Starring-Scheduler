@@ -1,0 +1,372 @@
+[
+  {
+    "name": "cost_only",
+    "base": ".\\versions\\v10_input_fix\\main.cpp",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "source": ".\\candidates\\v11_frontier\\cost_only.cpp",
+    "source_sha256": "e61c401f74067945bee0dc411ef6e6701059afdc4d344e6700096fd8cc3b2038",
+    "executable": ".\\build\\v11_frontier_cost_only.exe",
+    "exe_sha256": "c78c9e75a31d31c223b2c550d605ef8bfb993a41b4f9c80ec7b22adfc4338cdd",
+    "scope": "started and left<=8,currently ready jobs with individual immediate legal placement",
+    "objective": "cash + baseline current jobTheta * preparation;no LAK",
+    "cache_model": "membership quotes,not exact LRU;warm only when distinct image fits machine cache",
+    "time_refinement": false,
+    "official_submission_sent": false,
+    "before_old_cost_fix": {
+      "source_sha256": "ddadab7a5ae6542250a52c31a29a42baadbac21692cf2731463fce8f5aa300f0",
+      "exe_sha256": "ea8cc829072be2a862f55122f45475db7ed2b91e032c4b429274825dc15f670b"
+    },
+    "audit_date": "2026-11-16",
+    "correctness_fix": "Subtract full original pending-job cost including WK queue term before replacement;WK0 behavior unchanged",
+    "valid_range": {
+      "case_count": 14,
+      "cases": [
+        "fast_00",
+        "fast_01",
+        "heavy_00",
+        "heavy_01",
+        "light_00",
+        "light_01",
+        "slow_00",
+        "slow_01",
+        "small_00",
+        "small_01",
+        "standard_00",
+        "standard_01",
+        "unstable_00",
+        "unstable_01"
+      ],
+      "baseline_total_profit": 56070086,
+      "candidate_total_profit": 55575882,
+      "total_profit_delta": -494204,
+      "total_profit_increase_pct": -0.8814040342295937,
+      "mean_profit_ratio": 0.9867228230802929,
+      "median_profit_ratio": 0.9912052855859377,
+      "equal_weight_increase_pct": -1.327717691970709,
+      "ratio_undefined_cases": [],
+      "improved": 3,
+      "regressed": 11,
+      "unchanged": 0,
+      "baseline_health": {
+        "all_runs_ok": true,
+        "all_audits_correct": true,
+        "all_commands_legal": true,
+        "audit_errors": 0,
+        "illegal_commands": 0,
+        "max_cpu_seconds": 0.390625,
+        "max_peak_memory_bytes": 30474240,
+        "over_one_second": [],
+        "range_violations": {}
+      },
+      "candidate_health": {
+        "all_runs_ok": true,
+        "all_audits_correct": true,
+        "all_commands_legal": true,
+        "audit_errors": 0,
+        "illegal_commands": 0,
+        "max_cpu_seconds": 0.265625,
+        "max_peak_memory_bytes": 31825920,
+        "over_one_second": [],
+        "range_violations": {}
+      }
+    },
+    "boundary": {
+      "case_count": 2,
+      "cases": [
+        "large_00",
+        "large_01"
+      ],
+      "baseline_total_profit": 16352752,
+      "candidate_total_profit": 16514916,
+      "total_profit_delta": 162164,
+      "total_profit_increase_pct": 0.9916618315987336,
+      "mean_profit_ratio": 1.0146164941666582,
+      "median_profit_ratio": 1.0146164941666582,
+      "equal_weight_increase_pct": 1.4616494166658223,
+      "ratio_undefined_cases": [],
+      "improved": 2,
+      "regressed": 0,
+      "unchanged": 0
+    },
+    "worst": {
+      "case": "small_01",
+      "baseline_profit": 357104,
+      "candidate_profit": 333450,
+      "delta": -23654,
+      "profit_ratio": 0.9337615932613469,
+      "baseline_cpu_seconds": 0.03125,
+      "candidate_cpu_seconds": 0.03125,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    "health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.453125,
+      "max_peak_memory_bytes": 31825920,
+      "over_one_second": [],
+      "range_violations": {
+        "large_00": [
+          "logchars=3027206 > 3000000"
+        ],
+        "large_01": [
+          "logchars=3111782 > 3000000"
+        ]
+      }
+    },
+    "diagnostics": [
+      {
+        "case": "fast_00",
+        "diagnostic": "V11_FRONTIER eligible=33763 calls=18264 machine_quotes=912305 memo_hits=417166 changes=16014 lower=9208 higher=6806 time_changes=0 estimate_cost_delta=1012856.711248588 late=0 guard_returns=0"
+      },
+      {
+        "case": "fast_01",
+        "diagnostic": "V11_FRONTIER eligible=31483 calls=16967 machine_quotes=711033 memo_hits=323196 changes=13808 lower=8030 higher=5778 time_changes=0 estimate_cost_delta=1029619.874688677 late=0 guard_returns=0"
+      },
+      {
+        "case": "heavy_00",
+        "diagnostic": "V11_FRONTIER eligible=29299 calls=10727 machine_quotes=455281 memo_hits=196470 changes=8065 lower=4737 higher=3328 time_changes=0 estimate_cost_delta=687893.296017963 late=0 guard_returns=0"
+      },
+      {
+        "case": "heavy_01",
+        "diagnostic": "V11_FRONTIER eligible=22279 calls=6991 machine_quotes=426566 memo_hits=221180 changes=5987 lower=3166 higher=2821 time_changes=0 estimate_cost_delta=614736.425094842 late=0 guard_returns=0"
+      },
+      {
+        "case": "large_00",
+        "diagnostic": "V11_FRONTIER eligible=42185 calls=11907 machine_quotes=1785328 memo_hits=867959 changes=9481 lower=5384 higher=4097 time_changes=0 estimate_cost_delta=369484.011379875 late=0 guard_returns=0"
+      },
+      {
+        "case": "large_01",
+        "diagnostic": "V11_FRONTIER eligible=56685 calls=18708 machine_quotes=2033895 memo_hits=909927 changes=15555 lower=9189 higher=6366 time_changes=0 estimate_cost_delta=837760.315931000 late=0 guard_returns=0"
+      },
+      {
+        "case": "light_00",
+        "diagnostic": "V11_FRONTIER eligible=13443 calls=5346 machine_quotes=363528 memo_hits=190056 changes=2964 lower=1501 higher=1463 time_changes=0 estimate_cost_delta=112724.158029963 late=0 guard_returns=0"
+      },
+      {
+        "case": "light_01",
+        "diagnostic": "V11_FRONTIER eligible=9741 calls=2999 machine_quotes=259066 memo_hits=139189 changes=2162 lower=1491 higher=671 time_changes=0 estimate_cost_delta=17604.547017144 late=0 guard_returns=0"
+      },
+      {
+        "case": "slow_00",
+        "diagnostic": "V11_FRONTIER eligible=9471 calls=2207 machine_quotes=225492 memo_hits=119410 changes=1556 lower=1114 higher=442 time_changes=0 estimate_cost_delta=20121.699386268 late=0 guard_returns=0"
+      },
+      {
+        "case": "slow_01",
+        "diagnostic": "V11_FRONTIER eligible=7529 calls=1237 machine_quotes=173464 memo_hits=91770 changes=1023 lower=788 higher=235 time_changes=0 estimate_cost_delta=-14122.871928691 late=0 guard_returns=0"
+      },
+      {
+        "case": "small_00",
+        "diagnostic": "V11_FRONTIER eligible=3913 calls=1478 machine_quotes=25688 memo_hits=10492 changes=791 lower=525 higher=266 time_changes=0 estimate_cost_delta=36024.643596414 late=0 guard_returns=0"
+      },
+      {
+        "case": "small_01",
+        "diagnostic": "V11_FRONTIER eligible=5462 calls=2354 machine_quotes=35712 memo_hits=17058 changes=1090 lower=768 higher=322 time_changes=0 estimate_cost_delta=39071.656462495 late=0 guard_returns=0"
+      },
+      {
+        "case": "standard_00",
+        "diagnostic": "V11_FRONTIER eligible=20816 calls=6940 machine_quotes=394912 memo_hits=189667 changes=5011 lower=2627 higher=2384 time_changes=0 estimate_cost_delta=334949.342578348 late=0 guard_returns=0"
+      },
+      {
+        "case": "standard_01",
+        "diagnostic": "V11_FRONTIER eligible=20516 calls=6957 machine_quotes=359492 memo_hits=162719 changes=5227 lower=3447 higher=1780 time_changes=0 estimate_cost_delta=253748.405029843 late=0 guard_returns=0"
+      },
+      {
+        "case": "unstable_00",
+        "diagnostic": "V11_FRONTIER eligible=23237 calls=7992 machine_quotes=534179 memo_hits=255319 changes=6513 lower=3944 higher=2569 time_changes=0 estimate_cost_delta=311830.668849541 late=0 guard_returns=0"
+      },
+      {
+        "case": "unstable_01",
+        "diagnostic": "V11_FRONTIER eligible=24172 calls=9072 machine_quotes=470513 memo_hits=213851 changes=6686 lower=4113 higher=2573 time_changes=0 estimate_cost_delta=440359.933698415 late=0 guard_returns=0"
+      }
+    ]
+  },
+  {
+    "name": "cost_and_time",
+    "base": ".\\versions\\v10_input_fix\\main.cpp",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "source": ".\\candidates\\v11_frontier\\cost_and_time.cpp",
+    "source_sha256": "fc1fa7f4e95aa836fe3a521befde9dd90fe5695d3c810a18aefd550883e8a768",
+    "executable": ".\\build\\v11_frontier_cost_and_time.exe",
+    "exe_sha256": "4792ae72cc868842a7ee5b6ecc0744f4e9b376b533e1a81362c3e9e67e760b4f",
+    "scope": "started and left<=8,currently ready jobs with individual immediate legal placement",
+    "objective": "cash + baseline current jobTheta * preparation;no LAK",
+    "cache_model": "membership quotes,not exact LRU;warm only when distinct image fits machine cache",
+    "time_refinement": true,
+    "official_submission_sent": false,
+    "before_old_cost_fix": {
+      "source_sha256": "20b0f8519f23bbdee61c2677204c5986ca2d4c97cf8f82aace1327b55aa51e4b",
+      "exe_sha256": "0c571828c7046d43f361895c7b30ec586300e65742988c53b953e7d9a8fb9c48"
+    },
+    "audit_date": "2026-11-16",
+    "correctness_fix": "Subtract full original pending-job cost including WK queue term before replacement;WK0 behavior unchanged",
+    "valid_range": {
+      "case_count": 14,
+      "cases": [
+        "fast_00",
+        "fast_01",
+        "heavy_00",
+        "heavy_01",
+        "light_00",
+        "light_01",
+        "slow_00",
+        "slow_01",
+        "small_00",
+        "small_01",
+        "standard_00",
+        "standard_01",
+        "unstable_00",
+        "unstable_01"
+      ],
+      "baseline_total_profit": 56070086,
+      "candidate_total_profit": 55506145,
+      "total_profit_delta": -563941,
+      "total_profit_increase_pct": -1.005778731996243,
+      "mean_profit_ratio": 0.9899896953184185,
+      "median_profit_ratio": 0.9889660636663058,
+      "equal_weight_increase_pct": -1.0010304681581483,
+      "ratio_undefined_cases": [],
+      "improved": 5,
+      "regressed": 9,
+      "unchanged": 0,
+      "baseline_health": {
+        "all_runs_ok": true,
+        "all_audits_correct": true,
+        "all_commands_legal": true,
+        "audit_errors": 0,
+        "illegal_commands": 0,
+        "max_cpu_seconds": 0.390625,
+        "max_peak_memory_bytes": 30474240,
+        "over_one_second": [],
+        "range_violations": {}
+      },
+      "candidate_health": {
+        "all_runs_ok": true,
+        "all_audits_correct": true,
+        "all_commands_legal": true,
+        "audit_errors": 0,
+        "illegal_commands": 0,
+        "max_cpu_seconds": 0.390625,
+        "max_peak_memory_bytes": 31916032,
+        "over_one_second": [],
+        "range_violations": {}
+      }
+    },
+    "boundary": {
+      "case_count": 2,
+      "cases": [
+        "large_00",
+        "large_01"
+      ],
+      "baseline_total_profit": 16352752,
+      "candidate_total_profit": 16363133,
+      "total_profit_delta": 10381,
+      "total_profit_increase_pct": 0.0634816696296836,
+      "mean_profit_ratio": 1.0009661306928428,
+      "median_profit_ratio": 1.0009661306928428,
+      "equal_weight_increase_pct": 0.09661306928427926,
+      "ratio_undefined_cases": [],
+      "improved": 2,
+      "regressed": 0,
+      "unchanged": 0
+    },
+    "worst": {
+      "case": "heavy_00",
+      "baseline_profit": 4463341,
+      "candidate_profit": 4230108,
+      "delta": -233233,
+      "profit_ratio": 0.9477447499530061,
+      "baseline_cpu_seconds": 0.15625,
+      "candidate_cpu_seconds": 0.21875,
+      "baseline_range_violations": [],
+      "candidate_range_violations": []
+    },
+    "health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.390625,
+      "max_peak_memory_bytes": 31916032,
+      "over_one_second": [],
+      "range_violations": {
+        "large_00": [
+          "logchars=3027206 > 3000000"
+        ],
+        "large_01": [
+          "logchars=3111782 > 3000000"
+        ]
+      }
+    },
+    "diagnostics": [
+      {
+        "case": "fast_00",
+        "diagnostic": "V11_FRONTIER eligible=33525 calls=18096 machine_quotes=911206 memo_hits=421357 changes=15698 lower=9026 higher=6672 time_changes=15698 estimate_cost_delta=1021145.311786504 late=0 guard_returns=0"
+      },
+      {
+        "case": "fast_01",
+        "diagnostic": "V11_FRONTIER eligible=31596 calls=17289 machine_quotes=714775 memo_hits=326979 changes=13786 lower=8048 higher=5738 time_changes=13786 estimate_cost_delta=1008224.276319862 late=0 guard_returns=0"
+      },
+      {
+        "case": "heavy_00",
+        "diagnostic": "V11_FRONTIER eligible=29286 calls=10508 machine_quotes=459530 memo_hits=204545 changes=8061 lower=4749 higher=3312 time_changes=8061 estimate_cost_delta=631502.926881611 late=0 guard_returns=0"
+      },
+      {
+        "case": "heavy_01",
+        "diagnostic": "V11_FRONTIER eligible=22284 calls=6799 machine_quotes=418009 memo_hits=215787 changes=5860 lower=3154 higher=2706 time_changes=5860 estimate_cost_delta=608740.858815331 late=0 guard_returns=0"
+      },
+      {
+        "case": "large_00",
+        "diagnostic": "V11_FRONTIER eligible=41703 calls=11933 machine_quotes=1767880 memo_hits=871597 changes=9325 lower=5285 higher=4040 time_changes=9325 estimate_cost_delta=383663.005187427 late=0 guard_returns=0"
+      },
+      {
+        "case": "large_01",
+        "diagnostic": "V11_FRONTIER eligible=56702 calls=18932 machine_quotes=2006629 memo_hits=890828 changes=15579 lower=9304 higher=6275 time_changes=15579 estimate_cost_delta=816186.653758888 late=0 guard_returns=0"
+      },
+      {
+        "case": "light_00",
+        "diagnostic": "V11_FRONTIER eligible=13388 calls=5342 machine_quotes=353008 memo_hits=182468 changes=2854 lower=1495 higher=1359 time_changes=2854 estimate_cost_delta=100700.457475384 late=0 guard_returns=0"
+      },
+      {
+        "case": "light_01",
+        "diagnostic": "V11_FRONTIER eligible=9760 calls=3043 machine_quotes=262021 memo_hits=141111 changes=2178 lower=1519 higher=659 time_changes=2178 estimate_cost_delta=16284.196953374 late=0 guard_returns=0"
+      },
+      {
+        "case": "slow_00",
+        "diagnostic": "V11_FRONTIER eligible=9506 calls=2213 machine_quotes=224371 memo_hits=117804 changes=1545 lower=1120 higher=425 time_changes=1545 estimate_cost_delta=19386.613408615 late=0 guard_returns=0"
+      },
+      {
+        "case": "slow_01",
+        "diagnostic": "V11_FRONTIER eligible=7570 calls=1241 machine_quotes=174849 memo_hits=93110 changes=1031 lower=787 higher=244 time_changes=1031 estimate_cost_delta=-14308.043193557 late=0 guard_returns=0"
+      },
+      {
+        "case": "small_00",
+        "diagnostic": "V11_FRONTIER eligible=3897 calls=1475 machine_quotes=25444 memo_hits=10464 changes=779 lower=531 higher=248 time_changes=779 estimate_cost_delta=31706.346560660 late=0 guard_returns=0"
+      },
+      {
+        "case": "small_01",
+        "diagnostic": "V11_FRONTIER eligible=5434 calls=2197 machine_quotes=34624 memo_hits=16360 changes=1074 lower=760 higher=314 time_changes=1074 estimate_cost_delta=20823.889272688 late=0 guard_returns=0"
+      },
+      {
+        "case": "standard_00",
+        "diagnostic": "V11_FRONTIER eligible=20799 calls=7332 machine_quotes=392980 memo_hits=190679 changes=4946 lower=2662 higher=2284 time_changes=4946 estimate_cost_delta=354772.963296647 late=0 guard_returns=0"
+      },
+      {
+        "case": "standard_01",
+        "diagnostic": "V11_FRONTIER eligible=20502 calls=7224 machine_quotes=360937 memo_hits=164175 changes=5316 lower=3419 higher=1897 time_changes=5316 estimate_cost_delta=328871.175555810 late=0 guard_returns=0"
+      },
+      {
+        "case": "unstable_00",
+        "diagnostic": "V11_FRONTIER eligible=23144 calls=7969 machine_quotes=529678 memo_hits=250232 changes=6400 lower=3822 higher=2578 time_changes=6400 estimate_cost_delta=338031.214232826 late=0 guard_returns=0"
+      },
+      {
+        "case": "unstable_01",
+        "diagnostic": "V11_FRONTIER eligible=23977 calls=8748 machine_quotes=464560 memo_hits=207147 changes=6668 lower=4131 higher=2537 time_changes=6668 estimate_cost_delta=439242.974126060 late=0 guard_returns=0"
+      }
+    ]
+  }
+]

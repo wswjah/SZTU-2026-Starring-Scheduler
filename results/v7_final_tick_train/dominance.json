@@ -1,0 +1,183 @@
+{
+  "all_earned_equal": true,
+  "all_cost_nonincrease": true,
+  "total_saved": 6937,
+  "rows": [
+    {
+      "case": "fast_00",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 1044,
+      "cost_saved": 1044,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 1044
+    },
+    {
+      "case": "fast_01",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 615,
+      "cost_saved": 615,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 615
+    },
+    {
+      "case": "heavy_00",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 430,
+      "cost_saved": 430,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 430
+    },
+    {
+      "case": "heavy_01",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 453,
+      "cost_saved": 453,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 453
+    },
+    {
+      "case": "large_00",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 227,
+      "cost_saved": 227,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 227
+    },
+    {
+      "case": "large_01",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 472,
+      "cost_saved": 472,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 472
+    },
+    {
+      "case": "light_00",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 413,
+      "cost_saved": 413,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 413
+    },
+    {
+      "case": "light_01",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 54,
+      "cost_saved": 54,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 54
+    },
+    {
+      "case": "slow_00",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 114,
+      "cost_saved": 114,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 114
+    },
+    {
+      "case": "slow_01",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 144,
+      "cost_saved": 144,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 144
+    },
+    {
+      "case": "small_00",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 224,
+      "cost_saved": 224,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 224
+    },
+    {
+      "case": "small_01",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 348,
+      "cost_saved": 348,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 348
+    },
+    {
+      "case": "standard_00",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 656,
+      "cost_saved": 656,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 656
+    },
+    {
+      "case": "standard_01",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 872,
+      "cost_saved": 872,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 872
+    },
+    {
+      "case": "unstable_00",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 426,
+      "cost_saved": 426,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 426
+    },
+    {
+      "case": "unstable_01",
+      "earned_equal": true,
+      "cost_nonincrease": true,
+      "profit_delta": 445,
+      "cost_saved": 445,
+      "earned_delta": 0,
+      "pull_saved": 0,
+      "net_saved": 0,
+      "run_saved": 445
+    }
+  ]
+}

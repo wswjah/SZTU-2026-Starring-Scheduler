@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-15",
+  "name": "v7_racks16",
+  "selection_source": ".\\candidates\\v7_cpu\\racks_16.cpp",
+  "selection_rule": "best train combination and less invasive racks-only comparison; no validation outcomes used",
+  "parameters": {
+    "SB": 3.0,
+    "RK": 16.0,
+    "KILLK": 1.0,
+    "ADM": 0.0,
+    "SP": 0.4
+  },
+  "final_tick_cleanup": true,
+  "windows_process_cpu_clock": true,
+  "non_windows_clock_expression_preserved": true,
+  "source": ".\\versions\\v7_racks16\\main.cpp",
+  "source_sha256": "da6f64e6d3bef33295b01ec6423c2c945e90f3836758e5241bea04e6064b25c1",
+  "packed_source": ".\\versions\\v7_racks16\\submit.cpp",
+  "packed_bytes": 17818,
+  "packed_sha256": "e7780409232d5e44680ba48c5bf84c7f8394ea13cc784473d16d0ac86da30ef8",
+  "tokens_verified": true,
+  "attribution_preserved": true,
+  "executable": ".\\build\\v7_racks16.exe",
+  "exe_sha256": "65fd8e13510a69bdac8125c08a4aab5d3aa64f0dc0e63ebee7ffffa15bf9cd42",
+  "official_submission_sent": false,
+  "official_submission_authorized": false,
+  "validation_set_manifest": "cases/v7_validation/manifest.json"
+}

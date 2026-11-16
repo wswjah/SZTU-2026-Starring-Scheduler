@@ -1,0 +1,30 @@
+[
+  {
+    "name": "hybrid",
+    "base": ".\\versions\\v10_input_fix\\main.cpp",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "source": ".\\candidates\\v11_pull\\hybrid.cpp",
+    "source_sha256": "06c452f30c2284f2035ec45e24c541a07a77e97c8ce973113db1965997fdb088",
+    "executable": ".\\build\\v11_pull_hybrid.exe",
+    "exe_sha256": "0dd6d18f5e8249bc9bdbe9dc65e3e4a8cc28fc2c722c0b0ff2a15cf2eb920f21",
+    "real_runJob_and_billing_unchanged": true,
+    "second_pass_fast_path": "Unique image bytes <= machine capacity proves zero second pull",
+    "ordinary_delay": "exact",
+    "windows_process_cpu_clock": true,
+    "official_submission_sent": false
+  },
+  {
+    "name": "fee_only",
+    "base": ".\\versions\\v10_input_fix\\main.cpp",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "source": ".\\candidates\\v11_pull\\fee_only.cpp",
+    "source_sha256": "df305836025294e6ffb60b4c610fd2069983df30b09a88d51cf73436015acb93",
+    "executable": ".\\build\\v11_pull_fee_only.exe",
+    "exe_sha256": "3d01a6315c47d23ed63549d3d635fcb783e12b5c1f747ec9fdfebf15f90d7077",
+    "real_runJob_and_billing_unchanged": true,
+    "second_pass_fast_path": "Unique image bytes <= machine capacity proves zero second pull",
+    "ordinary_delay": "original membership heuristic",
+    "windows_process_cpu_clock": true,
+    "official_submission_sent": false
+  }
+]

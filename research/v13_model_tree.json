@@ -1,0 +1,496 @@
+{
+  "dataset_sha256": "e3b6d53a5665a31fee8169734e260d437e41cfd181e502f96ea0e80562ea0daf",
+  "feature_names": [
+    "jobs",
+    "root_fraction",
+    "forecast_cost_per_value",
+    "forecast_time_per_window",
+    "forecast_revenue_per_value",
+    "forecast_net_per_value",
+    "work_per_quota_window",
+    "headroom_fraction",
+    "window_fraction",
+    "elapsed_fraction",
+    "tenant_duration_factor",
+    "deadline_slack_fraction",
+    "first_cores_per_quota",
+    "selected_prep_fraction",
+    "first_transfer_fee_per_value",
+    "first_duration_fraction",
+    "forecast_age_fraction",
+    "selected_prewarm"
+  ],
+  "rows": 41151,
+  "worlds": [
+    "fast_00",
+    "fast_01",
+    "fast_02",
+    "fast_03",
+    "heavy_00",
+    "heavy_01",
+    "heavy_02",
+    "heavy_03",
+    "large_00",
+    "large_01",
+    "large_02",
+    "large_03",
+    "light_00",
+    "light_01",
+    "light_02",
+    "light_03",
+    "slow_00",
+    "slow_01",
+    "slow_02",
+    "slow_03",
+    "small_00",
+    "small_01",
+    "small_02",
+    "small_03",
+    "standard_00",
+    "standard_01",
+    "standard_02",
+    "standard_03",
+    "unstable_00",
+    "unstable_01",
+    "unstable_02",
+    "unstable_03"
+  ],
+  "targets": [
+    "earned/value",
+    "clip(net/value,-2,1)"
+  ],
+  "max_depth": 3,
+  "min_samples_leaf": 500,
+  "folds": [
+    {
+      "fold": 0,
+      "train_worlds": [
+        "fast_00",
+        "fast_02",
+        "fast_03",
+        "heavy_01",
+        "heavy_02",
+        "heavy_03",
+        "large_00",
+        "large_01",
+        "large_02",
+        "light_00",
+        "light_02",
+        "light_03",
+        "slow_01",
+        "slow_02",
+        "slow_03",
+        "small_00",
+        "small_02",
+        "small_03",
+        "standard_00",
+        "standard_03",
+        "unstable_00",
+        "unstable_01",
+        "unstable_02",
+        "unstable_03"
+      ],
+      "test_worlds": [
+        "fast_01",
+        "heavy_00",
+        "large_03",
+        "light_01",
+        "slow_00",
+        "small_01",
+        "standard_01",
+        "standard_02"
+      ],
+      "nodes": 15
+    },
+    {
+      "fold": 1,
+      "train_worlds": [
+        "fast_01",
+        "fast_02",
+        "fast_03",
+        "heavy_00",
+        "heavy_01",
+        "heavy_03",
+        "large_00",
+        "large_01",
+        "large_02",
+        "large_03",
+        "light_00",
+        "light_01",
+        "light_03",
+        "slow_00",
+        "slow_01",
+        "small_00",
+        "small_01",
+        "small_02",
+        "small_03",
+        "standard_00",
+        "standard_01",
+        "standard_02",
+        "unstable_00",
+        "unstable_02"
+      ],
+      "test_worlds": [
+        "fast_00",
+        "heavy_02",
+        "light_02",
+        "slow_02",
+        "slow_03",
+        "standard_03",
+        "unstable_01",
+        "unstable_03"
+      ],
+      "nodes": 15
+    },
+    {
+      "fold": 2,
+      "train_worlds": [
+        "fast_00",
+        "fast_01",
+        "fast_03",
+        "heavy_00",
+        "heavy_02",
+        "heavy_03",
+        "large_02",
+        "large_03",
+        "light_01",
+        "light_02",
+        "light_03",
+        "slow_00",
+        "slow_01",
+        "slow_02",
+        "slow_03",
+        "small_01",
+        "small_02",
+        "standard_00",
+        "standard_01",
+        "standard_02",
+        "standard_03",
+        "unstable_01",
+        "unstable_02",
+        "unstable_03"
+      ],
+      "test_worlds": [
+        "fast_02",
+        "heavy_01",
+        "large_00",
+        "large_01",
+        "light_00",
+        "small_00",
+        "small_03",
+        "unstable_00"
+      ],
+      "nodes": 15
+    },
+    {
+      "fold": 3,
+      "train_worlds": [
+        "fast_00",
+        "fast_01",
+        "fast_02",
+        "heavy_00",
+        "heavy_01",
+        "heavy_02",
+        "large_00",
+        "large_01",
+        "large_03",
+        "light_00",
+        "light_01",
+        "light_02",
+        "slow_00",
+        "slow_02",
+        "slow_03",
+        "small_00",
+        "small_01",
+        "small_03",
+        "standard_01",
+        "standard_02",
+        "standard_03",
+        "unstable_00",
+        "unstable_01",
+        "unstable_03"
+      ],
+      "test_worlds": [
+        "fast_03",
+        "heavy_03",
+        "large_02",
+        "light_03",
+        "slow_01",
+        "small_02",
+        "standard_00",
+        "unstable_02"
+      ],
+      "nodes": 15
+    }
+  ],
+  "weighting": "equal total weight per admitted-flow world,no class weighting",
+  "grouped_oof": {
+    "earned_fraction_mse": 0.1266446657947504,
+    "net_fraction_mse": 0.11357197766256971
+  },
+  "grouped_trainonly_constant": {
+    "earned_fraction_mse": 0.1717441171854489,
+    "net_fraction_mse": 0.17832515766836146
+  },
+  "feature_importance": {
+    "jobs": 0.0,
+    "root_fraction": 0.0,
+    "forecast_cost_per_value": 0.0,
+    "forecast_time_per_window": 0.0,
+    "forecast_revenue_per_value": 0.0,
+    "forecast_net_per_value": 0.9886770631765295,
+    "work_per_quota_window": 0.0,
+    "headroom_fraction": 0.0,
+    "window_fraction": 0.0,
+    "elapsed_fraction": 0.0,
+    "tenant_duration_factor": 0.011322936823470454,
+    "deadline_slack_fraction": 0.0,
+    "first_cores_per_quota": 0.0,
+    "selected_prep_fraction": 0.0,
+    "first_transfer_fee_per_value": 0.0,
+    "first_duration_fraction": 0.0,
+    "forecast_age_fraction": 0.0,
+    "selected_prewarm": 0.0
+  },
+  "leaves": [
+    {
+      "leaf": 3,
+      "rows": 2064,
+      "world_count": 32,
+      "prediction": [
+        0.2484444144511709,
+        0.03880844206587161
+      ]
+    },
+    {
+      "leaf": 4,
+      "rows": 3441,
+      "world_count": 32,
+      "prediction": [
+        0.44372626647599256,
+        0.11835382503280145
+      ]
+    },
+    {
+      "leaf": 6,
+      "rows": 3189,
+      "world_count": 32,
+      "prediction": [
+        0.5849158794340777,
+        0.20719989161127714
+      ]
+    },
+    {
+      "leaf": 7,
+      "rows": 5135,
+      "world_count": 32,
+      "prediction": [
+        0.7126421735592867,
+        0.32835675552239896
+      ]
+    },
+    {
+      "leaf": 10,
+      "rows": 8828,
+      "world_count": 30,
+      "prediction": [
+        0.8966337812252856,
+        0.5456300912110263
+      ]
+    },
+    {
+      "leaf": 11,
+      "rows": 2515,
+      "world_count": 32,
+      "prediction": [
+        0.7808958285605591,
+        0.45321114642817334
+      ]
+    },
+    {
+      "leaf": 13,
+      "rows": 7931,
+      "world_count": 32,
+      "prediction": [
+        0.938491508836844,
+        0.6986470053089424
+      ]
+    },
+    {
+      "leaf": 14,
+      "rows": 8048,
+      "world_count": 32,
+      "prediction": [
+        0.9727493096822363,
+        0.8357015553791561
+      ]
+    }
+  ],
+  "tree": {
+    "feature": [
+      5,
+      5,
+      5,
+      -2,
+      -2,
+      5,
+      -2,
+      -2,
+      5,
+      10,
+      -2,
+      -2,
+      5,
+      -2,
+      -2
+    ],
+    "left": [
+      1,
+      2,
+      3,
+      -1,
+      -1,
+      6,
+      -1,
+      -1,
+      9,
+      10,
+      -1,
+      -1,
+      13,
+      -1,
+      -1
+    ],
+    "right": [
+      8,
+      5,
+      4,
+      -1,
+      -1,
+      7,
+      -1,
+      -1,
+      12,
+      11,
+      -1,
+      -1,
+      14,
+      -1,
+      -1
+    ],
+    "threshold": [
+      0.44343508780002594,
+      0.1945345625281334,
+      0.08670411631464958,
+      -2.0,
+      -2.0,
+      0.2935299128293991,
+      -2.0,
+      -2.0,
+      0.7060945332050323,
+      1.4620581269264221,
+      -2.0,
+      -2.0,
+      0.8302907049655914,
+      -2.0,
+      -2.0
+    ],
+    "value": [
+      [
+        0.7660149357697349,
+        0.47660725714462565
+      ],
+      [
+        0.5368941771437337,
+        0.19832996439055386
+      ],
+      [
+        0.36712979345666724,
+        0.08715330272587617
+      ],
+      [
+        0.2484444144511709,
+        0.03880844206587161
+      ],
+      [
+        0.44372626647599256,
+        0.11835382503280145
+      ],
+      [
+        0.661799015994733,
+        0.2801286474100519
+      ],
+      [
+        0.5849158794340777,
+        0.20719989161127714
+      ],
+      [
+        0.7126421735592867,
+        0.32835675552239896
+      ],
+      [
+        0.9132636542453428,
+        0.6554473368679711
+      ],
+      [
+        0.8606312428371402,
+        0.5168813831966664
+      ],
+      [
+        0.8966337812252856,
+        0.5456300912110263
+      ],
+      [
+        0.7808958285605591,
+        0.45321114642817334
+      ],
+      [
+        0.9554640985639861,
+        0.7665489310360963
+      ],
+      [
+        0.938491508836844,
+        0.6986470053089424
+      ],
+      [
+        0.9727493096822363,
+        0.8357015553791561
+      ]
+    ]
+  },
+  "policy_plan": {
+    "veto_light": {
+      "type": "net_veto",
+      "net_threshold": 0.02,
+      "forecast_net_threshold": 0.25,
+      "min_jobs": 3
+    },
+    "veto_strict": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "rev_blend25": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    },
+    "rev_blend50": {
+      "type": "revenue_blend",
+      "model_weight": 0.5
+    }
+  },
+  "meaning": "Conditional outcomes of admitted flows under current99 baseline,not causal action values or completion probabilities",
+  "unadmitted_rows_used": false,
+  "future_inputs_at_runtime": false,
+  "official_submission_sent": false,
+  "existing_heuristic_raw": {
+    "earned_fraction_mse": 0.14109328223993967,
+    "net_fraction_mse": 0.11458308439125885
+  },
+  "existing_heuristic_clipped": {
+    "earned_fraction_mse": 0.14109328223993967,
+    "net_fraction_mse": 0.11458055927514987
+  },
+  "existing_heuristic_definition": "Features4/5 are actual cached baseline forecasts;earned clipped[0,1],net clipped[-2,1] only for clipped comparison,world weights unchanged"
+}

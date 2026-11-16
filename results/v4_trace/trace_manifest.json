@@ -1,0 +1,29 @@
+{
+  "source_sha256": "ebd941dc959e309ebcf860cff382a11cabb2f7c41887c22b5732839bdf295b3b",
+  "baseline_source_sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c",
+  "baseline_reports": "results/v3_final_aggressive/summary.json",
+  "trace_directory": "results/v4_trace",
+  "all_reports_exact": true,
+  "all_workflow_costs_and_earned_reconciled": true,
+  "cases": [
+    "fast_00",
+    "fast_01",
+    "heavy_00",
+    "heavy_01",
+    "large_00",
+    "large_01",
+    "light_00",
+    "light_01",
+    "slow_00",
+    "slow_01",
+    "small_00",
+    "small_01",
+    "standard_00",
+    "standard_01",
+    "unstable_00",
+    "unstable_01"
+  ],
+  "flow_rows": 26420,
+  "admitted_rows": 19616,
+  "note": "Hindsight outcome columns must never be used as decision-time features."
+}

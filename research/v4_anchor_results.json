@@ -1,0 +1,18 @@
+{
+  "committed": {
+    "case_count": 14,
+    "total_profit_increase_pct": -1.134232386918943,
+    "improved": 4,
+    "regressed": 10,
+    "median_profit_ratio": 0.9873030661434734,
+    "worst": "small_00"
+  },
+  "inflight": {
+    "case_count": 14,
+    "total_profit_increase_pct": -0.5477806225801962,
+    "improved": 3,
+    "regressed": 11,
+    "median_profit_ratio": 0.9811120825731257,
+    "worst": "small_01"
+  }
+}

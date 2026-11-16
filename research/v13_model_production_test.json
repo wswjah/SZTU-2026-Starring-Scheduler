@@ -1,0 +1,34 @@
+{
+  "all_passed": true,
+  "queries": 2176,
+  "original_production_text_outputs_identical": true,
+  "used_feature_float32_bits_identical": true,
+  "python_reference_predictions_and_gates_exact": true,
+  "all_leaves_covered": [
+    3,
+    4,
+    6,
+    7,
+    10,
+    11,
+    13,
+    14
+  ],
+  "allow_count": 1600,
+  "reject_count": 576,
+  "gate_boundaries": "jobs1/2/3/4,all reachable tree leaves,adjacentfloat32 splitvalues,forecastmargin.4 neighbours",
+  "no_interactive_runs": true,
+  "no_model_or_policy_changes": true,
+  "builds": [
+    {
+      "label": "original",
+      "source_sha256": "560c63b3dbcbe6341b315b1b56ef36f0d41dd902d12216bb5cb12ba3d4d5d55c",
+      "compiler_stderr": "In file included from tools/v13_model_production_test.cpp:5:\ntools/../candidates/v13_model/veto_strict.cpp: In function 'int v13_model_embedded_main()':\ntools/../candidates/v13_model/veto_strict.cpp:909:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  909 | }\n      | ^\n"
+    },
+    {
+      "label": "production",
+      "source_sha256": "997d4e112368ca47595585a021c6c9fc7cbbd5e3d09fdc2681afedca43b78983",
+      "compiler_stderr": "In file included from tools/v13_model_production_test.cpp:5:\ntools/../candidates/v13_model/production.cpp: In function 'int v13_model_embedded_main()':\ntools/../candidates/v13_model/production.cpp:884:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  884 | }\n      | ^\n"
+    }
+  ]
+}

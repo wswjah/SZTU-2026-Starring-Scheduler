@@ -1,0 +1,11 @@
+{
+  "source": ".\\candidates\\v8_donor.cpp",
+  "source_sha256": "17596c27c4e60f59c7cbb12f87ea775ee0777460513c4158a552203843d32146",
+  "executable": ".\\build\\v8_donor.exe",
+  "exe_sha256": "000bc2ea852abae706386a82ec541c421e7024d85e5c7e3f374d54147301355c",
+  "base": ".\\versions\\v7_tuned\\main.cpp",
+  "base_sha256": "69cf3b597411fb5e406e80d42c37e47f6f231d1146a61fe51a12da24d0022da2",
+  "pool_per_image": 4,
+  "donor_resources_le_target": true,
+  "official_submission_sent": false
+}

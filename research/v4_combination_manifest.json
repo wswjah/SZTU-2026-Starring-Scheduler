@@ -1,0 +1,11 @@
+{
+  "baseline": "official 85-point source",
+  "components": [
+    "candidates/v4_model_low_margin.cpp",
+    "candidates/v4_terminal_rescue.cpp"
+  ],
+  "source": "candidates/v4_model_terminal.cpp",
+  "sha256": "78a67230d16f85f0fe064f7877bd3cca9b655ffc06d441fd70e1655640c7b5b9",
+  "model_only_changes_pre_admission": true,
+  "terminal_estimate_only_when_all_other_jobs_done": true
+}

@@ -1,0 +1,16 @@
+{
+  "aggressive_costonly": {
+    "safety": 1.1,
+    "source": "candidates\\v3_policy_aggressive_costonly.cpp",
+    "source_sha256": "db6f34166bb48c1681f7ed84eaa7a196f1a3d290e87e5cd03f19cfcf6ccf3215",
+    "baseline_sha256": "89812abdcecbb3d65fada3d2dfdc11461489ea1c5ca5c126bf00a83651bc275b",
+    "changed_occurrences": 2
+  },
+  "conservative_costonly": {
+    "safety": 1.35,
+    "source": "candidates\\v3_policy_conservative_costonly.cpp",
+    "source_sha256": "b9cb6fa81f653b501f33f44c58c42c28cac7c53aa1be87e5cac347aa08070c74",
+    "baseline_sha256": "89812abdcecbb3d65fada3d2dfdc11461489ea1c5ca5c126bf00a83651bc275b",
+    "changed_occurrences": 2
+  }
+}

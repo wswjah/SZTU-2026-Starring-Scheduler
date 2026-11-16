@@ -1,0 +1,92 @@
+[
+  {
+    "name": "spread_low",
+    "parameter": "SP",
+    "value": 0.3,
+    "source": ".\\candidates\\v7_params\\spread_low.cpp",
+    "source_sha256": "49f491cf201efaf2f1e6f019505d089cb1cb83ffb1d509be340472f802ea9b1f",
+    "executable": ".\\build\\v7_param_spread_low.exe",
+    "executable_sha256": "01fd253ee82d2bbd6fcaff85f83f445201aff052c39b8a5911fec4c8b7243714"
+  },
+  {
+    "name": "spread_high",
+    "parameter": "SP",
+    "value": 0.5,
+    "source": ".\\candidates\\v7_params\\spread_high.cpp",
+    "source_sha256": "9bd30479c2bdf5c1652adca7260ac86318c135ec309160a0270973c2a7c8be10",
+    "executable": ".\\build\\v7_param_spread_high.exe",
+    "executable_sha256": "b866c1f8444042e6900a5d303e3dd2b27ad73bcf83eb61b0f89a425122729a1e"
+  },
+  {
+    "name": "started_low",
+    "parameter": "SB",
+    "value": 2,
+    "source": ".\\candidates\\v7_params\\started_low.cpp",
+    "source_sha256": "1cccac9c5fda18da7dd9cde199b814102e552c0b80b59be652a910f69d664d12",
+    "executable": ".\\build\\v7_param_started_low.exe",
+    "executable_sha256": "2ded14fdfe59955dd471ff100c119024b58ed430bbfe363d7b8286dce0ea1b2c"
+  },
+  {
+    "name": "started_high",
+    "parameter": "SB",
+    "value": 4,
+    "source": ".\\candidates\\v7_params\\started_high.cpp",
+    "source_sha256": "cc4caedef64172b26911934d06c99729f8d67e890139170e09718daff901de01",
+    "executable": ".\\build\\v7_param_started_high.exe",
+    "executable_sha256": "bfc7fa3c2915168cf3fd51652c28356b7d7db36b8c89c6f3a37a8e8384aa54bb"
+  },
+  {
+    "name": "stop_later",
+    "parameter": "KILLK",
+    "value": 0.9,
+    "source": ".\\candidates\\v7_params\\stop_later.cpp",
+    "source_sha256": "63185d300d7168940a991829221528d538320d80dd3713dfd4f41eec221afb1a",
+    "executable": ".\\build\\v7_param_stop_later.exe",
+    "executable_sha256": "6461bb6c4a4eb2f74574188e939d68d90fc814cfd0521aa49b7e2927a3ed10ab"
+  },
+  {
+    "name": "stop_earlier",
+    "parameter": "KILLK",
+    "value": 1.1,
+    "source": ".\\candidates\\v7_params\\stop_earlier.cpp",
+    "source_sha256": "1f1ef35c838f728765782c4eb112ae3eedc6f5c0d6010a2c1030e04597401008",
+    "executable": ".\\build\\v7_param_stop_earlier.exe",
+    "executable_sha256": "3289dee60af19745fbc2539fef28c68122407fb165595a49453b90820ea49566"
+  },
+  {
+    "name": "admit_more",
+    "parameter": "ADM",
+    "value": -0.05,
+    "source": ".\\candidates\\v7_params\\admit_more.cpp",
+    "source_sha256": "9ed7c683c8ad452df5c2fd1c2c507739589e5f72477530fefb7d1402652fb5d0",
+    "executable": ".\\build\\v7_param_admit_more.exe",
+    "executable_sha256": "6c077b8b6165804baccd51ae04018d42702724043dc7fe4d660d195b11c07b32"
+  },
+  {
+    "name": "admit_less",
+    "parameter": "ADM",
+    "value": 0.05,
+    "source": ".\\candidates\\v7_params\\admit_less.cpp",
+    "source_sha256": "07ccc706ac31257082ad29e867afa1aa0fd81761a44717d30fbdfe3d7a437ce3",
+    "executable": ".\\build\\v7_param_admit_less.exe",
+    "executable_sha256": "ca8fcc1b49e20fa9c63f3a7e1113398fd2905f18e690f70a915023a04c299b66"
+  },
+  {
+    "name": "racks_8",
+    "parameter": "RK",
+    "value": 8,
+    "source": ".\\candidates\\v7_params\\racks_8.cpp",
+    "source_sha256": "2a21d95c0be147b4a3c9712473f977868db2a16b3b373fe6328d54a3fffacaae",
+    "executable": ".\\build\\v7_param_racks_8.exe",
+    "executable_sha256": "dcd331977ee2b84c4e543976ac2acbb0252d0fc8f4867e79964431a9a70f4d84"
+  },
+  {
+    "name": "racks_16",
+    "parameter": "RK",
+    "value": 16,
+    "source": ".\\candidates\\v7_params\\racks_16.cpp",
+    "source_sha256": "86e775d1798e4b732272a95338b24676d548be578885654be081056ea8970dce",
+    "executable": ".\\build\\v7_param_racks_16.exe",
+    "executable_sha256": "51023630b3a49ba626a3606bc760253fb1025c1dba9509bc63860c244c0a66e0"
+  }
+]

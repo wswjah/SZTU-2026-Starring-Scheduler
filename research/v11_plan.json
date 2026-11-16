@@ -1,0 +1,63 @@
+{
+  "base": ".\\versions\\v10_input_fix\\main.cpp",
+  "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "official_best": 99,
+  "buffer_fix_retained": true,
+  "official_submission_authorized": false,
+  "user_submission_decision": "Do not submit yet; retain fix for next combined candidate",
+  "parameters": {
+    "recheck_1": {
+      "THR": 1
+    },
+    "recheck_2": {
+      "THR": 2
+    },
+    "recheck_3": {
+      "THR": 3
+    },
+    "retry_1": {
+      "RT0": 1
+    },
+    "reservation_life_1": {
+      "RT1": 1
+    },
+    "reservation_life_2": {
+      "RT1": 2
+    },
+    "reservation_fraction_025": {
+      "RTK": 0.25
+    },
+    "reserve_10": {
+      "RESV": 10
+    },
+    "reserve_20": {
+      "RESV": 20
+    },
+    "urgency_margin_075": {
+      "MG": 0.75
+    },
+    "urgency_margin_125": {
+      "MG": 1.25
+    },
+    "dead_045": {
+      "DEADK": 0.45
+    },
+    "dead_075": {
+      "DEADK": 0.75
+    },
+    "queue_01": {
+      "WK": 0.1
+    },
+    "queue_025": {
+      "WK": 0.25
+    }
+  },
+  "parallel_branches": [
+    "Up to3 wider rack/lookahead searches",
+    "2 exact-LRU quote variants",
+    "Memo/portableO3 performance controls"
+  ],
+  "selection": "train16 then old V8development80, choose at most2 frozen finalists before fresh40; no parameters selected from fresh outcomes",
+  "compute": "Keep1sec safety guard, distinguish extra CPU from extra profit; controls if CPU guard changes reports",
+  "scope": "Train16 has2 old log boundaries; all are retained and checked-range stats separate"
+}

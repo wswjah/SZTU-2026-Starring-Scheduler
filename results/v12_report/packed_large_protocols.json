@@ -1,0 +1,16 @@
+[
+  {
+    "version": "v12_pen0875_scan",
+    "answers_exact": 400,
+    "encoded_hex_characters": 6000000,
+    "decoded_characters": 3000000,
+    "method": "Direct complete protocol replay,separate from TPJ worlds"
+  },
+  {
+    "version": "v12_scan_input_fix",
+    "answers_exact": 400,
+    "encoded_hex_characters": 6000000,
+    "decoded_characters": 3000000,
+    "method": "Direct complete protocol replay,separate from TPJ worlds"
+  }
+]

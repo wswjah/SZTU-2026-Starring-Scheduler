@@ -1,0 +1,30 @@
+{
+  "all": {
+    "flows": 41151,
+    "worlds": 32,
+    "net_mse": {
+      "tree": 0.11357197766256971,
+      "A": 0.10820211190535985,
+      "B": 0.10834338714165155
+    }
+  },
+  "marginal_n3_forecast_net_lt_04": {
+    "flows": 11975,
+    "worlds": 32,
+    "net_mse": {
+      "tree": 0.1522103087360209,
+      "A": 0.1459697844269353,
+      "B": 0.14556039409109744
+    }
+  },
+  "very_low_forecast_n3": {
+    "flows": 2032,
+    "worlds": 32,
+    "net_mse": {
+      "tree": 0.0841112632171807,
+      "A": 0.0812344369415908,
+      "B": 0.08122727137598229
+    }
+  },
+  "meaning": "Postfit OOF diagnostic only,normalized original equal-world flow weights within subset;not used to change fixed policies or pick candidates"
+}

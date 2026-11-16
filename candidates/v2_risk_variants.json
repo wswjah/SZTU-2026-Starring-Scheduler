@@ -1,0 +1,24 @@
+{
+  "default": {},
+  "risk_01": {
+    "V2_RISK": 0.1
+  },
+  "risk_03": {
+    "V2_RISK": 0.3
+  },
+  "risk_1": {
+    "V2_RISK": 1
+  },
+  "admit_03": {
+    "V2_RISK": 0.3,
+    "V2_ADMIT": 0.3
+  },
+  "window_30": {
+    "V2_RISK": 0.3,
+    "V2_WINDOW": 30
+  },
+  "window_7": {
+    "V2_RISK": 0.3,
+    "V2_WINDOW": 7
+  }
+}

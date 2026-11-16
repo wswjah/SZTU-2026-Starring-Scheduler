@@ -1,0 +1,20 @@
+[
+  {
+    "name": "quota",
+    "source": ".\\candidates\\v8_structure_quota.cpp",
+    "source_sha256": "f08bba25edf819d1f19e804b6bbc5b2c0cb607e5798ffbf4aae5ba849df46ad6",
+    "executable": ".\\build\\v8_structure_quota.exe",
+    "exe_sha256": "9e08fa1c806000afbba9ff86db1617b291b2a71ec355aac15ef9c0b423bea4a1",
+    "discount_competing_usage": 0,
+    "base_sha256": "69cf3b597411fb5e406e80d42c37e47f6f231d1146a61fe51a12da24d0022da2"
+  },
+  {
+    "name": "contention",
+    "source": ".\\candidates\\v8_structure_contention.cpp",
+    "source_sha256": "5728fd1ecc495860d34b293a427a6a1419fac53f6b807981e85b07e88f5558f6",
+    "executable": ".\\build\\v8_structure_contention.exe",
+    "exe_sha256": "a949b14aa5fe5fe7ff9f5760ee6bcd5d4ee9d8f446214b948191b75e9084ab22",
+    "discount_competing_usage": 0.5,
+    "base_sha256": "69cf3b597411fb5e406e80d42c37e47f6f231d1146a61fe51a12da24d0022da2"
+  }
+]

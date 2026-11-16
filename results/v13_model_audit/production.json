@@ -1,0 +1,35 @@
+{
+  "sources": {
+    ".\\candidates\\v13_model\\veto_strict.cpp": "560c63b3dbcbe6341b315b1b56ef36f0d41dd902d12216bb5cb12ba3d4d5d55c",
+    ".\\candidates\\v13_model\\production.cpp": "997d4e112368ca47595585a021c6c9fc7cbbd5e3d09fdc2681afedca43b78983"
+  },
+  "generator_reproduces_production_exactly": true,
+  "tree_inc_and_gate_condition_identical": true,
+  "used_features": [
+    5,
+    10
+  ],
+  "two_float32_formulas_identical": true,
+  "all_other_runtime_slots_zero_initialized": true,
+  "actual_production_state_cases_passed": true,
+  "state_stdout": "gate state cases passed: actual rejection,raw-prefix,budget,quota,reservations,started-retry\n",
+  "production_decision_queries": 94,
+  "all_predictions_features_and_decisions_match_full_strict_reference": true,
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-DV13_MODEL_AUDIT_SOURCE=\"../candidates/v13_model/production.cpp\"",
+    "-DV13_MODEL_AUDIT_KIND=1",
+    "-DV13_MODEL_AUDIT_PRODUCTION=1",
+    "tools/v13_model_audit_gate.cpp",
+    "-o",
+    ".\\build\\v13_model_audit_production.exe"
+  ],
+  "compiler_stderr": "In file included from tools/v13_model_audit_gate.cpp:6:\ntools/../candidates/v13_model/production.cpp: In function 'int v13ModelAuditPolicyMain()':\ntools/../candidates/v13_model/production.cpp:884:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  884 | }\n      | ^\n",
+  "candidate_sources_unchanged": true,
+  "interaction_benchmarks_run": 0,
+  "note": "This proves fixed-function/state cases, not complete CPU-insurance trajectory equivalence; root owns production80 full-report comparison."
+}

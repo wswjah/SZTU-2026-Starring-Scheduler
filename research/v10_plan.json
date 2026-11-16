@@ -1,0 +1,76 @@
+{
+  "base": ".\\versions\\v8_fine\\main.cpp",
+  "base_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
+  "official_best": 99,
+  "root_configs": {
+    "tickprice_3": {
+      "TH0": 3
+    },
+    "tickprice_35": {
+      "TH0": 3.5
+    },
+    "tickprice_45": {
+      "TH0": 4.5
+    },
+    "slack_11": {
+      "SL": 1.1
+    },
+    "slack_14": {
+      "SL": 1.4
+    },
+    "slack_15": {
+      "SL": 1.5
+    },
+    "started_175": {
+      "SB": 1.75
+    },
+    "started_225": {
+      "SB": 2.25
+    },
+    "kill_1075": {
+      "KILLK": 1.075
+    },
+    "kill_1125": {
+      "KILLK": 1.125
+    },
+    "admit_04": {
+      "ADM": 0.04
+    },
+    "admit_06": {
+      "ADM": 0.06
+    },
+    "spread_0375": {
+      "SP": 0.375
+    },
+    "spread_0425": {
+      "SP": 0.425
+    },
+    "away_075": {
+      "PEN": 0.75
+    },
+    "away_125": {
+      "PEN": 1.25
+    },
+    "reserve_15": {
+      "RESV": 15
+    },
+    "reserve_45": {
+      "RESV": 45
+    },
+    "registry_08": {
+      "RF": 0.8
+    },
+    "registry_12": {
+      "RF": 1.2
+    }
+  },
+  "duration_configs_count": 14,
+  "max_root_combinations": 3,
+  "max_duration_combinations": 1,
+  "train": "cases/train,14 checked range+2 large log boundaries",
+  "development": "V8 holdout/confirmation80 now development only, previous results known",
+  "fresh": "cases/v10_holdout40 frozen before any V10 result",
+  "selection": "Train shortlist then development80. Prefer broad case gains and positive median/equal-weight mean, report all losses. Freeze at most2 finalists before fresh evaluation.",
+  "correctness": "Independent protocol/state/bounds audit in parallel; only concrete reproducible fixes considered",
+  "official_submission_authorized": false
+}

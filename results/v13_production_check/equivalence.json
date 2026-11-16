@@ -1,0 +1,432 @@
+[
+  {
+    "case": "holdout/fast_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/fast_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/fast_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/fast_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/heavy_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/heavy_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/heavy_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/heavy_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/large_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/large_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/large_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/large_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/light_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/light_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/light_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/light_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/shift_changing",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/shift_dense",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/shift_high_failures",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/shift_no_failures",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/shift_sparse",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/shift_uncertain",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/shift_very_fast",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/shift_very_slow",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/slow_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/slow_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/slow_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/slow_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/small_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/small_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/small_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/small_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/standard_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/standard_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/standard_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/standard_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/unstable_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/unstable_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/unstable_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "holdout/unstable_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/fast_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/fast_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/fast_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/fast_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/heavy_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/heavy_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/heavy_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/heavy_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/large_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/large_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/large_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/large_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/light_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/light_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/light_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/light_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/shift_changing",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/shift_dense",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/shift_high_failures",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/shift_no_failures",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/shift_sparse",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/shift_uncertain",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/shift_very_fast",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/shift_very_slow",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/slow_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/slow_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/slow_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/slow_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/small_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/small_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/small_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/small_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/standard_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/standard_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/standard_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/standard_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/unstable_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/unstable_01",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/unstable_02",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "confirmation/unstable_03",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "aux/stress/failures",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "aux/stress/logs_audits",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "aux/stress/max_topology",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "aux/stress/slow_costly",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "aux/sample_00/turn_00",
+    "input_equal": true,
+    "full_report_equal": true
+  },
+  {
+    "case": "aux/sample_01/turn_00",
+    "input_equal": true,
+    "full_report_equal": true
+  }
+]

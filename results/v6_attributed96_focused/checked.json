@@ -1,0 +1,17 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-DATTRIBUTED96_CHECKED_SCRATCH",
+    "-DATTRIBUTED96_SOURCE=\"../build/attributed96_checked_source.cpp\"",
+    ".\\tools\\test_attributed96.cpp",
+    "-o",
+    ".\\build\\test_attributed96_checked.exe"
+  ],
+  "compiler_stderr": "In file included from ./tools\\test_attributed96.cpp:26:\n./build/attributed96_checked_source.cpp: In function 'int attributed96_solver_main()':\n./build/attributed96_checked_source.cpp:787:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  787 | }\n      | ^\n",
+  "executable_sha256": "f0541e11a2c339c0f43469993674aef90cd574e47122c6ac1ec17a30eafa992a",
+  "returncode": 0,
+  "stdout": "attributed96 focused regressions passed: fanout(0..1000), atomic budget, deferred DONE/FAIL\n",
+  "stderr": ""
+}

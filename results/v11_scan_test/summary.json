@@ -1,0 +1,102 @@
+{
+  "all_passed": true,
+  "cases": [
+    {
+      "padding": 0,
+      "bytes": 186,
+      "all_values_exact": true,
+      "input_sha256": "a3d212318bbee3dca72689ae71dffc6075bcb04e42d6ea17bdfe5d452c8e873c"
+    },
+    {
+      "padding": 1,
+      "bytes": 187,
+      "all_values_exact": true,
+      "input_sha256": "d16c1d2ceae9645d2c85f656247348cec32b3016198b73946883f80ec4132af6"
+    },
+    {
+      "padding": 7,
+      "bytes": 193,
+      "all_values_exact": true,
+      "input_sha256": "05b700b1ba2e7b3ca0f169bf4c0e0a8bdfbd703ac0694aabbb3fab6312af2cbe"
+    },
+    {
+      "padding": 17,
+      "bytes": 203,
+      "all_values_exact": true,
+      "input_sha256": "075783317c75d66cd17a5b5e6160ca48c45e0086f202a3a5854ab18c3f1c705d"
+    },
+    {
+      "padding": 65486,
+      "bytes": 65672,
+      "all_values_exact": true,
+      "input_sha256": "7aebe2683eb053ac214cc9b98ef667fb8773af584888a121e775148f5506d9f0"
+    },
+    {
+      "padding": 65510,
+      "bytes": 65696,
+      "all_values_exact": true,
+      "input_sha256": "15c1f067c6a78e984174b1c9920a62d5d800c709253420bca45793ded11a0fd1"
+    },
+    {
+      "padding": 65530,
+      "bytes": 65716,
+      "all_values_exact": true,
+      "input_sha256": "06b66b5d9ace85a40ef4dc0a62b5152b75e117a1d3fadd4183c83257d1c62b05"
+    },
+    {
+      "padding": 65535,
+      "bytes": 65721,
+      "all_values_exact": true,
+      "input_sha256": "2f1bd0dfbfad6678d499e4c2307697b97872942c31fc451cce4e91e5f7a27d15"
+    },
+    {
+      "padding": 65536,
+      "bytes": 65722,
+      "all_values_exact": true,
+      "input_sha256": "c04a0590017cc3f29652c2b70a7fffd1d4a31256426389d9cf4bc4645d59397c"
+    },
+    {
+      "padding": 65537,
+      "bytes": 65723,
+      "all_values_exact": true,
+      "input_sha256": "2f06b996bfbc75679052512e73b0ad532218bec247305eab31d2a18e946bfeac"
+    },
+    {
+      "padding": 131065,
+      "bytes": 131251,
+      "all_values_exact": true,
+      "input_sha256": "4a273701a7f9b28f773219511d62c3021ca7d08383c034a553a85a903ee209db"
+    }
+  ],
+  "expected": [
+    "0",
+    "1",
+    "-1",
+    "9223372036854775807",
+    "-9223372036854775808",
+    "2147483647",
+    "-2147483648",
+    "999999999",
+    "-999999999",
+    "17",
+    "0",
+    "0",
+    "TEXT",
+    "-123",
+    "DeAdBeEf",
+    "456",
+    "-789",
+    "0",
+    "0"
+  ],
+  "signed_min_and_max": true,
+  "optional_plus": true,
+  "whitespace": "space CR LF TAB VT FF",
+  "EOF_returns_zero_twice": true,
+  "numeric_tokens_cross_input_buffer_boundary": true,
+  "text_hex_mixed_reads_exact": true,
+  "six_million_hex_token_regression_exact": true,
+  "large_protocol_answers": 400,
+  "compiler_stderr": "In file included from tools/v11_scan_test.cpp:2:\ntools/../candidates/v11_scan.cpp: In function 'int v11_scan_original_main()':\ntools/../candidates/v11_scan.cpp:830:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  830 | }\n      | ^\n",
+  "source_sha256": "d59972ba208958bca0688f432515e60edee920815596eb32644415d461224828"
+}

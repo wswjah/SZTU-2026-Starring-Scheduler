@@ -1,0 +1,36 @@
+[
+  {
+    "seed": 103991,
+    "ticks": 600,
+    "queries": 3000,
+    "events": 3282,
+    "all_answers_exact": true,
+    "initialization": {
+      "D": 5,
+      "N": 600,
+      "R": 30,
+      "M": 30,
+      "K": 200,
+      "E": 1000,
+      "W": 60
+    },
+    "protocol_sha256": "2f51326f61875667bba8f7eb37e8d73129af3a5965d6adbef594e70d750a08c1"
+  },
+  {
+    "seed": 104021,
+    "ticks": 600,
+    "queries": 3000,
+    "events": 3328,
+    "all_answers_exact": true,
+    "initialization": {
+      "D": 5,
+      "N": 600,
+      "R": 30,
+      "M": 30,
+      "K": 200,
+      "E": 1000,
+      "W": 60
+    },
+    "protocol_sha256": "ec9eb469edeaa35f21ffcdfa7530dea09d5192862123a95f40d85894c48d8f08"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "mild",
+    "strength": 0.5,
+    "base": ".\\versions\\v8_fine\\main.cpp",
+    "base_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
+    "source": ".\\candidates\\v9_alarm_mild.cpp",
+    "source_sha256": "da02b42aac9e5c96bfe2096b56633163810ba5f64173809a8e5a51d491f5da08",
+    "executable": ".\\build\\v9_alarm_mild.exe",
+    "exe_sha256": "26498f775a13b91950812568af6ff79818a7f0eb6fb58379dfcd1b994a94a0d1",
+    "model_sha256": "e99bba90a4066252f2baf8d3fcd86b6227f5f4cc4a57f3d52b340bafbbd891c9",
+    "observed_inputs_only": true,
+    "official_submission_sent": false
+  },
+  {
+    "name": "normal",
+    "strength": 1,
+    "base": ".\\versions\\v8_fine\\main.cpp",
+    "base_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
+    "source": ".\\candidates\\v9_alarm_normal.cpp",
+    "source_sha256": "3d0b5d4416a6fa7915f3de5f46829d087f4164b40dec468e08e7bf29817163b5",
+    "executable": ".\\build\\v9_alarm_normal.exe",
+    "exe_sha256": "1868d163beac2ca7e0a11003208c63278e912fd32ebb2982480fd4bcce176fcb",
+    "model_sha256": "e99bba90a4066252f2baf8d3fcd86b6227f5f4cc4a57f3d52b340bafbbd891c9",
+    "observed_inputs_only": true,
+    "official_submission_sent": false
+  },
+  {
+    "name": "strong",
+    "strength": 2,
+    "base": ".\\versions\\v8_fine\\main.cpp",
+    "base_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
+    "source": ".\\candidates\\v9_alarm_strong.cpp",
+    "source_sha256": "8a76fec1de962f1c894ec0a150516dab6917aaac2cee46bcca47b89629b4b145",
+    "executable": ".\\build\\v9_alarm_strong.exe",
+    "exe_sha256": "1e110b7ac03aa07daadc560bef1a93e3fcc8c03f737f71911b4bc228c5a33308",
+    "model_sha256": "e99bba90a4066252f2baf8d3fcd86b6227f5f4cc4a57f3d52b340bafbbd891c9",
+    "observed_inputs_only": true,
+    "official_submission_sent": false
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "committed": {
+    "source": ".\\candidates\\v4_anchor_committed.cpp",
+    "sha256": "9b550123c0c80234b217bb942cc3b96eb5ef4ba31ccf422870753f9baaaaf6ed",
+    "hypothesis": "reduce needless anchor migration after work has started"
+  },
+  "inflight": {
+    "source": ".\\candidates\\v4_anchor_inflight.cpp",
+    "sha256": "19d0bcaf2593b43813f5ad4ab0db2180fd72bef00d2e789e533011f757064e8f",
+    "hypothesis": "reduce needless anchor migration after work has started"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "base": ".\\versions\\v10_input_fix\\main.cpp",
+  "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "configs": {
+    "full_racks": {
+      "RK": 30
+    },
+    "warm_rank": {
+      "RK": 16,
+      "machine_aware_rack_fee": true
+    },
+    "full_wide": {
+      "RK": 30,
+      "lookahead_successors": 16,
+      "lookahead_inputs": 12
+    }
+  },
+  "training": "cases/train16,14 checked-range +2 large log boundary worlds",
+  "budget": "Exactly3 variants, no duration/priority tuning, root owns validation",
+  "note": "Process CPU insurance is preserved; CPU<1s does not prove degradation never occurs.",
+  "official_submission_sent": false
+}

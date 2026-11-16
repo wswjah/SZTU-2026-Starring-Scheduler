@@ -1,0 +1,93 @@
+{
+  "name": "dead_075",
+  "parameters": {
+    "DEADK": 0.75
+  },
+  "rewrite": null,
+  "source": ".\\candidates\\v11_parameters\\dead_075.cpp",
+  "source_sha256": "ed91fc904c186784d620b6453d0591f682ec08e8e58cef6f70fb0b8d5e7b348f",
+  "executable": ".\\build\\v11_parameter_dead_075.exe",
+  "exe_sha256": "79f523afc9a8d089db1934c4b00869e5ae949d243b8df3fcfed55f283b132c6e",
+  "valid_range": {
+    "case_count": 14,
+    "cases": [
+      "fast_00",
+      "fast_01",
+      "heavy_00",
+      "heavy_01",
+      "light_00",
+      "light_01",
+      "slow_00",
+      "slow_01",
+      "small_00",
+      "small_01",
+      "standard_00",
+      "standard_01",
+      "unstable_00",
+      "unstable_01"
+    ],
+    "baseline_total_profit": 56070086,
+    "candidate_total_profit": 56070086,
+    "total_profit_delta": 0,
+    "total_profit_increase_pct": 0.0,
+    "mean_profit_ratio": 1.0,
+    "median_profit_ratio": 1.0,
+    "equal_weight_increase_pct": 0.0,
+    "ratio_undefined_cases": [],
+    "improved": 0,
+    "regressed": 0,
+    "unchanged": 14,
+    "baseline_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.390625,
+      "max_peak_memory_bytes": 30474240,
+      "over_one_second": [],
+      "range_violations": {}
+    },
+    "candidate_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.390625,
+      "max_peak_memory_bytes": 30490624,
+      "over_one_second": [],
+      "range_violations": {}
+    }
+  },
+  "boundary": {
+    "case_count": 2,
+    "cases": [
+      "large_00",
+      "large_01"
+    ],
+    "baseline_total_profit": 16352752,
+    "candidate_total_profit": 16352752,
+    "total_profit_delta": 0,
+    "total_profit_increase_pct": 0.0,
+    "mean_profit_ratio": 1.0,
+    "median_profit_ratio": 1.0,
+    "equal_weight_increase_pct": 0.0,
+    "ratio_undefined_cases": [],
+    "improved": 0,
+    "regressed": 0,
+    "unchanged": 2
+  },
+  "worst": {
+    "case": "fast_00",
+    "baseline_profit": 14269550,
+    "candidate_profit": 14269550,
+    "delta": 0,
+    "profit_ratio": 1.0,
+    "baseline_cpu_seconds": 0.390625,
+    "candidate_cpu_seconds": 0.390625,
+    "baseline_range_violations": [],
+    "candidate_range_violations": []
+  },
+  "max_cpu_seconds": 0.4375
+}

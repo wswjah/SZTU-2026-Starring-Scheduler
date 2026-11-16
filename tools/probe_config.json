@@ -1,0 +1,12 @@
+{
+  "gxx_dir": "",
+  "spj": "2",
+  "time_limit": 5,
+  "memory_limit": 512,
+  "tpj_cc": ".\\tpj.cc",
+  "solution": ".\\reference\\StarRing_readable.cpp",
+  "testdata_dir": ".\\cases\\smoke",
+  "pass2": "batch",
+  "oj_module": "csgoj",
+  "admin_module": "admin"
+}

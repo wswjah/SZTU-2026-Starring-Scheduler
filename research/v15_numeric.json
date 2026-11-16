@@ -1,0 +1,57 @@
+{
+  "all_passed": true,
+  "models": [
+    {
+      "name": "A128_120",
+      "queries": 1743,
+      "cpp_numpy_max_abs_error": 8.881784197001252e-16,
+      "cpp_saved_final_prediction_error": 3.3306690738754696e-16,
+      "all4_formula_gates_equal": true,
+      "all_leaves_covered": null,
+      "source_sha256": "b52aa30bf9040a60c4927d6f4a11c820f53e4ff0633fa279c6ed265c3e7ee32f",
+      "compiler_stderr": "In file included from tools/v14_mlp_numeric.cpp:5:\ntools/../candidates/v15_models/A128_120.cpp: In function 'int v14_mlp_embedded_main()':\ntools/../candidates/v15_models/A128_120.cpp:900:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  900 | }\n      | ^\n"
+    },
+    {
+      "name": "B128_120",
+      "queries": 1744,
+      "cpp_numpy_max_abs_error": 6.661338147750939e-16,
+      "cpp_saved_final_prediction_error": 3.3306690738754696e-16,
+      "all4_formula_gates_equal": true,
+      "all_leaves_covered": null,
+      "source_sha256": "48466beea55485a3f73479099870262d68565b24fd1b380cc4699d5a4d0a912a",
+      "compiler_stderr": "In file included from tools/v14_mlp_numeric.cpp:5:\ntools/../candidates/v15_models/B128_120.cpp: In function 'int v14_mlp_embedded_main()':\ntools/../candidates/v15_models/B128_120.cpp:904:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  904 | }\n      | ^\n"
+    },
+    {
+      "name": "tree128",
+      "queries": 1189,
+      "cpp_numpy_max_abs_error": 0.0,
+      "cpp_saved_final_prediction_error": 0.0,
+      "all4_formula_gates_equal": true,
+      "all_leaves_covered": [
+        3,
+        4,
+        6,
+        7,
+        10,
+        11,
+        13,
+        14
+      ],
+      "source_sha256": "c7d2d6bbf86d601cbe51c794d9b57076c47be7a7cffc3cbedb20f561c68c5c6f",
+      "compiler_stderr": "In file included from tools/v14_mlp_numeric.cpp:5:\ntools/../candidates/v15_models/tree128.cpp: In function 'int v14_mlp_embedded_main()':\ntools/../candidates/v15_models/tree128.cpp:909:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  909 | }\n      | ^\n"
+    },
+    {
+      "name": "A128_steps",
+      "queries": 1743,
+      "cpp_numpy_max_abs_error": 8.881784197001252e-16,
+      "cpp_saved_final_prediction_error": 3.3306690738754696e-16,
+      "all4_formula_gates_equal": true,
+      "all_leaves_covered": null,
+      "source_sha256": "8a8ffa72306bc95c4ff9605424fd8d3ec3fd9597f13d41d9643614aa44173116",
+      "compiler_stderr": "In file included from tools/v14_mlp_numeric.cpp:5:\ntools/../candidates/v15_models/A128_steps.cpp: In function 'int v14_mlp_embedded_main()':\ntools/../candidates/v15_models/A128_steps.cpp:900:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  900 | }\n      | ^\n"
+    }
+  ],
+  "no_interactive_runs": true,
+  "fresh_data_accessed": false,
+  "official_submission_sent": false
+}

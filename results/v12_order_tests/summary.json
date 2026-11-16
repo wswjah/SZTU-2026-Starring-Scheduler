@@ -1,0 +1,36 @@
+{
+  "all_passed": true,
+  "source_sha256": "d2910cf5f57822db01a71b5d54cfadfc2c557dcc45f51ea203d22ebb7e5a1878",
+  "stdout": "V12 order transaction tests passed checks=4270\n",
+  "stderr": "",
+  "compiler_stderr": "In file included from tools/v12_order_tests.cpp:5:\ntools/../candidates/v12_order.cpp: In function 'int v12_order_solver_main()':\ntools/../candidates/v12_order.cpp:959:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  959 | }\n      | ^\n",
+  "test_exe_sha256": "4faac428e7adffcb33b05c114b006fa81645770e84e80a1ddbd3039c036968d9",
+  "coverage": [
+    "raw-scalar and real-state rollback",
+    "two actual order startup prices",
+    "forecast score",
+    "20k atomic prewarm boundaries0..7slots",
+    "busy-machine virtual reservation rollback",
+    "cache version ABA invalidation",
+    "reservation/quota/CPU/scope gates",
+    "only chosen commands committed",
+    "tie keeps original order",
+    "200 random multi-machine/cache/budget fixtures in both orders"
+  ],
+  "source_unchanged": true,
+  "official_submission_sent": false,
+  "negative_controls": [
+    {
+      "name": "aba",
+      "exit_code": 1,
+      "stderr": "FAILED hypothetical registry quote versions invalidated\n",
+      "expected_failure_detected": true
+    },
+    {
+      "name": "ema",
+      "exit_code": 1,
+      "stderr": "FAILED first order restores all logical state including sentinel bytes\n",
+      "expected_failure_detected": true
+    }
+  ]
+}

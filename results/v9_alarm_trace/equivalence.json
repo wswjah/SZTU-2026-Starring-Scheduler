@@ -1,0 +1,82 @@
+[
+  {
+    "case": "standard_00",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "light_00",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "fast_00",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "fast_01",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "heavy_00",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "heavy_01",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "large_00",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "large_01",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "light_01",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "slow_00",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "slow_01",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "small_00",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "small_01",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "standard_01",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "unstable_00",
+    "full_report_equal": true,
+    "profit_delta": 0
+  },
+  {
+    "case": "unstable_01",
+    "full_report_equal": true,
+    "profit_delta": 0
+  }
+]

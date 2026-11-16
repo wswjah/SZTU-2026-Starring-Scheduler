@@ -1,0 +1,17 @@
+{
+  "base": ".\\versions\\v6_attributed96\\main.cpp",
+  "base_sha256": "65be27cdc374c30c8434b335c3895ebf661eca1a0d8e1394523237124df56fab",
+  "source": ".\\candidates\\v7_final_tick.cpp",
+  "source_sha256": "5400f2629930633c62ba9aad79434e00c8f02432b239432877ee1e28f2deb996",
+  "portable_clock_adapter": true,
+  "changes": [
+    "only now==T cleanup before CPU insurance"
+  ],
+  "official_submission_sent": false,
+  "executable": "build/v7_final_tick.exe",
+  "exe_sha256": "fa3d7a6637d6b60d25d9c68c7b97d96ef31fe18eafe12e1932e98fbb1b7ef972",
+  "comparison": "results/v7_final_tick_train/comparison.json",
+  "dominance_check": "results/v7_final_tick_train/dominance.json",
+  "earned_equal_all_train16": true,
+  "cost_nonincrease_all_train16": true
+}

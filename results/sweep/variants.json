@@ -1,0 +1,75 @@
+{
+  "default": {},
+  "duration_080": {
+    "SR_DURATION": 0.8
+  },
+  "duration_090": {
+    "SR_DURATION": 0.9
+  },
+  "duration_110": {
+    "SR_DURATION": 1.1
+  },
+  "duration_120": {
+    "SR_DURATION": 1.2
+  },
+  "prior_1": {
+    "SR_PRIOR": 1
+  },
+  "prior_10": {
+    "SR_PRIOR": 10
+  },
+  "clip_2": {
+    "SR_CLIP": 2
+  },
+  "clip_3": {
+    "SR_CLIP": 3
+  },
+  "weighted_05": {
+    "SR_EST_WEIGHT": 0.5
+  },
+  "weighted_1": {
+    "SR_EST_WEIGHT": 1
+  },
+  "progress_1": {
+    "SR_PROGRESS": 1
+  },
+  "progress_3": {
+    "SR_PROGRESS": 3
+  },
+  "work_04": {
+    "SR_WORK": 0.4
+  },
+  "work_16": {
+    "SR_WORK": 1.6
+  },
+  "time_0": {
+    "SR_TIME": 0
+  },
+  "time_10": {
+    "SR_TIME": 10
+  },
+  "rack_wait_0": {
+    "SR_RACK_WAIT": 0
+  },
+  "rack_wait_1": {
+    "SR_RACK_WAIT": 1
+  },
+  "risk_0": {
+    "SR_RISK": 0
+  },
+  "risk_3": {
+    "SR_RISK": 3
+  },
+  "risk_10": {
+    "SR_RISK": 10
+  },
+  "running_05": {
+    "SR_RUNNING_FLOOR": 0.5
+  },
+  "long_margin_1": {
+    "SR_LONG_MARGIN": 1
+  },
+  "long_margin_15": {
+    "SR_LONG_MARGIN": 1.5
+  }
+}

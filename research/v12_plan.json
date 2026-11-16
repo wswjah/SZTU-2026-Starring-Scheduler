@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-16",
+  "base": "versions/v10_input_fix/main.cpp",
+  "official_best": 99,
+  "new_submissions_authorized": false,
+  "exploration": "12 predeclared coarse routing/lookahead single axes and1 two-ready-job transactional order rollout",
+  "train": "train16:14checked range+2old log boundaries",
+  "development": "Old V8development80; V11new80 may be reused only if explicitly relabeled development",
+  "finalists": "At most2 train/development-selected candidates, frozen before V12holdout; no fitting from holdout/confirmation",
+  "fresh": "40holdout+40confirmation predeclared before any V12 results",
+  "constraints": "Retain8MiB buffer,20k commands,CPU insurance,original99 header; default99 untouched"
+}

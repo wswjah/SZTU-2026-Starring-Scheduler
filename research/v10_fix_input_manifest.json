@@ -1,0 +1,47 @@
+{
+  "base": ".\\versions\\v8_fine\\main.cpp",
+  "base_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
+  "source": ".\\candidates\\v10_fix_input.cpp",
+  "source_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "exe": ".\\build\\v10_fix_input.exe",
+  "exe_sha256": "50a16ccce953aecaf5c76ff7817223098a8b4f8f1f81c65e98d9dad92bc0c49c",
+  "change": "tok capacity4MiB to8MiB; all program tokens identical except one exponent",
+  "decoded_log_characters": 3000000,
+  "huffman_code_for_a": "11111110",
+  "encoded_hex_length": 6000000,
+  "bounds": {
+    "T": 400,
+    "D": 2,
+    "N": 2,
+    "R": 2,
+    "M": 2,
+    "K": 30,
+    "L": 1,
+    "I": 1,
+    "P": 1,
+    "W": 20,
+    "E": 1,
+    "jobs": 0,
+    "audits": 400
+  },
+  "baseline": {
+    "exit_code": 0,
+    "stdout_bytes": 4920,
+    "stderr": "",
+    "stdout_sha256": "9ac3c4badf5b3d1bf367ff919eb61a317959008da64e8c247d8b7cf951bfdd99",
+    "all_answers_exact": false,
+    "first_audit": "ANS 2995859"
+  },
+  "fixed": {
+    "exit_code": 0,
+    "stdout_bytes": 4920,
+    "stderr": "",
+    "stdout_sha256": "1310248529238bbb074cd4354adf18994df403d5a05b401a9a8377e14bd3e64b",
+    "all_answers_exact": true,
+    "first_audit": "ANS 3000000"
+  },
+  "expected_first_audit": "ANS 3000000",
+  "expected_all_audits": "400 answers:3,000,000 for ticks1..20,zero for ticks21..400; every response END,CRLF normalized",
+  "method": "Direct complete protocol transcript with manually exact ALARM answers; not an official interactor run or official hidden data.",
+  "official_submission_sent": false
+}

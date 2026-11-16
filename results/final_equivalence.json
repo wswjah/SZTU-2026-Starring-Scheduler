@@ -1,0 +1,44 @@
+{
+  "train": {
+    "fast_00": true,
+    "fast_01": true,
+    "heavy_00": true,
+    "heavy_01": true,
+    "large_00": true,
+    "large_01": true,
+    "light_00": true,
+    "light_01": true,
+    "slow_00": true,
+    "slow_01": true,
+    "small_00": true,
+    "small_01": true,
+    "standard_00": true,
+    "standard_01": true,
+    "unstable_00": true,
+    "unstable_01": true
+  },
+  "holdout": {
+    "fast_00": true,
+    "fast_01": true,
+    "heavy_00": true,
+    "heavy_01": true,
+    "large_00": true,
+    "large_01": true,
+    "light_00": true,
+    "light_01": true,
+    "slow_00": true,
+    "slow_01": true,
+    "small_00": true,
+    "small_01": true,
+    "standard_00": true,
+    "standard_01": true,
+    "unstable_00": true,
+    "unstable_01": true
+  },
+  "stress": {
+    "failures": true,
+    "logs_audits": true,
+    "max_topology": true,
+    "slow_costly": true
+  }
+}

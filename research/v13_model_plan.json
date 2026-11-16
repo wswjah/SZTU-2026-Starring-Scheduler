@@ -1,0 +1,56 @@
+{
+  "features": [
+    "jobs",
+    "root_fraction",
+    "forecast_cost_per_value",
+    "forecast_time_per_window",
+    "forecast_revenue_per_value",
+    "forecast_net_per_value",
+    "work_per_quota_window",
+    "headroom_fraction",
+    "window_fraction",
+    "elapsed_fraction",
+    "tenant_duration_factor",
+    "deadline_slack_fraction",
+    "first_cores_per_quota",
+    "selected_prep_fraction",
+    "first_transfer_fee_per_value",
+    "first_duration_fraction",
+    "forecast_age_fraction",
+    "selected_prewarm"
+  ],
+  "policies": {
+    "veto_light": {
+      "type": "net_veto",
+      "net_threshold": 0.02,
+      "forecast_net_threshold": 0.25,
+      "min_jobs": 3
+    },
+    "veto_strict": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "rev_blend25": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    },
+    "rev_blend50": {
+      "type": "revenue_blend",
+      "model_weight": 0.5
+    }
+  },
+  "max_depth": 3,
+  "min_samples_leaf": 500,
+  "folds": 4,
+  "targets": [
+    "earned/value",
+    "clip((earned-actual_cost)/value,-2,1)"
+  ],
+  "training": "cases/v13_train32 only",
+  "inference": "Before first actual complete RUN batch,selectedmachine/budget already feasible,never modifies started workflows",
+  "forecast": "Cached only where original schedule truly updates rem/work/cost/rev;no extra flowEstimate",
+  "labels": "Actual admitted baseline-policy conditional outcomes,not causal or counterfactual;never-started excluded",
+  "official_submission_sent": false
+}

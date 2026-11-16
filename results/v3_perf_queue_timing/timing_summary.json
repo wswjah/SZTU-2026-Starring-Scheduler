@@ -1,0 +1,73 @@
+{
+  "rounds": 2,
+  "run_count": 16,
+  "all_reports_exactly_equal": true,
+  "splits": {
+    "stress": {
+      "all_cpu_totals": {
+        "baseline": 5.875,
+        "candidate": 5.59375
+      },
+      "total_cpu_reduction_pct": 4.78723404255319,
+      "per_case": [
+        {
+          "case": "failures",
+          "baseline_all_cpu_seconds": [
+            0.84375,
+            0.921875
+          ],
+          "baseline_median_cpu_seconds": 0.8828125,
+          "candidate_all_cpu_seconds": [
+            0.90625,
+            0.796875
+          ],
+          "candidate_median_cpu_seconds": 0.8515625,
+          "median_reduction_pct": 3.539823008849563
+        },
+        {
+          "case": "logs_audits",
+          "baseline_all_cpu_seconds": [
+            0.65625,
+            0.65625
+          ],
+          "baseline_median_cpu_seconds": 0.65625,
+          "candidate_all_cpu_seconds": [
+            0.640625,
+            0.640625
+          ],
+          "candidate_median_cpu_seconds": 0.640625,
+          "median_reduction_pct": 2.3809523809523836
+        },
+        {
+          "case": "max_topology",
+          "baseline_all_cpu_seconds": [
+            0.84375,
+            0.75
+          ],
+          "baseline_median_cpu_seconds": 0.796875,
+          "candidate_all_cpu_seconds": [
+            0.8125,
+            0.703125
+          ],
+          "candidate_median_cpu_seconds": 0.7578125,
+          "median_reduction_pct": 4.90196078431373
+        },
+        {
+          "case": "slow_costly",
+          "baseline_all_cpu_seconds": [
+            0.609375,
+            0.59375
+          ],
+          "baseline_median_cpu_seconds": 0.6015625,
+          "candidate_all_cpu_seconds": [
+            0.578125,
+            0.515625
+          ],
+          "candidate_median_cpu_seconds": 0.546875,
+          "median_reduction_pct": 9.090909090909093
+        }
+      ]
+    }
+  },
+  "execution": "Strictly serial; case-paired runs, variant order alternated per round"
+}

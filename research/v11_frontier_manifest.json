@@ -1,0 +1,42 @@
+[
+  {
+    "name": "cost_only",
+    "base": ".\\versions\\v10_input_fix\\main.cpp",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "source": ".\\candidates\\v11_frontier\\cost_only.cpp",
+    "source_sha256": "e61c401f74067945bee0dc411ef6e6701059afdc4d344e6700096fd8cc3b2038",
+    "executable": ".\\build\\v11_frontier_cost_only.exe",
+    "exe_sha256": "c78c9e75a31d31c223b2c550d605ef8bfb993a41b4f9c80ec7b22adfc4338cdd",
+    "scope": "started and left<=8,currently ready jobs with individual immediate legal placement",
+    "objective": "cash + baseline current jobTheta * preparation;no LAK",
+    "cache_model": "membership quotes,not exact LRU;warm only when distinct image fits machine cache",
+    "time_refinement": false,
+    "official_submission_sent": false,
+    "before_old_cost_fix": {
+      "source_sha256": "ddadab7a5ae6542250a52c31a29a42baadbac21692cf2731463fce8f5aa300f0",
+      "exe_sha256": "ea8cc829072be2a862f55122f45475db7ed2b91e032c4b429274825dc15f670b"
+    },
+    "audit_date": "2026-11-16",
+    "correctness_fix": "Subtract full original pending-job cost including WK queue term before replacement;WK0 behavior unchanged"
+  },
+  {
+    "name": "cost_and_time",
+    "base": ".\\versions\\v10_input_fix\\main.cpp",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "source": ".\\candidates\\v11_frontier\\cost_and_time.cpp",
+    "source_sha256": "fc1fa7f4e95aa836fe3a521befde9dd90fe5695d3c810a18aefd550883e8a768",
+    "executable": ".\\build\\v11_frontier_cost_and_time.exe",
+    "exe_sha256": "4792ae72cc868842a7ee5b6ecc0744f4e9b376b533e1a81362c3e9e67e760b4f",
+    "scope": "started and left<=8,currently ready jobs with individual immediate legal placement",
+    "objective": "cash + baseline current jobTheta * preparation;no LAK",
+    "cache_model": "membership quotes,not exact LRU;warm only when distinct image fits machine cache",
+    "time_refinement": true,
+    "official_submission_sent": false,
+    "before_old_cost_fix": {
+      "source_sha256": "20b0f8519f23bbdee61c2677204c5986ca2d4c97cf8f82aace1327b55aa51e4b",
+      "exe_sha256": "0c571828c7046d43f361895c7b30ec586300e65742988c53b953e7d9a8fb9c48"
+    },
+    "audit_date": "2026-11-16",
+    "correctness_fix": "Subtract full original pending-job cost including WK queue term before replacement;WK0 behavior unchanged"
+  }
+]

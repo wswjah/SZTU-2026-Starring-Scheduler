@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-16",
+  "base": ".\\versions\\v10_input_fix\\main.cpp",
+  "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "baseline": ".\\results\\v11_baseline_train",
+  "scanner_added": false,
+  "configs": {
+    "pen_0": {
+      "PEN": 0
+    },
+    "pen_025": {
+      "PEN": 0.25
+    },
+    "pen_05": {
+      "PEN": 0.5
+    },
+    "pen_0875": {
+      "PEN": 0.875
+    },
+    "lookahead_0": {
+      "LAK": 0
+    },
+    "lookahead_025": {
+      "LAK": 0.25
+    },
+    "lookahead_05": {
+      "LAK": 0.5
+    },
+    "lookahead_15": {
+      "LAK": 1.5
+    },
+    "lookahead_2": {
+      "LAK": 2
+    },
+    "unknown_predecessor_0": {
+      "GU": 0
+    },
+    "registry_rank_0": {
+      "RF": 0
+    },
+    "registry_rank_15": {
+      "RF": 1.5
+    }
+  },
+  "fixed_before_outcomes": true,
+  "maximum_variants": 12,
+  "combinations_allowed": false,
+  "training": "cases/train16 only,14 checked-range +2 large log boundary worlds",
+  "official_submission_sent": false,
+  "default_or_frozen_sources_modified": false
+}

@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-16",
+  "training": "OldV13train32+new96=128 worlds;no validation promotion to training",
+  "additional_training": "Same8 profiles,12 new seeds each; nominal profile mix held fixed",
+  "validation": "New40+40 frozen before fitting/outcomes; all fixed old and refit policies tested unchanged",
+  "references": {
+    "v12_scan_input_fix": {
+      "packed_source": ".\\versions\\v12_scan_input_fix\\submit.cpp",
+      "packed_sha256": "59e5e2309c06871161bd2f7d27220233bab2b1b4ec94e3333e095ac2d7766aed",
+      "executable": ".\\build\\v12_scan_input_fix.exe",
+      "exe_sha256": "9fe09b9f1a0b4bb2a8019b6a51eb8c1680af85cbe096c86c2ddd1a1622880a3c"
+    },
+    "v13_model_fast": {
+      "packed_source": ".\\versions\\v13_model_fast\\submit.cpp",
+      "packed_sha256": "b7ed699acbe7cd1bfd03fbd68fc35bc1432a52b031df574af620167c63e20a34",
+      "executable": ".\\build\\v13_model_fast.exe",
+      "exe_sha256": "4e9aa95df300db34dc98994c40d5ac7cb5b9cb607f98a73cd18a511d23187db9"
+    },
+    "v14_mlp_A": {
+      "packed_source": ".\\versions\\v14_mlp_A\\submit.cpp",
+      "packed_sha256": "60c937fe7b0f9fe6350a21043536abc8ae2b0860622178cba313e5fa8dbb1cf1",
+      "executable": ".\\build\\v14_mlp_A.exe",
+      "exe_sha256": "b90933d54a3e8ace53f407bcb1e74cd05d11cb4bb4fda6e5eb9024d6a83e73d4"
+    },
+    "v14_mlp_B": {
+      "packed_source": ".\\versions\\v14_mlp_B\\submit.cpp",
+      "packed_sha256": "6099cd79380537309ab8ec6aaae97145fa0c73a0fa7fb8cb691609454093fdc2",
+      "executable": ".\\build\\v14_mlp_B.exe",
+      "exe_sha256": "4af1be32fbd09f37e45f4df126ee453cb302499fed3826b3edbd67e522672910"
+    }
+  },
+  "case_manifests_sha256": {
+    "v13_train32": "594e2d3dcad1f1ea2f3309d163909feb8411a93467c1efcf7c170028b381f4c9",
+    "v15_train96": "5f5aa248cc8052f31022651048d01d56a75023ebca882781e8c5bbb79def4895",
+    "v15_holdout": "b5ddfd5e5b6e7349e41e0c83b55cf1aa22b12f1f7cec79ee9556978c7ba06f17",
+    "v15_confirmation": "d5f5642c9b8ae4bbe2f3bb9177136e82fe4ae44396c6284fa8ea99ec254f073e"
+  },
+  "refits": {
+    "A128_120": "18-16-2,seed141116,120epochs,originalA25% revenue blend gate",
+    "B128_120": "18-16-8-2,seed141117,120epochs,originalBstrict gate",
+    "tree128": "Depth3/minleaf500,seed131116,originalstrict gate",
+    "A128_steps": "SameA,exact4920updates for each fit; matches oldfullA32 update count,originalA25% gate;CV budget not same as oldfold fits"
+  },
+  "fixed_hyperparameters": "V14 float64/train-only world-weighted normalization,18float32 inputs,Adam lr.003/wd1e-4/batch1024,raw loss,eval clip unchanged",
+  "selection": "No new threshold search or train-profit shortlist;all4 refits evaluated on same new80 regardless train results",
+  "interpretation": "120epochs on more rows also means more optimizer steps;fixed-update A control helps separate this effect. More rows alone cannot guarantee higher profits.",
+  "controls": "8MiB/scanner/99parameters/CPUguard/20k/rawscalar rollback retained;official99 defaults unchanged",
+  "official_submission_sent": false
+}

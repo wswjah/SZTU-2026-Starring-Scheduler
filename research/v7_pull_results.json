@@ -1,0 +1,98 @@
+{
+  "hybrid": {
+    "source": "candidates\\v7_pull_hybrid.cpp",
+    "sha256": "373a9fa528a27a4fa2bbfcbf2c10d70705c7a5e48dd56877c927eb6f26633146",
+    "valid": {
+      "case_count": 14,
+      "baseline_total_profit": 54401376,
+      "candidate_total_profit": 53938115,
+      "total_profit_increase_pct": -0.851561181099536,
+      "mean_profit_ratio": 1.0155384863534662,
+      "median_profit_ratio": 1.0081739648395711,
+      "improved": 10,
+      "regressed": 4,
+      "unchanged": 0
+    },
+    "overall": {
+      "case_count": 16,
+      "baseline_total_profit": 69972349,
+      "candidate_total_profit": 69102225,
+      "total_profit_increase_pct": -1.2435254960498798,
+      "mean_profit_ratio": 1.0111129643544046,
+      "median_profit_ratio": 1.0075820255031263,
+      "improved": 10,
+      "regressed": 6,
+      "unchanged": 0
+    },
+    "boundary": {
+      "case_count": 2,
+      "baseline_total_profit": 15570973,
+      "candidate_total_profit": 15164110,
+      "total_profit_increase_pct": -2.612958098379592,
+      "mean_profit_ratio": 0.9801343103609728,
+      "median_profit_ratio": 0.9801343103609728,
+      "improved": 0,
+      "regressed": 2,
+      "unchanged": 0
+    },
+    "counters": {
+      "previews": 2953848,
+      "exact": 2441888,
+      "first_mismatch": 158810,
+      "warm_residual": 0
+    },
+    "all_runs_ok": true,
+    "max_cpu_seconds": 0.5,
+    "exe_sha256": [
+      "773fe7461f859aa75a01d9f342ee8a7d5bbe26341d9f6ecf0e58f4a35ee6de09"
+    ]
+  },
+  "fee_only": {
+    "source": "candidates\\v7_pull_fee_only.cpp",
+    "sha256": "9fc41d46b9f2003af2d6ec74970585eaaa31180ee4b84e0a0c9d2ae87bc26be3",
+    "valid": {
+      "case_count": 14,
+      "baseline_total_profit": 54401376,
+      "candidate_total_profit": 53624709,
+      "total_profit_increase_pct": -1.4276605797618025,
+      "mean_profit_ratio": 1.0087547254369522,
+      "median_profit_ratio": 1.0004611795098564,
+      "improved": 7,
+      "regressed": 7,
+      "unchanged": 0
+    },
+    "overall": {
+      "case_count": 16,
+      "baseline_total_profit": 69972349,
+      "candidate_total_profit": 68565880,
+      "total_profit_increase_pct": -2.010035421277623,
+      "mean_profit_ratio": 1.0034665687485012,
+      "median_profit_ratio": 0.9988796510178588,
+      "improved": 7,
+      "regressed": 9,
+      "unchanged": 0
+    },
+    "boundary": {
+      "case_count": 2,
+      "baseline_total_profit": 15570973,
+      "candidate_total_profit": 14941171,
+      "total_profit_increase_pct": -4.0447183358419565,
+      "mean_profit_ratio": 0.9664494719293442,
+      "median_profit_ratio": 0.9664494719293442,
+      "improved": 0,
+      "regressed": 2,
+      "unchanged": 0
+    },
+    "counters": {
+      "previews": 2925708,
+      "exact": 2418787,
+      "first_mismatch": 158935,
+      "warm_residual": 0
+    },
+    "all_runs_ok": true,
+    "max_cpu_seconds": 0.53125,
+    "exe_sha256": [
+      "fd90a0d1ed87d1c3d4002093c0ce34f26a5ecf4b07a838286f71909691c31655"
+    ]
+  }
+}

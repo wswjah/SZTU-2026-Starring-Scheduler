@@ -1,0 +1,143 @@
+{
+  "training_arrays_sha256": "0974407a7cbcf2787ae1eb2fae108a17152a27344565b7ed15925909c212b402",
+  "same_admitted_v13_rows": 41151,
+  "training_worlds": 32,
+  "world_total_weights_equal": true,
+  "raw_loss_source_checked": true,
+  "fixed120_epochs_no_selection_source_checked": true,
+  "pre_fit_loss_amendment_retained": true,
+  "architectures": [
+    {
+      "architecture": "A",
+      "model_sha256": "a1c4792e1b8f2387f8015d4658ee79faad741f55be75702bf4f03fba6c717024",
+      "widths": [
+        18,
+        16,
+        2
+      ],
+      "parameters": 338,
+      "folds": [
+        {
+          "fold": 0,
+          "training_only_mean_scale_exact": true,
+          "training_only_constant_exact": true
+        },
+        {
+          "fold": 1,
+          "training_only_mean_scale_exact": true,
+          "training_only_constant_exact": true
+        },
+        {
+          "fold": 2,
+          "training_only_mean_scale_exact": true,
+          "training_only_constant_exact": true
+        },
+        {
+          "fold": 3,
+          "training_only_mean_scale_exact": true,
+          "training_only_constant_exact": true
+        }
+      ],
+      "final_mean_scale_exact": true,
+      "oof_and_constant_mse_exact": true,
+      "cpp_mean_scale_weights_bias_literals_exact": true,
+      "independent_final_torch_max_abs_error": 4.440892098500626e-16,
+      "existing_cpp_queries_reconstructed": 1744,
+      "independent_cpp_numpy_max_abs_error": 1.5543122344752192e-15,
+      "scalar_bias_first_row_major_queries": 32,
+      "independent_cpp_scalar_max_abs_error": 0.0,
+      "all_existing_numeric_formula_gate_decisions_match": true
+    },
+    {
+      "architecture": "B",
+      "model_sha256": "a2fe0399f72128996bcd2e7328d108f5667f8fe52c331f920fb50fa006347ee6",
+      "widths": [
+        18,
+        16,
+        8,
+        2
+      ],
+      "parameters": 458,
+      "folds": [
+        {
+          "fold": 0,
+          "training_only_mean_scale_exact": true,
+          "training_only_constant_exact": true
+        },
+        {
+          "fold": 1,
+          "training_only_mean_scale_exact": true,
+          "training_only_constant_exact": true
+        },
+        {
+          "fold": 2,
+          "training_only_mean_scale_exact": true,
+          "training_only_constant_exact": true
+        },
+        {
+          "fold": 3,
+          "training_only_mean_scale_exact": true,
+          "training_only_constant_exact": true
+        }
+      ],
+      "final_mean_scale_exact": true,
+      "oof_and_constant_mse_exact": true,
+      "cpp_mean_scale_weights_bias_literals_exact": true,
+      "independent_final_torch_max_abs_error": 4.718447854656915e-16,
+      "existing_cpp_queries_reconstructed": 1744,
+      "independent_cpp_numpy_max_abs_error": 8.881784197001252e-16,
+      "scalar_bias_first_row_major_queries": 32,
+      "independent_cpp_scalar_max_abs_error": 0.0,
+      "all_existing_numeric_formula_gate_decisions_match": true
+    }
+  ],
+  "policy_integrations": [
+    {
+      "name": "A_veto_light",
+      "source_sha256": "8b8e6b622920166b11160091d68178c1499a5992b17ba5bee5da3b57620a04f1",
+      "only_predictor_and_diagnostic_name_replaced": true
+    },
+    {
+      "name": "A_veto_strict",
+      "source_sha256": "91bf8328177ae625d8a6a681277ecfb526b7362ea347b22e0dccbf8f6459bfef",
+      "only_predictor_and_diagnostic_name_replaced": true
+    },
+    {
+      "name": "A_rev_blend25",
+      "source_sha256": "1e7c75636936674bbbf57272ff20bfc526be112da1eaa3b1e70367e3efb51286",
+      "only_predictor_and_diagnostic_name_replaced": true
+    },
+    {
+      "name": "A_rev_blend50",
+      "source_sha256": "43781c618b71f05fb1c60da811a799b6a2b48c18ad639b0df118b3cc3fa7a11e",
+      "only_predictor_and_diagnostic_name_replaced": true
+    },
+    {
+      "name": "B_veto_light",
+      "source_sha256": "bc6c06275342110ab658422bd7f1ef292e8d28ca7b024dc4e856607138255aa0",
+      "only_predictor_and_diagnostic_name_replaced": true
+    },
+    {
+      "name": "B_veto_strict",
+      "source_sha256": "b7cee043f78a02c481954c72b6e2c5a4fa1c4b9f4fffcd81d68732d3d0acae07",
+      "only_predictor_and_diagnostic_name_replaced": true
+    },
+    {
+      "name": "B_rev_blend25",
+      "source_sha256": "19c6dd7e3977eb17d133b3c2116f0a6c5a60817d59dfbb8519d7cf6d5fe7f4a7",
+      "only_predictor_and_diagnostic_name_replaced": true
+    },
+    {
+      "name": "B_rev_blend50",
+      "source_sha256": "c6481dcc5fe7cebc54d04565105b4b158f382655e704806438fe649c1ec9f83d",
+      "only_predictor_and_diagnostic_name_replaced": true
+    }
+  ],
+  "four_existing_disabled_reports_equal": true,
+  "new_model_refits": 0,
+  "new_cpp_executions": 0,
+  "new_interaction_benchmarks": 0,
+  "fresh_outcomes_read": false,
+  "numeric_gate_scope": "Existing numeric harness checks net veto formulas exactly; blend formulas use float32 x2/x4 ratios,not direct runtime raw-double forecast.Allow. Full policy sources retain raw original.Allow conditions unchanged; formula equality is not proof for every raw-double threshold edge.",
+  "verdict": "No blocking implementation issue found in inspected training/export/integration;finite audits do not guarantee unseen-state or official-score behaviour."
+}

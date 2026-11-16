@@ -1,0 +1,2291 @@
+{
+  "dataset": {
+    "worlds": [
+      {
+        "case": "fast_00",
+        "flows": 2705,
+        "admitted": 2449,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "203a92aa2911ab6e1e18cda221b0a542fda38615edab14c004821862c5b1bcd4"
+      },
+      {
+        "case": "fast_01",
+        "flows": 2764,
+        "admitted": 2512,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "67b6444152bee5b2b8686d33d1b9a4b79a5e017ce4217cad18db23ec7184d651"
+      },
+      {
+        "case": "fast_02",
+        "flows": 2334,
+        "admitted": 2083,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "dd803de4135286d0d9168a06a78743a1aea49b8b26b28bf594cdf6536c4527e5"
+      },
+      {
+        "case": "fast_03",
+        "flows": 2573,
+        "admitted": 2309,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "675e7161f03cfdd184f513e0e9bf6c6621e31bf08b4c21b30ca1a797ea390c8d"
+      },
+      {
+        "case": "heavy_00",
+        "flows": 2225,
+        "admitted": 1725,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "1ac37587fcbcaac02dc3cecde5dba6f9c3fc610c967a30e9017293f87425a03b"
+      },
+      {
+        "case": "heavy_01",
+        "flows": 1879,
+        "admitted": 1605,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "6a10373065acfe18c1b6d281290bb293abfeb87d42fbaceee0da9c96641c7a4e"
+      },
+      {
+        "case": "heavy_02",
+        "flows": 2429,
+        "admitted": 2017,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "ecc4362a7dd19d7423b2fcb8d625b2ab4d36d41f44a19770362e369931ee82a2"
+      },
+      {
+        "case": "heavy_03",
+        "flows": 2226,
+        "admitted": 1814,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "4e3949ea96280864f6e2169f402f31dd31f1a4789cc8f9a61f428a10c030c85a"
+      },
+      {
+        "case": "large_00",
+        "flows": 1972,
+        "admitted": 1589,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "8ed5782b2abdf78d8c3a3a260ddea3200aa45684c138e115a2b952de630a97be"
+      },
+      {
+        "case": "large_01",
+        "flows": 2750,
+        "admitted": 2432,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "31e61cd0b409194561bd7ba3b257e771977ca22a7790fbce899965d07148189a"
+      },
+      {
+        "case": "large_02",
+        "flows": 2460,
+        "admitted": 2100,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "f54c43c727e3bed411f1e3ad998532f4bd71df0885b2958e761d24420f4f8928"
+      },
+      {
+        "case": "large_03",
+        "flows": 2190,
+        "admitted": 1921,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "efa8c5a5b05f23b6a7876ca5538a386ba8ec446ce9d683d2c8ec55f481857b75"
+      },
+      {
+        "case": "light_00",
+        "flows": 789,
+        "admitted": 703,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "e1b8b273524d1d5d10c89023c6bac607bb4a51b345ba80891957799331409bf2"
+      },
+      {
+        "case": "light_01",
+        "flows": 868,
+        "admitted": 818,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "0e3cde337917a6fb524d589a5094041bb518a8f4d5554cb6b0c639669d9e409f"
+      },
+      {
+        "case": "light_02",
+        "flows": 728,
+        "admitted": 634,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "c409e71aa3b7d298f171bd9f868b5c63695432c3784469f3a4c006b75b5bfc7e"
+      },
+      {
+        "case": "light_03",
+        "flows": 752,
+        "admitted": 614,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "f9ed7f0e71193960202730df0c48b3fba8e2bc65e1709c660f372e8129d9fe28"
+      },
+      {
+        "case": "slow_00",
+        "flows": 629,
+        "admitted": 315,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "9c020cec85062dc84e39840fd97e10132000219c0c01ea874eba093f7b10793b"
+      },
+      {
+        "case": "slow_01",
+        "flows": 1001,
+        "admitted": 662,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "947bb7a636eb459a45acc052f7438694945928c644085a439414d5c5e48095fc"
+      },
+      {
+        "case": "slow_02",
+        "flows": 698,
+        "admitted": 358,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "d623539b69da22e9c72d922499e34923bd0eb0630ef64c399f8ae26f9623a1c6"
+      },
+      {
+        "case": "slow_03",
+        "flows": 737,
+        "admitted": 483,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "54e89cd4304590a36e253d50f5b5f1fcf8dd35ad5ffbc3e03b70dd8e3167a0e8"
+      },
+      {
+        "case": "small_00",
+        "flows": 452,
+        "admitted": 373,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "867579346b7f66accd7259711eea2167d5d1952666a1acdd04918a8d491755dc"
+      },
+      {
+        "case": "small_01",
+        "flows": 469,
+        "admitted": 411,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "45ed1f52af82702be332e1e85213cf813f40aa8d8fe3c639e4d3de1a1a479107"
+      },
+      {
+        "case": "small_02",
+        "flows": 367,
+        "admitted": 276,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "0ed0fb39701704cd86ae540e2f9d51d9f545a0555f44f6325f05e4f0e3f620de"
+      },
+      {
+        "case": "small_03",
+        "flows": 473,
+        "admitted": 419,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "baba2c671abffba816feb8528134d2952e7956a2cfab28f3175ec4bcadf88c31"
+      },
+      {
+        "case": "standard_00",
+        "flows": 1354,
+        "admitted": 1198,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "9565227f569b16f95a9d1e795575cfd85f293956f1576d9c7c6b6eb38dcd7bb0"
+      },
+      {
+        "case": "standard_01",
+        "flows": 1286,
+        "admitted": 1067,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "597a65e5810b4e60e54c728be20dfac298c5efa6153207f345c85f7924921a54"
+      },
+      {
+        "case": "standard_02",
+        "flows": 1671,
+        "admitted": 1530,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "2fd3e1f9a599a060d3296fab57f02d30dfcdcd4413833bc6749b6188865308c8"
+      },
+      {
+        "case": "standard_03",
+        "flows": 1446,
+        "admitted": 1180,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "a6a57db9dbd2f18a8afcfeb59939262d72b1272d22cdd2596212e339de1b6d69"
+      },
+      {
+        "case": "unstable_00",
+        "flows": 1254,
+        "admitted": 1046,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "56bc93385ed835858fb7b3853cf77ef7471af64991b5bae24a00bdce644acfec"
+      },
+      {
+        "case": "unstable_01",
+        "flows": 1713,
+        "admitted": 1457,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "98d18ef3430a37a9a45bd5d571352e022ee9cebff28da52c775276bc217e699a"
+      },
+      {
+        "case": "unstable_02",
+        "flows": 1586,
+        "admitted": 1334,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "4f3007c29b48a906d0540ddb3dd7715a61d97538f6f505ffb44b53a11b657371"
+      },
+      {
+        "case": "unstable_03",
+        "flows": 1887,
+        "admitted": 1717,
+        "ledger_exact": true,
+        "full_report_equal": true,
+        "late": 0,
+        "guard_returns": 0,
+        "trace_sha256": "c762e1038c52d228cf43c22dbc5fc9b12fd375c73779bb82cafa86ee96e84a92"
+      }
+    ],
+    "features": [
+      "jobs",
+      "root_fraction",
+      "forecast_cost_per_value",
+      "forecast_time_per_window",
+      "forecast_revenue_per_value",
+      "forecast_net_per_value",
+      "work_per_quota_window",
+      "headroom_fraction",
+      "window_fraction",
+      "elapsed_fraction",
+      "tenant_duration_factor",
+      "deadline_slack_fraction",
+      "first_cores_per_quota",
+      "selected_prep_fraction",
+      "first_transfer_fee_per_value",
+      "first_duration_fraction",
+      "forecast_age_fraction",
+      "selected_prewarm"
+    ],
+    "all_flows": 48667,
+    "admitted": 41151,
+    "trace_runs": 32,
+    "all_reports_exact": true,
+    "all_perflow_ledgers_exact": true,
+    "audit_total": 55999,
+    "dataset": "results/v13_model_dataset/admitted.csv",
+    "never_started_not_negative_labels": true,
+    "source_sha256": "c03d521e97c68e24afb6c1e4d76b19f51f654297dcbd33e51949f8fdcadea211",
+    "official_submission_sent": false
+  },
+  "model": {
+    "dataset_sha256": "e3b6d53a5665a31fee8169734e260d437e41cfd181e502f96ea0e80562ea0daf",
+    "feature_names": [
+      "jobs",
+      "root_fraction",
+      "forecast_cost_per_value",
+      "forecast_time_per_window",
+      "forecast_revenue_per_value",
+      "forecast_net_per_value",
+      "work_per_quota_window",
+      "headroom_fraction",
+      "window_fraction",
+      "elapsed_fraction",
+      "tenant_duration_factor",
+      "deadline_slack_fraction",
+      "first_cores_per_quota",
+      "selected_prep_fraction",
+      "first_transfer_fee_per_value",
+      "first_duration_fraction",
+      "forecast_age_fraction",
+      "selected_prewarm"
+    ],
+    "rows": 41151,
+    "worlds": [
+      "fast_00",
+      "fast_01",
+      "fast_02",
+      "fast_03",
+      "heavy_00",
+      "heavy_01",
+      "heavy_02",
+      "heavy_03",
+      "large_00",
+      "large_01",
+      "large_02",
+      "large_03",
+      "light_00",
+      "light_01",
+      "light_02",
+      "light_03",
+      "slow_00",
+      "slow_01",
+      "slow_02",
+      "slow_03",
+      "small_00",
+      "small_01",
+      "small_02",
+      "small_03",
+      "standard_00",
+      "standard_01",
+      "standard_02",
+      "standard_03",
+      "unstable_00",
+      "unstable_01",
+      "unstable_02",
+      "unstable_03"
+    ],
+    "targets": [
+      "earned/value",
+      "clip(net/value,-2,1)"
+    ],
+    "max_depth": 3,
+    "min_samples_leaf": 500,
+    "folds": [
+      {
+        "fold": 0,
+        "train_worlds": [
+          "fast_00",
+          "fast_02",
+          "fast_03",
+          "heavy_01",
+          "heavy_02",
+          "heavy_03",
+          "large_00",
+          "large_01",
+          "large_02",
+          "light_00",
+          "light_02",
+          "light_03",
+          "slow_01",
+          "slow_02",
+          "slow_03",
+          "small_00",
+          "small_02",
+          "small_03",
+          "standard_00",
+          "standard_03",
+          "unstable_00",
+          "unstable_01",
+          "unstable_02",
+          "unstable_03"
+        ],
+        "test_worlds": [
+          "fast_01",
+          "heavy_00",
+          "large_03",
+          "light_01",
+          "slow_00",
+          "small_01",
+          "standard_01",
+          "standard_02"
+        ],
+        "nodes": 15
+      },
+      {
+        "fold": 1,
+        "train_worlds": [
+          "fast_01",
+          "fast_02",
+          "fast_03",
+          "heavy_00",
+          "heavy_01",
+          "heavy_03",
+          "large_00",
+          "large_01",
+          "large_02",
+          "large_03",
+          "light_00",
+          "light_01",
+          "light_03",
+          "slow_00",
+          "slow_01",
+          "small_00",
+          "small_01",
+          "small_02",
+          "small_03",
+          "standard_00",
+          "standard_01",
+          "standard_02",
+          "unstable_00",
+          "unstable_02"
+        ],
+        "test_worlds": [
+          "fast_00",
+          "heavy_02",
+          "light_02",
+          "slow_02",
+          "slow_03",
+          "standard_03",
+          "unstable_01",
+          "unstable_03"
+        ],
+        "nodes": 15
+      },
+      {
+        "fold": 2,
+        "train_worlds": [
+          "fast_00",
+          "fast_01",
+          "fast_03",
+          "heavy_00",
+          "heavy_02",
+          "heavy_03",
+          "large_02",
+          "large_03",
+          "light_01",
+          "light_02",
+          "light_03",
+          "slow_00",
+          "slow_01",
+          "slow_02",
+          "slow_03",
+          "small_01",
+          "small_02",
+          "standard_00",
+          "standard_01",
+          "standard_02",
+          "standard_03",
+          "unstable_01",
+          "unstable_02",
+          "unstable_03"
+        ],
+        "test_worlds": [
+          "fast_02",
+          "heavy_01",
+          "large_00",
+          "large_01",
+          "light_00",
+          "small_00",
+          "small_03",
+          "unstable_00"
+        ],
+        "nodes": 15
+      },
+      {
+        "fold": 3,
+        "train_worlds": [
+          "fast_00",
+          "fast_01",
+          "fast_02",
+          "heavy_00",
+          "heavy_01",
+          "heavy_02",
+          "large_00",
+          "large_01",
+          "large_03",
+          "light_00",
+          "light_01",
+          "light_02",
+          "slow_00",
+          "slow_02",
+          "slow_03",
+          "small_00",
+          "small_01",
+          "small_03",
+          "standard_01",
+          "standard_02",
+          "standard_03",
+          "unstable_00",
+          "unstable_01",
+          "unstable_03"
+        ],
+        "test_worlds": [
+          "fast_03",
+          "heavy_03",
+          "large_02",
+          "light_03",
+          "slow_01",
+          "small_02",
+          "standard_00",
+          "unstable_02"
+        ],
+        "nodes": 15
+      }
+    ],
+    "weighting": "equal total weight per admitted-flow world,no class weighting",
+    "grouped_oof": {
+      "earned_fraction_mse": 0.1266446657947504,
+      "net_fraction_mse": 0.11357197766256971
+    },
+    "grouped_trainonly_constant": {
+      "earned_fraction_mse": 0.1717441171854489,
+      "net_fraction_mse": 0.17832515766836146
+    },
+    "feature_importance": {
+      "jobs": 0.0,
+      "root_fraction": 0.0,
+      "forecast_cost_per_value": 0.0,
+      "forecast_time_per_window": 0.0,
+      "forecast_revenue_per_value": 0.0,
+      "forecast_net_per_value": 0.9886770631765295,
+      "work_per_quota_window": 0.0,
+      "headroom_fraction": 0.0,
+      "window_fraction": 0.0,
+      "elapsed_fraction": 0.0,
+      "tenant_duration_factor": 0.011322936823470454,
+      "deadline_slack_fraction": 0.0,
+      "first_cores_per_quota": 0.0,
+      "selected_prep_fraction": 0.0,
+      "first_transfer_fee_per_value": 0.0,
+      "first_duration_fraction": 0.0,
+      "forecast_age_fraction": 0.0,
+      "selected_prewarm": 0.0
+    },
+    "leaves": [
+      {
+        "leaf": 3,
+        "rows": 2064,
+        "world_count": 32,
+        "prediction": [
+          0.2484444144511709,
+          0.03880844206587161
+        ]
+      },
+      {
+        "leaf": 4,
+        "rows": 3441,
+        "world_count": 32,
+        "prediction": [
+          0.44372626647599256,
+          0.11835382503280145
+        ]
+      },
+      {
+        "leaf": 6,
+        "rows": 3189,
+        "world_count": 32,
+        "prediction": [
+          0.5849158794340777,
+          0.20719989161127714
+        ]
+      },
+      {
+        "leaf": 7,
+        "rows": 5135,
+        "world_count": 32,
+        "prediction": [
+          0.7126421735592867,
+          0.32835675552239896
+        ]
+      },
+      {
+        "leaf": 10,
+        "rows": 8828,
+        "world_count": 30,
+        "prediction": [
+          0.8966337812252856,
+          0.5456300912110263
+        ]
+      },
+      {
+        "leaf": 11,
+        "rows": 2515,
+        "world_count": 32,
+        "prediction": [
+          0.7808958285605591,
+          0.45321114642817334
+        ]
+      },
+      {
+        "leaf": 13,
+        "rows": 7931,
+        "world_count": 32,
+        "prediction": [
+          0.938491508836844,
+          0.6986470053089424
+        ]
+      },
+      {
+        "leaf": 14,
+        "rows": 8048,
+        "world_count": 32,
+        "prediction": [
+          0.9727493096822363,
+          0.8357015553791561
+        ]
+      }
+    ],
+    "tree": {
+      "feature": [
+        5,
+        5,
+        5,
+        -2,
+        -2,
+        5,
+        -2,
+        -2,
+        5,
+        10,
+        -2,
+        -2,
+        5,
+        -2,
+        -2
+      ],
+      "left": [
+        1,
+        2,
+        3,
+        -1,
+        -1,
+        6,
+        -1,
+        -1,
+        9,
+        10,
+        -1,
+        -1,
+        13,
+        -1,
+        -1
+      ],
+      "right": [
+        8,
+        5,
+        4,
+        -1,
+        -1,
+        7,
+        -1,
+        -1,
+        12,
+        11,
+        -1,
+        -1,
+        14,
+        -1,
+        -1
+      ],
+      "threshold": [
+        0.44343508780002594,
+        0.1945345625281334,
+        0.08670411631464958,
+        -2.0,
+        -2.0,
+        0.2935299128293991,
+        -2.0,
+        -2.0,
+        0.7060945332050323,
+        1.4620581269264221,
+        -2.0,
+        -2.0,
+        0.8302907049655914,
+        -2.0,
+        -2.0
+      ],
+      "value": [
+        [
+          0.7660149357697349,
+          0.47660725714462565
+        ],
+        [
+          0.5368941771437337,
+          0.19832996439055386
+        ],
+        [
+          0.36712979345666724,
+          0.08715330272587617
+        ],
+        [
+          0.2484444144511709,
+          0.03880844206587161
+        ],
+        [
+          0.44372626647599256,
+          0.11835382503280145
+        ],
+        [
+          0.661799015994733,
+          0.2801286474100519
+        ],
+        [
+          0.5849158794340777,
+          0.20719989161127714
+        ],
+        [
+          0.7126421735592867,
+          0.32835675552239896
+        ],
+        [
+          0.9132636542453428,
+          0.6554473368679711
+        ],
+        [
+          0.8606312428371402,
+          0.5168813831966664
+        ],
+        [
+          0.8966337812252856,
+          0.5456300912110263
+        ],
+        [
+          0.7808958285605591,
+          0.45321114642817334
+        ],
+        [
+          0.9554640985639861,
+          0.7665489310360963
+        ],
+        [
+          0.938491508836844,
+          0.6986470053089424
+        ],
+        [
+          0.9727493096822363,
+          0.8357015553791561
+        ]
+      ]
+    },
+    "policy_plan": {
+      "veto_light": {
+        "type": "net_veto",
+        "net_threshold": 0.02,
+        "forecast_net_threshold": 0.25,
+        "min_jobs": 3
+      },
+      "veto_strict": {
+        "type": "net_veto",
+        "net_threshold": 0.08,
+        "forecast_net_threshold": 0.4,
+        "min_jobs": 3
+      },
+      "rev_blend25": {
+        "type": "revenue_blend",
+        "model_weight": 0.25
+      },
+      "rev_blend50": {
+        "type": "revenue_blend",
+        "model_weight": 0.5
+      }
+    },
+    "meaning": "Conditional outcomes of admitted flows under current99 baseline,not causal action values or completion probabilities",
+    "unadmitted_rows_used": false,
+    "future_inputs_at_runtime": false,
+    "official_submission_sent": false,
+    "existing_heuristic_raw": {
+      "earned_fraction_mse": 0.14109328223993967,
+      "net_fraction_mse": 0.11458308439125885
+    },
+    "existing_heuristic_clipped": {
+      "earned_fraction_mse": 0.14109328223993967,
+      "net_fraction_mse": 0.11458055927514987
+    },
+    "existing_heuristic_definition": "Features4/5 are actual cached baseline forecasts;earned clipped[0,1],net clipped[-2,1] only for clipped comparison,world weights unchanged"
+  },
+  "closed_loop": {
+    "controls_full_report_equal": true,
+    "controls": 2,
+    "candidates": [
+      {
+        "name": "veto_light",
+        "policy": {
+          "type": "net_veto",
+          "net_threshold": 0.02,
+          "forecast_net_threshold": 0.25,
+          "min_jobs": 3
+        },
+        "source": ".\\candidates\\v13_model\\veto_light.cpp",
+        "source_sha256": "39bc899428430c62045093f728b1341aef5f91c38eede35c5c9366f99e13a4d7",
+        "executable": ".\\build\\v13_model_veto_light.exe",
+        "exe_sha256": "cf0da8edb3213441d654830e791e3546c8bb72050b7a4f95f3397c15776254ba",
+        "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+        "gate_scope": "!started,immediate placement and complete command budget checked,before any prewarm RUN",
+        "rejection": "Restore pre-tryPlace scalar job/reservation state,emit no command and do not alter cache/bill/quota",
+        "official_submission_sent": false,
+        "valid_range": {
+          "case_count": 32,
+          "cases": [
+            "fast_00",
+            "fast_01",
+            "fast_02",
+            "fast_03",
+            "heavy_00",
+            "heavy_01",
+            "heavy_02",
+            "heavy_03",
+            "large_00",
+            "large_01",
+            "large_02",
+            "large_03",
+            "light_00",
+            "light_01",
+            "light_02",
+            "light_03",
+            "slow_00",
+            "slow_01",
+            "slow_02",
+            "slow_03",
+            "small_00",
+            "small_01",
+            "small_02",
+            "small_03",
+            "standard_00",
+            "standard_01",
+            "standard_02",
+            "standard_03",
+            "unstable_00",
+            "unstable_01",
+            "unstable_02",
+            "unstable_03"
+          ],
+          "baseline_total_profit": 153826635,
+          "candidate_total_profit": 153826635,
+          "total_profit_delta": 0,
+          "total_profit_increase_pct": 0.0,
+          "mean_profit_ratio": 1.0,
+          "median_profit_ratio": 1.0,
+          "equal_weight_increase_pct": 0.0,
+          "ratio_undefined_cases": [
+            "slow_00"
+          ],
+          "improved": 0,
+          "regressed": 0,
+          "unchanged": 32,
+          "baseline_health": {
+            "all_runs_ok": true,
+            "all_audits_correct": true,
+            "all_commands_legal": true,
+            "audit_errors": 0,
+            "illegal_commands": 0,
+            "max_cpu_seconds": 0.359375,
+            "max_peak_memory_bytes": 20758528,
+            "over_one_second": [],
+            "range_violations": {}
+          },
+          "candidate_health": {
+            "all_runs_ok": true,
+            "all_audits_correct": true,
+            "all_commands_legal": true,
+            "audit_errors": 0,
+            "illegal_commands": 0,
+            "max_cpu_seconds": 0.4375,
+            "max_peak_memory_bytes": 30593024,
+            "over_one_second": [],
+            "range_violations": {}
+          }
+        },
+        "boundary": {
+          "case_count": 0,
+          "cases": [],
+          "baseline_total_profit": 0,
+          "candidate_total_profit": 0,
+          "total_profit_delta": 0,
+          "total_profit_increase_pct": null,
+          "mean_profit_ratio": null,
+          "median_profit_ratio": null,
+          "equal_weight_increase_pct": null,
+          "ratio_undefined_cases": [],
+          "improved": 0,
+          "regressed": 0,
+          "unchanged": 0
+        },
+        "runs": 32,
+        "audit_total": 55999,
+        "all_ok": true,
+        "result_dir": ".\\results\\v13_model_policies\\veto_light"
+      },
+      {
+        "name": "veto_strict",
+        "policy": {
+          "type": "net_veto",
+          "net_threshold": 0.08,
+          "forecast_net_threshold": 0.4,
+          "min_jobs": 3
+        },
+        "source": ".\\candidates\\v13_model\\veto_strict.cpp",
+        "source_sha256": "560c63b3dbcbe6341b315b1b56ef36f0d41dd902d12216bb5cb12ba3d4d5d55c",
+        "executable": ".\\build\\v13_model_veto_strict.exe",
+        "exe_sha256": "495cf116ad8d0c1938da91eaaddce34c686298f90da65e460ea5b36e970e44ba",
+        "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+        "gate_scope": "!started,immediate placement and complete command budget checked,before any prewarm RUN",
+        "rejection": "Restore pre-tryPlace scalar job/reservation state,emit no command and do not alter cache/bill/quota",
+        "official_submission_sent": false,
+        "valid_range": {
+          "case_count": 32,
+          "cases": [
+            "fast_00",
+            "fast_01",
+            "fast_02",
+            "fast_03",
+            "heavy_00",
+            "heavy_01",
+            "heavy_02",
+            "heavy_03",
+            "large_00",
+            "large_01",
+            "large_02",
+            "large_03",
+            "light_00",
+            "light_01",
+            "light_02",
+            "light_03",
+            "slow_00",
+            "slow_01",
+            "slow_02",
+            "slow_03",
+            "small_00",
+            "small_01",
+            "small_02",
+            "small_03",
+            "standard_00",
+            "standard_01",
+            "standard_02",
+            "standard_03",
+            "unstable_00",
+            "unstable_01",
+            "unstable_02",
+            "unstable_03"
+          ],
+          "baseline_total_profit": 153826635,
+          "candidate_total_profit": 153962002,
+          "total_profit_delta": 135367,
+          "total_profit_increase_pct": 0.08799971474380275,
+          "mean_profit_ratio": 1.0107468454834962,
+          "median_profit_ratio": 1.0019459678354647,
+          "equal_weight_increase_pct": 1.0746845483496248,
+          "ratio_undefined_cases": [
+            "slow_00"
+          ],
+          "improved": 18,
+          "regressed": 14,
+          "unchanged": 0,
+          "baseline_health": {
+            "all_runs_ok": true,
+            "all_audits_correct": true,
+            "all_commands_legal": true,
+            "audit_errors": 0,
+            "illegal_commands": 0,
+            "max_cpu_seconds": 0.359375,
+            "max_peak_memory_bytes": 20758528,
+            "over_one_second": [],
+            "range_violations": {}
+          },
+          "candidate_health": {
+            "all_runs_ok": true,
+            "all_audits_correct": true,
+            "all_commands_legal": true,
+            "audit_errors": 0,
+            "illegal_commands": 0,
+            "max_cpu_seconds": 0.390625,
+            "max_peak_memory_bytes": 30654464,
+            "over_one_second": [],
+            "range_violations": {}
+          }
+        },
+        "boundary": {
+          "case_count": 0,
+          "cases": [],
+          "baseline_total_profit": 0,
+          "candidate_total_profit": 0,
+          "total_profit_delta": 0,
+          "total_profit_increase_pct": null,
+          "mean_profit_ratio": null,
+          "median_profit_ratio": null,
+          "equal_weight_increase_pct": null,
+          "ratio_undefined_cases": [],
+          "improved": 0,
+          "regressed": 0,
+          "unchanged": 0
+        },
+        "runs": 32,
+        "audit_total": 55999,
+        "all_ok": true,
+        "result_dir": ".\\results\\v13_model_policies\\veto_strict"
+      },
+      {
+        "name": "rev_blend25",
+        "policy": {
+          "type": "revenue_blend",
+          "model_weight": 0.25
+        },
+        "source": ".\\candidates\\v13_model\\rev_blend25.cpp",
+        "source_sha256": "83453aaee0ee16b724083d6905d36a24c89c40817b3aaa87b6b349cab9433784",
+        "executable": ".\\build\\v13_model_rev_blend25.exe",
+        "exe_sha256": "f62dac9a89a7f52c3d3cd7f7836ee23ba789affbc0916fc83cdb1f3e17c8dd89",
+        "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+        "gate_scope": "!started,immediate placement and complete command budget checked,before any prewarm RUN",
+        "rejection": "Restore pre-tryPlace scalar job/reservation state,emit no command and do not alter cache/bill/quota",
+        "official_submission_sent": false,
+        "valid_range": {
+          "case_count": 32,
+          "cases": [
+            "fast_00",
+            "fast_01",
+            "fast_02",
+            "fast_03",
+            "heavy_00",
+            "heavy_01",
+            "heavy_02",
+            "heavy_03",
+            "large_00",
+            "large_01",
+            "large_02",
+            "large_03",
+            "light_00",
+            "light_01",
+            "light_02",
+            "light_03",
+            "slow_00",
+            "slow_01",
+            "slow_02",
+            "slow_03",
+            "small_00",
+            "small_01",
+            "small_02",
+            "small_03",
+            "standard_00",
+            "standard_01",
+            "standard_02",
+            "standard_03",
+            "unstable_00",
+            "unstable_01",
+            "unstable_02",
+            "unstable_03"
+          ],
+          "baseline_total_profit": 153826635,
+          "candidate_total_profit": 153484243,
+          "total_profit_delta": -342392,
+          "total_profit_increase_pct": -0.22258303966670168,
+          "mean_profit_ratio": 1.0147616645078155,
+          "median_profit_ratio": 1.0019248589761713,
+          "equal_weight_increase_pct": 1.4761664507815464,
+          "ratio_undefined_cases": [
+            "slow_00"
+          ],
+          "improved": 18,
+          "regressed": 14,
+          "unchanged": 0,
+          "baseline_health": {
+            "all_runs_ok": true,
+            "all_audits_correct": true,
+            "all_commands_legal": true,
+            "audit_errors": 0,
+            "illegal_commands": 0,
+            "max_cpu_seconds": 0.359375,
+            "max_peak_memory_bytes": 20758528,
+            "over_one_second": [],
+            "range_violations": {}
+          },
+          "candidate_health": {
+            "all_runs_ok": true,
+            "all_audits_correct": true,
+            "all_commands_legal": true,
+            "audit_errors": 0,
+            "illegal_commands": 0,
+            "max_cpu_seconds": 0.40625,
+            "max_peak_memory_bytes": 30699520,
+            "over_one_second": [],
+            "range_violations": {}
+          }
+        },
+        "boundary": {
+          "case_count": 0,
+          "cases": [],
+          "baseline_total_profit": 0,
+          "candidate_total_profit": 0,
+          "total_profit_delta": 0,
+          "total_profit_increase_pct": null,
+          "mean_profit_ratio": null,
+          "median_profit_ratio": null,
+          "equal_weight_increase_pct": null,
+          "ratio_undefined_cases": [],
+          "improved": 0,
+          "regressed": 0,
+          "unchanged": 0
+        },
+        "runs": 32,
+        "audit_total": 55999,
+        "all_ok": true,
+        "result_dir": ".\\results\\v13_model_policies\\rev_blend25"
+      },
+      {
+        "name": "rev_blend50",
+        "policy": {
+          "type": "revenue_blend",
+          "model_weight": 0.5
+        },
+        "source": ".\\candidates\\v13_model\\rev_blend50.cpp",
+        "source_sha256": "743526d89a717dbdbcf15ff9f7f47582a9246b5765157dcac75027d9549375d2",
+        "executable": ".\\build\\v13_model_rev_blend50.exe",
+        "exe_sha256": "1b041f94f2f1b98cc6fa3da19cf050d3e979041481d0ae21ce7a16c22fe63ba0",
+        "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+        "gate_scope": "!started,immediate placement and complete command budget checked,before any prewarm RUN",
+        "rejection": "Restore pre-tryPlace scalar job/reservation state,emit no command and do not alter cache/bill/quota",
+        "official_submission_sent": false,
+        "valid_range": {
+          "case_count": 32,
+          "cases": [
+            "fast_00",
+            "fast_01",
+            "fast_02",
+            "fast_03",
+            "heavy_00",
+            "heavy_01",
+            "heavy_02",
+            "heavy_03",
+            "large_00",
+            "large_01",
+            "large_02",
+            "large_03",
+            "light_00",
+            "light_01",
+            "light_02",
+            "light_03",
+            "slow_00",
+            "slow_01",
+            "slow_02",
+            "slow_03",
+            "small_00",
+            "small_01",
+            "small_02",
+            "small_03",
+            "standard_00",
+            "standard_01",
+            "standard_02",
+            "standard_03",
+            "unstable_00",
+            "unstable_01",
+            "unstable_02",
+            "unstable_03"
+          ],
+          "baseline_total_profit": 153826635,
+          "candidate_total_profit": 153251070,
+          "total_profit_delta": -575565,
+          "total_profit_increase_pct": -0.3741647212135879,
+          "mean_profit_ratio": 1.0166413582197316,
+          "median_profit_ratio": 0.9923170754823222,
+          "equal_weight_increase_pct": 1.6641358219731561,
+          "ratio_undefined_cases": [
+            "slow_00"
+          ],
+          "improved": 13,
+          "regressed": 19,
+          "unchanged": 0,
+          "baseline_health": {
+            "all_runs_ok": true,
+            "all_audits_correct": true,
+            "all_commands_legal": true,
+            "audit_errors": 0,
+            "illegal_commands": 0,
+            "max_cpu_seconds": 0.359375,
+            "max_peak_memory_bytes": 20758528,
+            "over_one_second": [],
+            "range_violations": {}
+          },
+          "candidate_health": {
+            "all_runs_ok": true,
+            "all_audits_correct": true,
+            "all_commands_legal": true,
+            "audit_errors": 0,
+            "illegal_commands": 0,
+            "max_cpu_seconds": 0.421875,
+            "max_peak_memory_bytes": 30769152,
+            "over_one_second": [],
+            "range_violations": {}
+          }
+        },
+        "boundary": {
+          "case_count": 0,
+          "cases": [],
+          "baseline_total_profit": 0,
+          "candidate_total_profit": 0,
+          "total_profit_delta": 0,
+          "total_profit_increase_pct": null,
+          "mean_profit_ratio": null,
+          "median_profit_ratio": null,
+          "equal_weight_increase_pct": null,
+          "ratio_undefined_cases": [],
+          "improved": 0,
+          "regressed": 0,
+          "unchanged": 0
+        },
+        "runs": 32,
+        "audit_total": 55999,
+        "all_ok": true,
+        "result_dir": ".\\results\\v13_model_policies\\rev_blend50"
+      }
+    ]
+  },
+  "diagnostics": [
+    {
+      "name": "veto_light",
+      "totals": {
+        "attempts": 41151,
+        "rejects": 0,
+        "late": 0,
+        "guard_returns": 0
+      },
+      "per_world": [
+        {
+          "case": "fast_00",
+          "attempts": 2449,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_01",
+          "attempts": 2512,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_02",
+          "attempts": 2083,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_03",
+          "attempts": 2309,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_00",
+          "attempts": 1725,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_01",
+          "attempts": 1605,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_02",
+          "attempts": 2017,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_03",
+          "attempts": 1814,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_00",
+          "attempts": 1589,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_01",
+          "attempts": 2432,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_02",
+          "attempts": 2100,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_03",
+          "attempts": 1921,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_00",
+          "attempts": 703,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_01",
+          "attempts": 818,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_02",
+          "attempts": 634,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_03",
+          "attempts": 614,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_00",
+          "attempts": 315,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_01",
+          "attempts": 662,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_02",
+          "attempts": 358,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_03",
+          "attempts": 483,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_00",
+          "attempts": 373,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_01",
+          "attempts": 411,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_02",
+          "attempts": 276,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_03",
+          "attempts": 419,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_00",
+          "attempts": 1198,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_01",
+          "attempts": 1067,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_02",
+          "attempts": 1530,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_03",
+          "attempts": 1180,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_00",
+          "attempts": 1046,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_01",
+          "attempts": 1457,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_02",
+          "attempts": 1334,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_03",
+          "attempts": 1717,
+          "rejects": 0,
+          "late": 0,
+          "guard_returns": 0
+        }
+      ],
+      "worst_ratio": {
+        "case": "fast_00",
+        "baseline_profit": 17539712,
+        "candidate_profit": 17539712,
+        "delta": 0,
+        "profit_ratio": 1.0,
+        "baseline_cpu_seconds": 0.359375,
+        "candidate_cpu_seconds": 0.4375,
+        "baseline_range_violations": [],
+        "candidate_range_violations": []
+      },
+      "full_reports_equal": 32
+    },
+    {
+      "name": "veto_strict",
+      "totals": {
+        "attempts": 56806,
+        "rejects": 16741,
+        "late": 0,
+        "guard_returns": 0
+      },
+      "per_world": [
+        {
+          "case": "fast_00",
+          "attempts": 2604,
+          "rejects": 163,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_01",
+          "attempts": 2688,
+          "rejects": 213,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_02",
+          "attempts": 2315,
+          "rejects": 254,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_03",
+          "attempts": 2396,
+          "rejects": 119,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_00",
+          "attempts": 2066,
+          "rejects": 350,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_01",
+          "attempts": 2121,
+          "rejects": 555,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_02",
+          "attempts": 2503,
+          "rejects": 485,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_03",
+          "attempts": 2155,
+          "rejects": 421,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_00",
+          "attempts": 2599,
+          "rejects": 1072,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_01",
+          "attempts": 3145,
+          "rejects": 759,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_02",
+          "attempts": 3051,
+          "rejects": 1005,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_03",
+          "attempts": 2712,
+          "rejects": 841,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_00",
+          "attempts": 890,
+          "rejects": 197,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_01",
+          "attempts": 1126,
+          "rejects": 330,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_02",
+          "attempts": 1079,
+          "rejects": 467,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_03",
+          "attempts": 1261,
+          "rejects": 664,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_00",
+          "attempts": 607,
+          "rejects": 339,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_01",
+          "attempts": 1399,
+          "rejects": 781,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_02",
+          "attempts": 822,
+          "rejects": 503,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_03",
+          "attempts": 1027,
+          "rejects": 593,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_00",
+          "attempts": 798,
+          "rejects": 441,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_01",
+          "attempts": 718,
+          "rejects": 324,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_02",
+          "attempts": 546,
+          "rejects": 287,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_03",
+          "attempts": 695,
+          "rejects": 279,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_00",
+          "attempts": 1657,
+          "rejects": 490,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_01",
+          "attempts": 2065,
+          "rejects": 1049,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_02",
+          "attempts": 2364,
+          "rejects": 886,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_03",
+          "attempts": 1761,
+          "rejects": 623,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_00",
+          "attempts": 1925,
+          "rejects": 935,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_01",
+          "attempts": 1881,
+          "rejects": 446,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_02",
+          "attempts": 1724,
+          "rejects": 441,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_03",
+          "attempts": 2106,
+          "rejects": 429,
+          "late": 0,
+          "guard_returns": 0
+        }
+      ],
+      "worst_ratio": {
+        "case": "small_03",
+        "baseline_profit": 928361,
+        "candidate_profit": 876576,
+        "delta": -51785,
+        "profit_ratio": 0.9442188976055651,
+        "baseline_cpu_seconds": 0.046875,
+        "candidate_cpu_seconds": 0.03125,
+        "baseline_range_violations": [],
+        "candidate_range_violations": []
+      },
+      "full_reports_equal": 0
+    },
+    {
+      "name": "rev_blend25",
+      "totals": {
+        "attempts": 61736,
+        "rejects": 21707,
+        "late": 0,
+        "guard_returns": 0
+      },
+      "per_world": [
+        {
+          "case": "fast_00",
+          "attempts": 2602,
+          "rejects": 153,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_01",
+          "attempts": 2682,
+          "rejects": 204,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_02",
+          "attempts": 2327,
+          "rejects": 257,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_03",
+          "attempts": 2422,
+          "rejects": 122,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_00",
+          "attempts": 2417,
+          "rejects": 690,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_01",
+          "attempts": 2224,
+          "rejects": 648,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_02",
+          "attempts": 2657,
+          "rejects": 673,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_03",
+          "attempts": 2384,
+          "rejects": 628,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_00",
+          "attempts": 3023,
+          "rejects": 1506,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_01",
+          "attempts": 3334,
+          "rejects": 950,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_02",
+          "attempts": 3269,
+          "rejects": 1237,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_03",
+          "attempts": 3019,
+          "rejects": 1152,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_00",
+          "attempts": 899,
+          "rejects": 206,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_01",
+          "attempts": 1213,
+          "rejects": 416,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_02",
+          "attempts": 1232,
+          "rejects": 625,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_03",
+          "attempts": 1359,
+          "rejects": 766,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_00",
+          "attempts": 627,
+          "rejects": 359,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_01",
+          "attempts": 1658,
+          "rejects": 1054,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_02",
+          "attempts": 884,
+          "rejects": 570,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_03",
+          "attempts": 996,
+          "rejects": 559,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_00",
+          "attempts": 757,
+          "rejects": 397,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_01",
+          "attempts": 799,
+          "rejects": 408,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_02",
+          "attempts": 554,
+          "rejects": 293,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_03",
+          "attempts": 800,
+          "rejects": 388,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_00",
+          "attempts": 1802,
+          "rejects": 634,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_01",
+          "attempts": 2557,
+          "rejects": 1549,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_02",
+          "attempts": 2762,
+          "rejects": 1294,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_03",
+          "attempts": 1936,
+          "rejects": 801,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_00",
+          "attempts": 2141,
+          "rejects": 1144,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_01",
+          "attempts": 2094,
+          "rejects": 663,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_02",
+          "attempts": 2165,
+          "rejects": 889,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_03",
+          "attempts": 2141,
+          "rejects": 472,
+          "late": 0,
+          "guard_returns": 0
+        }
+      ],
+      "worst_ratio": {
+        "case": "small_03",
+        "baseline_profit": 928361,
+        "candidate_profit": 892886,
+        "delta": -35475,
+        "profit_ratio": 0.9617874943044785,
+        "baseline_cpu_seconds": 0.046875,
+        "candidate_cpu_seconds": 0.046875,
+        "baseline_range_violations": [],
+        "candidate_range_violations": []
+      },
+      "full_reports_equal": 0
+    },
+    {
+      "name": "rev_blend50",
+      "totals": {
+        "attempts": 87633,
+        "rejects": 48464,
+        "late": 0,
+        "guard_returns": 0
+      },
+      "per_world": [
+        {
+          "case": "fast_00",
+          "attempts": 2659,
+          "rejects": 220,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_01",
+          "attempts": 3039,
+          "rejects": 589,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_02",
+          "attempts": 2675,
+          "rejects": 626,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "fast_03",
+          "attempts": 2555,
+          "rejects": 271,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_00",
+          "attempts": 3642,
+          "rejects": 1968,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_01",
+          "attempts": 2763,
+          "rejects": 1223,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_02",
+          "attempts": 3596,
+          "rejects": 1660,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "heavy_03",
+          "attempts": 3303,
+          "rejects": 1583,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_00",
+          "attempts": 4518,
+          "rejects": 3051,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_01",
+          "attempts": 4738,
+          "rejects": 2400,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_02",
+          "attempts": 5055,
+          "rejects": 3069,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "large_03",
+          "attempts": 4238,
+          "rejects": 2403,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_00",
+          "attempts": 1335,
+          "rejects": 654,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_01",
+          "attempts": 1510,
+          "rejects": 727,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_02",
+          "attempts": 1998,
+          "rejects": 1399,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "light_03",
+          "attempts": 2295,
+          "rejects": 1718,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_00",
+          "attempts": 909,
+          "rejects": 658,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_01",
+          "attempts": 2928,
+          "rejects": 2372,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_02",
+          "attempts": 1237,
+          "rejects": 954,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "slow_03",
+          "attempts": 1552,
+          "rejects": 1131,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_00",
+          "attempts": 1495,
+          "rejects": 1151,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_01",
+          "attempts": 1105,
+          "rejects": 721,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_02",
+          "attempts": 935,
+          "rejects": 688,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "small_03",
+          "attempts": 1373,
+          "rejects": 971,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_00",
+          "attempts": 2372,
+          "rejects": 1225,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_01",
+          "attempts": 4216,
+          "rejects": 3247,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_02",
+          "attempts": 4214,
+          "rejects": 2782,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "standard_03",
+          "attempts": 2768,
+          "rejects": 1662,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_00",
+          "attempts": 3724,
+          "rejects": 2761,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_01",
+          "attempts": 3143,
+          "rejects": 1732,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_02",
+          "attempts": 2964,
+          "rejects": 1715,
+          "late": 0,
+          "guard_returns": 0
+        },
+        {
+          "case": "unstable_03",
+          "attempts": 2779,
+          "rejects": 1133,
+          "late": 0,
+          "guard_returns": 0
+        }
+      ],
+      "worst_ratio": {
+        "case": "small_03",
+        "baseline_profit": 928361,
+        "candidate_profit": 829444,
+        "delta": -98917,
+        "profit_ratio": 0.8934498540977055,
+        "baseline_cpu_seconds": 0.046875,
+        "candidate_cpu_seconds": 0.0,
+        "baseline_range_violations": [],
+        "candidate_range_violations": []
+      },
+      "full_reports_equal": 0
+    }
+  ],
+  "health": {
+    "actual_runs": 162,
+    "all_runs_ok": true,
+    "audit_total": 283538,
+    "audit_errors": 0,
+    "illegal_commands": 0,
+    "max_cpu_seconds": 0.4375,
+    "max_peak_memory_bytes": 31154176
+  },
+  "all_existing_headers_preserved": true,
+  "training": "cases/v13_train32 only,32 completeworlds",
+  "fresh_data_accessed": false,
+  "official_submission_sent": false,
+  "report": "research/v13_model_experiment.md",
+  "decision": "strict has only a small train gain;others zero/negative. Root may decide whether a fixed finalist deserves fresh validation;no additional fitting or thresholds."
+}

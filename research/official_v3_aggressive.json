@@ -1,0 +1,14 @@
+{
+  "record_type": "sanitized_public_official_result",
+  "variant": "v3_aggressive",
+  "official_score": 85,
+  "solution_id": 543440,
+  "date": "2026-11-14",
+  "language": "C++",
+  "original_source_file": "versions/v3_aggressive/submit.cpp",
+  "original_source_sha256": "7bf5ae764011c792b471bd03b49f6fb2b44603dec955deea019a7c8d3cb2ee8f",
+  "original_source_bytes": 55042,
+  "public_source_note": "Leading comments relocated;use PUBLICATION_MANIFEST.json for published source checksum",
+  "per_case_feedback_public": false,
+  "privacy_note": "Personal identifiers,login/submission transaction details and full answer sheets are excluded"
+}

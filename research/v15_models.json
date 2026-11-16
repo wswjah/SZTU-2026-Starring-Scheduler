@@ -1,0 +1,118 @@
+[
+  {
+    "name": "A128_120",
+    "source": ".\\candidates\\v15_models\\A128_120.cpp",
+    "source_sha256": "b52aa30bf9040a60c4927d6f4a11c820f53e4ff0633fa279c6ed265c3e7ee32f",
+    "source_bytes": 45438,
+    "executable": ".\\build\\v15_A128_120.exe",
+    "exe_sha256": "cf809a0cb1674e28cb6ccc6878292ccf9dd57cbb65726b55c852a0c18ac95053",
+    "model_json": ".\\research\\v15_A128_120.json",
+    "model_sha256": "1aa31d8f3afea1129a36038a2df635bcea836902d740e8cf2645b80b4f57f0e7",
+    "policy_name": "rev_blend25",
+    "settings": {
+      "kind": "mlp",
+      "widths": [
+        18,
+        16,
+        2
+      ],
+      "seed": 141116,
+      "epochs": 120,
+      "steps": null,
+      "policy_name": "rev_blend25"
+    },
+    "original_policy_source": ".\\candidates\\v13_model\\rev_blend25.cpp",
+    "only_predictor_replaced": true,
+    "diagnostic_prefix": "V15_MODEL_POLICY",
+    "original_header_and_byte_rollback_preserved": true,
+    "all4_enter_validation_without_training_selection": true,
+    "fresh_data_accessed": false,
+    "official_submission_sent": false
+  },
+  {
+    "name": "B128_120",
+    "source": ".\\candidates\\v15_models\\B128_120.cpp",
+    "source_sha256": "48466beea55485a3f73479099870262d68565b24fd1b380cc4699d5a4d0a912a",
+    "source_bytes": 48140,
+    "executable": ".\\build\\v15_B128_120.exe",
+    "exe_sha256": "dcc5fb51296fd94c4ddeb057ecf506118581636d29bfbbfd5db5edf615b2253d",
+    "model_json": ".\\research\\v15_B128_120.json",
+    "model_sha256": "b6882325e42706b3fbbdc7a9c8296c91fce203d25d8cd1b35d037306bd4dbe6c",
+    "policy_name": "veto_strict",
+    "settings": {
+      "kind": "mlp",
+      "widths": [
+        18,
+        16,
+        8,
+        2
+      ],
+      "seed": 141117,
+      "epochs": 120,
+      "steps": null,
+      "policy_name": "veto_strict"
+    },
+    "original_policy_source": ".\\candidates\\v13_model\\veto_strict.cpp",
+    "only_predictor_replaced": true,
+    "diagnostic_prefix": "V15_MODEL_POLICY",
+    "original_header_and_byte_rollback_preserved": true,
+    "all4_enter_validation_without_training_selection": true,
+    "fresh_data_accessed": false,
+    "official_submission_sent": false
+  },
+  {
+    "name": "tree128",
+    "source": ".\\candidates\\v15_models\\tree128.cpp",
+    "source_sha256": "c7d2d6bbf86d601cbe51c794d9b57076c47be7a7cffc3cbedb20f561c68c5c6f",
+    "source_bytes": 38197,
+    "executable": ".\\build\\v15_tree128.exe",
+    "exe_sha256": "1efc094d993a337295d8997c171f8bd591ab23f82f9268491fc5d267131a457d",
+    "model_json": ".\\research\\v15_tree128.json",
+    "model_sha256": "eb06250648af66c8c6abcbc0830d5fa56bd0f38e4c2212a6267bcb794fcf6bed",
+    "policy_name": "veto_strict",
+    "settings": {
+      "kind": "tree",
+      "max_depth": 3,
+      "min_samples_leaf": 500,
+      "seed": 131116,
+      "policy_name": "veto_strict"
+    },
+    "original_policy_source": ".\\candidates\\v13_model\\veto_strict.cpp",
+    "only_predictor_replaced": true,
+    "diagnostic_prefix": "V15_MODEL_POLICY",
+    "original_header_and_byte_rollback_preserved": true,
+    "all4_enter_validation_without_training_selection": true,
+    "fresh_data_accessed": false,
+    "official_submission_sent": false
+  },
+  {
+    "name": "A128_steps",
+    "source": ".\\candidates\\v15_models\\A128_steps.cpp",
+    "source_sha256": "8a8ffa72306bc95c4ff9605424fd8d3ec3fd9597f13d41d9643614aa44173116",
+    "source_bytes": 45440,
+    "executable": ".\\build\\v15_A128_steps.exe",
+    "exe_sha256": "9fd759e30c3fd8fd321e878bbd4094dd02dfcfd53df0683ffceb584fd67b6124",
+    "model_json": ".\\research\\v15_A128_steps.json",
+    "model_sha256": "2916d43cdf4641a4d016892bba8aa4c0f8c0357eeaf6c084259a7dd1abdfd2d3",
+    "policy_name": "rev_blend25",
+    "settings": {
+      "kind": "mlp",
+      "widths": [
+        18,
+        16,
+        2
+      ],
+      "seed": 141116,
+      "epochs": null,
+      "steps": 4920,
+      "policy_name": "rev_blend25"
+    },
+    "original_policy_source": ".\\candidates\\v13_model\\rev_blend25.cpp",
+    "only_predictor_replaced": true,
+    "diagnostic_prefix": "V15_MODEL_POLICY",
+    "original_header_and_byte_rollback_preserved": true,
+    "all4_enter_validation_without_training_selection": true,
+    "fresh_data_accessed": false,
+    "official_submission_sent": false
+  }
+]

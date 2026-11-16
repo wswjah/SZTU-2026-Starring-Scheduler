@@ -1,0 +1,12 @@
+{
+  "readable_source": "candidates/v3_perf_combo.cpp",
+  "readable_sha256": "fded4f1d7b69b4137a4f8faba1c0fcd351c4b69a14425e4b3e81697f507fa049",
+  "packed_bytes": 55042,
+  "max_bytes": 64000,
+  "all_20_reports_identical": true,
+  "cache_random_fixture_count": 200000,
+  "network_random_fixture_count": 3000,
+  "stress_timing_reduction_pct": 14.173228346456689,
+  "large_timing_reduction_pct": 10.382513661202186,
+  "official_submission_performed": false
+}

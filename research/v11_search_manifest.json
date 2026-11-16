@@ -1,0 +1,47 @@
+[
+  {
+    "name": "full_racks",
+    "config": {
+      "RK": 30
+    },
+    "source": ".\\candidates\\v11_search\\full_racks.cpp",
+    "source_sha256": "316d2cad5c6448b94eaac8afd37a80d1c3f877cdd22d8d40b93626a4a8e07ef4",
+    "executable": ".\\build\\v11_search_full_racks.exe",
+    "exe_sha256": "9b640a830848dbb4d83aaf7c0d68cc7cc590cdf66331f0e6d831c8f77eaa0788",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "header_unchanged": true,
+    "buffer_8m_preserved": true,
+    "official_submission_sent": false
+  },
+  {
+    "name": "warm_rank",
+    "config": {
+      "RK": 16,
+      "machine_aware_rack_fee": true
+    },
+    "source": ".\\candidates\\v11_search\\warm_rank.cpp",
+    "source_sha256": "dc5d793ac172a1a5b7359d2a6d9cd074c0a3b214b7ef3b4b657ddb46a5ec7e83",
+    "executable": ".\\build\\v11_search_warm_rank.exe",
+    "exe_sha256": "09ec85b80f91bebc27a64b7a3a6be24b87865ebb48b7876a6efca03fa87542ec",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "header_unchanged": true,
+    "buffer_8m_preserved": true,
+    "official_submission_sent": false
+  },
+  {
+    "name": "full_wide",
+    "config": {
+      "RK": 30,
+      "lookahead_successors": 16,
+      "lookahead_inputs": 12
+    },
+    "source": ".\\candidates\\v11_search\\full_wide.cpp",
+    "source_sha256": "c4abe8f21d965c943b4ff1bc5992fcffe54c28ffaba88ee8a2ef72ddd9c63ea6",
+    "executable": ".\\build\\v11_search_full_wide.exe",
+    "exe_sha256": "2f6f03d7862045219e6d302552f00481c70d489dbacc43dd292a6be21dcf7f8e",
+    "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+    "header_unchanged": true,
+    "buffer_8m_preserved": true,
+    "official_submission_sent": false
+  }
+]

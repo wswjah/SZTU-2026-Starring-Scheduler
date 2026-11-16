@@ -1,0 +1,44 @@
+{
+  "default": {},
+  "age_pending0": {
+    "SR_UNSTARTED_AGE": 0
+  },
+  "age_half": {
+    "SR_PLAN_AGE": 0.5,
+    "SR_UNSTARTED_AGE": 0
+  },
+  "age_all0": {
+    "SR_PLAN_AGE": 0,
+    "SR_UNSTARTED_AGE": 0
+  },
+  "cost_09": {
+    "SR_COST_SAFETY": 0.9
+  },
+  "cost_11": {
+    "SR_COST_SAFETY": 1.1
+  },
+  "cost_12": {
+    "SR_COST_SAFETY": 1.2
+  },
+  "mix_1": {
+    "SR_REWARD_MIX": 1
+  },
+  "mix_05": {
+    "SR_REWARD_MIX": 0.5
+  },
+  "optimism_09": {
+    "SR_OPTIMISM": 0.9
+  },
+  "duration_110": {
+    "SR_DURATION": 1.1
+  },
+  "risk_30": {
+    "SR_RISK": 30
+  },
+  "work_04": {
+    "SR_WORK": 0.4
+  },
+  "time_6": {
+    "SR_TIME": 6
+  }
+}

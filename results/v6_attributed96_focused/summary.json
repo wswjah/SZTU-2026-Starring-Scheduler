@@ -1,0 +1,21 @@
+{
+  "production_source": ".\\versions\\v6_attributed96\\main.cpp",
+  "production_sha256": "65be27cdc374c30c8434b335c3895ebf661eca1a0d8e1394523237124df56fab",
+  "production_source_unchanged": true,
+  "ubsan_available": false,
+  "ubsan_limitation": "MinGW linker cannot find -lubsan",
+  "fallback": "Only successor scratch arrays use checked indexing in a generated copy",
+  "production_passed": true,
+  "checked_scratch_passed": true,
+  "negative_control_caught_original_index_8": true,
+  "checks": [
+    "tryPlace successor counts 0,1,7,8,9,16,64,1000",
+    "19998 command slots used: no partial 3-command prewarm",
+    "19997 used: exact RUN/KILL/RUN ends at 20000",
+    "19999 used: cache-hit one-command RUN accepted",
+    "20000 used: no commands or resources changed",
+    "deferred stops survive a tick and honor remaining budget",
+    "DONE/FAIL expire pending stops without illegal KILL",
+    "quota, CPU, memory and affine bill reconcile"
+  ]
+}

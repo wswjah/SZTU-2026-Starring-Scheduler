@@ -1,0 +1,105 @@
+{
+  "all_identical": true,
+  "checks": [
+    {
+      "case": "fast_00",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "fast_01",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "heavy_00",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "heavy_01",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "large_00",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "large_01",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "light_00",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "light_01",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "slow_00",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "slow_01",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "small_00",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "small_01",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "standard_00",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "standard_01",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "unstable_00",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "unstable_01",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "failures",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "logs_audits",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "max_topology",
+      "exact_metrics": true,
+      "ok": true
+    },
+    {
+      "case": "slow_costly",
+      "exact_metrics": true,
+      "ok": true
+    }
+  ]
+}

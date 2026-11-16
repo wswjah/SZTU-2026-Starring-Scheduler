@@ -1,0 +1,112 @@
+{
+  "name": "horizon_10",
+  "parameters": {
+    "HZ": 10
+  },
+  "source": ".\\candidates\\v10_duration\\horizon_10.cpp",
+  "source_sha256": "c211cc95661fa4821f6e0d276d8a58ff757bec701e3d7a6bc7ff750fe125edfc",
+  "executable": ".\\build\\v10_duration_horizon_10.exe",
+  "exe_sha256": "ac316519146af7651bbe6255513ca8ef4079368ab992ce08b6ae3e84c7b44f4a",
+  "base_source_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
+  "result_dir": ".\\results\\v10_duration\\horizon_10",
+  "valid_range": {
+    "case_count": 14,
+    "cases": [
+      "fast_00",
+      "fast_01",
+      "heavy_00",
+      "heavy_01",
+      "light_00",
+      "light_01",
+      "slow_00",
+      "slow_01",
+      "small_00",
+      "small_01",
+      "standard_00",
+      "standard_01",
+      "unstable_00",
+      "unstable_01"
+    ],
+    "baseline_total_profit": 56070086,
+    "candidate_total_profit": 55542433,
+    "total_profit_delta": -527653,
+    "total_profit_increase_pct": -0.9410597301384604,
+    "mean_profit_ratio": 1.004788334841667,
+    "median_profit_ratio": 0.9919602893446074,
+    "equal_weight_increase_pct": 0.47883348416670746,
+    "ratio_undefined_cases": [],
+    "improved": 5,
+    "regressed": 9,
+    "unchanged": 0,
+    "baseline_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.3125,
+      "max_peak_memory_bytes": 26226688,
+      "over_one_second": [],
+      "range_violations": {}
+    },
+    "candidate_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.3125,
+      "max_peak_memory_bytes": 26292224,
+      "over_one_second": [],
+      "range_violations": {}
+    }
+  },
+  "boundary": {
+    "case_count": 2,
+    "cases": [
+      "large_00",
+      "large_01"
+    ],
+    "baseline_total_profit": 16352752,
+    "candidate_total_profit": 16426314,
+    "total_profit_delta": 73562,
+    "total_profit_increase_pct": 0.4498447723049859,
+    "mean_profit_ratio": 1.010737622708805,
+    "median_profit_ratio": 1.010737622708805,
+    "equal_weight_increase_pct": 1.0737622708804961,
+    "ratio_undefined_cases": [],
+    "improved": 1,
+    "regressed": 1,
+    "unchanged": 0
+  },
+  "all_health": {
+    "all_runs_ok": true,
+    "all_audits_correct": true,
+    "all_commands_legal": true,
+    "audit_errors": 0,
+    "illegal_commands": 0,
+    "max_cpu_seconds": 0.421875,
+    "max_peak_memory_bytes": 26292224,
+    "over_one_second": [],
+    "range_violations": {
+      "large_00": [
+        "logchars=3027206 > 3000000"
+      ],
+      "large_01": [
+        "logchars=3111782 > 3000000"
+      ]
+    }
+  },
+  "worst_ratio": 0.9516522077164793,
+  "worst_case": {
+    "case": "standard_01",
+    "baseline_profit": 3858625,
+    "candidate_profit": 3672069,
+    "delta": -186556,
+    "profit_ratio": 0.9516522077164793,
+    "baseline_cpu_seconds": 0.171875,
+    "candidate_cpu_seconds": 0.09375,
+    "baseline_range_violations": [],
+    "candidate_range_violations": []
+  }
+}

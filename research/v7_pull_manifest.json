@@ -1,0 +1,14 @@
+{
+  "baseline": ".\\versions\\v6_attributed96\\main.cpp",
+  "baseline_sha256": "65be27cdc374c30c8434b335c3895ebf661eca1a0d8e1394523237124df56fab",
+  "source": ".\\candidates\\v7_pull_hybrid.cpp",
+  "source_sha256": "373a9fa528a27a4fa2bbfcbf2c10d70705c7a5e48dd56877c927eb6f26633146",
+  "change": "LRU-exact first and second pull quote when eviction/duplicate/oversize can matter; otherwise membership fast path",
+  "fee_only_ablation": {
+    "source": ".\\candidates\\v7_pull_fee_only.cpp",
+    "source_sha256": "9fc41d46b9f2003af2d6ec74970585eaaa31180ee4b84e0a0c9d2ae87bc26be3",
+    "change": "Exact immediate registry fees and warm residual; keep original cold-delay heuristic"
+  },
+  "real_runJob_and_billing_unchanged": true,
+  "official_submission_sent": false
+}

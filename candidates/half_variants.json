@@ -1,0 +1,27 @@
+{
+  "default": {},
+  "age_all0": {
+    "SR_PLAN_AGE": 0,
+    "SR_UNSTARTED_AGE": 0
+  },
+  "cost_12": {
+    "SR_COST_SAFETY": 1.2
+  },
+  "age0_cost12": {
+    "SR_PLAN_AGE": 0,
+    "SR_UNSTARTED_AGE": 0,
+    "SR_COST_SAFETY": 1.2
+  },
+  "time_6": {
+    "SR_TIME": 6
+  },
+  "age0_time6": {
+    "SR_PLAN_AGE": 0,
+    "SR_UNSTARTED_AGE": 0,
+    "SR_TIME": 6
+  },
+  "cost12_time6": {
+    "SR_COST_SAFETY": 1.2,
+    "SR_TIME": 6
+  }
+}

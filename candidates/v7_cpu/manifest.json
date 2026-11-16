@@ -1,0 +1,146 @@
+[
+  {
+    "name": "baseline",
+    "upstream_source": ".\\versions\\v6_attributed96\\main.cpp",
+    "source": ".\\candidates\\v7_cpu\\baseline.cpp",
+    "source_sha256": "605d9a3c02c6a51c0a304b340e1e5701749d0bd698f043ca1a3e8bb88ca376b9",
+    "executable": ".\\build\\v7_cpu_baseline.exe",
+    "exe_sha256": "1658483057d3e0707912e216f65c23756e5330681a170dfbd2b5bd05449b45be"
+  },
+  {
+    "name": "spread_low",
+    "upstream_source": ".\\candidates\\v7_params\\spread_low.cpp",
+    "source": ".\\candidates\\v7_cpu\\spread_low.cpp",
+    "source_sha256": "f4b6c264a487d2891e0cff70ccf3e241a32a50cc0b5fb211ad64a101ea0e50ea",
+    "executable": ".\\build\\v7_cpu_spread_low.exe",
+    "exe_sha256": "135ad6a03e710b0121ecf6bedb5d42117e5c8916db8dc5f4304ea1a6fc54193e"
+  },
+  {
+    "name": "spread_high",
+    "upstream_source": ".\\candidates\\v7_params\\spread_high.cpp",
+    "source": ".\\candidates\\v7_cpu\\spread_high.cpp",
+    "source_sha256": "7d4bd705bd46f327e04bf4db856abd93508442b83c84fc3f59e476f605a5f211",
+    "executable": ".\\build\\v7_cpu_spread_high.exe",
+    "exe_sha256": "740fada9bc247e9c04e5f24f9ca466626a5ca0708b8e440fa1c11e784e33e9c5"
+  },
+  {
+    "name": "started_low",
+    "upstream_source": ".\\candidates\\v7_params\\started_low.cpp",
+    "source": ".\\candidates\\v7_cpu\\started_low.cpp",
+    "source_sha256": "5ab882d943a867da415bf176cec6655a08d08f4c598fcc8b697b56cf09203855",
+    "executable": ".\\build\\v7_cpu_started_low.exe",
+    "exe_sha256": "9820bf85018413258de52412eae530a646bb036c96df827d2808ea8662875a3a"
+  },
+  {
+    "name": "started_high",
+    "upstream_source": ".\\candidates\\v7_params\\started_high.cpp",
+    "source": ".\\candidates\\v7_cpu\\started_high.cpp",
+    "source_sha256": "f6d414033c52378860bf90cd970ddb5a0bc5208e3858bad0e54cb25b9c18b0be",
+    "executable": ".\\build\\v7_cpu_started_high.exe",
+    "exe_sha256": "04f1a8ffb36a6642f344207e9037932061d8f4f69d06edde25b82f51d729f1e2"
+  },
+  {
+    "name": "stop_later",
+    "upstream_source": ".\\candidates\\v7_params\\stop_later.cpp",
+    "source": ".\\candidates\\v7_cpu\\stop_later.cpp",
+    "source_sha256": "896635757360fd36dc847737c12fe2271ceaf7b716179b592c7b6fba6363fb03",
+    "executable": ".\\build\\v7_cpu_stop_later.exe",
+    "exe_sha256": "c5df9dd3aa5bf32013199512bcc4f0d835a7c4bcff059236b4eaa2bd4c1352c6"
+  },
+  {
+    "name": "stop_earlier",
+    "upstream_source": ".\\candidates\\v7_params\\stop_earlier.cpp",
+    "source": ".\\candidates\\v7_cpu\\stop_earlier.cpp",
+    "source_sha256": "93ed5d19a686ca9a5bbbe7f9795f4738dfb714ed0a07bab0aad4b9f9b0237dde",
+    "executable": ".\\build\\v7_cpu_stop_earlier.exe",
+    "exe_sha256": "d7aca355f65c39a7c1943e73708f70a45fd266245dbfc90b49d82ab8e1c28154"
+  },
+  {
+    "name": "admit_more",
+    "upstream_source": ".\\candidates\\v7_params\\admit_more.cpp",
+    "source": ".\\candidates\\v7_cpu\\admit_more.cpp",
+    "source_sha256": "85a18476e58691b17838f485aa3dd8e36f0799a7a0a73633fe74dc37fceba8fd",
+    "executable": ".\\build\\v7_cpu_admit_more.exe",
+    "exe_sha256": "00eee02025a180343618a3b898fa50d3507596597d68f94328e1b26f22ef3469"
+  },
+  {
+    "name": "admit_less",
+    "upstream_source": ".\\candidates\\v7_params\\admit_less.cpp",
+    "source": ".\\candidates\\v7_cpu\\admit_less.cpp",
+    "source_sha256": "9bf8e53eb46599107ade15b77b9a336454849ba1f09d4e83b234737112fcb58e",
+    "executable": ".\\build\\v7_cpu_admit_less.exe",
+    "exe_sha256": "d613ccb0116ebf3a762d41e31a322be18f6f9fafb8b27842a6be34d2c44c5953"
+  },
+  {
+    "name": "racks_8",
+    "upstream_source": ".\\candidates\\v7_params\\racks_8.cpp",
+    "source": ".\\candidates\\v7_cpu\\racks_8.cpp",
+    "source_sha256": "da11c513e4f058fdf1a43a67505301965f0989091470c22ec5e95034fd1ceecb",
+    "executable": ".\\build\\v7_cpu_racks_8.exe",
+    "exe_sha256": "2421fe3246cdecdfa0cd1cae1f1dce1ecc3b3b551d4dc74ab139c59fe158376b"
+  },
+  {
+    "name": "racks_16",
+    "upstream_source": ".\\candidates\\v7_params\\racks_16.cpp",
+    "source": ".\\candidates\\v7_cpu\\racks_16.cpp",
+    "source_sha256": "4b58377fc6d8d426d6f58a5d2db401e5311355734463c79badbdc8e25a1cc5e7",
+    "executable": ".\\build\\v7_cpu_racks_16.exe",
+    "exe_sha256": "596d35e49d4a47781bd5deb030ba03cee22df641ae15bd51fb6a7c86fea3d501"
+  },
+  {
+    "name": "priority_capacity",
+    "upstream_source": ".\\candidates\\v7_combinations\\priority_capacity.cpp",
+    "source": ".\\candidates\\v7_cpu\\priority_capacity.cpp",
+    "source_sha256": "a94c1eae8b66087ecf257555e0239365e3105084bde2ccc24e30927180e95364",
+    "executable": ".\\build\\v7_cpu_priority_capacity.exe",
+    "exe_sha256": "c90b72982a87cbbd7e53b80fec616f39402d59e1844b5c868e4f7b8514ea18ea"
+  },
+  {
+    "name": "economic_margin",
+    "upstream_source": ".\\candidates\\v7_combinations\\economic_margin.cpp",
+    "source": ".\\candidates\\v7_cpu\\economic_margin.cpp",
+    "source_sha256": "9868bdd07b44791bb8b9c4b34c76deef7ef94bc5924f437228428b47e045b77a",
+    "executable": ".\\build\\v7_cpu_economic_margin.exe",
+    "exe_sha256": "68e6317613282dbf332ad524bf3b57f7c6162d99a0bd1243c12e96f733e06cde"
+  },
+  {
+    "name": "combined",
+    "upstream_source": ".\\candidates\\v7_combinations\\combined.cpp",
+    "source": ".\\candidates\\v7_cpu\\combined.cpp",
+    "source_sha256": "5dbd80775a5c3f676ffc2455a4f9839d3a47df4743e3f5e50961e90b4ea73daa",
+    "executable": ".\\build\\v7_cpu_combined.exe",
+    "exe_sha256": "dcf7d1f96b5297a8b7237e463f9e0b2a5b02929bab7d32bfc077cd6c96f3f7bf"
+  },
+  {
+    "name": "started_equal",
+    "upstream_source": ".\\candidates\\v7_bracket\\started_equal.cpp",
+    "source": ".\\candidates\\v7_cpu\\started_equal.cpp",
+    "source_sha256": "6424eaabeef3d5d6ef4e37b3879e4bf419f3babe46b5791e09c75204837031f2",
+    "executable": ".\\build\\v7_cpu_started_equal.exe",
+    "exe_sha256": "976f824b89dc2d7a5de4645121b57d5ca001680a5d121a496176034478df31d6"
+  },
+  {
+    "name": "stop_earlier_12",
+    "upstream_source": ".\\candidates\\v7_bracket\\stop_earlier_12.cpp",
+    "source": ".\\candidates\\v7_cpu\\stop_earlier_12.cpp",
+    "source_sha256": "0f713e6c1666f5ca73319f4d62dc972efbc5dd1f00ed949f137301a1e467e060",
+    "executable": ".\\build\\v7_cpu_stop_earlier_12.exe",
+    "exe_sha256": "94def5420b513681a1c66b72869420b6b59bea0ba961e8813840812494ae86ea"
+  },
+  {
+    "name": "admit_less_10",
+    "upstream_source": ".\\candidates\\v7_bracket\\admit_less_10.cpp",
+    "source": ".\\candidates\\v7_cpu\\admit_less_10.cpp",
+    "source_sha256": "67c0cc1066996cd214a95269aa784c5436ef08522e5504263d0ddc804926736e",
+    "executable": ".\\build\\v7_cpu_admit_less_10.exe",
+    "exe_sha256": "655918f8140078703d694ff3acb77bc6c1b56d7fb93b37223d601115e990a3a4"
+  },
+  {
+    "name": "racks_24",
+    "upstream_source": ".\\candidates\\v7_bracket\\racks_24.cpp",
+    "source": ".\\candidates\\v7_cpu\\racks_24.cpp",
+    "source_sha256": "cc0e6bbcfb42ebf579b941a003ed0b015f1ad4f47ac326161a30f33394cd432d",
+    "executable": ".\\build\\v7_cpu_racks_24.exe",
+    "exe_sha256": "74be2855864e2b40d4cebcabc45b4ab780b3de92ffbf6362d810ebbcd4094485"
+  }
+]

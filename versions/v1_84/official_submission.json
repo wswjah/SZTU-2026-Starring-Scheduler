@@ -1,0 +1,155 @@
+{
+  "contest_id": 2231,
+  "problem_id": 1846,
+  "question_id": 488,
+  "source_file": "submit.cpp",
+  "source_sha256": "44730d683c8bde710f0f74a49ce5eccc44a223221270b3a0ad2ab92dd77c18f7",
+  "source_bytes": 52772,
+  "language_id": 1,
+  "language_name": "C++",
+  "authorized_submission_count": 1,
+  "submission_posts_sent": 1,
+  "started_at": "2026-11-13T20:03:12.522357+08:00",
+  "state": "completed",
+  "preflight_meta": {
+    "code": 1,
+    "msg": "ok",
+    "data": {
+      "limit_submit": 1,
+      "max_submit": 10,
+      "show_score": 1,
+      "by_qid": {
+        "488": {
+          "used": 0,
+          "max": 10,
+          "remain": 10,
+          "best_pass_rate": null,
+          "best_score": null,
+          "pscore": 100
+        }
+      }
+    },
+    "url": "https://acm.sztu.edu.cn:40081/examsys/contest/problemset_single_page?cid=2231",
+    "wait": 3
+  },
+  "previous_records_total": 0,
+  "submitted_at": "2026-11-13T20:03:13.604931+08:00",
+  "submission_http_status": 200,
+  "acknowledgement": {
+    "code": 1,
+    "msg": "Question 1 answer sheet updated.",
+    "data": {
+      "exam_id": 2231,
+      "ex_question_id": 488,
+      "update_at": "2026-11-13 20:03:09",
+      "solution_id": "543386"
+    },
+    "url": "https://acm.sztu.edu.cn:40081/examsys/contest/problemset_single_page?cid=2231",
+    "wait": 3
+  },
+  "solution_id": "543386",
+  "latest_status": {
+    "solution_id": 543386,
+    "problem_id": 1,
+    "time": 929,
+    "memory": 11152,
+    "in_date": "2026-11-13 20:03:09",
+    "result": 6,
+    "language": "C++",
+    "contest_id": 2231,
+    "valid": 1,
+    "num": 1,
+    "code_length": 52772,
+    "judgetime": "2026-11-13 20:03:10",
+    "pass_rate": "0.84",
+    "lint_error": 0,
+    "judger": "j01",
+    "course_id": null,
+    "contest_type": 5,
+    "qid": 1,
+    "problem_id_oj": 1846,
+    "code_show": true,
+    "res_show": false,
+    "res_color": "danger",
+    "res_text": "Wrong Answer",
+    "res_text_cn": "答案错误",
+    "res_short": "WA",
+    "exam_score": 84
+  },
+  "last_polled_at": "2026-11-13T20:04:19.800959+08:00",
+  "completed_at": "2026-11-13T20:04:19.800959+08:00",
+  "final_status": {
+    "solution_id": 543386,
+    "problem_id": 1,
+    "time": 929,
+    "memory": 11152,
+    "in_date": "2026-11-13 20:03:09",
+    "result": 6,
+    "language": "C++",
+    "contest_id": 2231,
+    "valid": 1,
+    "num": 1,
+    "code_length": 52772,
+    "judgetime": "2026-11-13 20:03:10",
+    "pass_rate": "0.84",
+    "lint_error": 0,
+    "judger": "j01",
+    "course_id": null,
+    "contest_type": 5,
+    "qid": 1,
+    "problem_id_oj": 1846,
+    "code_show": true,
+    "res_show": false,
+    "res_color": "danger",
+    "res_text": "Wrong Answer",
+    "res_text_cn": "答案错误",
+    "res_short": "WA",
+    "exam_score": 84
+  },
+  "submission_url": "https://acm.sztu.edu.cn:40081/examsys/contest/status?cid=2231#solution_id=543386",
+  "postflight_meta": {
+    "code": 1,
+    "msg": "ok",
+    "data": {
+      "limit_submit": 1,
+      "max_submit": 10,
+      "show_score": 1,
+      "by_qid": {
+        "488": {
+          "used": 1,
+          "max": 10,
+          "remain": 9,
+          "best_pass_rate": 0.84,
+          "best_score": 84,
+          "pscore": 100
+        }
+      }
+    },
+    "url": "https://acm.sztu.edu.cn:40081/examsys/contest/problemset_single_page?cid=2231",
+    "wait": 3
+  },
+  "feedback_visibility": {
+    "score": true,
+    "summary_time": true,
+    "summary_memory": true,
+    "source_code": true,
+    "run_details": false,
+    "per_case_status": false,
+    "per_case_profit_target": false,
+    "first_error": false,
+    "evidence": "final status row res_show=false; the normal UI does not expose the run-details action. No hidden feedback or private test-data endpoint was accessed."
+  },
+  "visibility_limitation": "Only aggregate WA/84 score/time/memory is visible. Individual failing cases, WA-versus-TLE grouping, profit/target and first error are not exposed by the normal UI (res_show=false); they were not requested through hidden endpoints.",
+  "summary_units": {
+    "time": "ms (page compatibility field)",
+    "memory": "kB (page label)"
+  },
+  "time_field_caveat": "The official frontend explains that the list time field is a compatibility value and may be normalized to the problem limit on timeout paths. It is not guaranteed to be the raw maximum measured time.",
+  "feedback_sources": [
+    "/examsys/contest/status_ajax?cid=2231&solution_id=543386",
+    "/examsys/contest/exam_prog_meta_ajax?cid=2231",
+    "/examsys/contest/status?cid=2231#solution_id=543386",
+    "/static/csgoj/oj_timing_display.js?v=20261112_timing2",
+    "/static/csgoj/oj_status.js?v=20261110_stack1"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "base_source": ".\\candidates\\v7_terminal_conditioned.cpp",
+  "base_sha256": "e43ab647fc7e60435a320d68ef3246906ce74b255a809c681cb236cdd8593300",
+  "diagnostic_sha256": "a77de7c44c91711c082e13709bfa48ef5cc1930c589cf09a54304b1435cd12ac",
+  "purpose": "end-only counters; not a new policy; CPU insurance can change trajectories"
+}

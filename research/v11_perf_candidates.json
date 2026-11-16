@@ -1,0 +1,21 @@
+{
+  "base": ".\\versions\\v10_input_fix\\main.cpp",
+  "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "candidates": [
+    {
+      "name": "memo",
+      "source": ".\\candidates\\v11_perf_memo.cpp",
+      "source_sha256": "b311e4df268e43c9e6545c1efdde07956f0cdd0f139cd5609ea0142f16520ab0",
+      "exe": ".\\build\\v11_perf_memo.exe",
+      "exe_sha256": "8197943f909fe1c1682f13f2ecb9352886a1584c0a662483cb709b935c9a8ea1"
+    },
+    {
+      "name": "o3",
+      "source": ".\\candidates\\v11_perf_o3.cpp",
+      "source_sha256": "63230082f6eedaa6e2fca810d79f6598006fc7afedc4c8e620cdcf32c827602f",
+      "exe": ".\\build\\v11_perf_o3.exe",
+      "exe_sha256": "6c76592be90d73222393d3adc78cfcb0806735a7ca7cecaab0381593d3830515"
+    }
+  ],
+  "official_submission_sent": false
+}

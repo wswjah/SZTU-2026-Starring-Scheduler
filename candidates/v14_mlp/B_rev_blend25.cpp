@@ -1,0 +1,900 @@
+// Build:  g++ -std=c++11 -O2 sol.cpp            (add -DDBG for diagnostics on stderr)
+// Submit: python3 minify.py sol.cpp submit.cpp --names   (same program, < 16384 bytes)
+//
+// Overview
+//  * Audit: every state the questions ask about is maintained incrementally - tenant bills
+//    (fixed part + rate * time), quota head-room along the tenant tree with an undo stack,
+//    rack-to-rack shortest paths (recomputed only for the source racks a link event can affect),
+//    LRU layer caches of machines and racks, alarm scores (Huffman decoding + Aho-Corasick),
+//    and the slack of a job in the DAG of its workflow.
+//  * Duration model: real / estimated duration is learned per tenant from finished jobs and from
+//    running jobs that are already overdue, shrunk towards the pooled ratio.
+//  * Workflow value: remaining critical path (durations, preparation, queueing) and remaining cost
+//    are estimated; the expected revenue is averaged over five finish-time scenarios. A flow is
+//    started only if that beats its remaining cost, and a started flow is killed once it no longer
+//    does. Flows are served in order of expected profit per core-tick (started flows first,
+//    flows with little slack first).
+//  * Placement: for a ready job the racks are ranked by transfer fee + delay + run cost, plus a
+//    one-step look-ahead (what the successors will pay to gather their inputs); on the best racks
+//    every machine is priced including image pulls and the wait for a busy machine (a per-machine
+//    timeline of expected releases, so that a job may reserve a machine instead of taking a bad one).
+//  * A CPU-time insurance degrades the scheduler gradually if the judge machine is slow.
+#include <bits/stdc++.h>
+#include <unistd.h>
+
+// V7_PORTABLE_PROCESS_CPU_CLOCK
+#ifdef _WIN32
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+#include <windows.h>
+static inline double v7ProcessCpuSeconds() {
+    FILETIME created, exited, kernel, user;
+    if (!GetProcessTimes(GetCurrentProcess(), &created, &exited, &kernel, &user)) {
+        std::fputs("GetProcessTimes failed while reading scheduling CPU budget\n", stderr);
+        std::exit(3);
+    }
+    ULARGE_INTEGER kernelTicks{}, userTicks{};
+    kernelTicks.LowPart = kernel.dwLowDateTime;
+    kernelTicks.HighPart = kernel.dwHighDateTime;
+    userTicks.LowPart = user.dwLowDateTime;
+    userTicks.HighPart = user.dwHighDateTime;
+    return double(kernelTicks.QuadPart + userTicks.QuadPart) / 10000000.;
+}
+#define V7_SCHEDULER_USED(scale) (v7ProcessCpuSeconds() * (scale))
+#else
+#define V7_SCHEDULER_USED(scale) (clock() * (scale) / CLOCKS_PER_SEC)
+#endif
+
+using namespace std;
+typedef long long ll;
+#define F(i, n) for (int i = 0; i < (int)(n); i++)
+
+// ---------------- fast input ----------------
+char inbuf[1 << 16], tok[1 << 23];
+int inpos, inlen;
+int getch() {
+    if (inpos == inlen) {
+        inlen = read(0, inbuf, sizeof inbuf);
+        inpos = 0;
+        if (inlen <= 0) return -1;
+    }
+    return inbuf[inpos++];
+}
+int readTok() {
+    int c = getch(), n = 0;
+    while (c == ' ' || c == '\n' || c == '\r') c = getch();
+    while (c > ' ') tok[n++] = c, c = getch();
+    tok[n] = 0;
+    return n;
+}
+ll readInt() {
+    int c=getch();
+    while(c>=0&&c<=' ') c=getch();
+    bool negative=c=='-';
+    if(c=='-'||c=='+') c=getch();
+    ll value=0;
+    if(negative) {
+        while(unsigned(c-'0')<10) value=value*10-(c-'0'),c=getch();
+    } else {
+        while(unsigned(c-'0')<10) value=value*10+(c-'0'),c=getch();
+    }
+    return value;
+}
+
+// ---------------- world state ----------------
+int T, D, N, R, M, K, L, I, P, W, E, now;
+ll Breg, Brack, Bnet, Ureg, Unet, price[8];
+
+struct Cache {
+    vector<int> q;  // LRU order, front = least recently used
+    ll cap, sum;
+    int ver;  // bumped whenever the contents change
+    char in[400];
+};
+Cache rackCache[30], machCache[360];
+int rackDc[30], rackNode[30];
+int machRack[360], machCpu[360], machMem[360], freeCpu[360], freeMem[360], machUp[360];
+vector<int> machJobs[360];
+ll alarmAt[360][602];
+
+int edgeU[1000], edgeV[1000], edgeW[1000], edgeUp[1000], dcDown[8], netDirty = 1;
+vector<int> adj[600];
+ll rackDist[30][30];
+
+int tenPar[200], tenOrder[200];
+ll tenQuota[200], tenUsed[200], tenFix[200], tenRate[200], tenRateStart[200];
+double tenDur[602], tenEst[602];
+vector<pair<int, ll>> undoStack;
+
+int layerSize[400];
+vector<int> imageLayers[120];
+int huffChild[20][2], huffRoot;
+vector<array<int, 8>> acGo;
+vector<ll> acVal;
+
+struct Job {
+    int id, wf, c, m, e, img, s, zin, zout, state, mach, t0, prep, outRack, need, ready;
+    int resM, resAt, resT;  // cached reservation: machine, tick it was computed, tick it expires
+    double resEnd, xt, xf;  // xt / xf: time / fee to bring the external input to the flow's home rack
+    vector<int> pre, suc;
+};
+struct Flow {
+    int id, tenant, dl, arrive, first, n, left, dead, endT, started, home, dirty, adm;
+    double key;
+    ll v;
+};
+vector<Job> jobs;
+vector<Flow> flows;
+unordered_map<int, int> jobIndex;
+string outbuf;
+constexpr int COMMAND_LIMIT = 20000;
+int commandsUsed;
+vector<int> deferredKills;
+size_t deferredHead;
+ll runFee;
+int freedAt[360];
+
+struct V13ModelForecast {double rem=0,work=0,cost=0,rev=0;int tick=0,roots=0;};
+vector<V13ModelForecast> v13ModelForecasts;
+
+
+// ---------------- caches ----------------
+bool cacheHit(Cache& c, int l) {
+    if (!c.in[l]) return 0;
+    c.q.erase(find(c.q.begin(), c.q.end(), l));
+    c.q.push_back(l);
+    return 1;
+}
+void cachePut(Cache& c, int l) {
+    c.q.push_back(l);
+    c.in[l] = 1, c.ver++;
+    c.sum += layerSize[l];
+    while (c.sum > c.cap) {
+        int o = c.q[0];
+        c.sum -= layerSize[o];
+        c.in[o] = 0;
+        c.q.erase(c.q.begin());
+    }
+}
+
+// ---------------- network ----------------
+// nodeDist[a][v]: distance from rack a's node to node v. A link event only invalidates the rows
+// (source racks) whose distances it can change.
+ll nodeDist[30][600];
+char rowDirty[30];
+void recomputeNet() {
+    static int q[1024];
+    static char in[600];
+    int per = N / D;
+    F(a, R) if (rowDirty[a]) {
+        ll* d = nodeDist[a];
+        F(i, N) d[i] = 1e18;
+        int s = rackNode[a], h = 0, t = 0;
+        if (!dcDown[s / per]) d[s] = 0, q[t++] = s;
+        while (h != t) {  // queue-based Bellman-Ford; the graph is small and sparse
+            int u = q[h++ & 1023];
+            in[u] = 0;
+            for (int e : adj[u]) {
+                int v = edgeU[e] ^ edgeV[e] ^ u;
+                if (edgeUp[e] && !dcDown[v / per] && d[u] + edgeW[e] < d[v]) {
+                    d[v] = d[u] + edgeW[e];
+                    if (!in[v]) in[v] = 1, q[t++ & 1023] = v;
+                }
+            }
+        }
+        F(b, R) rackDist[a][b] = d[rackNode[b]] > 9e17 ? -1 : d[rackNode[b]];
+        rowDirty[a] = 0;
+    }
+    netDirty = 0;
+}
+
+// ---------------- tunables ----------------
+#define PRM(n, d) const double n = d
+PRM(TH0, 4);      // base value of one tick of delay, per core
+PRM(MG, 1);       // lateness uncertainty margin as a fraction of remaining path
+PRM(DEADK, 0.6);  // optimism factor before declaring a flow dead
+PRM(SB, 2);       // priority boost of already started flows
+PRM(PEN, 1);      // look-ahead penalty for leaving the predecessors' rack
+PRM(RESV, 30);    // longest wait (ticks) worth a reservation
+PRM(OVK, 1);      // weight of the learned per-job overhead
+PRM(SP, 0.4);     // spread of the finish-time scenarios
+PRM(KILLK, 1.1);    // kill a started flow when expected revenue < KILLK * remaining cost
+PRM(ADM, 0.05);      // required profit margin (fraction of cost) to start a flow
+PRM(THR, 6);      // waiting flows are re-evaluated every THR ticks
+PRM(OD, 0.25);    // an overdue job is expected to need OD * (its run time so far) more ticks
+
+PRM(WK, 0);       // weight of the learned queueing delay per job
+PRM(WCAP, 12);    // cap on one observation of queueing delay
+PRM(RT0, 3);      // ticks before a job without a usable machine is examined again
+PRM(RT1, 4);      // longest life of a cached reservation
+PRM(RTK, 0.5);    // cached reservation lives RTK * (expected wait)
+PRM(BB, 0.03);    // growth of the remaining-time estimate with the number of unfinished jobs
+PRM(SL, 1.25);       // priority discount for flows with plenty of slack
+PRM(RK, 16);      // number of candidate racks examined per job
+PRM(LAK, 1);      // weight of the one-step look-ahead in rack selection
+PRM(GU, 1);       // 1: guess the rack of unplaced predecessors in the look-ahead
+PRM(TS, 1);
+PRM(F0, 1.5);     // prior real/estimated duration ratio
+PRM(W0, 100);     // weight of that prior (in estimated ticks)
+PRM(W1, 30);      // weight of the pooled ratio in a tenant's ratio
+PRM(PW, 1);       // 1: warm the caches with RUN + KILL in the same tick before the real RUN
+PRM(HS, 1);       // 1: the end of the horizon is applied to each finish-time scenario separately
+PRM(HZ, 30);      // tolerance (ticks) of that test
+PRM(RF, 1);       // weight of the registry fee when racks are ranked
+
+// ---------------- job lifecycle ----------------
+// real/estimated duration ratio of a tenant. Evidence: finished jobs, plus running jobs that are
+// already overdue (their run time so far is a lower bound). A tenant's ratio is shrunk towards the
+// pooled ratio, which itself starts from a pessimistic prior.
+double allDur, allEst, allRunD, allRunE, tenRunD[602], tenRunE[602], tenF[602];
+double tenFactor(int o) { return tenF[o]; }
+void updateFactors() {
+    double pool = (allDur + allRunD + W0 * F0) / (allEst + allRunE + W0);
+    F(o, K) tenF[o] = (tenDur[o] + tenRunD[o] + W1 * pool) / (tenEst[o] + tenRunE[o] + W1);
+}
+
+// release resources of a running job at current tick
+void release(int ji) {
+    Job& j = jobs[ji];
+    int x = j.mach, o = flows[j.wf].tenant;
+    ll cp = j.c * price[rackDc[machRack[x]]];
+    freeCpu[x] += j.c;
+    freeMem[x] += j.m;
+    freedAt[x] = now;
+    flows[j.wf].dirty = 1;
+    machJobs[x].erase(find(machJobs[x].begin(), machJobs[x].end(), ji));
+    tenFix[o] += cp * (now - j.t0);
+    tenRate[o] -= cp;
+    tenRateStart[o] -= cp * j.t0;
+    for (int a = o; a >= 0; a = tenPar[a]) tenUsed[a] -= j.c;
+    j.state = 0;
+    j.ready = now, j.resT = 0;
+}
+
+// Stop requests beyond the current command budget survive to the next tick.
+// Events may finish or interrupt a queued job before then; those requests expire.
+void killNow(int ji) {
+    assert(commandsUsed < COMMAND_LIMIT);
+    outbuf += "KILL " + to_string(jobs[ji].id) + "\n";
+    ++commandsUsed;
+    release(ji);
+}
+void stopOrDefer(int ji) {
+    if (jobs[ji].state != 1) return;
+    if (commandsUsed < COMMAND_LIMIT) killNow(ji);
+    else deferredKills.push_back(ji);
+}
+void drainDeferredKills() {
+    while (deferredHead < deferredKills.size() && commandsUsed < COMMAND_LIMIT) {
+        int ji = deferredKills[deferredHead++];
+        if (jobs[ji].state == 1) killNow(ji);
+    }
+    if (deferredHead == deferredKills.size()) deferredKills.clear(), deferredHead = 0;
+}
+
+ll dst(int a, int b) { return a == b ? 0 : rackDist[a][b] < 0 ? 99 : rackDist[a][b]; }
+
+// transfer time / fee of job j when placed on rack r; false if some input is unreachable.
+// away = largest distance to a predecessor's output rack (0 when the job stays with its predecessors)
+bool transferCost(Job& j, int r, ll& tt, ll& tf, ll& away) {
+    tt = tf = away = 0;
+    int k = j.pre.size();
+    for (int i = j.s < 0 ? 0 : -1; i < k; i++) {
+        int s = i < 0 ? j.s : jobs[j.pre[i]].outRack;
+        ll z = i < 0 ? j.zin : jobs[j.pre[i]].zout;
+        if (s == r) continue;
+        ll d = rackDist[r][s];
+        if (d < 0) return 0;
+        tt = max(tt, d + (z + Bnet - 1) / Bnet);
+        tf += z * d * Unet;
+        if (i >= 0) away = max(away, d);
+    }
+    return 1;
+}
+
+void runJob(int ji, int x) {
+    assert(commandsUsed < COMMAND_LIMIT);
+    ++commandsUsed;
+    Job& j = jobs[ji];
+    int r = machRack[x], o = flows[j.wf].tenant;
+    ll tt, tf, aw, qreg = 0, qrack = 0;
+    transferCost(j, r, tt, tf, aw);
+    for (int l : imageLayers[j.img]) {
+        if (cacheHit(machCache[x], l)) continue;
+        if (cacheHit(rackCache[r], l))
+            qrack += layerSize[l];
+        else
+            qreg += layerSize[l], cachePut(rackCache[r], l);
+        cachePut(machCache[x], l);
+    }
+    ll cp = j.c * price[rackDc[r]];
+    j.prep = max(tt, (qreg + Breg - 1) / Breg + (qrack + Brack - 1) / Brack);
+    j.state = 1;
+    j.mach = x;
+    j.t0 = now;
+    freeCpu[x] -= j.c;
+    freeMem[x] -= j.m;
+    machJobs[x].push_back(ji);
+    tenFix[o] += runFee = tf + qreg * Ureg;
+    tenRate[o] += cp;
+    tenRateStart[o] += cp * now;
+    for (int a = o; a >= 0; a = tenPar[a]) tenUsed[a] += j.c;
+    outbuf += "RUN " + to_string(j.id) + " " + to_string(x) + "\n";
+}
+
+// ---------------- reconciliation helpers ----------------
+ll slackOf(int ji) {
+    Flow& w = flows[jobs[ji].wf];
+    static ll es[1 << 16], tl[1 << 16];
+    ll cp = 0;
+    F(i, w.n) {
+        Job& j = jobs[w.first + i];
+        es[i] = 0;
+        tl[i] = 0;
+        if (j.state > 1) continue;
+        for (int p : j.pre)
+            if (jobs[p].state < 2) es[i] = max(es[i], es[p - w.first] + jobs[p].e);
+        cp = max(cp, es[i] + j.e);
+    }
+    for (int i = w.n - 1; i >= 0; i--) {
+        Job& j = jobs[w.first + i];
+        if (j.state > 1) continue;
+        tl[i] += j.e;
+        for (int p : j.pre) tl[p - w.first] = max(tl[p - w.first], tl[i]);
+    }
+    return cp - es[ji - w.first] - tl[ji - w.first];
+}
+
+// ---------------- scheduling ----------------
+double jobEnd[1 << 17], jobTheta[1 << 17], jobTail[1 << 17], overhead = 3, ovWait = 1, feeAvg = 50;
+vector<pair<double, ll>> timeline[360];  // (expected release tick, cores << 32 | memory) incl. reservations
+int virtCpu[360], virtMem[360];
+vector<int> rackMachs[30];
+
+double revenueAt(Flow& w, double f) {
+    ll g = max(5, (w.dl - w.arrive) / 3);
+    if (f <= w.dl) return w.v;
+    if (f >= w.dl + g) return 0;
+    return w.v * (w.dl + g - f) / g;
+}
+
+// estimated remaining critical path (ticks), remaining work (core-ticks) and remaining cost of a
+// workflow; also fills per-job urgency (jobTheta) and tail length (jobTail)
+void flowEstimate(Flow& w, double& rem, double& work, double& cost) {
+    static double st[1 << 16], du[1 << 16];
+    double f = tenFactor(w.tenant);
+    ll pr = price[rackDc[w.home]];
+    rem = work = cost = 0;
+    F(i, w.n) {
+        Job& j = jobs[w.first + i];
+        st[i] = du[i] = 0;
+        if (j.state > 1) continue;
+        for (int p : j.pre) st[i] = max(st[i], st[p - w.first] + du[p - w.first]);
+        du[i] = j.state ? jobEnd[w.first + i] - now : j.e * f + OVK * overhead + j.xt;
+        work += j.c * du[i];
+        if (!j.state) du[i] += WK * ovWait;
+        cost += j.state ? j.c * du[i] * price[rackDc[machRack[j.mach]]] : j.c * du[i] * pr + feeAvg + j.xf;
+        rem = max(rem, st[i] + du[i]);
+        jobTail[w.first + i] = 0;
+    }
+    ll g = max(5, (w.dl - w.arrive) / 3);
+    for (int i = w.n - 1; i >= 0; i--) {
+        int ji = w.first + i;
+        Job& j = jobs[ji];
+        if (j.state > 1) continue;
+        jobTail[ji] += du[i];
+        for (int p : j.pre) jobTail[p] = max(jobTail[p], jobTail[ji]);
+        double path = st[i] + jobTail[ji], x = (now + path - w.dl) / (MG * path + 1) + 1;
+        jobTheta[ji] = TH0 * j.c + w.v * 1.0 / g * min(1.0, max(0.0, x));
+    }
+}
+
+// home rack of a workflow: the rack where running everything is cheapest (external inputs have
+// to be brought there); also fills the per-job transfer time / fee towards it
+void chooseHome(Flow& w) {
+    double best = 1e18;
+    F(h, R) {
+        double tot = 0;
+        F(i, w.n) {
+            Job& j = jobs[w.first + i];
+            ll cp = j.c * price[rackDc[h]], d = j.s < 0 || j.s == h ? 0 : rackDist[h][j.s];
+            tot += cp * j.e;
+            if (d < 0) tot += 1e9;
+            if (d > 0) tot += j.zin * d * Unet + (d + (j.zin + Bnet - 1) / Bnet) * (cp + TH0 * j.c);
+        }
+        if (tot < best) best = tot, w.home = h;
+    }
+    F(i, w.n) {
+        Job& j = jobs[w.first + i];
+        ll d = j.s < 0 || j.s == w.home ? 0 : rackDist[w.home][j.s];
+        if (d < 0) d = 60;
+        j.xt = d ? d + (j.zin + Bnet - 1) / Bnet : 0, j.xf = j.zin * d * Unet;
+    }
+}
+
+// expected ticks until machine x has room for (c, m)
+double waitFor(int x, int c, int m, double lim) {
+    int fc = virtCpu[x], fm = virtMem[x];
+    if (fc >= c && fm >= m) return 0;
+    for (auto& q : timeline[x]) {
+        if (q.first - now > lim) break;  // too late to be the best choice
+        fc += q.second >> 32, fm += int(q.second);
+        if (fc >= c && fm >= m) return q.first - now;
+    }
+    return 1e9;
+}
+
+void occupy(int x, int ji, double end) {
+    virtCpu[x] -= jobs[ji].c, virtMem[x] -= jobs[ji].m;
+    pair<double, ll> v(end, ll(jobs[ji].c) << 32 | jobs[ji].m);
+    timeline[x].insert(lower_bound(timeline[x].begin(), timeline[x].end(), v), v);
+}
+
+
+void v13ModelFeatures(int ji,int machine,double preparation,bool warm,float* x) {
+    const Job& j=jobs[ji];const Flow& w=flows[j.wf];const V13ModelForecast& p=v13ModelForecasts[j.wf];
+    int grace=max(5,(w.dl-w.arrive)/3);
+    double window=max(1.,double(min(T,w.dl+grace-1)-now)),value=max(1.,double(w.v));
+    ll quota=LLONG_MAX,headroom=LLONG_MAX;
+    for(int a=w.tenant;a>=0;a=tenPar[a])quota=min(quota,tenQuota[a]),headroom=min(headroom,tenQuota[a]-tenUsed[a]);
+    double capacity=max(1.,double(quota));ll time,fee,away;
+    transferCost(jobs[ji],machRack[machine],time,fee,away);
+    x[0]=float(w.n);x[1]=float(double(p.roots)/max(1,w.n));
+    x[2]=float(p.cost/value);x[3]=float(p.rem/window);x[4]=float(p.rev/value);x[5]=float((p.rev-p.cost)/value);
+    x[6]=float(p.work/(capacity*window));x[7]=float(headroom/capacity);x[8]=float(window/T);x[9]=float(double(now)/T);
+    x[10]=float(tenFactor(w.tenant));x[11]=float((w.dl-now)/window);x[12]=float(j.c/capacity);
+    x[13]=float(preparation/window);x[14]=float(fee/value);x[15]=float(j.e*tenFactor(w.tenant)/window);
+    x[16]=float(double(now-p.tick)/T);x[17]=warm?1.f:0.f;
+}
+
+static void v13ModelPredict(const float* x,double* prediction) {
+    static const double mean[18]={12.814873008712269,0.24757155098575145,0.32923126812762316,0.51190106215445641,0.85862047250838569,0.52938920223875907,0.017026197823316585,0.77549073408229963,0.45062288326328509,0.32336865710111912,1.3383808955708398,0.81023119794142873,0.01933338933283087,0.0086641039168437774,0.0034686463731950345,0.10227543027101449,0.0007967073808567885,0.81944144941096975};
+    static const double scale[18]={15.76918528718965,0.27280308847425827,0.17028750616237592,0.21259278290539044,0.1627715596315425,0.27633824382744504,0.017709908820591713,0.25020542302828219,0.27766675759923426,0.2385812636373785,0.43740612476878871,0.14131903143521737,0.017762067148155231,0.031911328339495698,0.01514456510688109,0.10767596886696774,0.0021790592180097211,0.38465199908257186};
+    double a0[18];F(i,18)a0[i]=min(8.,max(-8.,(double(x[i])-mean[i])/scale[i]));
+    static const double w0[16][18]={-0.26205474524167854,-0.018637348287150187,0.088952551978002267,-0.16324267388901043,0.16043226042128853,0.13971085757574209,-0.17648159988302015,-0.1764451370470323,-0.21263290898433476,0.16727887347669398,0.27473453608594917,0.24739744530189062,0.013330577725145587,0.083513980939172366,-0.15538864040482564,-0.067545264546354414,0.058969709311600629,0.38240810823282811,-0.12131856733963757,-0.24653503918065639,0.11878221175493318,-0.040427694457311716,0.082758134762265539,0.047942438395138322,0.027474422343217172,-0.27426853100346865,-0.14815099526399297,0.1016850387281541,-0.038810399609243394,0.036706954650782761,0.043477563708440962,-0.12807786394487486,-0.28303502943259351,-0.035058061144595642,0.013895489552762536,0.016660292033163552,-0.10115375970845994,-0.12152991442072443,-0.073736196023928419,0.015711085360102409,0.12660977687470598,0.23014689396110255,0.013431389956068235,0.051342553882076085,-0.13322604669407373,0.034291761228556511,-0.34211719403711516,-0.037488112353250044,-0.098959046087889579,0.0014022330127326558,-0.019641719017159078,0.16848484599470567,-0.11960237235705942,0.033136913322504256,0.016557059837814577,0.31350151237260099,-0.14368692046187115,0.053799636132698558,0.10345591442629508,0.094314342538379267,0.03491315571134021,0.00203563997534712,-0.29570492835950779,-0.35221000098586414,0.080606091068035735,-0.10433702726037181,-0.04126236166314904,0.036553139759519043,-0.29826937145671467,-0.11074000452257358,-0.14864836807705492,-0.25087069244003002,0.27499033927158456,0.07299513560268861,-0.18671596655168302,-0.085327552424926026,0.070822585912286976,0.17522960228152915,-0.06860832782578237,0.3546361045064666,0.40910298087904695,0.17849079116195554,-0.017056510518852104,-0.050829880571064169,0.10472759503274176,-0.20988044026617142,-0.095930996984188749,0.033847954087623311,0.10218003716912263,-0.12411510098954459,-0.071866492319418454,-0.22087323772908446,0.066835863100182261,0.032384638569725593,-0.049476975166562409,-0.12401538741466096,0.0078453772397861898,0.12478998895612507,0.16770749480206101,0.072812243646184729,-0.33317904074410293,0.24837307362271285,-0.034926819936931613,-0.025220642030147178,0.0791549314781652,0.11794878744260708,-0.10943935285599758,-0.12359655433427308,0.10367247921794773,-0.026032585445713539,-0.36854708535965808,-0.28610235455834315,-0.1092318289536769,-0.013942764586894706,-0.096711096156227666,-0.14266676442095183,0.027747886985667086,0.32992583743582576,0.17083953504808133,0.13794659949608626,0.08659431227991847,0.020629676775482001,0.048385128907406601,0.01548350528214467,0.0069112814888676669,0.0099255318521312176,0.26777922346132943,-0.09762661466768871,0.050821900440337214,0.47082294814869352,-0.14422746418566093,-0.21899556898809522,-0.10324697755850658,0.12313441503946677,0.11913665692800934,-0.011539140647426706,0.15834141889580305,-0.19787456746966006,0.12154096642489326,0.27770575134508418,-0.011567160157888353,0.11761531840939157,-0.0088498532556819803,0.053551520819357462,0.098091954553534699,-0.043371186232243703,0.32369694821254308,0.27307330159683413,0.00096917545440973181,-0.062303868985941598,0.08616430665122797,-0.1252623508601762,-0.0059048754538754029,-0.013736614665567359,0.01628947936086645,-0.034309531333077313,-0.118210369159768,0.024280757026831794,-0.059516919011162059,-0.032878243726820522,0.095347570612862004,-0.003943219625334924,-0.39018449775354547,0.24510524909681636,0.11404019640628064,-0.11697346961534043,-0.017607067161012156,-0.056843751890505528,0.11138694167289341,0.037521497420258954,-0.32202690780064908,-0.067595275620381978,0.0051051321977782036,0.30048095051749574,0.020485001965000769,-0.02034878940808009,-0.13722044967865302,0.12226441449153251,-0.022881118427649845,0.0416885144769885,-0.0050229762461263721,0.17314285397278467,0.066135183170199272,-0.26220323530233214,0.053055390499104974,0.012576265422202955,-0.067419625028851668,0.16220943010743774,-0.13415219496209244,0.019487117269197694,-0.19927009561811981,0.47886938702308396,0.099770787083537357,-0.11670016798084036,-0.21510308106295378,0.13743494364350656,-0.13502989547162628,-0.24834534474158157,0.11419287282655348,0.11521782220372376,-0.075981510691543019,-0.11025043566186214,0.17612951896988324,-0.0039820646180039714,0.094187044037352771,0.0073478185776116233,0.061327246526228694,-0.21876963407763655,-0.18431565227347169,-0.031121937421018129,-0.085965349680116362,0.20829052243154925,-0.068224119181376955,-0.011356640855971141,-0.25536064761507976,0.17650561224506472,0.047326693295590118,0.094307142181289091,0.2555273861786273,0.42506458909480638,0.081779023169734566,0.13016288307960966,0.059852640963675832,0.029854392412789726,0.096307938389062681,-0.10791277491070664,0.27268827451987776,-0.31817369909069432,-0.078262529275768142,-0.11924299813065584,-0.029784230980122259,-0.044414098714966328,-0.11243424156487146,-0.054637403223111496,-0.053296692801453396,0.04977925767925874,0.22022158469881795,-0.072823065133168483,0.10155401059776802,-0.13096302532662807,0.18583882700387189,-0.4782349662228878,0.08986865436087707,0.14858577806134932,-0.05762417438588837,0.13205535337166729,-0.097343189308483818,-0.038973362828268014,0.034596413870539064,0.022690302848330395,-0.017580739917656667,0.11275776002212266,0.014647866965475043,-0.057402849254403324,0.32705509401301808,-0.10498018010271599,0.10107058651143669,-0.013287449856819636,-0.12007328617764271,0.019724181066083139,-0.0097911826742610938,0.1502726611638372,0.068627179626079393,-0.072458930608693892,0.027102975377669324,0.087641000802061095,0.00088717839594987962,-0.015704352526436635,-0.062575499746012453,-0.037801891585336048,-0.061100198769865097,-0.090670155254640658,-0.056736234212089759,-0.055607284776460118,0.19388973658406894,0.14283288514199768,-0.070392526948103898,0.012054936854847955,-0.23835123207320094,-0.41118947509161008,-0.15563778175299986,-0.077597602756428782,-0.041098213877998169,-0.069878839134191739,0.015263947498652272,-0.13810542258979863,0.098154981384805842,0.1706615949259768};
+    static const double b0[16]={-0.033925654134079296,0.44112069841933715,0.38159989832939101,-0.094605478691665648,0.028386857328148329,0.44742694929743027,0.50069876842839178,-0.1441379732151285,-0.66194034377395494,0.051037585462319568,0.063697147579464222,0.17982892251103694,0.10157452144151109,-0.085232221968720573,0.37931100887379693,0.21712600704517809};
+    double a1[16];
+    F(o,16){double value=b0[o];F(i,18)value+=w0[o][i]*a0[i];a1[o]=max(0.,value);}
+    static const double w1[8][16]={-0.66760013532341822,-0.20356265909367052,-0.3249369951239624,-0.46541344351216568,-0.21735115785320083,-0.11990372763139671,-0.19505577434268176,0.22486864562521325,0.021288764296449002,-0.01906988683677184,0.4017124418771863,-0.28580056096195156,0.064185727148245983,0.18608663674341971,0.22366957949669461,-0.024402307778897452,0.03100051854597639,0.10099561182641838,0.089587376731283017,0.11700333649407021,0.072060355432940759,0.1562349369748478,0.087517325314125691,-0.12604904487912685,-0.11147042897624607,0.091669800337030191,0.02424300272725876,0.099932875367403431,-0.0047121757672487592,-0.14032131748678925,-0.10312942296140691,0.18481632795816486,0.016296443253508246,0.10256557158968957,0.27082441740742225,0.25364764044825183,0.36469255351702451,0.1849677097344235,0.17629445514605793,-0.22500079330652359,-0.22225599396987766,0.22617451218001589,-0.10981179422808542,0.024949378473492222,-0.18219782720537833,-0.16268120178103054,0.16282862120934402,0.30619594615535345,-0.023540141966928503,0.11691774000419219,-0.13799623124635765,-0.078602513959951048,-0.013520904285972796,0.14635892110598842,-0.14588716178092764,0.0055574621077748168,-0.3191587945662947,0.066796126374640302,-0.0065383021174177363,0.031682574666833802,-0.11449643903576895,-0.038484105314767723,0.13071537329783275,0.024270409798161256,-1.4729547113104006e-09,-1.0372882017444153e-05,-0.0001114099280771348,-9.5258727764822108e-07,-7.7768791157948161e-12,-2.888237166301653e-07,-4.5647864204954589e-09,-1.773559418966138e-07,-4.4728054767217315e-07,-2.421230278136017e-18,3.5883995801083e-25,-1.5116139232165667e-06,-1.2384268441304272e-10,-1.4668952222342467e-15,-3.4842899535189009e-11,-7.8459101767505471e-08,0.11802972023514414,-0.028041609727817468,0.065286363337511352,0.041979000938282683,0.16040603579368404,0.22197259667831948,-0.22990008924762487,-0.27535440073379136,-0.21805342772072966,0.30916134548808333,-0.00068883450227765104,0.10732970320801315,0.17812597381900552,-0.10767937110248835,0.13648666774149715,0.1823313407743761,-0.021829335012884112,-0.020192291396869243,-0.12420944771723101,-0.039856987144889396,0.0067932468354875907,-0.12480856469049484,-0.15321152192638107,-0.011327190408613751,-0.23640161883188643,0.031302027840742465,0.027907846095811713,0.075356371685164417,0.017433885637159398,0.11694954571302973,0.16785502922015502,-0.034187656272524104,-0.038504766631577279,0.096341160465473141,-0.08076897033230003,-0.020843835866834821,-0.10964509028502653,0.17370021608400693,0.20654095601015054,-0.20035539989330031,-0.29461987748078022,0.20090450018272435,-0.16798209605527781,0.020780543793788898,-0.18468070159278527,-0.071261944626775667,0.18562549495591116,0.072977796702138012};
+    static const double b1[8]={-0.014099226828189954,0.18549202298877795,0.35951489561004735,0.36402228929345465,-0.0011039176945057739,-0.063967153366413995,0.19731991245228936,0.48590775414541842};
+    double a2[8];
+    F(o,8){double value=b1[o];F(i,16)value+=w1[o][i]*a1[i];a2[o]=max(0.,value);}
+    static const double w2[2][8]={-0.5569127818281292,0.009756090616205304,0.30521100581131849,0.27696902357916375,-3.5684649443495048e-05,-0.14376876780569209,0.14800457479412304,0.2471060209322512,-0.31545518580163379,0.16109775580283969,0.35177853136133047,-0.096985359565601878,-2.2957545586864709e-05,-0.30229896628145109,-0.28979636358193556,0.13655559454560789};
+    static const double b2[2]={0.27037949019052976,0.12121988506445618};
+    double a3[2];
+    F(o,2){double value=b2[o];F(i,8)value+=w2[o][i]*a2[i];a3[o]=value;}
+    prediction[0]=min(1.,max(0.,a3[0]));prediction[1]=min(1.,max(-2.,a3[1]));
+}
+
+
+ll v13ModelAttempts,v13ModelRejects,v13ModelLate,v13ModelGuardReturns;
+#ifdef V13_MODEL_DISABLED
+volatile double v13ModelDisabledSink;
+#endif
+static bool v13ModelAllow(int ji,int machine,double prep,bool warm) {
+    ++v13ModelAttempts;
+    float x[18];v13ModelFeatures(ji,machine,prep,warm,x);
+    double prediction[2];v13ModelPredict(x,prediction);
+    const auto& forecast=v13ModelForecasts[jobs[ji].wf];
+    (void)forecast;
+#ifdef V13_MODEL_DISABLED
+    v13ModelDisabledSink=prediction[0]+prediction[1]+x[0];
+    return true;
+#else
+    bool allow=((1-0.25)*forecast.rev+0.25*prediction[0]*flows[jobs[ji].wf].v>forecast.cost*(1+ADM));
+    v13ModelRejects+=!allow;
+    return allow;
+#endif
+}
+
+void tryPlace(int ji) {
+    Job& j = jobs[ji];
+    Flow& w = flows[j.wf];
+    array<unsigned char,offsetof(Job,pre)> v13BeforeJob;
+    if(!w.started)memcpy(v13BeforeJob.data(),&j,v13BeforeJob.size());
+    for (int a = w.tenant; a >= 0; a = tenPar[a])
+        if (tenUsed[a] + j.c > tenQuota[a]) {
+            return;
+        }
+    if (j.resT > now && (j.resM < 0 || (machUp[j.resM] && freedAt[j.resM] < j.resAt))) {
+        if (j.resM >= 0) occupy(j.resM, ji, j.resEnd);
+        return;
+    }
+    double est = max(1.0, j.e * tenFactor(w.tenant)), best = 1e18, th = jobTheta[ji], bw = 0, bs = 0;
+    int bx = -1, bwarm = 0;
+    static ll tts[30], tfs[30];
+    static double rfee[30];
+    static vector<pair<double, int>> cand;
+    cand.clear();
+    F(r, R) {
+        ll aw;
+        if (transferCost(j, r, tts[r], tfs[r], aw)) {
+            // registry fee of the layers the rack cache does not hold (a machine may still hold them)
+            static ll iq[120][30];
+            static int iv[120][30];
+            ll& q = iq[j.img][r];
+            if (iv[j.img][r] != rackCache[r].ver + 1) {
+                iv[j.img][r] = rackCache[r].ver + 1, q = 0;
+                for (int l : imageLayers[j.img])
+                    if (!rackCache[r].in[l]) q += layerSize[l];
+            }
+            rfee[r] = RF * q * Ureg;
+            // keep the RK cheapest racks, sorted
+            pair<double, int> v = {rfee[r] + tfs[r] + th * (tts[r] + PEN * aw * !j.suc.empty()) + j.c * price[rackDc[r]] * (tts[r] + est), r};
+            int k = cand.size();
+            if (k < RK) cand.push_back(v);
+            else if (v.first < cand[--k].first) ;
+            else continue;
+            for (; k && v.first < cand[k - 1].first; k--) cand[k] = cand[k - 1];
+            cand[k] = v;
+        }
+    }
+    if (LAK > 0) {
+        // look one step ahead: every successor will have to gather this job's output and its other
+        // inputs (external input, outputs of predecessors that are already placed) on one rack
+        static int qr[8][5], nq[8];
+        static ll qz[8][5];
+        static double qm[8][5], qf[8][5];
+        int ns = 0, sj[8];
+        for (int si : j.suc) {
+            if (ns >= 8) break;  // Check before any access to qr/ns scratch rows.
+            Job& s = jobs[si];
+            int k = 0;
+            if (s.s >= 0) qr[ns][k] = s.s, qz[ns][k++] = s.zin;
+            for (int p : s.pre)
+                if (p != ji && k < 5 && (jobs[p].state || GU > 0)) {
+                    Job* q = &jobs[p];
+                    // an unplaced predecessor is guessed to run where its own inputs are
+                    for (int it = 0; it < 3 && !q->state && q->s < 0 && q->pre.size(); it++) q = &jobs[q->pre[0]];
+                    qr[ns][k] = q->state > 1 ? q->outRack : q->state ? machRack[q->mach] : q->s < 0 ? w.home : q->s, qz[ns][k++] = jobs[p].zout;
+                }
+            if (!k) continue;
+            F(a, k) {
+                qm[ns][a] = qf[ns][a] = 0;
+                F(b, k) {
+                    ll d = dst(qr[ns][a], qr[ns][b]);
+                    if (d) qm[ns][a] = max(qm[ns][a], double(d + (qz[ns][b] + Bnet - 1) / Bnet)), qf[ns][a] += qz[ns][b] * d;
+                }
+            }
+            nq[ns] = k, sj[ns++] = si;
+        }
+        if (ns) {
+            for (auto& cr : cand) {
+                int r = cr.second;
+                F(i, ns) {
+                    double sth = jobTheta[sj[i]] + jobs[sj[i]].c * price[rackDc[r]], stayT = 0, stayF = 0;
+                    F(a, nq[i]) {
+                        ll d = dst(r, qr[i][a]);
+                        if (d) stayT = max(stayT, double(d + (qz[i][a] + Bnet - 1) / Bnet)), stayF += qz[i][a] * d;
+                    }
+                    double la = sth * stayT + Unet * stayF;
+                    F(a, nq[i]) {
+                        ll d = dst(r, qr[i][a]);
+                        la = min(la, sth * max(d ? double(d + (j.zout + Bnet - 1) / Bnet) : 0, qm[i][a]) + Unet * (j.zout * d + qf[i][a]));
+                    }
+                    cr.first += LAK * la;
+                }
+            }
+            sort(cand.begin(), cand.end());
+        }
+    }
+    for (auto& cr : cand) {
+        int r = cr.second;
+        cr.first -= rfee[r];
+        if (cr.first >= best) continue;
+        for (int x : rackMachs[r]) {
+            if (!machUp[x] || machCpu[x] < j.c || machMem[x] < j.m) continue;
+            double wt = waitFor(x, j.c, j.m, (best - cr.first) / (th + 1e-9));
+            if (cr.first + th * wt >= best) continue;
+            ll qreg = 0, qrack = 0;
+            for (int l : imageLayers[j.img])
+                if (!machCache[x].in[l]) (rackCache[r].in[l] ? qrack : qreg) += layerSize[l];
+            ll s = max(tts[r], (qreg + Breg - 1) / Breg + (qrack + Brack - 1) / Brack);
+            double cost = cr.first + qreg * Ureg + (j.c * price[rackDc[r]] + th) * (s - tts[r]) + th * wt;
+            // A RUN puts the layers into the caches at once and a KILL in the same tick costs no run
+            // fee, so RUN + KILL + RUN skips the pull time; the transfer fee is then paid twice.
+            double warm = cr.first + qreg * Ureg + tfs[r] + th * wt;
+            int wm = PW > 0 && warm < cost;
+            if (wm) cost = warm, s = tts[r];
+            if (cost < best) best = cost, bx = x, bw = wt, bs = s, bwarm = wm;
+        }
+    }
+    j.resAt = now, j.resM = -1, j.resT = now + RT0;
+    if (bx < 0 || bw > RESV) return;
+    if (bw > 0) {
+        j.resM = bx, j.resEnd = now + bw + bs + est, j.resT = now + min(RT1, bw * RTK);
+        occupy(bx, ji, now + bw + bs + est);
+        return;
+    }
+    // RUN/KILL/RUN is one atomic decision: never emit a partial prewarm batch.
+    if (commandsUsed + (bwarm ? 3 : 1) > COMMAND_LIMIT) return;
+    if(!w.started&&!v13ModelAllow(ji,bx,bs,bwarm)) {
+        memcpy(reinterpret_cast<unsigned char*>(&j),v13BeforeJob.data(),v13BeforeJob.size());
+        return;
+    }
+    int rdy = j.ready;
+    ll fee0 = 0;
+    if (bwarm && !bw) {
+        runJob(ji, bx);
+        fee0 = runFee;
+        killNow(ji);
+        j.ready = rdy;
+    }
+    runJob(ji, bx);
+    runFee += fee0;
+    w.started = w.dirty = 1;
+    overhead = overhead * .98 + .02 * max(0.0, j.prep - j.xt);
+    ovWait = ovWait * .98 + .02 * min(WCAP, double(now - j.ready));
+    feeAvg = feeAvg * .98 + .02 * (runFee - j.xf);
+    jobEnd[ji] = now + j.prep + est;
+    occupy(bx, ji, jobEnd[ji]);
+}
+
+void schedule() {
+    drainDeferredKills();
+    // No future completion event can create revenue after the known final tick.
+    if (now == T) {
+        F(x,M) {
+            while (!machJobs[x].empty() && commandsUsed < COMMAND_LIMIT)
+                killNow(machJobs[x].back());
+            if (commandsUsed == COMMAND_LIMIT) break;
+        }
+        return;
+    }
+    // CPU-time insurance (limit: 1 s per test). `late` > 0 means we are behind a linear budget
+    // that ends at 0.7 s: first the periodic re-evaluation of flows is dropped, then scheduling
+    // runs only every 2nd, 4th, ... 32nd tick; close to the limit only the audit is answered.
+    double used = V7_SCHEDULER_USED(TS), late = used - .08 - .62 * now / T;
+    v13ModelLate+=late>=0;
+    if (used > .93 || (late > 0 && now % (1 << min(5, int(late / .04))))) {++v13ModelGuardReturns;return;}
+    updateFactors();
+    allRunD = allRunE = 0;
+    F(i, K) tenRunD[i] = tenRunE[i] = 0;
+    F(x, M) {
+        virtCpu[x] = freeCpu[x], virtMem[x] = freeMem[x];
+        timeline[x].clear();
+        for (int q : machJobs[x]) {
+            double el = max(0, now - jobs[q].t0 - jobs[q].prep);
+            int o = flows[jobs[q].wf].tenant;
+            if (el > jobs[q].e * tenF[o]) allRunD += el, tenRunD[o] += el, allRunE += jobs[q].e, tenRunE[o] += jobs[q].e;
+            timeline[x].push_back({jobEnd[q] = max(now + 1 + OD * el, jobEnd[q]), ll(jobs[q].c) << 32 | jobs[q].m});
+        }
+        sort(timeline[x].begin(), timeline[x].end());
+    }
+    updateFactors();
+    vector<pair<double, int>> order;
+    F(wi, flows.size()) {
+        Flow& w = flows[wi];
+        if (w.dead || !w.left) continue;
+        if (w.dirty || (late < 0 && (now + wi) % int(THR) == 0)) {
+            double rem, work, cost, rev = 0;
+            flowEstimate(w, rem, work, cost);
+            static const double sc[5] = {-1, -.5, 0, 1, 2};
+            rem *= 1 + BB * log(w.left);  // the longest of many noisy paths is longer than the path of the means
+            F(k, 5) {
+                double f = now + rem * (1 + SP * sc[k]);
+                if (f <= T + HZ || !HS) rev += revenueAt(w, f) / 5;  // nothing is earned after the last tick
+            }
+            if (!HS && now + rem > T) rev = 0;
+            auto& v13forecast=v13ModelForecasts[wi];
+            v13forecast.rem=rem;v13forecast.work=work;v13forecast.cost=cost;v13forecast.rev=rev;v13forecast.tick=now;
+            w.dirty = 0, w.key = 1;
+            if (rev > cost * (w.started ? KILLK : 1 + ADM)) {
+                w.key = -(rev - cost) / (work + 1) * (w.started ? SB : 1) / (1 + SL * max(0.0, (w.dl - now - rem) / rem));
+            } else if (w.started) {
+                w.dead = 1;
+                F(i, w.n) if (jobs[w.first + i].state == 1) {
+                    stopOrDefer(w.first + i);
+                }
+            } else if (revenueAt(w, now + rem * DEADK) <= 0)
+                w.dead = 1;
+        }
+        if (w.key < 0 && !w.dead) order.push_back({w.key, wi});
+    }
+    sort(order.begin(), order.end());
+    for (auto& o : order) {
+        Flow& w = flows[o.second];
+        static vector<pair<double, int>> ready;
+        ready.clear();
+        F(i, w.n) {
+            Job& j = jobs[w.first + i];
+            if (j.state == 0 && j.need == 0) ready.push_back({-jobTail[w.first + i], w.first + i});
+        }
+        sort(ready.begin(), ready.end());
+        for (auto& q : ready) tryPlace(q.second);
+    }
+}
+
+int main() {
+    T = readInt(), D = readInt(), N = readInt(), R = readInt(), M = readInt(), K = readInt();
+    L = readInt(), I = readInt(), P = readInt(), W = readInt(), E = readInt();
+    Breg = readInt(), Brack = readInt(), Bnet = readInt(), Ureg = readInt(), Unet = readInt();
+    F(i, D) price[i] = readInt();
+    F(i, R) rackDc[i] = readInt(), rackNode[i] = readInt(), rackCache[i].cap = readInt();
+    F(i, M) {
+        machRack[i] = readInt(), freeCpu[i] = machCpu[i] = readInt(), freeMem[i] = machMem[i] = readInt();
+        machCache[i].cap = readInt(), machUp[i] = 1;
+        rackMachs[machRack[i]].push_back(i);
+    }
+    F(i, E) {
+        edgeU[i] = readInt(), edgeV[i] = readInt(), edgeW[i] = readInt(), edgeUp[i] = 1;
+        adj[edgeU[i]].push_back(i), adj[edgeV[i]].push_back(i);
+    }
+    F(i, K) tenPar[i] = readInt(), tenQuota[i] = readInt();
+    {  // order tenants so that parents come first
+        int cnt = 0;
+        vector<char> seen(K);
+        while (cnt < K) F(i, K) if (!seen[i] && (tenPar[i] < 0 || seen[tenPar[i]])) seen[i] = 1, tenOrder[cnt++] = i;
+    }
+    F(i, L) layerSize[i] = readInt();
+    F(i, I) {
+        int k = readInt();
+        while (k--) imageLayers[i].push_back(readInt());
+    }
+    {  // huffman tree
+        ll wt[20];
+        char alive[20] = {};
+        F(i, 9) wt[i] = readInt(), alive[i] = 1;
+        for (int id = 9; id < 17; id++) {
+            int pick[2];
+            F(k, 2) {
+                int b = -1;
+                F(i, id) if (alive[i] && (b < 0 || wt[i] < wt[b])) b = i;
+                alive[b] = 0, pick[k] = b;
+                huffChild[id][k] = b;
+            }
+            wt[id] = wt[pick[0]] + wt[pick[1]], alive[id] = 1;
+        }
+        huffRoot = 16;
+    }
+    {  // aho-corasick
+        acGo.push_back(array<int, 8>());
+        acVal.push_back(0);
+        F(i, P) {
+            int n = readTok(), u = 0;
+            F(k, n) {
+                int c = tok[k] - 'a';
+                if (!acGo[u][c]) acGo[u][c] = acGo.size(), acGo.push_back(array<int, 8>()), acVal.push_back(0);
+                u = acGo[u][c];
+            }
+            acVal[u] += readInt();
+        }
+        vector<int> fail(acGo.size()), que;
+        F(c, 8) if (acGo[0][c]) que.push_back(acGo[0][c]);
+        F(qi, que.size()) {
+            int u = que[qi];
+            acVal[u] += acVal[fail[u]];
+            F(c, 8) {
+                int v = acGo[u][c];
+                if (v)
+                    fail[v] = acGo[fail[u]][c], que.push_back(v);
+                else
+                    acGo[u][c] = acGo[fail[u]][c];
+            }
+        }
+    }
+    F(a, R) rowDirty[a] = 1;
+    for (;;) {
+        if (!readTok()) break;  // "TICK"
+        now = readInt();
+        int ne = readInt(), nq = readInt();
+        while (ne--) {
+            readTok();
+            string ev = tok;
+            if (ev == "DONE") {
+                int ji = jobIndex[readInt()];
+                Job& j = jobs[ji];
+                Flow& w = flows[j.wf];
+                int o = w.tenant;
+                tenDur[o] += now - j.t0 - j.prep, tenEst[o] += j.e, allDur += now - j.t0 - j.prep, allEst += j.e;
+                release(ji);
+                j.state = 2;
+                j.outRack = machRack[j.mach];
+                for (int s : j.suc) jobs[s].need--, jobs[s].ready = now;
+                w.left--;
+                if (!w.left) w.endT = now;
+            } else if (ev == "FAIL") {
+                int x = readInt();
+                while (machJobs[x].size()) release(machJobs[x][0]);
+                machUp[x] = 0;
+                Cache& c = machCache[x];
+                c.q.clear(), c.sum = 0;
+                memset(c.in, 0, 400);
+            } else if (ev == "UP") {
+                int x = readInt();
+                machUp[x] = 1;
+            }
+            else if (ev == "DCDOWN" || ev == "DCUP") {
+                dcDown[readInt()] = ev.size() > 4, netDirty = 1;
+                F(a, R) rowDirty[a] = 1;
+            } else if (ev == "LDOWN" || ev == "LUP") {
+                int e = readInt(), u = edgeU[e], v = edgeV[e];
+                edgeUp[e] = ev.size() < 4, netDirty = 1;
+                F(a, R) {
+                    ll x = nodeDist[a][u], y = nodeDist[a][v];
+                    // going up: matters if it is a shortcut; going down: matters if it was tight
+                    if (edgeUp[e] ? x + edgeW[e] < y || y + edgeW[e] < x : x + edgeW[e] == y || y + edgeW[e] == x) rowDirty[a] = 1;
+                }
+            }
+            else if (ev == "QUOTA") {
+                int t = readInt();
+                undoStack.push_back({t, tenQuota[t]});
+                tenQuota[t] = readInt();
+            } else if (ev == "UNDO") {
+                int k = readInt();
+                while (k--) tenQuota[undoStack.back().first] = undoStack.back().second, undoStack.pop_back();
+            } else if (ev == "LOG") {
+                int x = readInt(), b = readInt(), u = huffRoot, st = 0;
+                readTok();
+                ll sc = 0;
+                F(i, b) {
+                    int h = tok[i / 4], bit = ((h <= '9' ? h - '0' : (h | 32) - 'a' + 10) >> (3 - i % 4)) & 1;
+                    u = huffChild[u][bit];
+                    if (u < 9) {
+                        st = u < 8 ? acGo[st][u] : 0;
+                        sc += acVal[st];
+                        u = huffRoot;
+                    }
+                }
+                alarmAt[x][now] += sc;
+            } else {  // WF
+                Flow w;
+                w.id = readInt(), w.tenant = readInt(), w.v = readInt(), w.dl = readInt(), w.n = w.left = readInt();
+                w.arrive = now, w.first = jobs.size(), w.dead = w.started = w.adm = 0, w.dirty = 1, w.key = 1;
+                F(i, w.n) {
+                    Job j;
+                    j.id = readInt(), j.c = readInt(), j.m = readInt(), j.e = readInt(), j.img = readInt();
+                    j.s = readInt(), j.zin = readInt(), j.zout = readInt(), j.need = readInt();
+                    j.state = 0, j.wf = flows.size(), j.ready = now, j.resT = 0;
+                    F(k, j.need) {
+                        int p = jobIndex[readInt()];
+                        j.pre.push_back(p);
+                        jobs[p].suc.push_back(jobs.size());
+                    }
+                    jobIndex[j.id] = jobs.size();
+                    jobs.push_back(j);
+                }
+                if (netDirty) recomputeNet();
+                chooseHome(w);
+                flows.push_back(w);
+                V13ModelForecast v13forecast;
+                F(i,w.n)v13forecast.roots+=jobs[w.first+i].pre.empty();
+                v13ModelForecasts.push_back(v13forecast);
+            }
+        }
+        if (netDirty) recomputeNet();
+        outbuf = "ANS";
+        while (nq--) {
+            readTok();
+            char q = tok[0], q2 = tok[1];
+            int a = readInt();
+            ll ans = 0;
+            if (q == 'B') {
+                static ll sub[200];
+                F(i, K) sub[i] = tenFix[i] + tenRate[i] * now - tenRateStart[i];
+                for (int i = K - 1; i > 0; i--) sub[tenPar[tenOrder[i]]] += sub[tenOrder[i]];
+                ans = sub[a];
+            } else if (q == 'H') {
+                ans = 1e18;
+                for (; a >= 0; a = tenPar[a]) ans = min(ans, tenQuota[a] - tenUsed[a]);
+            } else if (q == 'R' && q2 == 'O')
+                ans = rackDist[a][readInt()];
+            else if (q == 'A') {
+                for (int t = max(1, now - W + 1); t <= now; t++) ans += alarmAt[a][t];
+            } else if (q == 'S')
+                ans = slackOf(jobIndex[a]);
+            else
+                ans = (q == 'C' ? machCache[a] : rackCache[a]).sum;
+            outbuf += " " + to_string(ans);
+        }
+        outbuf += "\n";
+        commandsUsed = 0;
+        schedule();
+        outbuf += "END\n";
+        fwrite(outbuf.data(), 1, outbuf.size(), stdout);
+        fflush(stdout);
+        if (now == T) break;
+    }
+    fprintf(stderr,"V14_MLP_POLICY attempts=%lld rejects=%lld late=%lld guard_returns=%lld\n",v13ModelAttempts,v13ModelRejects,v13ModelLate,v13ModelGuardReturns);
+}

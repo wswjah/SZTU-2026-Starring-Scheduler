@@ -1,0 +1,44 @@
+{
+  "default": {},
+  "duration_105": {
+    "SR_DURATION": 1.05
+  },
+  "duration_115": {
+    "SR_DURATION": 1.15
+  },
+  "wait_01": {
+    "SR_RACK_WAIT": 0.1
+  },
+  "wait_015": {
+    "SR_RACK_WAIT": 0.15
+  },
+  "wait_035": {
+    "SR_RACK_WAIT": 0.35
+  },
+  "time_6": {
+    "SR_TIME": 6
+  },
+  "risk_30": {
+    "SR_RISK": 30
+  },
+  "duration_weighted": {
+    "SR_DURATION": 1.1,
+    "SR_EST_WEIGHT": 0.5
+  },
+  "duration_progress": {
+    "SR_DURATION": 1.1,
+    "SR_PROGRESS": 3
+  },
+  "duration_time": {
+    "SR_DURATION": 1.1,
+    "SR_TIME": 10
+  },
+  "duration_risk": {
+    "SR_DURATION": 1.1,
+    "SR_RISK": 10
+  },
+  "duration_work": {
+    "SR_DURATION": 1.1,
+    "SR_WORK": 0.4
+  }
+}

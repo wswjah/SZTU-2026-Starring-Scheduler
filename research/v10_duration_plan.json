@@ -1,0 +1,52 @@
+{
+  "base": ".\\versions\\v8_fine\\main.cpp",
+  "base_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
+  "configs": {
+    "prior_ratio_125": {
+      "F0": 1.25
+    },
+    "prior_ratio_175": {
+      "F0": 1.75
+    },
+    "prior_weight_50": {
+      "W0": 50
+    },
+    "prior_weight_200": {
+      "W0": 200
+    },
+    "tenant_shrink_15": {
+      "W1": 15
+    },
+    "tenant_shrink_60": {
+      "W1": 60
+    },
+    "overdue_tail_015": {
+      "OD": 0.15
+    },
+    "overdue_tail_035": {
+      "OD": 0.35
+    },
+    "path_growth_015": {
+      "BB": 0.015
+    },
+    "path_growth_045": {
+      "BB": 0.045
+    },
+    "overhead_08": {
+      "OVK": 0.8
+    },
+    "overhead_12": {
+      "OVK": 1.2
+    },
+    "horizon_10": {
+      "HZ": 10
+    },
+    "horizon_50": {
+      "HZ": 50
+    }
+  },
+  "max_combinations": 1,
+  "selection": "Train only, prefer positive aggregate with sensible equal-weight, median and worst-case behaviour; root owns validation.",
+  "official_submission_authorized": false,
+  "official_submission_sent": false
+}

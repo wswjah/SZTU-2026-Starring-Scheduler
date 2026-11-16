@@ -1,0 +1,127 @@
+{
+  "runs": 192,
+  "audit_total": 335436,
+  "audit_errors": 0,
+  "illegal_commands": 0,
+  "max_cpu_seconds": 0.46875,
+  "max_peak_memory_bytes": 30470144,
+  "all_runs_ok": true,
+  "source_integrity": [
+    {
+      "name": "pen_0",
+      "parameter": "PEN",
+      "value": 0,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "pen_025",
+      "parameter": "PEN",
+      "value": 0.25,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "pen_05",
+      "parameter": "PEN",
+      "value": 0.5,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "pen_0875",
+      "parameter": "PEN",
+      "value": 0.875,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "lookahead_0",
+      "parameter": "LAK",
+      "value": 0,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "lookahead_025",
+      "parameter": "LAK",
+      "value": 0.25,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "lookahead_05",
+      "parameter": "LAK",
+      "value": 0.5,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "lookahead_15",
+      "parameter": "LAK",
+      "value": 1.5,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "lookahead_2",
+      "parameter": "LAK",
+      "value": 2,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "unknown_predecessor_0",
+      "parameter": "GU",
+      "value": 0,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "registry_rank_0",
+      "parameter": "RF",
+      "value": 0,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    },
+    {
+      "name": "registry_rank_15",
+      "parameter": "RF",
+      "value": 1.5,
+      "whole_source_equals_base_with_only_this_constant_replaced": true,
+      "source_sha256_matches": true,
+      "exe_sha256_matches": true,
+      "all_16_inputs_from_train": true
+    }
+  ],
+  "single_axis_source_checks_all_pass": true,
+  "all_twelve_valid_range_total_profit_negative": true,
+  "extra_config_or_combination_added": false,
+  "followup_selected_by_parent": [
+    "pen_0875",
+    "pen_0"
+  ],
+  "followup_status": "Parent owns old-development evaluation; this subtask did not read it or any V12 held-out outcomes"
+}

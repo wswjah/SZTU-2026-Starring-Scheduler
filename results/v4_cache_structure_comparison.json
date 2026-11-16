@@ -1,0 +1,320 @@
+[
+  {
+    "candidate": "v4_frontier_cache",
+    "cases": 16,
+    "all_ok": true,
+    "baseline_profit": 52516196,
+    "profit": 52213899,
+    "gain_pct": -0.5756262315724459,
+    "wins": 5,
+    "ties": 5,
+    "median_gain_pct": 0.0,
+    "worst_gain_pct": -16.13770905080244,
+    "rows": [
+      {
+        "case": "fast_00",
+        "baseline_profit": 11069475,
+        "profit": 10967385,
+        "delta": -102090,
+        "gain_pct": -0.9222659611228146,
+        "ok": true,
+        "solver_cpu_seconds": 0.34375
+      },
+      {
+        "case": "fast_01",
+        "baseline_profit": 8520968,
+        "profit": 8459461,
+        "delta": -61507,
+        "gain_pct": -0.7218311346785966,
+        "ok": true,
+        "solver_cpu_seconds": 0.265625
+      },
+      {
+        "case": "heavy_00",
+        "baseline_profit": 3050688,
+        "profit": 3088270,
+        "delta": 37582,
+        "gain_pct": 1.2319188327354347,
+        "ok": true,
+        "solver_cpu_seconds": 0.328125
+      },
+      {
+        "case": "heavy_01",
+        "baseline_profit": 2347872,
+        "profit": 2357452,
+        "delta": 9580,
+        "gain_pct": 0.4080290578021284,
+        "ok": true,
+        "solver_cpu_seconds": 0.28125
+      },
+      {
+        "case": "large_00",
+        "baseline_profit": 3328814,
+        "profit": 3315513,
+        "delta": -13301,
+        "gain_pct": -0.39957173936423507,
+        "ok": true,
+        "solver_cpu_seconds": 0.546875
+      },
+      {
+        "case": "large_01",
+        "baseline_profit": 7900781,
+        "profit": 7799546,
+        "delta": -101235,
+        "gain_pct": -1.2813290230421548,
+        "ok": true,
+        "solver_cpu_seconds": 0.609375
+      },
+      {
+        "case": "light_00",
+        "baseline_profit": 1650467,
+        "profit": 1650467,
+        "delta": 0,
+        "gain_pct": 0.0,
+        "ok": true,
+        "solver_cpu_seconds": 0.1875
+      },
+      {
+        "case": "light_01",
+        "baseline_profit": 1187262,
+        "profit": 1187262,
+        "delta": 0,
+        "gain_pct": 0.0,
+        "ok": true,
+        "solver_cpu_seconds": 0.171875
+      },
+      {
+        "case": "slow_00",
+        "baseline_profit": 409374,
+        "profit": 409374,
+        "delta": 0,
+        "gain_pct": 0.0,
+        "ok": true,
+        "solver_cpu_seconds": 0.21875
+      },
+      {
+        "case": "slow_01",
+        "baseline_profit": 87524,
+        "profit": 87524,
+        "delta": 0,
+        "gain_pct": 0.0,
+        "ok": true,
+        "solver_cpu_seconds": 0.1875
+      },
+      {
+        "case": "small_00",
+        "baseline_profit": 125768,
+        "profit": 126395,
+        "delta": 627,
+        "gain_pct": 0.4985369887411828,
+        "ok": true,
+        "solver_cpu_seconds": 0.046875
+      },
+      {
+        "case": "small_01",
+        "baseline_profit": 88854,
+        "profit": 74515,
+        "delta": -14339,
+        "gain_pct": -16.13770905080244,
+        "ok": true,
+        "solver_cpu_seconds": 0.078125
+      },
+      {
+        "case": "standard_00",
+        "baseline_profit": 2074413,
+        "profit": 2074413,
+        "delta": 0,
+        "gain_pct": 0.0,
+        "ok": true,
+        "solver_cpu_seconds": 0.21875
+      },
+      {
+        "case": "standard_01",
+        "baseline_profit": 3153337,
+        "profit": 3090383,
+        "delta": -62954,
+        "gain_pct": -1.9964247398866708,
+        "ok": true,
+        "solver_cpu_seconds": 0.234375
+      },
+      {
+        "case": "unstable_00",
+        "baseline_profit": 4566949,
+        "profit": 4569577,
+        "delta": 2628,
+        "gain_pct": 0.05754388761511908,
+        "ok": true,
+        "solver_cpu_seconds": 0.234375
+      },
+      {
+        "case": "unstable_01",
+        "baseline_profit": 2953650,
+        "profit": 2956362,
+        "delta": 2712,
+        "gain_pct": 0.09181859732871889,
+        "ok": true,
+        "solver_cpu_seconds": 0.265625
+      }
+    ],
+    "source_sha256": "89e8e81354dbf771af6c0df7d6c5bb13220d9c382b748bcf7d16f1ae07799abe"
+  },
+  {
+    "candidate": "v4_warm_reservation",
+    "cases": 16,
+    "all_ok": true,
+    "baseline_profit": 52516196,
+    "profit": 52509857,
+    "gain_pct": -0.012070562003385632,
+    "wins": 7,
+    "ties": 0,
+    "median_gain_pct": -0.2229400741039056,
+    "worst_gain_pct": -8.549869601170412,
+    "rows": [
+      {
+        "case": "fast_00",
+        "baseline_profit": 11069475,
+        "profit": 11031448,
+        "delta": -38027,
+        "gain_pct": -0.3435302938937901,
+        "ok": true,
+        "solver_cpu_seconds": 0.375
+      },
+      {
+        "case": "fast_01",
+        "baseline_profit": 8520968,
+        "profit": 8473492,
+        "delta": -47476,
+        "gain_pct": -0.557166744435611,
+        "ok": true,
+        "solver_cpu_seconds": 0.375
+      },
+      {
+        "case": "heavy_00",
+        "baseline_profit": 3050688,
+        "profit": 3098080,
+        "delta": 47392,
+        "gain_pct": 1.5534856399605612,
+        "ok": true,
+        "solver_cpu_seconds": 0.328125
+      },
+      {
+        "case": "heavy_01",
+        "baseline_profit": 2347872,
+        "profit": 2318660,
+        "delta": -29212,
+        "gain_pct": -1.24419048397868,
+        "ok": true,
+        "solver_cpu_seconds": 0.296875
+      },
+      {
+        "case": "large_00",
+        "baseline_profit": 3328814,
+        "profit": 3342398,
+        "delta": 13584,
+        "gain_pct": 0.4080732657336883,
+        "ok": true,
+        "solver_cpu_seconds": 0.5625
+      },
+      {
+        "case": "large_01",
+        "baseline_profit": 7900781,
+        "profit": 7845893,
+        "delta": -54888,
+        "gain_pct": -0.6947161299623472,
+        "ok": true,
+        "solver_cpu_seconds": 0.640625
+      },
+      {
+        "case": "light_00",
+        "baseline_profit": 1650467,
+        "profit": 1637405,
+        "delta": -13062,
+        "gain_pct": -0.7914123699534703,
+        "ok": true,
+        "solver_cpu_seconds": 0.203125
+      },
+      {
+        "case": "light_01",
+        "baseline_profit": 1187262,
+        "profit": 1187459,
+        "delta": 197,
+        "gain_pct": 0.016592799230497057,
+        "ok": true,
+        "solver_cpu_seconds": 0.171875
+      },
+      {
+        "case": "slow_00",
+        "baseline_profit": 409374,
+        "profit": 393614,
+        "delta": -15760,
+        "gain_pct": -3.8497803964101296,
+        "ok": true,
+        "solver_cpu_seconds": 0.203125
+      },
+      {
+        "case": "slow_01",
+        "baseline_profit": 87524,
+        "profit": 95247,
+        "delta": 7723,
+        "gain_pct": 8.823865454046897,
+        "ok": true,
+        "solver_cpu_seconds": 0.15625
+      },
+      {
+        "case": "small_00",
+        "baseline_profit": 125768,
+        "profit": 115015,
+        "delta": -10753,
+        "gain_pct": -8.549869601170412,
+        "ok": true,
+        "solver_cpu_seconds": 0.03125
+      },
+      {
+        "case": "small_01",
+        "baseline_profit": 88854,
+        "profit": 111981,
+        "delta": 23127,
+        "gain_pct": 26.028091025727605,
+        "ok": true,
+        "solver_cpu_seconds": 0.015625
+      },
+      {
+        "case": "standard_00",
+        "baseline_profit": 2074413,
+        "profit": 2070579,
+        "delta": -3834,
+        "gain_pct": -0.18482336930977228,
+        "ok": true,
+        "solver_cpu_seconds": 0.25
+      },
+      {
+        "case": "standard_01",
+        "baseline_profit": 3153337,
+        "profit": 3145105,
+        "delta": -8232,
+        "gain_pct": -0.2610567788980389,
+        "ok": true,
+        "solver_cpu_seconds": 0.21875
+      },
+      {
+        "case": "unstable_00",
+        "baseline_profit": 4566949,
+        "profit": 4583922,
+        "delta": 16973,
+        "gain_pct": 0.3716485557425653,
+        "ok": true,
+        "solver_cpu_seconds": 0.28125
+      },
+      {
+        "case": "unstable_01",
+        "baseline_profit": 2953650,
+        "profit": 3059559,
+        "delta": 105909,
+        "gain_pct": 3.585699050327551,
+        "ok": true,
+        "solver_cpu_seconds": 0.265625
+      }
+    ],
+    "source_sha256": "6ccdc22f73af06fdc18a78f55e3e3065a867801d611b75f19b042eb3a2ce650d"
+  }
+]

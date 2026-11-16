@@ -1,0 +1,6 @@
+{
+  "all_passed": true,
+  "stdout": "V11 exact preview:5 directed cases and20000 randomized two-RUN previews passed; source caches unchanged\n",
+  "compiler_stderr": "In file included from ./tools\\v11_pull_tests.cpp:5:\n./candidates/v11_pull/hybrid.cpp: In function 'int v11_pull_solver_main()':\n./candidates/v11_pull/hybrid.cpp:872:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  872 | }\n      | ^\n",
+  "exe_sha256": "475297734ee99205f5a68d794fa5fe39830b3496ae45b0c2a8632dcb5918930f"
+}

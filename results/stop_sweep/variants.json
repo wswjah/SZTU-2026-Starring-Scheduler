@@ -1,0 +1,27 @@
+{
+  "default": {},
+  "stop_1": {
+    "SR_STOP": 1
+  },
+  "stop_15": {
+    "SR_STOP": 1.5
+  },
+  "stop_2": {
+    "SR_STOP": 2
+  },
+  "stop_4": {
+    "SR_STOP": 4
+  },
+  "stop_15_age20": {
+    "SR_STOP": 1.5,
+    "SR_STOP_AGE": 20
+  },
+  "stop_2_age10": {
+    "SR_STOP": 2,
+    "SR_STOP_AGE": 10
+  },
+  "stop_2_scale11": {
+    "SR_STOP": 2,
+    "SR_DURATION": 1.1
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "name": "unknown_predecessor_0",
+  "parameters": {
+    "GU": 0
+  },
+  "base": ".\\versions\\v10_input_fix\\main.cpp",
+  "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "source": ".\\candidates\\v12_routing\\unknown_predecessor_0.cpp",
+  "source_sha256": "d4f8a9ad505bc70be1ffaf2e4f1c648163ab46515843ff28873b434be9d618fd",
+  "executable": ".\\build\\v12_routing_unknown_predecessor_0.exe",
+  "exe_sha256": "fe017d74607ed0c0652ba9fa434a1a1b4c6c2e1a239e78d046592edeefc03813",
+  "source_changes_only_declared_constant": true,
+  "header_buffer_timeguard_budget_preserved": true,
+  "scanner_added": false,
+  "result_dir": ".\\results\\v12_routing\\unknown_predecessor_0",
+  "valid_range": {
+    "case_count": 14,
+    "cases": [
+      "fast_00",
+      "fast_01",
+      "heavy_00",
+      "heavy_01",
+      "light_00",
+      "light_01",
+      "slow_00",
+      "slow_01",
+      "small_00",
+      "small_01",
+      "standard_00",
+      "standard_01",
+      "unstable_00",
+      "unstable_01"
+    ],
+    "baseline_total_profit": 56070086,
+    "candidate_total_profit": 55031243,
+    "total_profit_delta": -1038843,
+    "total_profit_increase_pct": -1.8527579929162208,
+    "mean_profit_ratio": 0.9807476786973685,
+    "median_profit_ratio": 0.9837273122159594,
+    "equal_weight_increase_pct": -1.9252321302631548,
+    "ratio_undefined_cases": [],
+    "improved": 2,
+    "regressed": 12,
+    "unchanged": 0,
+    "baseline_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.390625,
+      "max_peak_memory_bytes": 30474240,
+      "over_one_second": [],
+      "range_violations": {}
+    },
+    "candidate_health": {
+      "all_runs_ok": true,
+      "all_audits_correct": true,
+      "all_commands_legal": true,
+      "audit_errors": 0,
+      "illegal_commands": 0,
+      "max_cpu_seconds": 0.3125,
+      "max_peak_memory_bytes": 30425088,
+      "over_one_second": [],
+      "range_violations": {}
+    }
+  },
+  "boundary": {
+    "case_count": 2,
+    "cases": [
+      "large_00",
+      "large_01"
+    ],
+    "baseline_total_profit": 16352752,
+    "candidate_total_profit": 16418466,
+    "total_profit_delta": 65714,
+    "total_profit_increase_pct": 0.4018528502113927,
+    "mean_profit_ratio": 1.0098115018627223,
+    "median_profit_ratio": 1.0098115018627223,
+    "equal_weight_increase_pct": 0.9811501862722283,
+    "ratio_undefined_cases": [],
+    "improved": 1,
+    "regressed": 1,
+    "unchanged": 0
+  },
+  "all_health": {
+    "all_runs_ok": true,
+    "all_audits_correct": true,
+    "all_commands_legal": true,
+    "audit_errors": 0,
+    "illegal_commands": 0,
+    "max_cpu_seconds": 0.34375,
+    "max_peak_memory_bytes": 30425088,
+    "over_one_second": [],
+    "range_violations": {
+      "large_00": [
+        "logchars=3027206 > 3000000"
+      ],
+      "large_01": [
+        "logchars=3111782 > 3000000"
+      ]
+    }
+  },
+  "worst": {
+    "case": "heavy_00",
+    "baseline_profit": 4463341,
+    "candidate_profit": 4149332,
+    "delta": -314009,
+    "profit_ratio": 0.9296470961999095,
+    "baseline_cpu_seconds": 0.15625,
+    "candidate_cpu_seconds": 0.140625,
+    "baseline_range_violations": [],
+    "candidate_range_violations": []
+  },
+  "official_submission_sent": false
+}

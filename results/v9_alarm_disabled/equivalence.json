@@ -1,0 +1,98 @@
+[
+  {
+    "case": "fast_00",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "fast_01",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "heavy_00",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "heavy_01",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "large_00",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "large_01",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "light_00",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "light_01",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "slow_00",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "slow_01",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "small_00",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "small_01",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "standard_00",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "standard_01",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "unstable_00",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  },
+  {
+    "case": "unstable_01",
+    "full_judge_report_equal": true,
+    "input_sha256_equal": true,
+    "judge_sha256_equal": true
+  }
+]

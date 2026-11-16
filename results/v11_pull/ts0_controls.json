@@ -1,0 +1,55 @@
+{
+  "baseline_ts0_vs_ts1_full_reports": {
+    "fast_00": true,
+    "heavy_00": true,
+    "standard_00": true
+  },
+  "hybrid": {
+    "ts0_vs_ts1_full_reports": {
+      "fast_00": true,
+      "heavy_00": true,
+      "standard_00": true
+    },
+    "profit_vs_baseline": {
+      "fast_00": {
+        "baseline": 14269550,
+        "candidate": 14218344,
+        "delta": -51206
+      },
+      "heavy_00": {
+        "baseline": 4463341,
+        "candidate": 4306141,
+        "delta": -157200
+      },
+      "standard_00": {
+        "baseline": 2748428,
+        "candidate": 2673587,
+        "delta": -74841
+      }
+    }
+  },
+  "fee_only": {
+    "ts0_vs_ts1_full_reports": {
+      "fast_00": true,
+      "heavy_00": true,
+      "standard_00": true
+    },
+    "profit_vs_baseline": {
+      "fast_00": {
+        "baseline": 14269550,
+        "candidate": 14317288,
+        "delta": 47738
+      },
+      "heavy_00": {
+        "baseline": 4463341,
+        "candidate": 4196250,
+        "delta": -267091
+      },
+      "standard_00": {
+        "baseline": 2748428,
+        "candidate": 2669576,
+        "delta": -78852
+      }
+    }
+  }
+}

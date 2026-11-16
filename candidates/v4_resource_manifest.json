@@ -1,0 +1,14 @@
+{
+  "dominant": {
+    "source": "candidates\\v4_resource_dominant.cpp",
+    "source_sha256": "a42004c9fb42e85c6963d0425d30ccfa2fa93b0e0379dd863ccf6e8cbf9d3202",
+    "baseline_source_sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c",
+    "description": "double cpu_per_memory=cpu_capacity/memory_capacity;"
+  },
+  "pressure": {
+    "source": "candidates\\v4_resource_pressure.cpp",
+    "source_sha256": "e21cfc619eb0daafa2e38720f317fa32b65eedd357212b9f235fa7bca1a33b8c",
+    "baseline_source_sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c",
+    "description": "double cpu_available=max(0.,min((double)quota_headroom[flow.tenant_id],\n                                                   resource_free_cores[resource_rack]));\n                double cpu_per_memory=(cpu_capacity+cpu_available)/\n                                      (memory_capacity+resource_free_memory[resource_rack]);"
+  }
+}

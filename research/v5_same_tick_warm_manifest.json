@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-15",
+  "baseline_score": 85,
+  "source": "candidates/v5_same_tick_warm.cpp",
+  "source_sha256": "5196d0dc780f3e0d5e5b74a2ac3facb30dc8d7103220acac9b428a3b059efb37",
+  "executable": "build/v5_same_tick_warm.exe",
+  "executable_sha256": "6440072e507eda56631593f79f5270a3b3e29309b2bf4069fdff3466dc05f60f",
+  "baseline": "versions/v3_aggressive/main.cpp",
+  "conditions": [
+    "complete image fits selected machine cache",
+    "cold preparation greater than transfer",
+    "extra transfer fee no larger than saved preparation CPU fee",
+    "at least three commands remain"
+  ],
+  "selection_and_admission_unchanged": true,
+  "v4_model_used": false,
+  "official_submission_sent": false,
+  "report": "research/same_tick_warm_audit.md",
+  "result_summaries": [
+    "results/v5_same_tick_warm_smoke/summary.json",
+    "results/v5_same_tick_warm_train/summary.json",
+    "results/v5_same_tick_warm_stress/summary.json",
+    "results/v5_same_tick_warm_confirmation/summary.json"
+  ],
+  "main_runs": 55,
+  "audit_total": 98843,
+  "audit_errors": 0,
+  "incidents": 0
+}

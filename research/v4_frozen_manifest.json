@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-14",
+  "official_baseline_score": 85,
+  "official_baseline_id": 543440,
+  "candidate": "risk_tree_and_terminal_job_estimate",
+  "model_nodes": 15,
+  "runtime_features": [
+    "plan_cost/value",
+    "plan_duration/profitable_window",
+    "profitable_window/total_ticks"
+  ],
+  "training_worlds": [
+    "fast_00",
+    "fast_01",
+    "heavy_00",
+    "heavy_01",
+    "large_00",
+    "large_01",
+    "light_00",
+    "light_01",
+    "slow_00",
+    "slow_01",
+    "small_00",
+    "small_01",
+    "standard_00",
+    "standard_01",
+    "unstable_00",
+    "unstable_01"
+  ],
+  "training_rows": 19616,
+  "raw_source": ".\\candidates\\v4_model_terminal.cpp",
+  "raw_source_sha256": "78a67230d16f85f0fe064f7877bd3cca9b655ffc06d441fd70e1655640c7b5b9",
+  "source": ".\\versions\\v4_risk_terminal\\main.cpp",
+  "source_sha256": "196dcb24e991d1fb9ab48291c44a63bda419bd46bbf76bb3dbe02d9b89396aaa",
+  "official_submission_authorized": true,
+  "official_submission_sent": true,
+  "baseline_files_unchanged": true,
+  "packed_source": {
+    "path": ".\\versions\\v4_risk_terminal\\submit.cpp",
+    "bytes": 57073,
+    "sha256": "82367cb745abd602560acbbcc8d37149adf9c5dc8be7c2d4c22dd2bfa5736ea4"
+  },
+  "executable": {
+    "path": ".\\build\\v4_submission.exe",
+    "bytes": 677760,
+    "sha256": "70aab821de5ee5ac7279ceb3d2d7f6bc5b6b52321dccdb85955cb2613c44c038"
+  },
+  "production_matches_prototype_all_36_worlds": true,
+  "production_results": [
+    "results/v4_production",
+    "results/v4_production_confirmation"
+  ],
+  "approval_requested": true,
+  "experiment_report": "research/v4_experiment.md",
+  "validation_production_runs": 70,
+  "maximum_serial_stress_cpu_seconds": 0.75,
+  "control_feature_alignment": "research/v4_model_feature_alignment.json",
+  "approval_received_date": "2026-11-15",
+  "submission_attempt_state": "completed",
+  "submission_attempt_report": "research/official_v4_risk_terminal_attempt.json",
+  "official_submission_id": "543899",
+  "official_receipt": "research/official_v4_risk_terminal.json",
+  "official_submission_score": 85
+}

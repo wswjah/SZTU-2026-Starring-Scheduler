@@ -1,0 +1,30 @@
+{
+  "base": ".\\versions\\v12_scan_input_fix\\main.cpp",
+  "base_sha256": "d59972ba208958bca0688f432515e60edee920815596eb32644415d461224828",
+  "source": ".\\candidates\\v13_model\\trace.cpp",
+  "source_sha256": "c03d521e97c68e24afb6c1e4d76b19f51f654297dcbd33e51949f8fdcadea211",
+  "executable": ".\\build\\v13_model_trace.exe",
+  "exe_sha256": "aa97870b7f9cb6776413998044ade3e7cb2ee0f244e704f9df9390a251f0e328",
+  "features": [
+    "jobs",
+    "root_fraction",
+    "forecast_cost_per_value",
+    "forecast_time_per_window",
+    "forecast_revenue_per_value",
+    "forecast_net_per_value",
+    "work_per_quota_window",
+    "headroom_fraction",
+    "window_fraction",
+    "elapsed_fraction",
+    "tenant_duration_factor",
+    "deadline_slack_fraction",
+    "first_cores_per_quota",
+    "selected_prep_fraction",
+    "first_transfer_fee_per_value",
+    "first_duration_fraction",
+    "forecast_age_fraction",
+    "selected_prewarm"
+  ],
+  "schema": "V13_MODEL_META,HEADER,rows afterfinalEND only",
+  "official_submission_sent": false
+}

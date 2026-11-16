@@ -1,0 +1,55 @@
+{
+  "train_cases": 16,
+  "complete_judge_reports_identical": true,
+  "report_differences": [],
+  "all_runs_ok": true,
+  "audit_total": 27953,
+  "only_source_change": "tok[1<<22] to tok[1<<23]",
+  "source_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "focused_probe": {
+    "executed_command": "build/v10_correctness_probes.exe",
+    "exit_code": 0,
+    "stdout": "slack_comparisons=12656\nLRU30000 operations and SLACK independent oracle passed\n",
+    "recording_note": "Recorded from completed root-task child tool execution, not rerun by this recorder.",
+    "exe_sha256": "bf90dceb08978663b15d692476c71e05be3955adf90da98db249dd40b1184895"
+  },
+  "network_protocol_probes": [
+    {
+      "seed": 103991,
+      "ticks": 600,
+      "queries": 3000,
+      "events": 3282,
+      "all_answers_exact": true,
+      "initialization": {
+        "D": 5,
+        "N": 600,
+        "R": 30,
+        "M": 30,
+        "K": 200,
+        "E": 1000,
+        "W": 60
+      },
+      "protocol_sha256": "2f51326f61875667bba8f7eb37e8d73129af3a5965d6adbef594e70d750a08c1"
+    },
+    {
+      "seed": 104021,
+      "ticks": 600,
+      "queries": 3000,
+      "events": 3328,
+      "all_answers_exact": true,
+      "initialization": {
+        "D": 5,
+        "N": 600,
+        "R": 30,
+        "M": 30,
+        "K": 200,
+        "E": 1000,
+        "W": 60
+      },
+      "protocol_sha256": "ec9eb469edeaa35f21ffcdfa7530dea09d5192862123a95f40d85894c48d8f08"
+    }
+  ],
+  "large_log_reproducer": "research/v10_fix_input_manifest.json",
+  "formal_hidden_failure_cause_known": false,
+  "official_submission_sent": false
+}

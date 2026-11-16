@@ -1,0 +1,11 @@
+{
+  "cases": [
+    "standard_00",
+    "slow_00"
+  ],
+  "reports_exact": true,
+  "aligned_snapshots": 1519,
+  "maximum_scaled_rounding_discrepancy": 2.7893163405678933e-06,
+  "tolerance_relative": 8e-06,
+  "tolerance_absolute": 2e-06
+}

@@ -1,0 +1,14 @@
+{
+  "edf": {
+    "source": "candidates\\v4_commitment_edf.cpp",
+    "source_sha256": "8adcbad5e4bbec544be78cf020d675fd5890be07819f4a8a6f86c317a85e26a0",
+    "baseline_sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c",
+    "description": "// Only commitments whose hard profit window expires within this window."
+  },
+  "reservation": {
+    "source": "candidates\\v4_commitment_reservation.cpp",
+    "source_sha256": "79d5a43d2c57aa5f942abfe712e164493b396a1858e9c3cbf7f30b6dbf900e95",
+    "baseline_sha256": "21ab5033ed9052e37b691c8f632029b181fe824f9f612cea9364e21bd8ab985c",
+    "description": "const auto& total=row.back();\n        used+=horizon*max(0.,total.sum_rate_work-rw);\n        value+=horizon*max(0.,total.sum_rate_value-rv);"
+  }
+}

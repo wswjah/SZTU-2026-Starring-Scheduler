@@ -1,0 +1,14 @@
+{
+  "record_type": "sanitized_public_official_result",
+  "variant": "v4_risk_terminal",
+  "official_score": 85,
+  "solution_id": 543899,
+  "date": "2026-11-15",
+  "language": "C++",
+  "original_source_file": "versions/v4_risk_terminal/submit.cpp",
+  "original_source_sha256": "82367cb745abd602560acbbcc8d37149adf9c5dc8be7c2d4c22dd2bfa5736ea4",
+  "original_source_bytes": 57073,
+  "public_source_note": "Leading comments relocated;use PUBLICATION_MANIFEST.json for published source checksum",
+  "per_case_feedback_public": false,
+  "privacy_note": "Personal identifiers,login/submission transaction details and full answer sheets are excluded"
+}

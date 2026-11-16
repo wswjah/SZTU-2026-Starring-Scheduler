@@ -1,0 +1,14 @@
+{
+  "record_type": "sanitized_public_official_result",
+  "variant": "v15_B128_120",
+  "official_score": 98,
+  "solution_id": 544377,
+  "date": "2026-11-16",
+  "language": "C++",
+  "original_source_file": "versions/v15_B128_120/submit.cpp",
+  "original_source_sha256": "42b180cfcbb0f07e8f795f1506879b14fe2f5e165323a0549b28e08219b290b0",
+  "original_source_bytes": 31749,
+  "public_source_note": "Leading comments relocated;use PUBLICATION_MANIFEST.json for published source checksum",
+  "per_case_feedback_public": false,
+  "privacy_note": "Personal identifiers,login/submission transaction details and full answer sheets are excluded"
+}

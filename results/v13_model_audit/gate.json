@@ -1,0 +1,773 @@
+{
+  "policies": [
+    {
+      "policy": "veto_light",
+      "source_sha256": "39bc899428430c62045093f728b1341aef5f91c38eede35c5c9366f99e13a4d7",
+      "source_unchanged": true,
+      "compile_command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-DV13_MODEL_AUDIT_SOURCE=\"../candidates/v13_model/veto_light.cpp\"",
+        "-DV13_MODEL_AUDIT_KIND=0",
+        "tools/v13_model_audit_gate.cpp",
+        "-o",
+        ".\\build\\v13_model_audit_gate_veto_light.exe"
+      ],
+      "compiler_stderr": "In file included from tools/v13_model_audit_gate.cpp:6:\ntools/../candidates/v13_model/veto_light.cpp: In function 'int v13ModelAuditPolicyMain()':\ntools/../candidates/v13_model/veto_light.cpp:909:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  909 | }\n      | ^\n",
+      "state_exit_code": 0,
+      "state_stdout": "gate state cases passed: actual rejection,raw-prefix,budget,quota,reservations,started-retry\n",
+      "decision_queries": 94,
+      "all_actual_cpp_decisions_match_independent_python": true,
+      "query_rejections": 0
+    },
+    {
+      "policy": "veto_strict",
+      "source_sha256": "560c63b3dbcbe6341b315b1b56ef36f0d41dd902d12216bb5cb12ba3d4d5d55c",
+      "source_unchanged": true,
+      "compile_command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-DV13_MODEL_AUDIT_SOURCE=\"../candidates/v13_model/veto_strict.cpp\"",
+        "-DV13_MODEL_AUDIT_KIND=1",
+        "tools/v13_model_audit_gate.cpp",
+        "-o",
+        ".\\build\\v13_model_audit_gate_veto_strict.exe"
+      ],
+      "compiler_stderr": "In file included from tools/v13_model_audit_gate.cpp:6:\ntools/../candidates/v13_model/veto_strict.cpp: In function 'int v13ModelAuditPolicyMain()':\ntools/../candidates/v13_model/veto_strict.cpp:909:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  909 | }\n      | ^\n",
+      "state_exit_code": 0,
+      "state_stdout": "gate state cases passed: actual rejection,raw-prefix,budget,quota,reservations,started-retry\n",
+      "decision_queries": 94,
+      "all_actual_cpp_decisions_match_independent_python": true,
+      "query_rejections": 22
+    },
+    {
+      "policy": "rev_blend25",
+      "source_sha256": "83453aaee0ee16b724083d6905d36a24c89c40817b3aaa87b6b349cab9433784",
+      "source_unchanged": true,
+      "compile_command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-DV13_MODEL_AUDIT_SOURCE=\"../candidates/v13_model/rev_blend25.cpp\"",
+        "-DV13_MODEL_AUDIT_KIND=2",
+        "tools/v13_model_audit_gate.cpp",
+        "-o",
+        ".\\build\\v13_model_audit_gate_rev_blend25.exe"
+      ],
+      "compiler_stderr": "In file included from tools/v13_model_audit_gate.cpp:6:\ntools/../candidates/v13_model/rev_blend25.cpp: In function 'int v13ModelAuditPolicyMain()':\ntools/../candidates/v13_model/rev_blend25.cpp:909:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  909 | }\n      | ^\n",
+      "state_exit_code": 0,
+      "state_stdout": "gate state cases passed: actual rejection,raw-prefix,budget,quota,reservations,started-retry\n",
+      "decision_queries": 94,
+      "all_actual_cpp_decisions_match_independent_python": true,
+      "query_rejections": 10
+    },
+    {
+      "policy": "rev_blend50",
+      "source_sha256": "743526d89a717dbdbcf15ff9f7f47582a9246b5765157dcac75027d9549375d2",
+      "source_unchanged": true,
+      "compile_command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-DV13_MODEL_AUDIT_SOURCE=\"../candidates/v13_model/rev_blend50.cpp\"",
+        "-DV13_MODEL_AUDIT_KIND=3",
+        "tools/v13_model_audit_gate.cpp",
+        "-o",
+        ".\\build\\v13_model_audit_gate_rev_blend50.exe"
+      ],
+      "compiler_stderr": "In file included from tools/v13_model_audit_gate.cpp:6:\ntools/../candidates/v13_model/rev_blend50.cpp: In function 'int v13ModelAuditPolicyMain()':\ntools/../candidates/v13_model/rev_blend50.cpp:909:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  909 | }\n      | ^\n",
+      "state_exit_code": 0,
+      "state_stdout": "gate state cases passed: actual rejection,raw-prefix,budget,quota,reservations,started-retry\n",
+      "decision_queries": 94,
+      "all_actual_cpp_decisions_match_independent_python": true,
+      "query_rejections": 5
+    }
+  ],
+  "decision_rows": [
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 0.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 100.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 150.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 186.70411000000001,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 186.70413000000002,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 250.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 350.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 500.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 700.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 900.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 1000.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 0.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 100.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 150.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 186.70411000000001,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 186.70413000000002,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 250.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 350.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 500.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 700.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 900.0,
+      "kind": "grid"
+    },
+    {
+      "n": 1,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 1000.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 0.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 100.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 150.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 186.70411000000001,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 186.70413000000002,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 250.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 350.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 500.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 700.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 900.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 1000.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 0.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 100.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 150.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 186.70411000000001,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 186.70413000000002,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 250.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 350.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 500.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 700.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 900.0,
+      "kind": "grid"
+    },
+    {
+      "n": 2,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 1000.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 0.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 100.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 150.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 186.70411000000001,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 186.70413000000002,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 250.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 350.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 500.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 700.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 900.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 1000.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 0.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 100.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 150.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 186.70411000000001,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 186.70413000000002,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 250.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 350.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 500.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 700.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 900.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 1000.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 0.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 100.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 150.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 186.70411000000001,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 186.70413000000002,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 250.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 350.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 500.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 700.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 900.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.0,
+      "cost": 100.0,
+      "rev": 1000.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 0.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 100.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 150.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 186.70411000000001,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 186.70413000000002,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 250.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 350.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 500.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 700.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 900.0,
+      "kind": "grid"
+    },
+    {
+      "n": 7,
+      "factor": 1.5,
+      "cost": 100.0,
+      "rev": 1000.0,
+      "kind": "grid"
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 332.0370120426425,
+      "rev": 382.03701204264075,
+      "kind": "blend_threshold",
+      "weight": 0.25,
+      "direction": -1
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 332.0370120426425,
+      "rev": 382.0370120426426,
+      "kind": "blend_threshold",
+      "weight": 0.25,
+      "direction": 0
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 332.0370120426425,
+      "rev": 382.0370120426444,
+      "kind": "blend_threshold",
+      "weight": 0.25,
+      "direction": 1
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 271.313104046519,
+      "rev": 321.3131040465172,
+      "kind": "blend_threshold",
+      "weight": 0.5,
+      "direction": -1
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 271.313104046519,
+      "rev": 321.313104046519,
+      "kind": "blend_threshold",
+      "weight": 0.5,
+      "direction": 0
+    },
+    {
+      "n": 3,
+      "factor": 1.5,
+      "cost": 271.313104046519,
+      "rev": 321.31310404652083,
+      "kind": "blend_threshold",
+      "weight": 0.5,
+      "direction": 1
+    }
+  ],
+  "interaction_benchmarks_run": 0,
+  "decision_queries": 376,
+  "all_passed": true,
+  "light_is_analytic_noop": true,
+  "note": "The nonzero raw prefix fixture tests restoration without typed-reading old reservation values. Renamed included solver main may produce its implicit-return warning; candidates are unchanged."
+}

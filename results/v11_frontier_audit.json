@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-16",
+  "all_expected_results_observed": true,
+  "source_unchanged_during_tests": true,
+  "candidate_sources": {
+    ".\\candidates\\v11_frontier\\cost_only.cpp": "e61c401f74067945bee0dc411ef6e6701059afdc4d344e6700096fd8cc3b2038",
+    ".\\candidates\\v11_frontier\\cost_and_time.cpp": "fc1fa7f4e95aa836fe3a521befde9dd90fe5695d3c810a18aefd550883e8a768"
+  },
+  "tests": [
+    {
+      "label": "cost_only",
+      "source": ".\\candidates\\v11_frontier\\cost_only.cpp",
+      "source_sha256": "e61c401f74067945bee0dc411ef6e6701059afdc4d344e6700096fd8cc3b2038",
+      "expected_pass": true,
+      "exit_code": 0,
+      "stdout": "frontier helper audit passed mode=0 WK=0 numerical_comparisons=2022\n",
+      "stderr": "",
+      "compiler_stderr": "In file included from tools/v11_frontier_audit.cpp:5:\ntools/../candidates/v11_frontier/cost_only.cpp: In function 'int v11_frontier_solver_main()':\ntools/../candidates/v11_frontier/cost_only.cpp:927:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  927 | }\n      | ^\n",
+      "exe_sha256": "f5b312f2f7695f8b63805e21bd47db604d9de1c88599f0ec2d1dc5207fb94f79"
+    },
+    {
+      "label": "wk_cost_only",
+      "source": ".\\results\\v11_frontier_audit\\wk_cost_only.cpp",
+      "source_sha256": "7b50c14550c3e9a4018ae602de82b79ecb3f0d8cef08deadf1db5202073476ef",
+      "expected_pass": true,
+      "exit_code": 0,
+      "stdout": "frontier helper audit passed mode=0 WK=0.5 numerical_comparisons=2022\n",
+      "stderr": "",
+      "compiler_stderr": "In file included from tools/v11_frontier_audit.cpp:5:\ntools/../results/v11_frontier_audit/wk_cost_only.cpp: In function 'int v11_frontier_solver_main()':\ntools/../results/v11_frontier_audit/wk_cost_only.cpp:927:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  927 | }\n      | ^\n",
+      "exe_sha256": "0afea66f976a17ebd098149a06bcda186a5057479019c7bc15fe446f1b6d8cf8"
+    },
+    {
+      "label": "cost_and_time",
+      "source": ".\\candidates\\v11_frontier\\cost_and_time.cpp",
+      "source_sha256": "fc1fa7f4e95aa836fe3a521befde9dd90fe5695d3c810a18aefd550883e8a768",
+      "expected_pass": true,
+      "exit_code": 0,
+      "stdout": "frontier helper audit passed mode=1 WK=0 numerical_comparisons=2022\n",
+      "stderr": "",
+      "compiler_stderr": "In file included from tools/v11_frontier_audit.cpp:5:\ntools/../candidates/v11_frontier/cost_and_time.cpp: In function 'int v11_frontier_solver_main()':\ntools/../candidates/v11_frontier/cost_and_time.cpp:927:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  927 | }\n      | ^\n",
+      "exe_sha256": "d1f82b6d693db1f12625ce9c828c2af141579c96d726861175a457d70752a774"
+    },
+    {
+      "label": "wk_cost_and_time",
+      "source": ".\\results\\v11_frontier_audit\\wk_cost_and_time.cpp",
+      "source_sha256": "8d6041cfb52b13c75f0a743ab48c8e7875d4962cdbe90ed1d43265d9d8dd23af",
+      "expected_pass": true,
+      "exit_code": 0,
+      "stdout": "frontier helper audit passed mode=1 WK=0.5 numerical_comparisons=2022\n",
+      "stderr": "",
+      "compiler_stderr": "In file included from tools/v11_frontier_audit.cpp:5:\ntools/../results/v11_frontier_audit/wk_cost_and_time.cpp: In function 'int v11_frontier_solver_main()':\ntools/../results/v11_frontier_audit/wk_cost_and_time.cpp:927:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  927 | }\n      | ^\n",
+      "exe_sha256": "2f2db3fb85fa9806a756b6d0883e57dfd96ca7e38c6ada5a83cf5011447376ec"
+    },
+    {
+      "label": "negative_old_cost",
+      "source": ".\\results\\v11_frontier_audit\\old_cost_negative.cpp",
+      "source_sha256": "19cc5de603ff9815d299c6ae4b2716c369b67f551d5dffb48e0bd3b404e475c7",
+      "expected_pass": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "FAILED forecast cost replacement includes full old pending cost\n",
+      "compiler_stderr": "In file included from tools/v11_frontier_audit.cpp:5:\ntools/../results/v11_frontier_audit/old_cost_negative.cpp: In function 'int v11_frontier_solver_main()':\ntools/../results/v11_frontier_audit/old_cost_negative.cpp:927:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  927 | }\n      | ^\n",
+      "exe_sha256": "6a8413e3a49750a2fbac09978fa2b9d2deec887922876499ce6f6e01fe437290"
+    }
+  ],
+  "coverage": [
+    "normal/warm cash and preparation",
+    "quota/free/physical/up/reachability rejection",
+    "FAIL epoch memo invalidation",
+    "rem/work/tail/theta full recomputation",
+    "no real state mutation",
+    "started/left scope guard",
+    "WK0 actual sources",
+    "WK0.5 private audit copies",
+    "oldCost negative control detects stale queue charge"
+  ],
+  "official_submission_sent": false
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "file": "overload.in",
+    "parameters": {
+      "seed": 914459,
+      "T": 600,
+      "D": 5,
+      "nodes_per_dc": 120,
+      "racks_per_dc": 6,
+      "mach_per_rack_lo": 12,
+      "mach_per_rack_hi": 12,
+      "NT": 200,
+      "NL": 400,
+      "NI": 120,
+      "p_noise": 10000,
+      "p_signal": 60,
+      "W": 60,
+      "load": 1.08,
+      "sigma": 0.35,
+      "bias_lo": 0.7,
+      "bias_hi": 1.8,
+      "fail_frac": 0.15,
+      "precursor_frac": 0.65,
+      "falsealarm_frac": 0.1,
+      "blackswan": 1,
+      "link_events": 200,
+      "quota_events": 70,
+      "log_rate": 0.1,
+      "straggler_p": 0.08,
+      "audit_rate": 4.5
+    },
+    "sha256": "f54942b2a7e10b28e967601813b44d8b9a8d7818c3bb8bfb0c66fd0a3f5cbab7",
+    "intended_scope": "preserved over-limit probe (66156 jobs)",
+    "maximum_jobs": 60000,
+    "maximum_audits": 3500,
+    "maximum_logchars": 3000000,
+    "actual_initialization": {
+      "T": 600,
+      "D": 5,
+      "N": 600,
+      "R": 30,
+      "M": 360,
+      "K": 200,
+      "L": 400,
+      "I": 120,
+      "P": 10060,
+      "W": 60,
+      "E": 896
+    },
+    "actual_generated_counts": {
+      "jobs": 66156,
+      "audit_total": 2781,
+      "logchars": 1931422
+    },
+    "range_violations": [
+      "jobs=66156>60000"
+    ],
+    "within_checked_upper_bounds": false,
+    "binary_log_limit_reference": 3145728
+  }
+]

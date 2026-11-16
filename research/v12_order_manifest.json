@@ -1,0 +1,24 @@
+{
+  "base": ".\\versions\\v10_input_fix\\main.cpp",
+  "base_sha256": "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6",
+  "source": ".\\candidates\\v12_order.cpp",
+  "source_sha256": "d2910cf5f57822db01a71b5d54cfadfc2c557dcc45f51ea203d22ebb7e5a1878",
+  "executable": ".\\build\\v12_order.exe",
+  "exe_sha256": "3c4afa81adcf16d9b2582562ab03a7e53eb2eeff4e657ae3a206639834ce304a",
+  "search": "exactly2ready,left2..8,totalflow<=128,both individually immediate-feasible,no live reservations",
+  "selection": "actual starts first,then original5-scenario expected revenue minus actual trial startup fees and remaining estimated cost;ties original order",
+  "extra_cpu_gate": "late<-.03 and used<.65,checked at schedule and each pair;original insurance unchanged",
+  "rollback": "touch journal for selected machines/racks;2jobs,currentflow forecasts,tenant bill/quota-used,EMAs,commands/output;clear registry quote versions against ABA",
+  "official_submission_sent": false,
+  "pre_test_draft_sha256": "3f5484038ec89604c2c73a4b4084b720e930a0dd2bf7fc71da1ec9fcaf1b482a",
+  "transaction_tests": "results/v12_order_tests/summary.json",
+  "uninitialized_scalar_safety": "Byte-copy Job scalar prefix only;Job pre/suc vectors are never mutated;Flow trivially-copyable representation restored via memcpy",
+  "training": {
+    "result": "research/v12_order_results.json",
+    "valid_profit_change_pct": -0.459553423905934,
+    "improved": 4,
+    "regressed": 10,
+    "all_ok": true,
+    "fresh_evaluated": false
+  }
+}

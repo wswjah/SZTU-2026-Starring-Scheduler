@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-16",
+  "official_best": 99,
+  "submissions_authorized": false,
+  "base": ".\\versions\\v12_scan_input_fix\\main.cpp",
+  "base_sha256": "d59972ba208958bca0688f432515e60edee920815596eb32644415d461224828",
+  "training": "cases/v13_train32:32 newly generated worlds, oldtrain16 no longer used to select parameters",
+  "validation": "cases/v13_holdout40 andconfirmation40 frozen before outcomes, never fit",
+  "fine_parameters": {
+    "kill_109": {
+      "KILLK": 1.09
+    },
+    "kill_1095": {
+      "KILLK": 1.095
+    },
+    "kill_1105": {
+      "KILLK": 1.105
+    },
+    "kill_111": {
+      "KILLK": 1.11
+    },
+    "admit_045": {
+      "ADM": 0.045
+    },
+    "admit_0475": {
+      "ADM": 0.0475
+    },
+    "admit_0525": {
+      "ADM": 0.0525
+    },
+    "admit_055": {
+      "ADM": 0.055
+    },
+    "started_195": {
+      "SB": 1.95
+    },
+    "started_205": {
+      "SB": 2.05
+    },
+    "tick_39": {
+      "TH0": 3.9
+    },
+    "tick_41": {
+      "TH0": 4.1
+    },
+    "spread_0395": {
+      "SP": 0.395
+    },
+    "spread_0405": {
+      "SP": 0.405
+    },
+    "slack_12": {
+      "SL": 1.2
+    },
+    "slack_13": {
+      "SL": 1.3
+    },
+    "away_095": {
+      "PEN": 0.95
+    },
+    "away_105": {
+      "PEN": 1.05
+    },
+    "joint_conservative1": {
+      "KILLK": 1.105,
+      "ADM": 0.0525,
+      "SB": 2.05,
+      "TH0": 4.1,
+      "SP": 0.405,
+      "SL": 1.3
+    },
+    "joint_conservative2": {
+      "KILLK": 1.11,
+      "ADM": 0.055,
+      "SB": 2.05,
+      "TH0": 4.1,
+      "SP": 0.405,
+      "SL": 1.25,
+      "PEN": 0.95
+    },
+    "joint_aggressive1": {
+      "KILLK": 1.095,
+      "ADM": 0.0475,
+      "SB": 1.95,
+      "TH0": 3.9,
+      "SP": 0.395,
+      "SL": 1.2
+    },
+    "joint_aggressive2": {
+      "KILLK": 1.09,
+      "ADM": 0.045,
+      "SB": 1.95,
+      "TH0": 3.9,
+      "SP": 0.395,
+      "SL": 1.25,
+      "PEN": 1.05
+    },
+    "joint_profit1": {
+      "KILLK": 1.105,
+      "ADM": 0.0475,
+      "SB": 2.05,
+      "TH0": 3.9,
+      "SP": 0.4,
+      "SL": 1.3,
+      "PEN": 0.95
+    },
+    "joint_profit2": {
+      "KILLK": 1.095,
+      "ADM": 0.0525,
+      "SB": 1.95,
+      "TH0": 4.1,
+      "SP": 0.4,
+      "SL": 1.2,
+      "PEN": 1.05
+    }
+  },
+  "fine_config_count": 24,
+  "small_model": "Current99-policy first-admission trace on same32 training worlds, wholeworldCV, tiny tree,4 predeclared closedloop policies",
+  "selection": "Choose at most3 shortlisted sources from training+known old development;freeze before fresh40,then unchangedconfirmation40. Report aggregate/median/wins/worst and nonpositive baselines.",
+  "controls": "All candidates retain8MiB fix, direct integer scanner, CPU insurance,20k budget. Default official99 files untouched."
+}

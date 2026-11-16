@@ -1,0 +1,17 @@
+{
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-DATTRIBUTED96_CHECKED_SCRATCH",
+    "-DATTRIBUTED96_SOURCE=\"../build/attributed96_negative_source.cpp\"",
+    ".\\tools\\test_attributed96.cpp",
+    "-o",
+    ".\\build\\test_attributed96_negative_control.exe"
+  ],
+  "compiler_stderr": "In file included from ./tools\\test_attributed96.cpp:26:\n./build/attributed96_negative_source.cpp: In function 'int attributed96_solver_main()':\n./build/attributed96_negative_source.cpp:786:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  786 | }\n      | ^\n",
+  "executable_sha256": "ecfc47df7c3a845ee1cdeb8670eae069cd86a20efff35af42b1bcd0e47e72f2b",
+  "returncode": 97,
+  "stdout": "",
+  "stderr": "checked scratch array out of bounds: 8 >= 8\n"
+}

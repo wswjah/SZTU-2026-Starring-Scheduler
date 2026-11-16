@@ -1,0 +1,81 @@
+{
+  "edf": {
+    "heavy_00": {
+      "registration_checks": 234433,
+      "positive_registrations": 175261,
+      "new_queries": 117234,
+      "charged_queries": 256,
+      "budget_queries": 710828,
+      "maximum_fill": 0.843442,
+      "maximum_charge": 50227.891,
+      "same_report_as_normal": true
+    },
+    "small_01": {
+      "registration_checks": 43761,
+      "positive_registrations": 27237,
+      "new_queries": 20716,
+      "charged_queries": 223,
+      "budget_queries": 97308,
+      "maximum_fill": 0.804032,
+      "maximum_charge": 44710.261,
+      "same_report_as_normal": true
+    },
+    "standard_00": {
+      "registration_checks": 131192,
+      "positive_registrations": 109647,
+      "new_queries": 77070,
+      "charged_queries": 447,
+      "budget_queries": 440018,
+      "maximum_fill": 0.992241,
+      "maximum_charge": 56123.067,
+      "same_report_as_normal": true
+    }
+  },
+  "reservation": {
+    "heavy_00": {
+      "registration_checks": 234433,
+      "positive_registrations": 175261,
+      "new_queries": 117234,
+      "charged_queries": 1342,
+      "budget_queries": 795933,
+      "maximum_fill": 0.866511,
+      "maximum_charge": 50227.891,
+      "same_report_as_normal": true,
+      "first_runs": {
+        "new_flow_count": 1674,
+        "charged_count": 0,
+        "total_charge": 0.0
+      }
+    },
+    "small_01": {
+      "registration_checks": 43761,
+      "positive_registrations": 27237,
+      "new_queries": 20716,
+      "charged_queries": 473,
+      "budget_queries": 111196,
+      "maximum_fill": 0.821912,
+      "maximum_charge": 44710.261,
+      "same_report_as_normal": true,
+      "first_runs": {
+        "new_flow_count": 275,
+        "charged_count": 0,
+        "total_charge": 0.0
+      }
+    },
+    "standard_00": {
+      "registration_checks": 131192,
+      "positive_registrations": 109647,
+      "new_queries": 77070,
+      "charged_queries": 1853,
+      "budget_queries": 492887,
+      "maximum_fill": 1.023794,
+      "maximum_charge": 56123.067,
+      "same_report_as_normal": true,
+      "first_runs": {
+        "new_flow_count": 982,
+        "charged_count": 0,
+        "total_charge": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-13",
+  "candidate": "input-local-half-tail-cost1.2-time6",
+  "official_submissions": 1,
+  "source_origin": "https://github.com/Misuzu0010/SZTU-2026-data-structure-final-homework",
+  "artifacts": {
+    "main.cpp": {
+      "bytes": 84063,
+      "sha256": "89812abdcecbb3d65fada3d2dfdc11461489ea1c5ca5c126bf00a83651bc275b"
+    },
+    "submit.cpp": {
+      "bytes": 52772,
+      "sha256": "44730d683c8bde710f0f74a49ce5eccc44a223221270b3a0ad2ab92dd77c18f7"
+    },
+    "build/main.exe": {
+      "bytes": 658379,
+      "sha256": "65f84af25688ee6b1ff92affe9e66b7f88b6c27ac635a404657e44938b0bd259"
+    },
+    "build/submit.exe": {
+      "bytes": 658379,
+      "sha256": "15570dd804f78ef6482c4cc518d2ea790cd6916701427c9d187a2e7b725cc5f5"
+    },
+    "reference/StarRing.cpp": {
+      "bytes": 16305,
+      "sha256": "ca4f04d291b967857a34e6a43a0a20571fde5fb1f19c818b0c0540ea03c239ba"
+    },
+    "reference/StarRing_readable.cpp": {
+      "bytes": 82121,
+      "sha256": "bee720063bec9dfb793973462469511e3a24e8b66d90c3528537444dd673b2de"
+    },
+    "tpj_win.exe": {
+      "bytes": 833024,
+      "sha256": "eb5a32b4a5ad196d3af503d892837141b38792744114f41d02675bab4bdcaf65"
+    }
+  },
+  "final_behavior_matches_frozen_candidate": true,
+  "results": [
+    "results/final_train",
+    "results/final_holdout",
+    "results/final_stress",
+    "results/final_serial",
+    "results/final_samples"
+  ],
+  "note": "Practice profit changes are not official OJ score changes. All original timings retained, including concurrent runs above one second.",
+  "official_score": 84,
+  "official_submission_id": 543386,
+  "official_submission_url": "https://acm.sztu.edu.cn:40081/examsys/contest/status?cid=2231#solution_id=543386"
+}

@@ -1,0 +1,39 @@
+{
+  "architectures": [
+    {
+      "name": "A",
+      "widths": [
+        18,
+        16,
+        2
+      ],
+      "parameters": 338,
+      "grouped_oof": {
+        "earned_fraction_mse": 0.11800426604413713,
+        "net_fraction_mse": 0.10820211190535985
+      },
+      "final_fit_wall_seconds": 2.5388049000000024,
+      "all_fit_wall_seconds": 10.223928400000034,
+      "model_sha256": "a1c4792e1b8f2387f8015d4658ee79faad741f55be75702bf4f03fba6c717024"
+    },
+    {
+      "name": "B",
+      "widths": [
+        18,
+        16,
+        8,
+        2
+      ],
+      "parameters": 458,
+      "grouped_oof": {
+        "earned_fraction_mse": 0.11769948316539115,
+        "net_fraction_mse": 0.10834338714165155
+      },
+      "final_fit_wall_seconds": 3.031587599999966,
+      "all_fit_wall_seconds": 12.107692600000007,
+      "model_sha256": "a2fe0399f72128996bcd2e7328d108f5667f8fe52c331f920fb50fa006347ee6"
+    }
+  ],
+  "fresh_data_accessed": false,
+  "official_submission_sent": false
+}

@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-16",
+  "dataset": ".\\results\\v13_model_dataset\\admitted.csv",
+  "dataset_sha256": "e3b6d53a5665a31fee8169734e260d437e41cfd181e502f96ea0e80562ea0daf",
+  "arrays": ".\\results\\v13_model_fit\\arrays.npz",
+  "arrays_sha256": "0974407a7cbcf2787ae1eb2fae108a17152a27344565b7ed15925909c212b402",
+  "training_worlds": "SameV13 train32 admittedflows only;never-started not negative labels;no new validation read",
+  "features": [
+    "jobs",
+    "root_fraction",
+    "forecast_cost_per_value",
+    "forecast_time_per_window",
+    "forecast_revenue_per_value",
+    "forecast_net_per_value",
+    "work_per_quota_window",
+    "headroom_fraction",
+    "window_fraction",
+    "elapsed_fraction",
+    "tenant_duration_factor",
+    "deadline_slack_fraction",
+    "first_cores_per_quota",
+    "selected_prep_fraction",
+    "first_transfer_fee_per_value",
+    "first_duration_fraction",
+    "forecast_age_fraction",
+    "selected_prewarm"
+  ],
+  "input_precision": "Original18 float32 feature formula cast to float64;normalization and network all float64",
+  "targets": [
+    "earned/value clipped[0,1]",
+    "net/value clipped[-2,1]"
+  ],
+  "architectures": {
+    "A": {
+      "widths": [
+        18,
+        16,
+        2
+      ],
+      "seed": 141116
+    },
+    "B": {
+      "widths": [
+        18,
+        16,
+        8,
+        2
+      ],
+      "seed": 141117
+    }
+  },
+  "activation": "ReLU after each hidden layer,linear last layer,then output clip[0,1]/[-2,1]",
+  "epochs": 120,
+  "optimizer": "Adam (notAdamW)",
+  "learning_rate": 0.003,
+  "weight_decay": 0.0001,
+  "batch_size": 1024,
+  "initialization": "PyTorch nn.Linear defaultuniform initialization directly in float64,fixedseed reset for each fit,no seed selection",
+  "loss": "Equal-world weighted MSE on raw linear outputs;targets clipped;prediction clipping only for evaluation/inference/gates",
+  "normalization": "Trainingfold weightedmean/std with equal totalweight perworld,std floor1e-6,standardized inputs clipped[-8,8]",
+  "cross_validation": "SameGroupKFold4 bycompleteworld;fixed120epochs,no earlystopping or epochselection;fold-only normalization and constants",
+  "policies_per_architecture": {
+    "veto_light": {
+      "type": "net_veto",
+      "net_threshold": 0.02,
+      "forecast_net_threshold": 0.25,
+      "min_jobs": 3
+    },
+    "veto_strict": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "rev_blend25": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    },
+    "rev_blend50": {
+      "type": "revenue_blend",
+      "model_weight": 0.5
+    }
+  },
+  "closed_loop": "Exactly8 pretrained fixedpolicies onV13 train32,no extra threshold/grid",
+  "selection": "Atmost1 positive aggregate-profit policy perarchitecture selected usingtrain32 before rootfresh40+40 evaluation",
+  "implementation": "Torch ifinstalled elseNumPyAdam;no framework installation;singleCPUthread plusinterop1",
+  "export": "Self-contained C++ double means/std/weights,originalfeaturehelper/rawscalar rejection rollback/99params/inputfixes retained",
+  "fresh_data_accessed": false,
+  "official_submission_sent": false,
+  "loss_initial": "Equal-world weighted MSE averaged across2 outputs after clipping predictions;batch weighted mean with globaltrain weights mean1",
+  "amendments": [
+    {
+      "date": "2026-11-16",
+      "before_any_fit_or_cv_results": true,
+      "field": "loss",
+      "original": "Equal-world weighted MSE averaged across2 outputs after clipping predictions;batch weighted mean with globaltrain weights mean1",
+      "effective": "Equal-world weighted MSE on raw linear outputs;targets clipped;prediction clipping only for evaluation/inference/gates",
+      "reason": "Root clarified original intent:clip evaluation/gates only,avoid zero gradients beyond clipped output bounds;no results observed"
+    }
+  ]
+}

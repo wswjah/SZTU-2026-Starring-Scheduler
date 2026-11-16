@@ -1,0 +1,30 @@
+[
+  {
+    "architecture": "A",
+    "name": "A_rev_blend25",
+    "policy": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    },
+    "source": ".\\candidates\\v14_mlp\\A_rev_blend25.cpp",
+    "source_sha256": "1e7c75636936674bbbf57272ff20bfc526be112da1eaa3b1e70367e3efb51286",
+    "executable": ".\\build\\v14_mlp_A_rev_blend25.exe",
+    "training_profit_increase_pct": 0.3967225831859267,
+    "selection_reason": "Highest positive aggregate train32 profit amongthe4 predeclared policies for thisarchitecture;no fresh outcomes read,no extra fitting or thresholds"
+  },
+  {
+    "architecture": "B",
+    "name": "B_veto_strict",
+    "policy": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "source": ".\\candidates\\v14_mlp\\B_veto_strict.cpp",
+    "source_sha256": "b7cee043f78a02c481954c72b6e2c5a4fa1c4b9f4fffcd81d68732d3d0acae07",
+    "executable": ".\\build\\v14_mlp_B_veto_strict.exe",
+    "training_profit_increase_pct": 0.35936234319888793,
+    "selection_reason": "Highest positive aggregate train32 profit amongthe4 predeclared policies for thisarchitecture;no fresh outcomes read,no extra fitting or thresholds"
+  }
+]

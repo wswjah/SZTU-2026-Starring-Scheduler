@@ -1,0 +1,18 @@
+{
+  "source": ".\\versions\\v10_input_fix\\submit.cpp",
+  "exe_sha256": "9cb5b6a5b73e7732fdf2e959929b158fcfc97b3abd58fc0debf0a3924ee17b6c",
+  "protocol_input_sha256": "afd7831a574e8bacb1e0ff5b0c7d00c78345a9a73c3ea681f7d486eb5cfdf299",
+  "protocol_input_bytes": 6008536,
+  "decoded_characters": 3000000,
+  "encoded_hex_characters": 6000000,
+  "all_400_answers_exact": true,
+  "exit_code": 0,
+  "wall_seconds": 0.04679229999965173,
+  "usage": {
+    "cpu_seconds": 0.03125,
+    "user_seconds": 0.015625,
+    "kernel_seconds": 0.015625,
+    "peak_memory_bytes": 10735616
+  },
+  "method": "Full direct protocol replay, not local TPJ validation of this custom transcript"
+}

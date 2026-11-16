@@ -1,0 +1,66 @@
+[
+  {
+    "name": "veto_light",
+    "policy": {
+      "type": "net_veto",
+      "net_threshold": 0.02,
+      "forecast_net_threshold": 0.25,
+      "min_jobs": 3
+    },
+    "source": ".\\candidates\\v13_model\\veto_light.cpp",
+    "source_sha256": "39bc899428430c62045093f728b1341aef5f91c38eede35c5c9366f99e13a4d7",
+    "executable": ".\\build\\v13_model_veto_light.exe",
+    "exe_sha256": "cf0da8edb3213441d654830e791e3546c8bb72050b7a4f95f3397c15776254ba",
+    "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+    "gate_scope": "!started,immediate placement and complete command budget checked,before any prewarm RUN",
+    "rejection": "Restore pre-tryPlace scalar job/reservation state,emit no command and do not alter cache/bill/quota",
+    "official_submission_sent": false
+  },
+  {
+    "name": "veto_strict",
+    "policy": {
+      "type": "net_veto",
+      "net_threshold": 0.08,
+      "forecast_net_threshold": 0.4,
+      "min_jobs": 3
+    },
+    "source": ".\\candidates\\v13_model\\veto_strict.cpp",
+    "source_sha256": "560c63b3dbcbe6341b315b1b56ef36f0d41dd902d12216bb5cb12ba3d4d5d55c",
+    "executable": ".\\build\\v13_model_veto_strict.exe",
+    "exe_sha256": "495cf116ad8d0c1938da91eaaddce34c686298f90da65e460ea5b36e970e44ba",
+    "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+    "gate_scope": "!started,immediate placement and complete command budget checked,before any prewarm RUN",
+    "rejection": "Restore pre-tryPlace scalar job/reservation state,emit no command and do not alter cache/bill/quota",
+    "official_submission_sent": false
+  },
+  {
+    "name": "rev_blend25",
+    "policy": {
+      "type": "revenue_blend",
+      "model_weight": 0.25
+    },
+    "source": ".\\candidates\\v13_model\\rev_blend25.cpp",
+    "source_sha256": "83453aaee0ee16b724083d6905d36a24c89c40817b3aaa87b6b349cab9433784",
+    "executable": ".\\build\\v13_model_rev_blend25.exe",
+    "exe_sha256": "f62dac9a89a7f52c3d3cd7f7836ee23ba789affbc0916fc83cdb1f3e17c8dd89",
+    "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+    "gate_scope": "!started,immediate placement and complete command budget checked,before any prewarm RUN",
+    "rejection": "Restore pre-tryPlace scalar job/reservation state,emit no command and do not alter cache/bill/quota",
+    "official_submission_sent": false
+  },
+  {
+    "name": "rev_blend50",
+    "policy": {
+      "type": "revenue_blend",
+      "model_weight": 0.5
+    },
+    "source": ".\\candidates\\v13_model\\rev_blend50.cpp",
+    "source_sha256": "743526d89a717dbdbcf15ff9f7f47582a9246b5765157dcac75027d9549375d2",
+    "executable": ".\\build\\v13_model_rev_blend50.exe",
+    "exe_sha256": "1b041f94f2f1b98cc6fa3da19cf050d3e979041481d0ae21ce7a16c22fe63ba0",
+    "model_sha256": "2a8fda3e3e767f54c55c4dd67c0b48438c215ccfa3f76956331dcd76ee4f330e",
+    "gate_scope": "!started,immediate placement and complete command budget checked,before any prewarm RUN",
+    "rejection": "Restore pre-tryPlace scalar job/reservation state,emit no command and do not alter cache/bill/quota",
+    "official_submission_sent": false
+  }
+]

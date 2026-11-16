@@ -1,0 +1,23 @@
+[
+  {
+    "name": "quarter",
+    "strength": 0.25,
+    "base": ".\\versions\\v8_fine\\main.cpp",
+    "base_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
+    "source": ".\\candidates\\v9_alarm_quarter.cpp",
+    "source_sha256": "0e50148095b302f39e655457108080b00b5196013c69068c8fcf88e95415e950",
+    "executable": ".\\build\\v9_alarm_quarter.exe",
+    "exe_sha256": "873914a221ead8642e833fc8c42e1a488002518af9e3182c40a59236bc9f5371",
+    "model_sha256": "e99bba90a4066252f2baf8d3fcd86b6227f5f4cc4a57f3d52b340bafbbd891c9",
+    "observed_inputs_only": true,
+    "official_submission_sent": false
+  },
+  {
+    "name": "tie",
+    "source": ".\\candidates\\v9_alarm_tie.cpp",
+    "source_sha256": "bc85015927c09034e64555dd95b5446f2bc5608aa409049d168614c3591e6235",
+    "executable": ".\\build\\v9_alarm_tie.exe",
+    "exe_sha256": "404b3e5267f6fad9ca1b178f275bb462846abe3a8d6896db90ce209426c86a80",
+    "rule": "Original quote/warm decision unchanged, smaller model penalty breaks exact quote ties only; equality pruning opened"
+  }
+]

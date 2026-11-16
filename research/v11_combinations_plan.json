@@ -1,0 +1,45 @@
+{
+  "configs": {
+    "pen075_resv15": [
+      "fixed99",
+      {
+        "PEN": 0.75,
+        "RESV": 15
+      }
+    ],
+    "warm_pen075": [
+      "warm_rank",
+      {
+        "PEN": 0.75
+      }
+    ],
+    "warm_resv15": [
+      "warm_rank",
+      {
+        "RESV": 15
+      }
+    ],
+    "warm_pen075_resv15": [
+      "warm_rank",
+      {
+        "PEN": 0.75,
+        "RESV": 15
+      }
+    ]
+  },
+  "bases": {
+    "fixed99": [
+      "versions/v10_input_fix/main.cpp",
+      "b0854a70f54ccb47d287a48be37e447eb100147ca3f2e556c20c20498f705ae6"
+    ],
+    "warm_rank": [
+      "candidates/v11_search/warm_rank.cpp",
+      "dc5d793ac172a1a5b7359d2a6d9cd074c0a3b214b7ef3b4b657ddb46a5ec7e83"
+    ]
+  },
+  "case_set": "cases/train16 only",
+  "baseline": ".\\results\\v11_baseline_train",
+  "max_variants": 4,
+  "extra_axis_or_variant_allowed": false,
+  "official_submission_sent": false
+}

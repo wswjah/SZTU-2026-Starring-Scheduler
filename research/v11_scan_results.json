@@ -1,0 +1,39 @@
+{
+  "train_runs": 16,
+  "all_full_reports_equal": true,
+  "all_runs_ok": true,
+  "audit_total": 27953,
+  "audit_errors": 0,
+  "illegal_commands": 0,
+  "max_cpu_seconds": 0.390625,
+  "primitive_tests": "results/v11_scan_test/summary.json",
+  "pressure_started": true,
+  "official_submission_sent": false,
+  "pressure_runs": 24,
+  "pressure_all_reports_equal": true,
+  "pressure_audit_total": 78960,
+  "pressure_cpu_totals": {
+    "base": 3.125,
+    "scan": 3.046875
+  },
+  "pressure_cpu_ratio": 0.975,
+  "pressure_case_medians": {
+    "failures": {
+      "base": 0.265625,
+      "scan": 0.25
+    },
+    "logs_audits": {
+      "base": 0.28125,
+      "scan": 0.28125
+    },
+    "max_topology": {
+      "base": 0.328125,
+      "scan": 0.328125
+    },
+    "slow_costly": {
+      "base": 0.1875,
+      "scan": 0.140625
+    }
+  },
+  "pressure_order": "3 repetitions,case order fixed,base/scan interleaved with alternating first execution,workers1"
+}

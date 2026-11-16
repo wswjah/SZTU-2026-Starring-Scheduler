@@ -1,0 +1,26 @@
+{
+  "all_passed": true,
+  "architectures": [
+    {
+      "architecture": "A",
+      "queries": 1744,
+      "cpp_numpy_max_abs_error": 1.5543122344752192e-15,
+      "cpp_savedtorch_max_abs_error": 3.885780586188048e-16,
+      "all4_formula_gates_equal": true,
+      "note": "Float64 dot reduction order can differ byulps;predictions agree within1e-12 and all tested gate decisions exactly.",
+      "source_sha256": "91bf8328177ae625d8a6a681277ecfb526b7362ea347b22e0dccbf8f6459bfef",
+      "compiler_stderr": "In file included from tools/v14_mlp_numeric.cpp:5:\ntools/../candidates/v14_mlp/A_veto_strict.cpp: In function 'int v14_mlp_embedded_main()':\ntools/../candidates/v14_mlp/A_veto_strict.cpp:900:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  900 | }\n      | ^\n"
+    },
+    {
+      "architecture": "B",
+      "queries": 1744,
+      "cpp_numpy_max_abs_error": 8.881784197001252e-16,
+      "cpp_savedtorch_max_abs_error": 3.3306690738754696e-16,
+      "all4_formula_gates_equal": true,
+      "note": "Float64 dot reduction order can differ byulps;predictions agree within1e-12 and all tested gate decisions exactly.",
+      "source_sha256": "b7cee043f78a02c481954c72b6e2c5a4fa1c4b9f4fffcd81d68732d3d0acae07",
+      "compiler_stderr": "In file included from tools/v14_mlp_numeric.cpp:5:\ntools/../candidates/v14_mlp/B_veto_strict.cpp: In function 'int v14_mlp_embedded_main()':\ntools/../candidates/v14_mlp/B_veto_strict.cpp:904:1: warning: no return statement in function returning non-void [-Wreturn-type]\n  904 | }\n      | ^\n"
+    }
+  ],
+  "no_interactive_runs": true
+}

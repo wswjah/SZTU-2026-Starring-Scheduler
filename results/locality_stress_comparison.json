@@ -1,0 +1,42 @@
+[
+  {
+    "case": "failures",
+    "baseline": 4083815,
+    "candidate": 4218054,
+    "gain_pct": 3.287,
+    "audits": "0/3137",
+    "incidents": 0,
+    "cpu_seconds": 0.921875,
+    "peak_memory_mb": 17.246
+  },
+  {
+    "case": "logs_audits",
+    "baseline": 4391734,
+    "candidate": 4645070,
+    "gain_pct": 5.768,
+    "audits": "0/3445",
+    "incidents": 0,
+    "cpu_seconds": 0.671875,
+    "peak_memory_mb": 15.477
+  },
+  {
+    "case": "max_topology",
+    "baseline": 7745628,
+    "candidate": 8606712,
+    "gain_pct": 11.117,
+    "audits": "0/3331",
+    "incidents": 0,
+    "cpu_seconds": 0.890625,
+    "peak_memory_mb": 18.926
+  },
+  {
+    "case": "slow_costly",
+    "baseline": 1501392,
+    "candidate": 1617106,
+    "gain_pct": 7.707,
+    "audits": "0/3247",
+    "incidents": 0,
+    "cpu_seconds": 0.609375,
+    "peak_memory_mb": 13.836
+  }
+]

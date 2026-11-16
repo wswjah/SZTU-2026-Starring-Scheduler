@@ -1,0 +1,266 @@
+{
+  "source": "versions/v4_risk_terminal/main.cpp",
+  "source_sha256": "196dcb24e991d1fb9ab48291c44a63bda419bd46bbf76bb3dbe02d9b89396aaa",
+  "metadata": "research/v4_admission_tree.json",
+  "metadata_sha256": "d50b5aa013e7cfa67c9d95f1fd81118fe7fbcfd3f2efb95a8162198f53e71704",
+  "output": "candidates/v5_distilled.cpp",
+  "output_sha256": "b3eb1f5d134ae5952286646b497f3e42038fd14b94b6efef1423f68b602ae23d",
+  "score_cutoff": 0.05,
+  "rejection_leaf": {
+    "leaf": 14,
+    "score": 0.016951855815637764,
+    "reject": true,
+    "path": [
+      {
+        "node": 0,
+        "feature": 2,
+        "name": "plan_cost_per_value",
+        "threshold": 0.3302348554134369,
+        "take_left": false
+      },
+      {
+        "node": 8,
+        "feature": 3,
+        "name": "duration_per_window",
+        "threshold": 0.5588178336620331,
+        "take_left": false
+      },
+      {
+        "node": 12,
+        "feature": 14,
+        "name": "window_fraction",
+        "threshold": 0.692249983549118,
+        "take_left": false
+      }
+    ]
+  },
+  "all_leaf_paths": [
+    {
+      "leaf": 3,
+      "score": 0.8083433698764553,
+      "reject": false,
+      "path": [
+        {
+          "node": 0,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.3302348554134369,
+          "take_left": true
+        },
+        {
+          "node": 1,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.22496424615383148,
+          "take_left": true
+        },
+        {
+          "node": 2,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.1602128967642784,
+          "take_left": true
+        }
+      ]
+    },
+    {
+      "leaf": 4,
+      "score": 0.6426596728005076,
+      "reject": false,
+      "path": [
+        {
+          "node": 0,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.3302348554134369,
+          "take_left": true
+        },
+        {
+          "node": 1,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.22496424615383148,
+          "take_left": true
+        },
+        {
+          "node": 2,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.1602128967642784,
+          "take_left": false
+        }
+      ]
+    },
+    {
+      "leaf": 6,
+      "score": 0.5006576908087405,
+      "reject": false,
+      "path": [
+        {
+          "node": 0,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.3302348554134369,
+          "take_left": true
+        },
+        {
+          "node": 1,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.22496424615383148,
+          "take_left": false
+        },
+        {
+          "node": 5,
+          "feature": 3,
+          "name": "duration_per_window",
+          "threshold": 0.7876390516757965,
+          "take_left": true
+        }
+      ]
+    },
+    {
+      "leaf": 7,
+      "score": 0.19926263025978433,
+      "reject": false,
+      "path": [
+        {
+          "node": 0,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.3302348554134369,
+          "take_left": true
+        },
+        {
+          "node": 1,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.22496424615383148,
+          "take_left": false
+        },
+        {
+          "node": 5,
+          "feature": 3,
+          "name": "duration_per_window",
+          "threshold": 0.7876390516757965,
+          "take_left": false
+        }
+      ]
+    },
+    {
+      "leaf": 10,
+      "score": 0.40696005515182676,
+      "reject": false,
+      "path": [
+        {
+          "node": 0,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.3302348554134369,
+          "take_left": false
+        },
+        {
+          "node": 8,
+          "feature": 3,
+          "name": "duration_per_window",
+          "threshold": 0.5588178336620331,
+          "take_left": true
+        },
+        {
+          "node": 9,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.45336927473545074,
+          "take_left": true
+        }
+      ]
+    },
+    {
+      "leaf": 11,
+      "score": 0.18093876387106061,
+      "reject": false,
+      "path": [
+        {
+          "node": 0,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.3302348554134369,
+          "take_left": false
+        },
+        {
+          "node": 8,
+          "feature": 3,
+          "name": "duration_per_window",
+          "threshold": 0.5588178336620331,
+          "take_left": true
+        },
+        {
+          "node": 9,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.45336927473545074,
+          "take_left": false
+        }
+      ]
+    },
+    {
+      "leaf": 13,
+      "score": 0.19386421785769534,
+      "reject": false,
+      "path": [
+        {
+          "node": 0,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.3302348554134369,
+          "take_left": false
+        },
+        {
+          "node": 8,
+          "feature": 3,
+          "name": "duration_per_window",
+          "threshold": 0.5588178336620331,
+          "take_left": false
+        },
+        {
+          "node": 12,
+          "feature": 14,
+          "name": "window_fraction",
+          "threshold": 0.692249983549118,
+          "take_left": true
+        }
+      ]
+    },
+    {
+      "leaf": 14,
+      "score": 0.016951855815637764,
+      "reject": true,
+      "path": [
+        {
+          "node": 0,
+          "feature": 2,
+          "name": "plan_cost_per_value",
+          "threshold": 0.3302348554134369,
+          "take_left": false
+        },
+        {
+          "node": 8,
+          "feature": 3,
+          "name": "duration_per_window",
+          "threshold": 0.5588178336620331,
+          "take_left": false
+        },
+        {
+          "node": 12,
+          "feature": 14,
+          "name": "window_fraction",
+          "threshold": 0.692249983549118,
+          "take_left": false
+        }
+      ]
+    }
+  ],
+  "predicate": "!(cost_ratio <= 0.33023485541343689) &&\n                !(duration_ratio <= 0.55881783366203308) &&\n                !(window_fraction <= 0.69224998354911804)",
+  "float32_conversion_retained": true,
+  "nan_right_branch_semantics_retained": true
+}

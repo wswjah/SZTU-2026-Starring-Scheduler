@@ -1,0 +1,81 @@
+{
+  "record_type": "public_checkout_local_verification",
+  "date": "2026-11-17",
+  "scope": "Four pre-existing public development/stress cases; not new unseen or official hidden validation",
+  "tool": "tools/v16_verify_release.py",
+  "source_hashes": {
+    "versions\\v8_fine\\main.cpp": "95ef894f5e03e58aa7cfbd33ba7a611c8e504d8fc92fabb4e155a3c508f9a07f",
+    "versions\\v8_fine\\submit.cpp": "aacc78f3a0e01aaff9e02a990c81200405d7b39694dcd656d4069cea169a0a31",
+    "versions\\v10_input_fix\\main.cpp": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340",
+    "versions\\v10_input_fix\\submit.cpp": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+    "versions\\v16_buffer_only\\main.cpp": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340",
+    "versions\\v16_buffer_only\\submit.cpp": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+    "main.cpp": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340",
+    "submit.cpp": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417"
+  },
+  "source_hashes_unchanged": true,
+  "v8_v16_token_differences": [
+    {
+      "token_index": 216,
+      "before": "22",
+      "after": "23",
+      "context": "tok[1<<22] -> tok[1<<23]"
+    }
+  ],
+  "v10_v16_tokens_identical": true,
+  "compile_flags": [
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra"
+  ],
+  "both_compiles_without_warnings": true,
+  "long_log_protocol": {
+    "decoded_characters": 3000000,
+    "encoded_hex_characters": 6000000,
+    "audit_count": 400,
+    "all_answers_exact": true,
+    "input_sha256": "afd7831a574e8bacb1e0ff5b0c7d00c78345a9a73c3ea681f7d486eb5cfdf299",
+    "scope": "Direct full protocol with exact answers, not TPJ-certified world"
+  },
+  "closed_loop_case_count": 4,
+  "fixed_closed_loop_audits": 10116,
+  "fixed_closed_loop_audit_errors": 0,
+  "fixed_closed_loop_illegal_commands": 0,
+  "all_closed_loop_reports_equal": true,
+  "cases": [
+    {
+      "case": "cases/train/standard_00.in",
+      "input_sha256": "b27260ad1bdb6b2db4ef33c2422e01ab6a13ffd10ec90752cade2b21c82f635e",
+      "baseline_profit": 2748428,
+      "fixed_profit": 2748428,
+      "fixed_audit_total": 1768,
+      "full_report_equal": true
+    },
+    {
+      "case": "cases/train/fast_00.in",
+      "input_sha256": "6703ddf26da0988de3449ac882e9b89b9196ed53c5c4809edc8eb7c611635367",
+      "baseline_profit": 14269550,
+      "fixed_profit": 14269550,
+      "fixed_audit_total": 1766,
+      "full_report_equal": true
+    },
+    {
+      "case": "cases/stress/failures.in",
+      "input_sha256": "1e536c8480317ad83e1d12a9c5bd2723dcb1c75bd5e09322fd195409663e1c04",
+      "baseline_profit": 6745790,
+      "fixed_profit": 6745790,
+      "fixed_audit_total": 3137,
+      "full_report_equal": true
+    },
+    {
+      "case": "cases/stress/logs_audits.in",
+      "input_sha256": "8e8f325833c29ae83879b1a2cdc49cacc9985c48c6837d164035fde90fad5b32",
+      "baseline_profit": 6315325,
+      "fixed_profit": 6315325,
+      "fixed_audit_total": 3445,
+      "full_report_equal": true
+    }
+  ],
+  "official_submission_performed_by_tool": false
+}

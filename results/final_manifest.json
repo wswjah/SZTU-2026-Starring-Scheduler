@@ -1,42 +1,40 @@
 {
-  "date": "2026-11-15",
-  "candidate": "v8_fine",
+  "date": "2026-11-17",
+  "candidate": "v16_buffer_only",
   "official_score": 99,
-  "official_submission_id": 544054,
-  "official_submission_url": "https://acm.sztu.edu.cn:40081/examsys/contest/status?cid=2231#solution_id=544054",
-  "official_submissions_total": 7,
-  "remaining_submissions": 3,
+  "official_submission_id": 546181,
+  "official_submission_url": "https://acm.sztu.edu.cn:40081/examsys/contest/status?cid=2231#solution_id=546181",
   "previous_96_manifest": "versions/v6_attributed96/final_manifest_before_v8.json",
   "upstream_repository": "https://github.com/Shuang-su/SZTU-2026-data-structure-final-homework",
   "upstream_commit": "a35a23f3a8a3c623ff9c62af15e680143264de5e",
   "attribution_preserved": true,
   "artifacts": {
     "main.cpp": {
-      "bytes": 33805,
-      "sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d"
+      "bytes": 33527,
+      "sha256": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340"
     },
     "submit.cpp": {
-      "bytes": 17821,
-      "sha256": "bafff023f3cc6c19ca3259bd4ce81123b9a58cd4c118cd9a6d9c1e19b162c706"
+      "bytes": 17538,
+      "sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417"
     },
     "build/main.exe": {
       "bytes": 581717,
-      "sha256": "df05ece80381d72e22cf9ee89f7d23149feab5c0d177b22a0db2cd269ed4d401"
+      "sha256": "9b764f3cbdce7585e7c46ca6fc72416aaa3b1abbf059b3d2cbc6b97e2e81fa3e"
     },
     "build/submit.exe": {
       "bytes": 581717,
-      "sha256": "df05ece80381d72e22cf9ee89f7d23149feab5c0d177b22a0db2cd269ed4d401"
+      "sha256": "9b764f3cbdce7585e7c46ca6fc72416aaa3b1abbf059b3d2cbc6b97e2e81fa3e"
     },
     "tpj_win.exe": {
       "bytes": 833024,
       "sha256": "eb5a32b4a5ad196d3af503d892837141b38792744114f41d02675bab4bdcaf65"
     }
   },
-  "results": "research/v8_experiment_manifest.json",
-  "official_receipt": "research/official_v8_fine.json",
-  "frozen_experiment": "versions/v8_fine/manifest.json",
+  "results": "research/v16_buffer_only_submit_validation.json",
+  "official_receipt": "research/official_v16_buffer_only.json",
+  "frozen_experiment": "versions/v16_buffer_only/manifest.json",
   "best_source_matches_official_receipt": true,
-  "remaining_case_cause": "Unknown: official per-case feedback is not published",
+  "remaining_case_cause": "Unknown; aggregate99 does not establish which test case failed",
   "local_research": {
     "date": "2026-11-16",
     "preferred_unsubmitted_candidate": "versions/v12_scan_input_fix/submit.cpp",
@@ -57,7 +55,6 @@
       "research/v15_independent_review.md"
     ],
     "new_submissions_sent": 1,
-    "submission_decision": "One newly authorized code POST consumed;no further submission authorized",
     "conservative_unsubmitted_candidate": "versions/v12_scan_input_fix/submit.cpp",
     "conservative_packed_sha256": "59e5e2309c06871161bd2f7d27220233bab2b1b4ec94e3333e095ac2d7766aed",
     "official_score_of_local_candidate": null,
@@ -1016,19 +1013,50 @@
     },
     "submitted_neural_candidate": "versions/v15_B128_120/submit.cpp",
     "submitted_neural_official_score": 98,
-    "latest_official_receipt": "research/official_v15_B128_120.json"
+    "latest_official_receipt": "research/official_v16_buffer_only.json",
+    "latest_buffer_only_submission": {
+      "record_type": "sanitized_public_official_result",
+      "variant": "v16_buffer_only",
+      "official_score": 99,
+      "solution_id": 546181,
+      "date": "2026-11-17",
+      "language": "C++",
+      "original_source_file": "versions/v16_buffer_only/submit.cpp",
+      "original_source_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+      "original_source_bytes": 17538,
+      "public_source_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+      "public_source_bytes": 17538,
+      "public_source_note": "This submission already had the four leading comments removed; public and submitted bytes are identical",
+      "server_source_readback_exact": true,
+      "scheduler_unchanged_from_v8": true,
+      "scanner_unchanged_from_v8": true,
+      "change": "Only token buffer4MiB->8MiB",
+      "per_case_feedback_public": false,
+      "privacy_note": "Personal identifiers, credentials, sessions, transaction payloads and full answer sheets are excluded"
+    }
   },
-  "last_verified_date": "2026-11-16",
+  "last_verified_date": "2026-11-17",
   "latest_official_submission": {
-    "variant": "v15_B128_120",
-    "score": 98,
-    "solution_id": 544377,
-    "source": "versions/v15_B128_120/submit.cpp",
-    "source_sha256": "42b180cfcbb0f07e8f795f1506879b14fe2f5e165323a0549b28e08219b290b0",
-    "receipt": "research/official_v15_B128_120.json",
-    "url": "https://acm.sztu.edu.cn:40081/examsys/contest/status?cid=2231#solution_id=544377",
-    "source_readback_exact": true,
-    "buffer_fix_retained": true,
-    "posts_sent": 1
-  }
+    "record_type": "sanitized_public_official_result",
+    "variant": "v16_buffer_only",
+    "official_score": 99,
+    "solution_id": 546181,
+    "date": "2026-11-17",
+    "language": "C++",
+    "original_source_file": "versions/v16_buffer_only/submit.cpp",
+    "original_source_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+    "original_source_bytes": 17538,
+    "public_source_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+    "public_source_bytes": 17538,
+    "public_source_note": "This submission already had the four leading comments removed; public and submitted bytes are identical",
+    "server_source_readback_exact": true,
+    "scheduler_unchanged_from_v8": true,
+    "scanner_unchanged_from_v8": true,
+    "change": "Only token buffer4MiB->8MiB",
+    "per_case_feedback_public": false,
+    "privacy_note": "Personal identifiers, credentials, sessions, transaction payloads and full answer sheets are excluded"
+  },
+  "previous_99_submission_id": 544054,
+  "previous_99_manifest": "versions/v8_fine/manifest.json",
+  "attribution_location": "README and public repository acknowledgements; four leading comments removed per user preference"
 }

@@ -1,3 +1,12 @@
+<!-- public-v16 -->
+# 当前正式版本：V16，99分
+
+2026-11-17仅缓冲区修复正式提交546181，仍99/100，默认源码已采用V16。
+调度与V8相同；原V8及V15文件继续保留。回执见[正式记录](../research/official_v16_buffer_only.md)，
+本地6场景及长日志证据见[验证记录](../research/v16_buffer_only_submit_validation.json)。
+以下旧记录中的默认版本及未提交状态均指当时阶段。
+<!-- public-v16-end -->
+
 # 验证记录
 
 <!-- v15 official98 -->

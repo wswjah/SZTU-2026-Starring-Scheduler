@@ -2,7 +2,7 @@
 
 这个仓库记录「星环算力平台调度」的一段完整探索：从公开的81分程序出发，逐步验证到正式99分，也保留没有带来提升的调参、性能优化、故障预测和小模型实验。希望后来的同学既能找到可读代码，也能少走一些已经试过的弯路。
 
-截至2026年11月16日，**最高正式成绩为99/100，来自V8**。根目录 [main.cpp](main.cpp) 和 [submit.cpp](submit.cpp) 对应这次正式提交的程序。后续V15扩训神经网络在本地生成场景上提高了总利润，正式提交得到**98分**，没有替换99分默认版本；本项目尚未取得100分。
+截至2026年11月17日，**最高正式成绩仍为99/100**。V8首次达到99分；最新V16只合入长日志缓冲区修复，正式提交546181仍为99分，现已作为根目录 [main.cpp](main.cpp) 和 [submit.cpp](submit.cpp) 的默认版本。V15扩训神经网络正式为98分，没有采用该模型；本项目尚未取得100分。
 
 整个过程建立在两份公开工作的基础上：早期路线来自 [Misuzu0010的81分程序](https://github.com/Misuzu0010/SZTU-2026-data-structure-final-homework)，后期96→99分路线的主体来自 [Shuang-su的96分程序](https://github.com/Shuang-su/SZTU-2026-data-structure-final-homework)。两位作者的代码与分析是这段探索的基石，来源和派生关系在本文及[致谢](docs/ACKNOWLEDGEMENTS.md)集中记录。
 
@@ -10,14 +10,15 @@
 
 | 想了解什么 | 入口 |
 | --- | --- |
-| 最高正式99分的代码 | [main.cpp](main.cpp)、[submit.cpp](submit.cpp)、[V8冻结版本](versions/v8_fine/) |
-| V1—V15做过什么、哪些方向失败了 | [完整实验历程](docs/EXPERIMENT_JOURNEY.md) |
-| 后续输入边界与整数读取修复 | [V12保留原99调度参数的修复版](versions/v12_scan_input_fix/)、[V10边界复现](research/v10_experiment.md) |
+| 当前正式99分的代码 | [main.cpp](main.cpp)、[submit.cpp](submit.cpp)、[V16冻结版本](versions/v16_buffer_only/)；[原V8冻结版本](versions/v8_fine/)继续保留 |
+| V1—V16做过什么、哪些方向失败了 | [完整实验历程](docs/EXPERIMENT_JOURNEY.md) |
+| 仅缓冲区修复的正式验证 | [V16回执](research/official_v16_buffer_only.md)、[实际提交文件本地验证](research/v16_buffer_only_submit_validation.json) |
+| 后续输入边界与整数读取修复 | [V10边界复现](research/v10_experiment.md)、[V12输入/扫描修复分支](versions/v12_scan_input_fix/) |
 | 首次接纳的小回归树 | [V13模型实验](research/v13_model_experiment.md)、[精简实现](versions/v13_model_fast/) |
 | 小神经网络与扩训 | [V14实验](research/v14_experiment.md)、[V15实验](research/v15_experiment.md)、[扩训说明](research/v15_training_report.md) |
 | 来源及贡献范围 | [ACKNOWLEDGEMENTS.md](docs/ACKNOWLEDGEMENTS.md) |
 
-版本号表示探索阶段，较新的版本不一定更好。V8正式99分原件没有合入后续8MiB缓冲修复；V12修复版保留其调度参数，并完成本地等价与长日志测试，但没有单独测得正式分数。需要研究或继续修改时，请按目标选择对应版本。
+版本号表示探索阶段，较新的版本不一定更好。V8正式99分原件保持冻结；V16沿用其全部调度逻辑与参数，仅将token缓冲区从4MiB扩大到8MiB，没有合入神经网络或直接整数扫描。V12输入/扫描分支也保留，但没有单独正式分数。需要研究或继续修改时，请按目标选择对应版本。
 
 ## 正式成绩
 
@@ -32,10 +33,15 @@
 | V6：Shuang-su基底的署名派生修复 | 96 | 543902 | [记录](research/official_v6_attributed96.md) |
 | V8：有限调参与末tick清理 | **99** | **544054** | [记录](research/official_v8_fine.md) |
 | V15：扩训网络B与输入修复 | 98 | 544377 | [记录](research/official_v15_B128_120.md) |
+| V16：仅长日志缓冲区修复 | **99** | **546181** | [记录](research/official_v16_buffer_only.md) |
 
-99分**正式提交原件**为17,821字节，SHA256为`bafff023f3cc6c19ca3259bd4ce81123b9a58cd4c118cd9a6d9c1e19b162c706`。本地冻结原件没有被后续模型或修复覆盖。本项目源码的公开副本仅删除指定的开头说明注释，C++ token序列与对应原件相同；因此公开文件的字节数及SHA可能不同。正式原件与发布副本的哈希分别记录在[发布清单](PUBLICATION_MANIFEST.json)，不要将这里的正式SHA当作公开文件SHA。参考目录的第三方原件保留原样。
+当前V16的**正式提交文件与公开提交文件字节一致**，均为17,538字节，SHA256为`d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417`。此次正式提交前已经按要求移走开头四行说明，来源继续记录在本文与致谢中。此前V8正式原件为17,821字节，SHA256为`bafff023f3cc6c19ca3259bd4ce81123b9a58cd4c118cd9a6d9c1e19b162c706`，冻结原件未被覆盖。较早版本的公开副本删除了指定头注释，C++ token序列相同，但字节数及SHA可能不同；各版正式原件与发布副本的指纹分列于[发布清单](PUBLICATION_MANIFEST.json)。参考目录的第三方原件保留原样。
 
-正式平台没有公开逐测试点的利润、目标及失败详情，剩余失分原因仍未知。**本地总利润增加，不等于正式多通过一个测试点**；正式98分的结果也不能直接归因为网络、输入修复、对账或耗时中的某一项。
+V16从实际提交文件重新编译，无编译警告；300万解码字符、600万十六进制字符的长日志构造中，400条答案全部精确。两个原生样例及标准、快速、故障、告警压力共6个场景，10,216次对账全对、零非法指令，完整评测报告与V8逐份一致。直接协议构造与本地TPJ场景分开计数，详见[验证记录](research/v16_buffer_only_submit_validation.json)。V10此前60次TPJ运行、112,146次对账及完整报告等价结果仍保留。
+
+公开副本另经独立重编与复跑：400条长日志答案全对，4个已公开场景10,116次对账全对、零非法指令，完整报告仍与V8相同；[复跑摘要](research/v16_public_archive_validation.json)与上述历史6场景分列。这4例属于已有开发/压力场景，未当作新的独立验证集。
+
+正式平台没有公开逐测试点的利润、目标及失败详情，剩余失分原因仍未知。V16修复了可复现的输入边界问题，但通过数没有增加；不能认定V8与V16仍是同一个测试点失败，也不能据总状态定位原因。**本地总利润增加，不等于正式多通过一个测试点**；正式98分的结果也不能直接归因为网络、输入修复、对账或耗时中的某一项。
 
 ## 本地运行
 
@@ -52,6 +58,20 @@ python tools/bench.py --exe build/main.exe --cases cases/v13_train32/small_00.in
 ```
 
 `tools/bench.py`直接连接调度程序与本地评测机，保存每例报告和`summary.json`，检查退出状态、对账错误与非法指令。它不登录网站，也不提交代码。批量比较时，请让基线和候选使用同一批输入与同一个评测机；性能测量宜单独串行、交错先后顺序，避免把并发和等待时间当成算法变化。
+
+V16另提供适配公开源码的[复核入口](tools/v16_verify_release.py)，可以自行生成长日志协议。只复核400tick长日志、不需要评测机：
+
+```powershell
+python tools/v16_verify_release.py --protocol-only
+```
+
+使用自备评测机比较V8与V16的完整报告：
+
+```powershell
+python tools/v16_verify_release.py --judge tpj_win.exe
+```
+
+后一命令默认运行4个公开场景。正式提交前的6场景、10,216次对账记录还包含2个原生样例；原生样例不随仓库发布，如已自行取得可加`--with-samples`。因此默认公开复跑的场景数和对账总数不应与历史6场景记录混用。
 
 `cases/`内的`.in`是本地生成器参数，包含种子，不是官方隐藏测试。原始样例、边界构造和超出题面范围的压力场景应分开解读；历史记录已将发现的超范围场景单列。仓库中的参数与manifest可帮助重建输入，但不能重建官方利润门槛。
 

@@ -1,6 +1,6 @@
 {
   "archive": "SZTU-2026-Starring-Scheduler",
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "official_best": 99,
   "last_official_neural_score": 98,
   "source_comments_relocated_per_user_request": true,
@@ -14,27 +14,25 @@
   "files": [
     {
       "path": "main.cpp",
-      "published_sha256": "95ef894f5e03e58aa7cfbd33ba7a611c8e504d8fc92fabb4e155a3c508f9a07f",
+      "published_sha256": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340",
       "published_bytes": 33527,
       "transformations": [
-        "remove_4_leading_comment_lines_per_user_request;credits_in_docs",
         "cpp_tokens_verified_equal_to_original"
       ],
       "original_path": "main.cpp",
-      "original_sha256": "b39a299e1983d1837393cdce80fce6ffbdaa209df170a7d865069df011514e3d",
-      "original_bytes": 33805
+      "original_sha256": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340",
+      "original_bytes": 33527
     },
     {
       "path": "submit.cpp",
-      "published_sha256": "aacc78f3a0e01aaff9e02a990c81200405d7b39694dcd656d4069cea169a0a31",
+      "published_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
       "published_bytes": 17538,
       "transformations": [
-        "remove_4_leading_comment_lines_per_user_request;credits_in_docs",
         "cpp_tokens_verified_equal_to_original"
       ],
       "original_path": "submit.cpp",
-      "original_sha256": "bafff023f3cc6c19ca3259bd4ce81123b9a58cd4c118cd9a6d9c1e19b162c706",
-      "original_bytes": 17821
+      "original_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+      "original_bytes": 17538
     },
     {
       "path": "versions/v10_input_fix/main.cpp",
@@ -16503,15 +16501,14 @@
     },
     {
       "path": "results/final_manifest.json",
-      "published_sha256": "1a06f34191c22db6b69f16cd2391b25a594268cae093f2914f7cada5a4c35d70",
-      "published_bytes": 34349,
+      "published_sha256": "eb8554f4cfc6e2738b867f16965bdd1b730876634b468f8e4332c8b9cfc4b218",
+      "published_bytes": 36055,
       "transformations": [
-        "normalize_text_line_endings_to_LF",
-        "sanitize_personal_fields_and_local_paths;historical_hashes_not_rewritten"
+        "sanitize_personal_fields_and_local_paths;public_release_metadata"
       ],
       "original_path": "results/final_manifest.json",
-      "original_sha256": "b7c2fe92daa7e69875a3b0a0720ff0bb6e33b65dc2fac6da4d0b570d646e65bc",
-      "original_bytes": 35381
+      "original_sha256": "a553cf2ac61b2d4a86120b4011113e47e70ffa0c23ba09791a225bb44a6f449a",
+      "original_bytes": 36235
     },
     {
       "path": "results/final_samples/sample_00/summary.json",
@@ -35234,32 +35231,29 @@
     },
     {
       "path": "docs/LOCAL_RESEARCH_LOG.md",
-      "published_sha256": "84dcea27de9a62e311f82cfc32eb734391f2bd76e3bf517c371c3ea9c805c654",
-      "published_bytes": 13105,
+      "published_sha256": "05d41a91396067a13bcc06349aa11e53ccc39a934a3a0d5e604baef9f2ae19de",
+      "published_bytes": 13572,
       "transformations": [
-        "normalize_text_line_endings_to_LF"
-      ],
-      "original_path": "REPORT.md",
-      "original_sha256": "80eec2867a00a387b1b9b63acbc863ad05c8636deb7c126141d376ec630e1761",
-      "original_bytes": 13222
+        "prepend_public_v16_status;preserve_previous_sanitized_history"
+      ]
     },
     {
       "path": "README.md",
-      "published_sha256": "53dcb11224c6370370e64d8ba23eba5c6b8e9ce8b50aad08354a17cae88ccf1e",
-      "published_bytes": 7092,
+      "published_sha256": "4dc4ef5aff2137d27b06d6c59710dd973f52d0fdb4898757df3b3a327c87bff8",
+      "published_bytes": 9294,
       "transformations": [],
       "original_path": "publication_drafts/README.md",
-      "original_sha256": "53dcb11224c6370370e64d8ba23eba5c6b8e9ce8b50aad08354a17cae88ccf1e",
-      "original_bytes": 7092
+      "original_sha256": "4dc4ef5aff2137d27b06d6c59710dd973f52d0fdb4898757df3b3a327c87bff8",
+      "original_bytes": 9294
     },
     {
       "path": "docs/EXPERIMENT_JOURNEY.md",
-      "published_sha256": "fd8514782140967299c5ee2c945b2f315c5ca4fbf419924b065db4162714ccef",
-      "published_bytes": 16438,
+      "published_sha256": "3be93d01aa6342c1707ba016c98f8ba87222ab001254c0223b6c89ead1edaf71",
+      "published_bytes": 18943,
       "transformations": [],
       "original_path": "publication_drafts/EXPERIMENT_JOURNEY.md",
-      "original_sha256": "fd8514782140967299c5ee2c945b2f315c5ca4fbf419924b065db4162714ccef",
-      "original_bytes": 16438
+      "original_sha256": "3be93d01aa6342c1707ba016c98f8ba87222ab001254c0223b6c89ead1edaf71",
+      "original_bytes": 18943
     },
     {
       "path": "docs/ACKNOWLEDGEMENTS.md",
@@ -35293,7 +35287,97 @@
       "published_sha256": "db70c7fd621aafc0883a1fcf8b79046c1123d29a127deda1205127e840ff3a5c",
       "published_bytes": 1834,
       "transformations": []
+    },
+    {
+      "path": "research/official_v16_buffer_only.json",
+      "published_sha256": "704c5a84f2e6bd27fe629fce77265a4e310c491c6e4f584b6e495c366acf6fe7",
+      "published_bytes": 953,
+      "transformations": [
+        "replace_private_response_with_public_score_summary"
+      ],
+      "original_path": "research/official_v16_buffer_only.json",
+      "original_sha256": "fb81337a4fd5d226d92ae23d51c1847c03527ba61b74f7408e79d45591f496a5",
+      "original_bytes": 2858
+    },
+    {
+      "path": "research/official_v16_buffer_only.md",
+      "published_sha256": "c69d10afd7fa44b5c9e804c802802f54d9a655ce6618864e2fa7735cf02de531",
+      "published_bytes": 1524,
+      "transformations": [
+        "replace_private_response_with_public_score_summary"
+      ],
+      "original_path": "research/official_v16_buffer_only.md",
+      "original_sha256": "8349f1abdaacc553690309168003acdc04bf7fa1088cb45aedcbf02d1fb877a5",
+      "original_bytes": 1497
+    },
+    {
+      "path": "research/v16_buffer_only_submit_validation.json",
+      "published_sha256": "a702847492ab60bb1814f754ab7b86e7ba40ea460abad55c79ec1e7a4a0d896e",
+      "published_bytes": 28033,
+      "transformations": [
+        "normalize_text_line_endings_to_LF",
+        "sanitize_personal_fields_and_local_paths;historical_hashes_not_rewritten"
+      ],
+      "original_path": "research/v16_buffer_only_submit_validation.json",
+      "original_sha256": "45a729bcde5c0986170d7da624b1112502e445702b684c93dfefbe17b7e0cb6e",
+      "original_bytes": 30178
+    },
+    {
+      "path": "research/v16_public_archive_validation.json",
+      "published_sha256": "2c9a4cf6790a83a88311c9baa09174735a48a97ef22141bb9022d509d091ae8d",
+      "published_bytes": 3127,
+      "transformations": [
+        "select_aggregate_metrics_from_public_checkout_rerun;omit_machine_paths_and_raw_outputs"
+      ]
+    },
+    {
+      "path": "tools/v16_verify_release.py",
+      "published_sha256": "cb6d886b45f56826eb550a87a6e81c73fb5507ba6ce371dbb8f6170f183e9eb4",
+      "published_bytes": 13284,
+      "transformations": [],
+      "original_path": "tools/v16_verify_release.py",
+      "original_sha256": "cb6d886b45f56826eb550a87a6e81c73fb5507ba6ce371dbb8f6170f183e9eb4",
+      "original_bytes": 13284
+    },
+    {
+      "path": "versions/v16_buffer_only/main.cpp",
+      "published_sha256": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340",
+      "published_bytes": 33527,
+      "transformations": [
+        "cpp_tokens_verified_equal_to_original"
+      ],
+      "original_path": "versions/v16_buffer_only/main.cpp",
+      "original_sha256": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340",
+      "original_bytes": 33527
+    },
+    {
+      "path": "versions/v16_buffer_only/manifest.json",
+      "published_sha256": "de5c2c167ed8a7e3599127bf19aa7c7079e1c3364feec0c2e570844716eabcf6",
+      "published_bytes": 1178,
+      "transformations": [
+        "select_public_source_and_validation_metadata"
+      ],
+      "original_path": "versions/v16_buffer_only/manifest.json",
+      "original_sha256": "04f75eb7b2db97948e4621cbe07fdd6b3ea8a7b7833db1b2e4d1366d5aafef07",
+      "original_bytes": 1663
+    },
+    {
+      "path": "versions/v16_buffer_only/submit.cpp",
+      "published_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+      "published_bytes": 17538,
+      "transformations": [
+        "cpp_tokens_verified_equal_to_original"
+      ],
+      "original_path": "versions/v16_buffer_only/submit.cpp",
+      "original_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+      "original_bytes": 17538
     }
   ],
-  "manifest_self_hash_excluded": true
+  "manifest_self_hash_excluded": true,
+  "current_default": "v16_buffer_only",
+  "latest_official_submission": {
+    "solution_id": 546181,
+    "score": 99,
+    "variant": "v16_buffer_only"
+  }
 }

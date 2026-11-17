@@ -1,0 +1,20 @@
+{
+  "record_type": "sanitized_public_official_result",
+  "variant": "v16_buffer_only",
+  "official_score": 99,
+  "solution_id": 546181,
+  "date": "2026-11-17",
+  "language": "C++",
+  "original_source_file": "versions/v16_buffer_only/submit.cpp",
+  "original_source_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+  "original_source_bytes": 17538,
+  "public_source_sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+  "public_source_bytes": 17538,
+  "public_source_note": "This submission already had the four leading comments removed; public and submitted bytes are identical",
+  "server_source_readback_exact": true,
+  "scheduler_unchanged_from_v8": true,
+  "scanner_unchanged_from_v8": true,
+  "change": "Only token buffer4MiB->8MiB",
+  "per_case_feedback_public": false,
+  "privacy_note": "Personal identifiers, credentials, sessions, transaction payloads and full answer sheets are excluded"
+}

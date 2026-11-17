@@ -51,7 +51,7 @@ typedef long long ll;
 #define F(i, n) for (int i = 0; i < (int)(n); i++)
 
 // ---------------- fast input ----------------
-char inbuf[1 << 16], tok[1 << 22];
+char inbuf[1 << 16], tok[1 << 23];
 int inpos, inlen;
 int getch() {
     if (inpos == inlen) {

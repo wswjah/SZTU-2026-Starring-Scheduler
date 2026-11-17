@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-17",
+  "variant": "v16_buffer_only",
+  "parent": "versions/v8_fine",
+  "parent_official_submission": 544054,
+  "functional_change": "Only token buffer4MiB->8MiB",
+  "scheduler_unchanged": true,
+  "integer_scanner_unchanged": true,
+  "neural_network_included": false,
+  "artifacts": {
+    "main.cpp": {
+      "path": "versions/v16_buffer_only/main.cpp",
+      "sha256": "882cf8887a1645f5e98e2bf7409d0f69ea97f266e4d7ba3383b06f2aae9fe340",
+      "bytes": 33527,
+      "public_bytes_equal_to_official_candidate": true
+    },
+    "submit.cpp": {
+      "path": "versions/v16_buffer_only/submit.cpp",
+      "sha256": "d84158ac1f864dfcc5642eafe400bf482f3cc8e5a8f54775eed36cf1fec49417",
+      "bytes": 17538,
+      "public_bytes_equal_to_official_candidate": true
+    }
+  },
+  "leading_comments_removed_before_submission": 4,
+  "upstream_credits": "docs/ACKNOWLEDGEMENTS.md",
+  "official_submission_id": 546181,
+  "official_score": 99,
+  "promoted_to_default": true,
+  "official_receipt": "research/official_v16_buffer_only.json",
+  "local_validation": "research/v16_buffer_only_submit_validation.json",
+  "public_verification_tool": "tools/v16_verify_release.py"
+}
